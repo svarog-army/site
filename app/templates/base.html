@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script src="{{ url_for('static', filename='js/lib/htmx.min.js') }}" type="text/javascript" defer></script>
     <script src="{{ url_for('static', filename='js/lib/response-targets.js') }}" type="text/javascript" defer></script>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.svg') }}" />
 
     {% block meta %}{% endblock %}
 
@@ -22,9 +23,10 @@
 
   <body hx-ext="response-targets" class="bg-white dark:bg-gray-800">
     {% block body %}
-    <div class="h-screen w-screen">
+    <div class="h-screen w-screen bg-cover bg-center bg-no-repeat bg-[url('../../static/img/bg.png')]">
       <!-- Main Content -->
-      {% block content %}{% endblock %}
+      {% block content %}
+      {% endblock %}
     </div>
     {% endblock %}
     <!-- scripts -->
