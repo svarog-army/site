@@ -5,10 +5,10 @@ from sqlalchemy.orm import Session
 import sqlalchemy as sa
 
 from api.oauth2 import verify_access_token, INVALID_CREDENTIALS_EXCEPTION
-from app.database import get_db
-import app.models as m
-import app.schema as s
-from app.logger import log
+from svarog.database import get_db
+import svarog.models as m
+import svarog.schema as s
+from svarog.logger import log
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 

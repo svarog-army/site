@@ -4,7 +4,7 @@ from jose import JWTError, jwt
 from fastapi import HTTPException
 from pydantic import ValidationError
 
-import app.schema as s
+import svarog.schema as s
 from config import config
 
 CFG = config()

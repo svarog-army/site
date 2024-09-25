@@ -1,6 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-from app import schema as s
+from svarog import schema as s
 from config import config
 from .test_data import TestData
 
