@@ -1,8 +1,8 @@
 from fastapi import Depends, APIRouter, status
 
-import app.models as m
-import app.schema as s
-from app.logger import log
+import svarog.models as m
+import svarog.schema as s
+from svarog.logger import log
 
 from api.dependency import get_current_user
 

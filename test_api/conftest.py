@@ -8,8 +8,8 @@ load_dotenv("test_api/test.env")
 from fastapi.testclient import TestClient
 from sqlalchemy import orm
 
-from app import models as m
-from app import schema as s
+from svarog import models as m
+from svarog import schema as s
 
 from api import app
 from .test_data import TestData
@@ -17,7 +17,7 @@ from .test_data import TestData
 
 @pytest.fixture
 def db(test_data: TestData) -> Generator[orm.Session, None, None]:
-    from app.database import db, get_db
+    from svarog.database import db, get_db
 
     with db.Session() as session:
         db.Model.metadata.drop_all(bind=session.bind)

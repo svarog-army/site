@@ -46,6 +46,9 @@ class BaseConfig(BaseSettings):
     JWT_SECRET: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int
 
+    # Database
+    ALCHEMICAL_DATABASE_URL: str
+
     @staticmethod
     def configure(app):
         # Implement this method to do further configuration on your app.
@@ -61,7 +64,6 @@ class DevelopmentConfig(BaseConfig):
     """Development configuration."""
 
     DEBUG: bool = True
-    ALCHEMICAL_DATABASE_URL: str = "sqlite:///" + os.path.join(BASE_DIR, "database-dev.sqlite3")
 
 
 class TestingConfig(BaseConfig):
@@ -69,15 +71,11 @@ class TestingConfig(BaseConfig):
 
     TESTING: bool = True
     PRESERVE_CONTEXT_ON_EXCEPTION: bool = False
-    ALCHEMICAL_DATABASE_URL: str = "sqlite:///" + os.path.join(BASE_DIR, "database-test.sqlite3")
 
 
 class ProductionConfig(BaseConfig):
     """Production configuration."""
 
-    ALCHEMICAL_DATABASE_URL: str = os.environ.get(
-        "DATABASE_URL", "sqlite:///" + os.path.join(BASE_DIR, "database.sqlite3")
-    )
     WTF_CSRF_ENABLED: bool = True
 
 
@@ -91,3 +89,6 @@ def config(name: str = APP_ENV) -> DevelopmentConfig | TestingConfig | Productio
     configuration = CONF_MAP[name]()
     configuration.ENV = name
     return configuration
+
+
+CFG = config()

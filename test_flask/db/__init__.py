@@ -1,8 +1,8 @@
 from typing import Generator
 from faker import Faker
 from sqlalchemy import func
-from app import db
-from app import models as m
+from svarog import db
+from svarog import models as m
 
 
 faker = Faker()

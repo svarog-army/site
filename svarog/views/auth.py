@@ -3,11 +3,11 @@ from flask import Blueprint, render_template, url_for, redirect, flash, request,
 from flask import current_app as app
 from flask_login import login_user, logout_user, login_required, current_user
 
-from app import models as m
-from app import forms as f
-from app import mail, db
-from app.utils import gen_uuid
-from app.logger import log
+from svarog import models as m
+from svarog import forms as f
+from svarog import mail, db
+from svarog.utils import gen_uuid
+from svarog.logger import log
 
 
 auth_blueprint = Blueprint("auth", __name__)

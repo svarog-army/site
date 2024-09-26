@@ -1,6 +1,6 @@
 from flask import request
 from flask import current_app as app
-from app import schema as s
+from svarog import schema as s
 
 
 def create_pagination(total: int, page_size: int = 0) -> s.Pagination:

@@ -1,4 +1,4 @@
-from app import db
+from svarog import db
 
 
 class ModelMixin(object):

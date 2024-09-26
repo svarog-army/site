@@ -7,7 +7,7 @@ from flask_migrate import Migrate
 from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect
 
-from app.logger import log
+from svarog.logger import log
 from .database import db
 
 # instantiate extensions
@@ -19,12 +19,12 @@ csrf = CSRFProtect()
 
 def create_app(environment="development"):
     from config import config
-    from app.views import (
+    from svarog.views import (
         main_blueprint,
         auth_blueprint,
         user_blueprint,
     )
-    from app import models as m
+    from svarog import models as m
 
     # Instantiate app.
     app = Flask(__name__)

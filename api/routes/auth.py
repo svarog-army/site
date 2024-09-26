@@ -3,9 +3,9 @@ from fastapi import Depends, APIRouter, status, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from api.oauth2 import create_access_token
 
-import app.models as m
-from app import schema as s
-from app.logger import log
+import svarog.models as m
+from svarog import schema as s
+from svarog.logger import log
 from api.dependency import get_db
 
 
