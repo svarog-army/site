@@ -6,8 +6,8 @@
   "scripts": {
     "js-watch": "webpack --config webpack.dev.js --watch",
     "js": "webpack --config webpack.prod.js",
-    "css": "tailwindcss -i ./src/styles.css -o ./app/static/css/styles.css --minify",
-    "css-watch": "tailwindcss -i ./src/styles.css -o ./app/static/css/styles.css --watch",
+    "css": "tailwindcss -i ./src/styles.css -o ./svarog/static/css/styles.css --minify",
+    "css-watch": "tailwindcss -i ./src/styles.css -o ./svarog/static/css/styles.css --watch",
     "build": "yarn css && yarn js"
   },
   "author": "",

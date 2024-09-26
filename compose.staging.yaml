@@ -13,7 +13,7 @@ services:
       PGUSER: ${POSTGRES_USER:-postgres}
 
   app:
-    image: simple2b/flask-app:0.1
+    image: simple2b/svarog-app:01
     restart: always
     command: sh ./start_web.sh
     environment:
@@ -23,6 +23,11 @@ services:
       - db
     ports:
       - 127.0.0.1:${LOCAL_WEB_PORT:-8001}:8000
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.svarog_py.rule=Host(`424bat.army`)'
+      - 'traefik.http.routers.svarog_py.tls=true'
+      - 'traefik.http.routers.svarog_py.tls.certresolver=myresolver'
 
   # api:
   #   image: simple2b/flask-app:0.1

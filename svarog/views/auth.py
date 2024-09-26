@@ -62,7 +62,7 @@ def login():
             login_user(user)
             log(log.INFO, "Login successful.")
             flash("Login successful.", "success")
-            return redirect(url_for("main.index"))
+            return redirect(url_for("user.get_all"))
         flash("Wrong user ID or password.", "danger")
 
     elif form.is_submitted():
@@ -158,7 +158,7 @@ def password_recovery(reset_password_uid):
         user.save()
         login_user(user)
         flash("Login successful.", "success")
-        return redirect(url_for("main.index"))
+        return redirect(url_for("user.get_all"))
 
     return render_template(
         "auth/reset_password.html",

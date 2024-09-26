@@ -6,7 +6,7 @@ module.exports = common.map(conf =>
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-      static: './app/static/js',
+      static: './svarog/static/js',
     },
   }),
 );

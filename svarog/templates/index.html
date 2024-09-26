@@ -1,4 +1,16 @@
 {% extends "base.html" %} {% block content %}
-<!-- component -->
+<div class="flex flex-col items-center align-baseline">
+  <!-- component -->
+  <p class="text-white uppercase font-extrabold text-7xl mt-20">
+    424 окремий батальйон безпілотних систем
+  </p>
 
+  <img
+    src="{{url_for('static',filename='img/chevron.png')}}"
+    class="w-[800px] mt-32 mb-32"
+    alt="chevron" />
+  <p class="text-white uppercase font-extrabold text-7xl">
+    сайт знаходиться на стадії розробки
+  </p>
+</div>
 {% endblock %} {% block scripts %} {% endblock %}
