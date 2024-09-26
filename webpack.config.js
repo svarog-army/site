@@ -21,7 +21,7 @@ const baseConfig = {
     main: './src/base.ts',
   },
   output: {
-    path: path.resolve(__dirname, './app/static'),
+    path: path.resolve(__dirname, './svarog/static'),
     filename: 'js/base.js', // <--- Will be compiled to this single file
   },
 };
@@ -31,7 +31,7 @@ const userConfig = {
     main: './src/user.ts',
   },
   output: {
-    path: path.resolve(__dirname, './app/static'),
+    path: path.resolve(__dirname, './svarog/static'),
     filename: 'js/user.js', // <--- Will be compiled to this single file
   },
 };
