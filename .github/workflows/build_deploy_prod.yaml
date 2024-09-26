@@ -15,20 +15,6 @@ env:
   DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
 jobs:
-  on-develop-branch-check:
-    runs-on: Linux
-    outputs:
-      on_develop: ${{ steps.contains_tag.outputs.retval }}
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: rickstaa/action-contains-tag@v1
-        id: contains_tag
-        with:
-          reference: 'develop'
-          tag: '${{ github.ref }}'
-
   deploy:
     name: Deploy to prod
     runs-on: Linux
