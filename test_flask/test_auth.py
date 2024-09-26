@@ -8,7 +8,7 @@ from svarog import db
 from test_flask.utils import register, login, logout
 
 
-TEST_EMAIL = "saintkos117@gmail.com"
+TEST_EMAIL = "sam@test.com"
 
 
 def test_auth_pages(client):
@@ -23,8 +23,6 @@ def test_auth_pages(client):
 
 
 def test_register(client):
-    TEST_EMAIL = "sam@test.com"
-
     with mail.record_messages() as outbox:
         response = client.post(
             "/register",
