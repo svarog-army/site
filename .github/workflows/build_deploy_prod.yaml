@@ -1,0 +1,58 @@
+name: Prod build and deploy
+
+on:
+  release:
+    types:
+      - released
+
+env:
+  DOCKER_LOGIN: simple2b
+  IMAGE_NAME: simple2b/svarog-app
+  DEPLOY_HOST: ${{ secrets.SSH_HOST_IP_STAGING }}
+  DEPLOY_USER_NAME: ${{ secrets.SSH_USER }}
+  DEPLOY_SSH_KEY: ${{ secrets.SSH_KEY }}
+  DEPLOY_SSH_PORT: ${{ secrets.SSH_PORT }}
+  DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
+jobs:
+  on-develop-branch-check:
+    runs-on: Linux
+    outputs:
+      on_develop: ${{ steps.contains_tag.outputs.retval }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: rickstaa/action-contains-tag@v1
+        id: contains_tag
+        with:
+          reference: 'develop'
+          tag: '${{ github.ref }}'
+
+  deploy:
+    name: Deploy to prod
+    runs-on: Linux
+    steps:
+      - uses: actions/checkout@v3
+      - name: update compose file
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ env.DEPLOY_HOST }}
+          username: ${{ env.DEPLOY_USER_NAME }}
+          key: ${{ env.DEPLOY_SSH_KEY }}
+          port: ${{ env.DEPLOY_SSH_PORT }}
+          source: compose.prod.yaml
+          target: ~/svarog_prod
+      - name: deploy
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ env.DEPLOY_HOST }}
+          username: ${{ env.DEPLOY_USER_NAME }}
+          key: ${{ env.DEPLOY_SSH_KEY }}
+          port: ${{ env.DEPLOY_SSH_PORT }}
+          script: |
+            cd ~/svarog_prod &&
+            mv compose.prod.yaml compose.yaml &&
+            docker compose pull &&
+            docker compose up -d &&
+            docker system prune -f
