@@ -2,8 +2,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, ValidationError, BooleanField, HiddenField
 from wtforms.validators import DataRequired, Email, Length, EqualTo
 
-from app import models as m
-from app import db
+from svarog import models as m
+from svarog import db
 
 
 class UserForm(FlaskForm):

@@ -2,9 +2,10 @@ import click
 from flask import Flask
 import sqlalchemy as sa
 from sqlalchemy import orm
-from app import models as m
-from app import db, forms
-from app import schema as s
+from svarog import models as m
+from svarog import db, forms
+from svarog import schema as s
+from config import CFG
 
 
 def init(app: Flask):
@@ -12,7 +13,7 @@ def init(app: Flask):
     @app.shell_context_processor
     def get_context():
         """Objects exposed here will be automatically available from the shell."""
-        return dict(app=app, db=db, m=m, f=forms, s=s, sa=sa, orm=orm)
+        return dict(app=app, db=db, m=m, f=forms, s=s, sa=sa, orm=orm, CFG=CFG)
 
     if app.config["ENV"] != "production":
 

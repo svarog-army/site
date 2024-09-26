@@ -10,11 +10,11 @@ from flask import (
 )
 from flask_login import login_required
 import sqlalchemy as sa
-from app.controllers import create_pagination
+from svarog.controllers import create_pagination
 
-from app import models as m, db
-from app import forms as f
-from app.logger import log
+from svarog import models as m, db
+from svarog import forms as f
+from svarog.logger import log
 
 
 bp = Blueprint("user", __name__, url_prefix="/user")

@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 from flask import Flask
 from flask.testing import FlaskClient
 
-from app import create_app, db
-from app import models as m
+from svarog import create_app, db
+from svarog import models as m
 from test_flask.utils import register
 
 
@@ -40,7 +40,7 @@ def client(app: Flask):
 
 @pytest.fixture()
 def runner(app, client):
-    from app import commands
+    from svarog import commands
 
     commands.init(app)
 

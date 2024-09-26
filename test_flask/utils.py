@@ -1,4 +1,4 @@
-from app.models import User
+from svarog.models import User
 
 TEST_ADMIN_NAME = "bob"
 TEST_ADMIN_EMAIL = "bob@test.com"

@@ -6,11 +6,11 @@ import sqlalchemy as sa
 from sqlalchemy import orm
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from app.database import db
+from svarog.database import db
 from .utils import ModelMixin
-from app.logger import log
-from app import schema as s
-from app.utils import gen_uuid
+from svarog.logger import log
+from svarog import schema as s
+from svarog.utils import gen_uuid
 
 
 class User(db.Model, UserMixin, ModelMixin):

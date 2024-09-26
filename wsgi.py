@@ -1,6 +1,6 @@
 #!/user/bin/env python
-from app import create_app
-from app import commands
+from svarog import create_app
+from svarog import commands
 
 app = create_app()
 commands.init(app)

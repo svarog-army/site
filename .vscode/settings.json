@@ -14,7 +14,7 @@
     "pydantic",
     "pytest",
     "sqlalchemy",
-    "Svarog",
+    "svarog",
     "tailwindcss",
     "werkzeug",
     "wsgi",
