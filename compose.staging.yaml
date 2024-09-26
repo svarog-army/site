@@ -13,7 +13,7 @@ services:
       PGUSER: ${POSTGRES_USER:-postgres}
 
   app:
-    image: simple2b/svarog-app:01
+    image: simple2b/svarog-app:0
     restart: always
     command: sh ./start_web.sh
     environment:
