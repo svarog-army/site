@@ -49,6 +49,9 @@ class BaseConfig(BaseSettings):
     # Database
     ALCHEMICAL_DATABASE_URL: str
 
+    # Under construction mode
+    PARKING: bool = False
+
     @staticmethod
     def configure(app):
         # Implement this method to do further configuration on your app.

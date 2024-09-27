@@ -11,6 +11,7 @@ services:
       PGDATABASE: db
       PGPASSWORD: ${POSTGRES_PASSWORD:-passwd}
       PGUSER: ${POSTGRES_USER:-postgres}
+      PARKING: True
 
   app:
     image: simple2b/svarog-app:latest
