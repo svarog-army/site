@@ -20,7 +20,7 @@
     {% endblock %}
   </head>
 
-  <body hx-ext="response-targets" class="bg-white dark:bg-gray-800">
+  <body hx-ext="response-targets" class="bg-gray-800 h-screen w-screen bg-cover bg-center bg-no-repeat bg-[url('../../static/img/bg.png')] overflow-hidden">
     <!-- Flash Messages -->
     <!-- prettier-ignore -->
     {% with messages = get_flashed_messages(with_categories=true) %}
