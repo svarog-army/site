@@ -49,6 +49,7 @@
       class="absolute top-12 right-12 max-w-sm mx-auto"
       action="{{url_for('main.change_locale')}}"
       method="post">
+      {{ form.hidden_tag() }}
       <label for="local_select" class="sr-only">Language select</label>
       <select
         id="local_select"
