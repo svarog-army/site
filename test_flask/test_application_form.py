@@ -1,5 +1,4 @@
 import sqlalchemy as sa
-from click.testing import Result
 from flask.testing import FlaskClient, FlaskCliRunner
 
 from svarog import db
@@ -7,7 +6,7 @@ from svarog import models as m
 
 
 def test_application_form(client: FlaskClient, runner: FlaskCliRunner):
-    res: Result = runner.invoke(args=["create-specialties"])
+    res = runner.invoke(args=["create-specialties"])
     assert "specialties created" in res.output
     specialties = db.session.scalars(sa.select(m.Specialty)).all()
     assert len(specialties) == 10
