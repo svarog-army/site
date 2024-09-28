@@ -2,7 +2,6 @@ from flask import render_template, Blueprint, g, redirect, request, current_app,
 from flask_babel import _
 
 from config import CFG
-from svarog.logger import log
 
 multilingual = Blueprint("multilingual", __name__, template_folder="templates", url_prefix="/<lang_code>")
 
@@ -38,7 +37,5 @@ def before_request():
 def index():
     if CFG.PARKING:
         return render_template("under_construction.html")
-    hello = _("привіт")
-    log(log.INFO, hello)
 
     return render_template("index.html")
