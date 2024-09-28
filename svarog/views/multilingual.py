@@ -1,4 +1,5 @@
 from flask import render_template, Blueprint, g, redirect, request, current_app, abort, url_for
+from flask_wtf import FlaskForm
 
 from config import CFG
 
@@ -34,6 +35,6 @@ def before_request():
 @multilingual.route("/")
 def index():
     if CFG.PARKING:
-        return render_template("under_construction.html")
+        return render_template("under_construction.html", form=FlaskForm())
 
-    return render_template("index.html")
+    return render_template("index.html", form=FlaskForm())
