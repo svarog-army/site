@@ -32,7 +32,6 @@ def before_request():
 
 
 @multilingual.route("/")
-@multilingual.route("/index")
 def index():
     if CFG.PARKING:
         return render_template("under_construction.html")

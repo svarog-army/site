@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <title>{{ config.APP_NAME }}</title>
     <!-- meta -->
-    <meta name="description" content="Офіційний сайт 424 окремого батальйону безпілотних систем">
+    <meta name="description" content="{{_('The official website of the 424th separate battalion')}}">
     <meta name="author" content="Simple2B" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="{{ config.APP_NAME }}" />
-    <meta property="og:description" content="Офіційний сайт 424 окремого батальйону безпілотних систем" />
+    <meta property="og:description" content="{{_('The official website of the 424th separate battalion')}}" />
     <meta property="og:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
     <meta property="og:url" content="{{ request.url }}" />
     <meta property="og:type" content="website" />
@@ -18,12 +18,12 @@
     <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ config.APP_NAME }}" />
-    <meta name="twitter:description" content="Офіційний сайт 424 окремого батальйону безпілотних систем" />
+    <meta name="twitter:description" content="{{_('The official website of the 424th separate battalion')}}" />
     <meta name="twitter:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
 
     <meta name="telegram:card" content="summary_large_image" />
     <meta name="telegram:title" content="{{ config.APP_NAME }}" />
-    <meta name="telegram:description" content="Офіційний сайт 424 окремого батальйону безпілотних систем" />
+    <meta name="telegram:description" content="{{_('The official website of the 424th separate battalion')}}" />
     <meta name="telegram:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
 
 
