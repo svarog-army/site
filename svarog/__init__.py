@@ -1,12 +1,14 @@
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session
 from flask_login import LoginManager
 from werkzeug.exceptions import HTTPException
 from flask_migrate import Migrate
 from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect
+from flask_babel import Babel
 
+from config import TRANSLATIONS_DIR
 from svarog.logger import log
 from .database import db
 
@@ -15,6 +17,7 @@ login_manager = LoginManager()
 migration = Migrate()
 mail = Mail()
 csrf = CSRFProtect()
+babel = Babel()
 
 
 def create_app(environment="development"):
@@ -43,6 +46,20 @@ def create_app(environment="development"):
     login_manager.init_app(app)
     mail.init_app(app)
     csrf.init_app(app)
+
+    def get_locale():
+        # Get locale from session.
+        if "locale" in session:
+            return session["locale"]
+
+        return request.accept_languages.best_match(app.config["BABEL_SUPPORTED_LOCALES"])
+
+    babel.init_app(
+        app,
+        default_locale=app.config["BABEL_DEFAULT_LOCALE"],
+        locale_selector=get_locale,
+        default_translation_directories=TRANSLATIONS_DIR,
+    )
 
     # Register blueprints.
     app.register_blueprint(auth_blueprint)

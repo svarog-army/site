@@ -30,7 +30,7 @@
       "justMyCode": false
     },
     {
-      "name": "Python: Flask",
+      "name": "Flask App",
       "type": "debugpy",
       "request": "launch",
       "module": "flask",
