@@ -1,0 +1,142 @@
+<div
+  tabindex="-1"
+  hx-trigger="click"
+  hx-swap="delete"
+  hx-get="{{url_for('main.no_content')}}"
+  class="fixed bg-opacity-80 bg-gray-600 top-0 left-0 right-0 z-50 items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full flex">
+  <div
+    onclick="event.stopPropagation();"
+    class="relative p-4 w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <div
+        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+        <div class="flex flex-col align-baseline">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Анкета опитування
+          </h3>
+          <span class="text-base text-gray-900 dark:text-white">
+            Для того щоб потрапити до лав 424 Окремого Батальйону Безпілотних
+            Систем необхідно подати заявку заповнивши анкету. Для іноземних
+            громадян - інформація за <a href="#">посиланням.</a>
+          </span>
+        </div>
+      </div>
+      <!-- Modal body -->
+      <div class="p-4 md:p-5 space-y-4">
+        <form action="{{url_for('application.create')}}" method="post">
+          {{ form.hidden_tag() }}
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="full_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Прізвище та імʼя<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.full_name(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <!-- prettier-ignore -->
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="birth_date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Дата народження<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.birth_date(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Телефон<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.phone(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Електронна пошта<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.email(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="city_of_actual_residence" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Місто фактичного проживання<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.city_of_actual_residence(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="education" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Освіта, спеціальність<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.education(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="skills" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Професійні навички (скіли)<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.skills(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="last_job" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Остання цивільна посада<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.last_job(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="health_problems" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Чи наявні у Вас критичні проблеми зі здоровʼям<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.health_problems(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="have_driver_license" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Наявність водійського посвідчення. Якщо так - які категорії?<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.have_driver_license(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="is_serviceman" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Чи Ви є військовослужбовцем?<span class="text-red-600"> *</span> </label>
+
+            <div class="flex items-center flex-row">
+              <!-- Radio button "Так" -->
+              <!-- prettier-ignore -->
+              {{ form.is_serviceman(class="h-8 w-40 flex flex-row justify-between text-white bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800") }}
+            </div>
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="uav_experience" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Чи маєте досвід з БПЛА (якщо так, який саме)<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.uav_experience(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <div class="mb-6 lg:max-w-xl">
+            <!-- prettier-ignore -->
+            <label for="uav_experience" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Оберіть спеціальність<span class="text-red-600"> *</span></label >
+            <!-- prettier-ignore -->
+            {{form.applied_specialties(autocomplete="off", class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500")}}
+          </div>
+          <!-- prettier-ignore -->
+          <!-- <div class="mb-6 lg:max-w-xl">
+              <label for="applied_specialties" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Оберіть спеціальності<span class="text-red-600"> *</span> </label>
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="applied_specialties">Parent (optional)</label>
+            <select name="applied_specialties" multiple  class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            {% for specialty in specialties %}
+                <option value="{{ specialty.id }}">{{ specialty.name }}</option>
+            {% endfor %}
+            </select>
+            </div> -->
+          <div
+            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+            <button
+              name="submit"
+              type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              Save new application
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/datepicker.min.js"></script>
+{% endblock %}
