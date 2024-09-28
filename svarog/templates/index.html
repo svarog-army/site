@@ -10,8 +10,8 @@
       name="locale"
       onchange="this.form.submit()"
       class="block py-2.5 px-0 w-full text-sm text-black dark:text-white bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-      <option value="uk" {% if session.locale == 'uk' %} selected {% endif %}>UA</option>
-      <option value="en" {% if session.locale == 'en' %} selected {% endif %}>EN</option>
+      <option value="uk" {% if g.lang_code == 'uk' %} selected {% endif %}>UA</option>
+      <option value="en" {% if g.lang_code == 'en' %} selected {% endif %}>EN</option>
     </select>
     <button
       id="theme-toggle"
