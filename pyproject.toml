@@ -23,6 +23,7 @@ python-multipart = "^0.0.6"
 pydantic-settings = "^2.0.3"
 email-validator = "^2.2.0"
 wtforms-sqlalchemy = "^0.4.1"
+flask-babel = "^4.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
@@ -33,6 +34,7 @@ httpx = "^0.25.0"
 mypy = "^1.5.1"
 types-flask-migrate = "^4.0.0.6"
 types-python-jose = "^3.3.4.8"
+pybabel = "^0.0.0.dev0"
 ruff = "^0.6.8"
 
 [build-system]

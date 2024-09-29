@@ -59,7 +59,7 @@ def test_register(client):
         url = urls[0]
         response = client.get(url)
         assert response.status_code == 302
-        response.location == url_for("main.index")
+        response.location == url_for("auth.login")
         user_db = db.session.scalar(m.User.select().where(m.User.email == TEST_EMAIL))
         assert user_db
         assert user_db.activated
