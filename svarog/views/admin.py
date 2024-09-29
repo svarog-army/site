@@ -1,6 +1,7 @@
 from datetime import datetime
+
 import sqlalchemy as sa
-from flask import Blueprint, flash, redirect, render_template, request, session, url_for
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_required
 
 from svarog import db
@@ -66,7 +67,7 @@ def get_edit_form(admin_uuid: str):
 @admin_blueprint.route("/save", methods=["POST"])
 @login_required
 def save():
-    form = f.AdminForm()
+    form: f.AdminForm = f.AdminForm()
     if form.validate_on_submit():
         query = m.User.select().where(m.User.uuid == form.admin_uuid.data)
         admin: m.User | None = db.session.scalar(query)
@@ -103,7 +104,7 @@ def get_add_form():
 @admin_blueprint.route("/create", methods=["POST"])
 @login_required
 def create():
-    form = f.NewUserForm()
+    form: f.NewUserForm = f.NewUserForm()
     if form.validate_on_submit():
         admin = m.User(
             username=form.username.data,
