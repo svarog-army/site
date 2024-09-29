@@ -1,5 +1,6 @@
 from flask import Blueprint, request, redirect, g, current_app, url_for, abort
 from config import CFG
+from svarog.logger import log
 
 
 main_blueprint = Blueprint("main", __name__)
@@ -7,7 +8,7 @@ main_blueprint = Blueprint("main", __name__)
 
 @main_blueprint.route("/no-content")
 def no_content():
-    """htmx request"""
+    """HTMX request"""
     return "", 200
 
 
@@ -20,12 +21,19 @@ def change_locale():
     else:
         g.lang_code = CFG.BABEL_DEFAULT_LOCALE
 
+    log(log.INFO, "change_locale: g.lang_code: [%s]", g.lang_code)
+
     adapter = current_app.url_map.bind("")
     try:
         # URL referrer without domain name and protocol
-        relative_url = request.referrer.replace(request.url_root, "")
+        url_root = request.url_root
+        relative_url = request.referrer.replace(url_root, "")
+        url_root = url_root.replace("http://", "https://")
+        relative_url = relative_url.replace(url_root, "")
+        log(log.INFO, "change_locale: relative_url: [%s]", relative_url)
         endpoint, args = adapter.match(relative_url)
         args["lang_code"] = g.lang_code  # type: ignore
         return redirect(url_for(endpoint, **args))
-    except Exception:
+    except Exception as e:
+        log(log.ERROR, "Failed to change locale: %s", e)
         abort(404)

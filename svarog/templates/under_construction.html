@@ -4,13 +4,31 @@
     <meta charset="utf-8" />
     <title>{{ config.APP_NAME }}</title>
     <!-- meta -->
-    <meta name="description" content="Svarog site" />
+    <meta name="description" content="{{_('The official website of the 424th separate battalion')}}">
     <meta name="author" content="Simple2B" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="{{ config.APP_NAME }}" />
+    <meta property="og:description" content="{{_('The official website of the 424th separate battalion')}}" />
+    <meta property="og:image" content="{{ url_for('static', filename='img/ceremonial.svg') }}" />
+    <meta property="og:url" content="{{ request.url }}" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ config.APP_NAME }}" />
+    <meta name="twitter:description" content="{{_('The official website of the 424th separate battalion')}}" />
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/ceremonial.svg') }}" />
+
+    <meta name="telegram:card" content="summary_large_image" />
+    <meta name="telegram:title" content="{{ config.APP_NAME }}" />
+    <meta name="telegram:description" content="{{_('The official website of the 424th separate battalion')}}" />
+    <meta name="telegram:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
+
     <script src="{{ url_for('static', filename='js/lib/htmx.min.js') }}" type="text/javascript" defer></script>
     <script src="{{ url_for('static', filename='js/lib/response-targets.js') }}" type="text/javascript" defer></script>
     <link rel="icon" href="{{ url_for('static', filename='img/logo.svg') }}" />
-
     {% block meta %}{% endblock %}
 
     <!-- styles -->
@@ -27,10 +45,25 @@
       <!-- Main Content -->
 
       {% block content %}
+      <form
+      class="absolute top-12 right-12 max-w-sm mx-auto"
+      action="{{url_for('main.change_locale')}}"
+      method="post">
+      {{ form.hidden_tag() }}
+      <label for="local_select" class="sr-only">Language select</label>
+      <select
+        id="local_select"
+        name="locale"
+        onchange="this.form.submit()"
+        class="block py-2.5 px-0 w-full text-sm text-black dark:text-white bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+        <option value="uk" {% if g.lang_code == 'uk' %} selected {% endif %}>UA</option>
+        <option value="en" {% if g.lang_code == 'en' %} selected {% endif %}>EN</option>
+      </select>
+    </form>
         <div class="flex flex-col items-center">
             <!-- component -->
             <p class="text-white uppercase font-extrabold 2xl:text-7xl sm:text-xs mt-20 text-center text-base lg:text-3xl">
-                424 окремий батальйон безпілотних систем
+              {{_("424th separate battalion of unmanned systems")}}
             </p>
 
             <img
@@ -38,7 +71,7 @@
                 class="2xl:w-[800px]  lg:w-[400px] 2xl:mt-32 2xl:mb-30 lg:mt-20 lg:mb-20"
                 alt="chevron" />
             <p class="text-white uppercase font-extrabold 2xl:text-7xl sm:text-xs mt-20 text-center text-base lg:text-3xl">
-                сайт знаходиться на стадії розробки
+              {{_("site is under construction")}}
             </p>
         </div>
       {% endblock %}

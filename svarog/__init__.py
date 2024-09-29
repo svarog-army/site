@@ -41,6 +41,7 @@ def create_app(environment="development"):
     app.config.from_object(configuration)
     configuration.configure(app)
     log(log.INFO, "Configuration: [%s]", configuration.ENV)
+    log(log.INFO, "Version: [%s]", configuration.VERSION)
 
     # Set up extensions.
     db.init_app(app)
