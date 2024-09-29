@@ -5,6 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 APP_ENV = os.environ.get("APP_ENV", "development")
+TRANSLATIONS_DIR = os.path.join(BASE_DIR, "translations")
 
 
 def get_version() -> str:
@@ -18,7 +19,7 @@ class BaseConfig(BaseSettings):
     IS_API: bool = False
 
     ENV: str = "base"
-    APP_NAME: str = "Simple Flask App"
+    APP_NAME: str = "Web Site"
     SECRET_KEY: str
     SQLALCHEMY_TRACK_MODIFICATIONS: bool = False
     WTF_CSRF_ENABLED: bool = False
@@ -51,6 +52,10 @@ class BaseConfig(BaseSettings):
 
     # Under construction mode
     PARKING: bool = False
+
+    # Babel
+    BABEL_DEFAULT_LOCALE: str = "uk"
+    BABEL_SUPPORTED_LOCALES: list[str] = ["uk", "en"]
 
     @staticmethod
     def configure(app):

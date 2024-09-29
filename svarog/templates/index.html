@@ -1,12 +1,18 @@
 {% extends "base.html" %} {% block content %}
-<div class="flex flex-col h-screen items-center align-baseline ">
-  <form class="absolute top-6 right-6 lg:top-12 lg:right-12 max-w-sm mx-auto flex flex-row lg:flex-col">
-    <label for="underline_select" class="sr-only">Language select</label>
+<div class="flex flex-col items-center align-baseline h-screen">
+  <form
+    class="absolute top-6 right-6 lg:top-12 lg:right-12 max-w-sm mx-auto flex flex-row lg:flex-col"
+    action="{{url_for('main.change_locale')}}"
+    method="post">
+    {{ form.hidden_tag() }}
+    <label for="local_select" class="sr-only">Language select</label>
     <select
-      id="underline_select"
-      class="block py-2.5 px-0 w-full text-sm text-black dark:text-white bg-transparent border-0 border-r-2 lg:border-r-0 lg:border-b-2 border-gray-200 appearance-none dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-      <option value="EN" selected>EN</option>
-      <option value="UA">UA</option>
+      id="local_select"
+      name="locale"
+      onchange="this.form.submit()"
+      class="block py-2.5 px-0 w-full text-sm text-black dark:text-white bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+      <option value="uk" {% if g.lang_code == 'uk' %} selected {% endif %}>UA</option>
+      <option value="en" {% if g.lang_code == 'en' %} selected {% endif %}>EN</option>
     </select>
     <button
       id="theme-toggle"
@@ -38,8 +44,8 @@
   <div class="flex flex-col flex-1 items-center container justify-evenly">
     <!-- component -->
     <p
-      class="text-white uppercase font-extrabold 2xl:text-7xl text-lg text-center md:text-2xl lg:text-3xl ">
-      424 окремий батальйон безпілотних систем
+      class="text-white uppercase font-extrabold 2xl:text-7xl text-lg text-center md:text-2xl lg:text-3xl">
+      {{_("424th separate battalion of unmanned systems")}}
     </p>
 
     <img
@@ -47,8 +53,8 @@
       class="w-full md:w-3/4 xl:w-1/2 "
       alt="chevron" />
     <p
-      class="text-white uppercase font-extrabold 2xl:text-7xl text-lg text-center md:text-2xl lg:text-3xl ">
-      сайт знаходиться на стадії розробки
+      class="text-white uppercase font-extrabold 2xl:text-7xl text-lg text-center md:text-2xl lg:text-3xl">
+      {{_("site is under construction")}}
     </p>
   </div>
 </div>
