@@ -90,7 +90,7 @@ def save():
         log(log.ERROR, "Admin save errors: [%s]", form.errors)
         flash(f"{form.errors}", "danger")
 
-    return redirect(url_for("user.get_all"))
+    return redirect(url_for("admin.get_all_users"))
 
 
 @admin_blueprint.route("/get-add-form", methods=["GET"])
@@ -140,3 +140,27 @@ def delete(admin_uuid: str):
     db.session.commit()
     log(log.INFO, "Admin deleted. Admin: [%s]", admin)
     return render_template("toast.html", category="success", message="User deleted!"), 202
+
+
+@admin_blueprint.route("/users", methods=["GET"])
+@login_required
+def get_all_users():
+    q = request.args.get("q", type=str, default=None)
+    where = m.User.is_deleted.is_(False) & m.User.is_admin.is_(False)
+    if q:
+        where = sa.and_(where, m.User.username.ilike(f"{q}%") | m.User.email.ilike(f"{q}%"))  # type: ignore
+
+    query = sa.select(m.User).where(where).order_by(m.User.id)
+    count_query = sa.select(sa.func.count()).select_from(m.User).where(where)
+    pagination = create_pagination(total=db.session.scalar(count_query))
+
+    log(log.INFO, "Returning users: [%s]", db.session.scalar(count_query))
+
+    return render_template(
+        "user/users.html",
+        users=db.session.execute(
+            query.offset((pagination.page - 1) * pagination.per_page).limit(pagination.per_page)
+        ).scalars(),
+        page=pagination,
+        search_query=q,
+    )

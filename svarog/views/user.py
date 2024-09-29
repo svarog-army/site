@@ -10,7 +10,6 @@ from flask import (
 )
 from flask_login import login_required
 import sqlalchemy as sa
-from svarog.controllers import create_pagination
 
 from svarog import models as m, db
 from svarog import forms as f
@@ -18,28 +17,6 @@ from svarog.logger import log
 
 
 bp = Blueprint("user", __name__, url_prefix="/user")
-
-
-@bp.route("/", methods=["GET"])
-@login_required
-def get_all():
-    q = request.args.get("q", type=str, default=None)
-    where = m.User.is_deleted.is_(False)
-    if q:
-        where = sa.and_(where, m.User.username.like(f"{q}%") | m.User.email.like(f"{q}%"))  # type: ignore
-
-    query = sa.select(m.User).where(where).order_by(m.User.id)
-    count_query = sa.select(sa.func.count()).select_from(m.User).where(where)
-    pagination = create_pagination(total=db.session.scalar(count_query))
-
-    return render_template(
-        "user/users.html",
-        users=db.session.execute(
-            query.offset((pagination.page - 1) * pagination.per_page).limit(pagination.per_page)
-        ).scalars(),
-        page=pagination,
-        search_query=q,
-    )
 
 
 @bp.route("/get-edit-form/<user_uuid>", methods=["GET"])
@@ -69,7 +46,7 @@ def save():
         if not user:
             log(log.ERROR, "Not found user by id : [%s]", form.user_uuid.data)
             flash("Cannot save user data", "danger")
-            return redirect(url_for("user.get_all"))
+            return redirect(url_for("admin.get_all_users"))
         user.username = form.username.data
         user.email = form.email.data
         user.activated = form.activated.data
@@ -79,13 +56,13 @@ def save():
         flash("User updated!", "success")
         if form.next_url.data:
             return redirect(form.next_url.data)
-        return redirect(url_for("user.get_all"))
+        return redirect(url_for("admin.get_all_users"))
 
     else:
         log(log.ERROR, "User save errors: [%s]", form.errors)
         flash(f"{form.errors}", "danger")
 
-    return redirect(url_for("user.get_all"))
+    return redirect(url_for("admin.get_all_users"))
 
 
 @bp.route("/get-add-form", methods=["GET"])
@@ -110,12 +87,12 @@ def create():
         log(log.INFO, "Form submitted. User: [%s]", user)
         flash("User added!", "success")
         user.save()
-        return redirect(url_for("user.get_all"))
+        return redirect(url_for("admin.get_all_users"))
     if form.errors:
         log(log.ERROR, "User create errors: [%s]", form.errors)
         flash(f"{form.errors}", "danger")
 
-    return redirect(url_for("user.get_all"))
+    return redirect(url_for("admin.get_all_users"))
 
 
 @bp.route("/delete/<user_uuid>", methods=["DELETE"])

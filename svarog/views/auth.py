@@ -62,7 +62,7 @@ def login():
             login_user(user)
             log(log.INFO, "Login successful.")
             flash("Login successful.", "success")
-            return redirect(url_for("user.get_all"))
+            return redirect(url_for("admin.get_all_users"))
         elif user and user.is_admin:
             login_user(user)
             log(log.INFO, "Login successful.")
@@ -164,7 +164,7 @@ def password_recovery(reset_password_uid):
         user.save()
         login_user(user)
         flash("Login successful.", "success")
-        return redirect(url_for("user.get_all"))
+        return redirect(url_for("admin.get_all_users"))
 
     return render_template(
         "auth/reset_password.html",
