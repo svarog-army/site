@@ -53,10 +53,7 @@ def create_app(environment="development"):
     def get_locale():
         # Get locale from URL.
         if not g.get("lang_code", None):
-            g.lang_code = (
-                request.accept_languages.best_match(CFG.BABEL_SUPPORTED_LOCALES)
-                or CFG.BABEL_DEFAULT_LOCALE
-            )
+            g.lang_code = request.accept_languages.best_match(CFG.BABEL_SUPPORTED_LOCALES) or CFG.BABEL_DEFAULT_LOCALE
         return g.lang_code
 
     babel.init_app(
