@@ -20,8 +20,6 @@ def pull_lang_code(endpoint, values):
 
 @multilingual.before_request
 def before_request():
-    if g.lang_code in SERVICE_ROUTES:
-        return None
     if g.lang_code not in CFG.BABEL_SUPPORTED_LOCALES:
         adapter = current_app.url_map.bind("")
         try:
