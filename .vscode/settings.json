@@ -11,6 +11,7 @@
     "fastapi",
     "flowbite",
     "HTMX",
+    "ilike",
     "jsonify",
     "pydantic",
     "pytest",

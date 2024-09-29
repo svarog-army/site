@@ -44,6 +44,8 @@ class User(db.Model, UserMixin, ModelMixin):
     )
     is_deleted: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
 
+    is_admin: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
+
     @property
     def password(self):
         return self.password_hash

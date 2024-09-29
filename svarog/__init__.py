@@ -22,12 +22,7 @@ babel = Babel()
 
 def create_app(environment="development"):
     from config import config
-    from svarog.views import (
-        main_blueprint,
-        auth_blueprint,
-        user_blueprint,
-        multilingual,
-    )
+    from svarog.views import main_blueprint, auth_blueprint, user_blueprint, multilingual, admin_blueprint
     from svarog import models as m
 
     # Instantiate app.
@@ -67,6 +62,7 @@ def create_app(environment="development"):
     app.register_blueprint(main_blueprint)
     app.register_blueprint(user_blueprint)
     app.register_blueprint(multilingual)
+    app.register_blueprint(admin_blueprint)
 
     @app.route("/")
     def home():

@@ -58,11 +58,17 @@ def login():
     if form.validate_on_submit():
         user = m.User.authenticate(form.user_id.data, form.password.data)
         log(log.INFO, "Form submitted. User: [%s]", user)
-        if user:
+        if user and not user.is_admin:
             login_user(user)
             log(log.INFO, "Login successful.")
             flash("Login successful.", "success")
             return redirect(url_for("user.get_all"))
+        elif user and user.is_admin:
+            login_user(user)
+            log(log.INFO, "Login successful.")
+            flash("Login successful.", "success")
+            return redirect(url_for("admin.get_all_admins"))
+
         flash("Wrong user ID or password.", "danger")
 
     elif form.is_submitted():

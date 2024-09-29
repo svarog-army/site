@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, ValidationError, BooleanField, HiddenField
-from wtforms.validators import DataRequired, Email, Length, EqualTo
+from wtforms.validators import DataRequired, Email, Length, EqualTo, Optional
 
 from svarog import models as m
 from svarog import db
@@ -60,5 +60,30 @@ class NewUserForm(FlaskForm):
 
     def validate_email(self, field):
         query = m.User.select().where(m.User.email == field.data)
+        if db.session.scalar(query) is not None:
+            raise ValidationError("This email is already registered.")
+
+
+class AdminForm(FlaskForm):
+    next_url = StringField("next_url")
+    admin_uuid = HiddenField("admin_uuid", [DataRequired()], render_kw={"readonly": True})
+    email = StringField("email", [DataRequired(), Email()], render_kw={"placeholder": "Email"})
+    activated = BooleanField("activated")
+    username = StringField("Username", [DataRequired()], render_kw={"placeholder": "Username"})
+    password = PasswordField("Password", render_kw={"placeholder": "Password"}, validators=[Optional()])
+    password_confirmation = PasswordField(
+        "Confirm Password",
+        validators=[Optional()],
+        render_kw={"placeholder": "Confirm Password"},
+    )
+    submit = SubmitField("Save")
+
+    def validate_username(self, field):
+        query = m.User.select().where(m.User.username == field.data).where(m.User.uuid != self.admin_uuid.data)
+        if db.session.scalar(query) is not None:
+            raise ValidationError("This username is taken.")
+
+    def validate_email(self, field):
+        query = m.User.select().where(m.User.email == field.data).where(m.User.uuid != self.admin_uuid.data)
         if db.session.scalar(query) is not None:
             raise ValidationError("This email is already registered.")
