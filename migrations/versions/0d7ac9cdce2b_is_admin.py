@@ -1,8 +1,8 @@
 """is_admin
 
-Revision ID: 5582bb274f18
-Revises: e750c1bf6cfa
-Create Date: 2024-09-29 09:40:37.457536
+Revision ID: 0d7ac9cdce2b
+Revises: 788d3ab11748
+Create Date: 2024-09-30 15:19:38.841189
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '5582bb274f18'
-down_revision = 'e750c1bf6cfa'
+revision = '0d7ac9cdce2b'
+down_revision = '788d3ab11748'
 branch_labels = None
 depends_on = None
 
