@@ -6,7 +6,6 @@ from flask_login import login_user, logout_user, login_required, current_user
 from svarog import models as m
 from svarog import forms as f
 from svarog import mail, db
-from svarog.utils import gen_uuid
 from svarog.logger import log
 
 
@@ -102,7 +101,7 @@ def activate(reset_password_uid):
         return redirect(url_for("auth.login"))
 
     user.activated = True
-    user.unique_id = gen_uuid()
+    user.unique_id = m.gen_uuid()
     user.save()
 
     flash("Welcome!", "success")
@@ -160,7 +159,7 @@ def password_recovery(reset_password_uid):
     if form.validate_on_submit():
         user.password = form.password.data
         user.activated = True
-        user.unique_id = gen_uuid()
+        user.unique_id = m.gen_uuid()
         user.save()
         login_user(user)
         flash("Login successful.", "success")
