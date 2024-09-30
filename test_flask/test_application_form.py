@@ -1,5 +1,6 @@
 import sqlalchemy as sa
 from flask.testing import FlaskClient, FlaskCliRunner
+from flask_babel import _
 
 from svarog import db
 from svarog import models as m
@@ -31,7 +32,7 @@ def test_application_form(client: FlaskClient, runner: FlaskCliRunner):
     assert res.status_code == 302
     res = client.get(res.location, follow_redirects=True)
     assert res.status_code == 200
-    assert "Application applied successfully" in res.get_data(as_text=True)
+    assert _("Application applied successfully") in res.get_data(as_text=True)
     assert m.Recruit.count() == 1
     assert m.Application.count() == 1
     application = m.Application.first()

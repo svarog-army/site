@@ -7,6 +7,8 @@ from flask import (
     flash,
 )
 
+from flask_babel import _
+
 from svarog import db
 from svarog import forms as f
 from svarog import models as m
@@ -68,6 +70,5 @@ def create():
 
     log(log.INFO, "Form submitted. Application: [%s]", application)
     application.save()
-    # return {"status": "success", "message": "Application created!"}, 201
-    flash("Application applied successfully", "success")
+    flash(_("Application applied successfully"), "success")
     return redirect(url_for("home"))

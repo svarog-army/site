@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-30 13:50+0300\n"
+"POT-Creation-Date: 2024-09-30 14:33+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -39,6 +39,10 @@ msgstr "424 окремий батальйон безпілотних систе�
 #: svarog/templates/index.html:68 svarog/templates/under_construction.html:74
 msgid "site is under construction"
 msgstr "сайт знаходиться в стані розробки"
+
+#: svarog/views/application.py:73
+msgid "Application applied successfully"
+msgstr "Заявка успішно подана"
 
 #~ msgid "bububu"
 #~ msgstr "бубубу"
