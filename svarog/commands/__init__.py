@@ -56,10 +56,12 @@ def init(app: Flask):
             "Оператор комплексу РЕБ",
             "Зв'язківець",
         ]
+        counter = 0
         for spec in specialties:
             existing = db.session.scalar(m.Specialty.select().where(m.Specialty.name == spec))
             if existing:
                 print(f"Specialty [{spec}] already exists")
                 continue
             m.Specialty(name=spec).save()
-        print("specialties created")
+            counter += 1
+        print(f"{counter} specialties created")
