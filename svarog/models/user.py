@@ -7,17 +7,16 @@ from sqlalchemy import orm
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from svarog.database import db
-from .utils import ModelMixin
+from .utils import ModelMixin, gen_uuid
 from svarog.logger import log
 from svarog import schema as s
-from svarog.utils import gen_uuid
 
 
 class User(db.Model, UserMixin, ModelMixin):
     __tablename__ = "users"
 
     id: orm.Mapped[int] = orm.mapped_column(primary_key=True)
-    uuid: orm.Mapped[str] = orm.mapped_column(sa.String(36), default=gen_uuid, index=True)
+    uuid: orm.Mapped[str] = orm.mapped_column(sa.String(32), default=gen_uuid, index=True)
     username: orm.Mapped[str] = orm.mapped_column(
         sa.String(64),
         unique=True,
