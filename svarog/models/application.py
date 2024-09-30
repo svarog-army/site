@@ -5,9 +5,8 @@ import sqlalchemy as sa
 from sqlalchemy import orm
 
 from svarog.database import db
-from svarog.utils import gen_uuid
 
-from .utils import ModelMixin
+from .utils import ModelMixin, gen_uuid
 from .application_specialty import application_specialty
 
 if TYPE_CHECKING:
@@ -19,7 +18,7 @@ class Application(db.Model, ModelMixin):
     __tablename__ = "applications"
 
     id: orm.Mapped[int] = orm.mapped_column(primary_key=True)
-    uuid: orm.Mapped[str] = orm.mapped_column(sa.String(36), default=gen_uuid, index=True)
+    uuid: orm.Mapped[str] = orm.mapped_column(sa.String(32), default=gen_uuid, index=True)
 
     full_name: orm.Mapped[str] = orm.mapped_column(sa.String(64))
     birth_date: orm.Mapped[date] = orm.mapped_column(sa.Date)
@@ -53,7 +52,7 @@ class Application(db.Model, ModelMixin):
         back_populates="applications",
     )
 
-    def delete(self) -> None:
+    def make_delete(self) -> None:
         self.is_deleted = True
         self.phone = f"{self.phone}-deleted-{datetime.now().timestamp()}"
         db.session.add(self)
