@@ -28,5 +28,13 @@ def test_application_form(client: FlaskClient, runner: FlaskCliRunner):
     res = client.get("/application/get-application-form")
     assert res.status_code == 200
     res = client.post("/application/create", data=application_create_data)
-    assert res.status_code == 201
-    pass
+    assert res.status_code == 302
+    res = client.get(res.location, follow_redirects=True)
+    assert res.status_code == 200
+    assert "Application applied successfully" in res.get_data(as_text=True)
+    assert m.Recruit.count() == 1
+    assert m.Application.count() == 1
+    application = m.Application.first()
+    assert application
+    assert application.full_name == application_create_data["full_name"]
+    assert application.phone == application_create_data["phone"]

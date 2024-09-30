@@ -2,6 +2,9 @@ import sqlalchemy as sa
 from flask import (
     Blueprint,
     render_template,
+    redirect,
+    url_for,
+    flash,
 )
 
 from svarog import db
@@ -65,4 +68,6 @@ def create():
 
     log(log.INFO, "Form submitted. Application: [%s]", application)
     application.save()
-    return {"status": "success", "message": "Application created!"}, 201
+    # return {"status": "success", "message": "Application created!"}, 201
+    flash("Application applied successfully", "success")
+    return redirect(url_for("home"))
