@@ -145,11 +145,11 @@ jobs:
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           envs: SIGNAL_BOT_CONFIG_BASE64
+          # tar -xzf signal-cli-config.tar.gz && -> Disable signal config extraction for now
           script: |
             cd ~/svarog_py &&
             mv compose.staging.yaml compose.yaml &&
             docker compose pull &&
             docker compose stop signal &&
-            tar -xzf signal-cli-config.tar.gz &&
             docker compose up -d &&
             docker system prune -f
