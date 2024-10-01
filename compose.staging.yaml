@@ -28,6 +28,14 @@ services:
       - 'traefik.http.routers.svarog_py.tls=true'
       - 'traefik.http.routers.svarog_py.tls.certresolver=myresolver'
 
+  signal:
+    image: bbernhard/signal-cli-rest-api:latest
+    restart: always
+    environment:
+      - MODE=json-rpc
+    volumes:
+      - "./signal-cli-config:/home/.local/share/signal-cli"
+
   # api:
   #   image: simple2b/flask-app:0.1
   #   restart: always

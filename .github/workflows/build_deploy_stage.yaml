@@ -125,13 +125,18 @@ jobs:
           target: ~/svarog_py
       - name: deploy
         uses: appleboy/ssh-action@master
+        env:
+          SIGNAL_BOT_CONFIG_BASE64: ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }}
         with:
           host: ${{ env.DEPLOY_HOST }}
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
+          envs: SIGNAL_BOT_CONFIG_BASE64
           script: |
             cd ~/svarog_py &&
+            echo ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }} | base64 -d > signal-cli-config.tar.gz &&
+            tar -xzf signal-cli-config.tar.gz &&
             mv compose.staging.yaml compose.yaml &&
             docker compose pull &&
             docker compose up -d &&
