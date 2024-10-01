@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "svarog"
-version = "0.0.16"
+version = "0.0.17"
 description = ""
 authors = ["kostia <saintkos117@gmail.com>"]
 
@@ -22,6 +22,7 @@ python-jose = "^3.3.0"
 python-multipart = "^0.0.6"
 pydantic-settings = "^2.0.3"
 email-validator = "^2.2.0"
+wtforms-sqlalchemy = "^0.4.1"
 flask-babel = "^4.0.0"
 signalbot = "^0.10.1"
 
@@ -42,11 +43,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-filterwarnings = [
-    "ignore:.*cgi.*:DeprecationWarning",
-    'ignore:.*werkzeug\.urls\.url.*:DeprecationWarning',
-    'ignore:.*flask\.Markup.*:DeprecationWarning',
-]
+filterwarnings = ['ignore:.*datetime\.datetime\.utcnow.*:DeprecationWarning']
 testpaths = ["test_flask", "test_api"]
 
 [tool.mypy]

@@ -7,10 +7,12 @@
     "**/.venv/*/**": true
   },
   "cSpell.words": [
+    "backref",
     "dotenv",
     "fastapi",
     "flowbite",
     "HTMX",
+    "ilike",
     "jsonify",
     "pydantic",
     "pytest",
@@ -19,11 +21,13 @@
     "tailwindcss",
     "werkzeug",
     "wsgi",
-    "wtforms"
+    "wtforms",
+    "скіли"
   ],
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
-  }
+  },
+  "cSpell.language": "en,uk"
 }

@@ -27,6 +27,8 @@ def create_app(environment="development"):
         auth_blueprint,
         user_blueprint,
         multilingual,
+        application_blueprint,
+        admin_blueprint,
     )
     from svarog import models as m
 
@@ -63,10 +65,12 @@ def create_app(environment="development"):
     )
 
     # Register blueprints.
-    app.register_blueprint(auth_blueprint)
+    admin_blueprint.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
     app.register_blueprint(user_blueprint)
+    app.register_blueprint(application_blueprint)
     app.register_blueprint(multilingual)
+    app.register_blueprint(admin_blueprint)
 
     @app.route("/")
     def home():
@@ -80,7 +84,7 @@ def create_app(environment="development"):
         query = m.User.select().where(m.User.id == int(id))
         return db.session.scalar(query)
 
-    login_manager.login_view = "auth.login"
+    login_manager.login_view = "admin.auth.login"
     login_manager.login_message_category = "info"
     login_manager.anonymous_user = m.AnonymousUser
 

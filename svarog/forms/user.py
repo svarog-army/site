@@ -10,15 +10,12 @@ class UserForm(FlaskForm):
     next_url = StringField("next_url")
     user_uuid = HiddenField("user_uuid", [DataRequired()], render_kw={"readonly": True})
     email = StringField("email", [DataRequired(), Email()], render_kw={"placeholder": "Email"})
-    activated = BooleanField("activated")
+    is_admin = BooleanField("Is Admin")
     username = StringField("Username", [DataRequired()], render_kw={"placeholder": "Username"})
-    password = PasswordField(
-        "Password", validators=[DataRequired(), Length(6, 30)], render_kw={"placeholder": "Password"}
-    )
+    password = PasswordField("Password", render_kw={"placeholder": "Password"})
     password_confirmation = PasswordField(
         "Confirm Password",
         validators=[
-            DataRequired(),
             EqualTo("password", message="Password do not match."),
         ],
         render_kw={"placeholder": "Confirm Password"},
@@ -35,10 +32,14 @@ class UserForm(FlaskForm):
         if db.session.scalar(query) is not None:
             raise ValidationError("This email is already registered.")
 
+    def validate_password(self, field):
+        if field.data and len(field.data) <= 6:
+            raise ValidationError("Password length must be more than 6 symbols .")
+
 
 class NewUserForm(FlaskForm):
     email = StringField("email", [DataRequired(), Email()], render_kw={"placeholder": "Email"})
-    activated = BooleanField("activated")
+    is_admin = BooleanField("Is Admin")
     username = StringField("Username", [DataRequired()], render_kw={"placeholder": "Username"})
     password = PasswordField(
         "Password", validators=[DataRequired(), Length(6, 30)], render_kw={"placeholder": "Password"}

@@ -37,6 +37,32 @@ def init(app: Flask):
             username=app.config["ADMIN_USERNAME"],
             email=app.config["ADMIN_EMAIL"],
             password=app.config["ADMIN_PASSWORD"],
+            is_admin=True,
             activated=True,
         ).save()
         print("admin created")
+
+    @app.cli.command("create-specialties")
+    def create_specialties():
+        """Create specialties"""
+        specialties = [
+            "Оператор БПЛА",
+            "Пілот БПЛА",
+            "Майстер",
+            "Водій",
+            "Авіаційний механік",
+            "Дешифрувальник",
+            "Механік",
+            "Сапер",
+            "Оператор комплексу РЕБ",
+            "Зв'язківець",
+        ]
+        counter = 0
+        for spec in specialties:
+            existing = db.session.scalar(m.Specialty.select().where(m.Specialty.name == spec))
+            if existing:
+                print(f"Specialty [{spec}] already exists")
+                continue
+            m.Specialty(name=spec).save()
+            counter += 1
+        print(f"{counter} specialties created")

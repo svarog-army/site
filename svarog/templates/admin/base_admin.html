@@ -4,33 +4,9 @@
     <meta charset="utf-8" />
     <title>{{ config.APP_NAME }}</title>
     <!-- meta -->
-    <meta name="description" content="{{_('The official website of the 424th separate battalion')}}">
-    <meta name="author" content="Simple2B" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-    <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="{{ config.APP_NAME }}" />
-    <meta property="og:description" content="{{_('The official website of the 424th separate battalion')}}" />
-    <meta property="og:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
-    <meta property="og:url" content="{{ request.url }}" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ config.APP_NAME }}" />
-    <meta name="twitter:description" content="{{_('The official website of the 424th separate battalion')}}" />
-    <meta name="twitter:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
-
-    <meta name="telegram:card" content="summary_large_image" />
-    <meta name="telegram:title" content="{{ config.APP_NAME }}" />
-    <meta name="telegram:description" content="{{_('The official website of the 424th separate battalion')}}" />
-    <meta name="telegram:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
-
-
-
     <script src="{{ url_for('static', filename='js/lib/htmx.min.js') }}" type="text/javascript" defer></script>
     <script src="{{ url_for('static', filename='js/lib/response-targets.js') }}" type="text/javascript" defer></script>
-
     <link rel="icon" href="{{ url_for('static', filename='img/logo.svg') }}" />
 
     {% block meta %}{% endblock %}
@@ -43,7 +19,10 @@
     {% endblock %}
   </head>
 
-  <body hx-ext="response-targets" class="bg-gray-800 h-screen w-screen bg-cover bg-center bg-no-repeat bg-[url('../../static/img/bg.png')] overflow-hidden">
+  <body hx-ext="response-targets" class="bg-white dark:bg-gray-800">
+    <!-- Header -->
+    <!-- prettier-ignore -->
+    {% include 'header.html' %}
     <!-- Flash Messages -->
     <!-- prettier-ignore -->
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -60,7 +39,11 @@
 
     {% block body %}
 
-    <div class="w-full h-full">
+    <!-- SideBar -->
+    <!-- prettier-ignore -->
+    {% include 'sidebar.html' %}
+
+    <div class="sm:ml-64 mt-14 h-full overflow-x-scroll">
       <!-- Main Content -->
       {% block content %}{% endblock %}
     </div>
@@ -75,7 +58,7 @@
   <div id="not-found"></div>
   {% include 'spinner.html' %}
 
-{% block scripts %} {% endblock %}
+  {% block scripts %} {% endblock %}
 
 </body>
 </html>
