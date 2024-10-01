@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-01 12:07+0300\n"
+"POT-Creation-Date: 2024-10-01 15:28+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -18,6 +18,42 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
+
+#: svarog/templates/about-us.html:16
+msgid "ABOUT US"
+msgstr "ПРО НАС"
+
+#: svarog/templates/about-us.html:20 svarog/templates/about-us.html:46
+#: svarog/templates/about-us.html:72
+msgid ""
+"During the one-week training, you will feel your weaknesses and "
+"strengths, you will understand how you can most effectively show yourself"
+" in the Armed Forces, and you will get During the one-week training, you "
+"will feel your weaknesses and strengths, you will understand how you can "
+"most effectively show yourself in the Armed Forces, and you will get "
+"During the one-week training, you will feel your weaknesses and "
+"strengths, you will understand what you can do most effectively in the "
+"Armed Forces and you will get"
+msgstr ""
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
+
+#: svarog/templates/about-us.html:42
+msgid "WHAT WE DO?"
+msgstr "ЩО МИ РОБИМО?"
+
+#: svarog/templates/about-us.html:68
+msgid "OUR MISSION"
+msgstr "НАША МІСІЯ"
+
+#: svarog/templates/about-us.html:78 svarog/templates/about-us.html:82
+#: svarog/templates/about-us.html:86 svarog/templates/about-us.html:90
+msgid "During the one-week training, you will feel your weaknesses"
+msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
 
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
@@ -32,7 +68,7 @@ msgstr "Надіслати заявку"
 msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
-#: svarog/templates/head.html:20 svarog/templates/button.html:3
+#: svarog/templates/button.html:3 svarog/templates/head.html:20
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
@@ -58,6 +94,97 @@ msgstr "424 окремий батальйон безпілотних систе�
 #: svarog/templates/under_construction.html:74
 msgid "site is under construction"
 msgstr "сайт знаходиться в стані розробки"
+
+#: svarog/templates/admin/add_modal.html:67
+msgid "Confirm Password"
+msgstr ""
+
+#: svarog/templates/admin/add_modal.html:80
+#: svarog/templates/admin/admins.html:31 svarog/templates/admin/admins.html:56
+#: svarog/templates/admin/edit_modal.html:77
+msgid "Admin"
+msgstr ""
+
+#: svarog/templates/admin/add_modal.html:97
+msgid "Save new user"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:6
+msgid "Search"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:22
+msgid "Add user"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:31
+#: svarog/templates/admin/edit_modal.html:29
+msgid "Name"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:31
+msgid "Actions"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:56
+msgid "User"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:61
+msgid "Edit"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:65
+msgid "Delete"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:82
+msgid "First"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:91
+msgid "Previous"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:116
+msgid "Next"
+msgstr ""
+
+#: svarog/templates/admin/admins.html:126
+msgid "Last"
+msgstr ""
+
+#: svarog/templates/admin/edit_modal.html:19
+msgid "Edit user"
+msgstr ""
+
+#: svarog/templates/admin/edit_modal.html:41
+msgid "Email"
+msgstr ""
+
+#: svarog/templates/admin/edit_modal.html:53
+msgid "Password"
+msgstr ""
+
+#: svarog/templates/admin/edit_modal.html:65
+msgid "Confirmation Password"
+msgstr ""
+
+#: svarog/templates/admin/edit_modal.html:94
+msgid "Save all"
+msgstr ""
+
+#: svarog/views/admin.py:83
+msgid "Cannot save user data"
+msgstr ""
+
+#: svarog/views/admin.py:92
+msgid "User updated!"
+msgstr ""
+
+#: svarog/views/admin.py:126
+msgid "User added!"
+msgstr ""
 
 #: svarog/views/application.py:73
 msgid "Application applied successfully"
