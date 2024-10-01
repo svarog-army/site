@@ -117,7 +117,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Get signal config
-        run: echo ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }} | base64 -d > signal-cli-config.tar.gz
+        run: |
+          echo "${{ env.SIGNAL_BOT_CONFIG_BASE64 }}" | base64 -d > signal-cli-config.tar.gz
       - name: Copy signal config archive
         uses: appleboy/scp-action@master
         with:
