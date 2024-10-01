@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ config.APP_NAME }}</title>
-    <!-- meta -->
-    <meta name="description" content="{{_('The official website of the 424th separate battalion')}}">
-    <meta name="author" content="Simple2B" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="{{ config.APP_NAME }}" />
-    <meta property="og:description" content="{{_('The official website of the 424th separate battalion')}}" />
-    <meta property="og:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
-    <meta property="og:url" content="{{ request.url }}" />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="utf-8" />
+  <title>{{ config.APP_NAME }}</title>
+  <!-- meta -->
+  <meta name="description" content="{{_('The official website of the 424th separate battalion')}}">
+  <meta name="author" content="Simple2B" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ config.APP_NAME }}" />
-    <meta name="twitter:description" content="{{_('The official website of the 424th separate battalion')}}" />
-    <meta name="twitter:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
+  <!-- Open Graph meta tags for social sharing -->
+  <meta property="og:title" content="{{ config.APP_NAME }}" />
+  <meta property="og:description" content="{{_('The official website of the 424th separate battalion')}}" />
+  <meta property="og:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
+  <meta property="og:url" content="{{ request.url }}" />
+  <meta property="og:type" content="website" />
 
-    <meta name="telegram:card" content="summary_large_image" />
-    <meta name="telegram:title" content="{{ config.APP_NAME }}" />
-    <meta name="telegram:description" content="{{_('The official website of the 424th separate battalion')}}" />
-    <meta name="telegram:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ config.APP_NAME }}" />
+  <meta name="twitter:description" content="{{_('The official website of the 424th separate battalion')}}" />
+  <meta name="twitter:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
+
+  <meta name="telegram:card" content="summary_large_image" />
+  <meta name="telegram:title" content="{{ config.APP_NAME }}" />
+  <meta name="telegram:description" content="{{_('The official website of the 424th separate battalion')}}" />
+  <meta name="telegram:image" url="{{ url_for('static', filename='img/ceremonial.svg') }}" />
 
 
 
-    <script src="{{ url_for('static', filename='js/lib/htmx.min.js') }}" type="text/javascript" defer></script>
-    <script src="{{ url_for('static', filename='js/lib/response-targets.js') }}" type="text/javascript" defer></script>
-    <link rel="icon" href="{{ url_for('static', filename='img/logo.svg') }}" />
+  <script src="{{ url_for('static', filename='js/lib/htmx.min.js') }}" type="text/javascript" defer></script>
+  <script src="{{ url_for('static', filename='js/lib/response-targets.js') }}" type="text/javascript" defer></script>
+  <link rel="icon" href="{{ url_for('static', filename='img/logo.svg') }}" />
 
-    {% block meta %}{% endblock %}
+  {% block meta %}{% endblock %}
 
-    <!-- styles -->
-    <!-- prettier-ignore -->
-    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
-    <!-- prettier-ignore -->
-    {% block links %}
-    {% endblock %}
-  </head>
+  <!-- styles -->
+  <!-- prettier-ignore -->
+  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+  <!-- prettier-ignore -->
+  {% block links %}
+  {% endblock %}
+</head>
 
-  <body hx-ext="response-targets" class="bg-gray-800 h-screen w-screen bg-cover bg-center bg-no-repeat bg-[url('../../static/img/bg.png')] overflow-hidden">
-    <!-- Flash Messages -->
-    <!-- prettier-ignore -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    {% for category, message in messages %}
-    <!-- Flash message markup -->
-    <!-- prettier-ignore -->
-    {% include 'toast.html' %}
-    <!-- prettier-ignore -->
-    <!-- prettier-ignore -->
-    {% endfor %}
-    {% endif %}
-    {% endwith %}
+<body hx-ext="response-targets" class=" overflow-x-hidden bg-[--main-black]">
+  <!-- Flash Messages -->
+  <!-- prettier-ignore -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  {% for category, message in messages %}
+  <!-- Flash message markup -->
+  <!-- prettier-ignore -->
+  {% include 'toast.html' %}
+  <!-- prettier-ignore -->
+  <!-- prettier-ignore -->
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
 
-    {% block body %}
+  {% block body %}
 
-    <div class="w-full h-full">
-      <!-- Main Content -->
-      {% block content %}{% endblock %}
-    </div>
-    {% endblock %}
-    <!-- scripts -->
+  <!-- Header -->
+  {% include 'head.html' %}
 
-    <!-- prettier-ignore -->
+  <div class="w-full h-full">
+    <!-- Main Content -->
+    {% block content %}{% endblock %}
+  </div>
+  {% endblock %}
+  <!-- scripts -->
+
+  <!-- prettier-ignore -->
 
   </div>
   <script src="{{ url_for('static', filename='js/base.js') }}" type="text/javascript" defer></script>
@@ -74,7 +78,8 @@
   <div id="not-found"></div>
   {% include 'spinner.html' %}
 
-{% block scripts %} {% endblock %}
+  {% block scripts %} {% endblock %}
 
 </body>
+
 </html>

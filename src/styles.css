@@ -2,17 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-yellow: #ffc823;
+  --main-black: #000000;
+  color: white;
+}
 
 .text-danger {
-    color: red;
+  color: red;
 }
 
-.htmx-indicator{
-    display: none;
+.htmx-indicator {
+  display: none;
 }
-.htmx-request .htmx-indicator{
-    display:inline;
+.htmx-request .htmx-indicator {
+  display: inline;
 }
-.htmx-request.htmx-indicator{
-    display:inline;
+.htmx-request.htmx-indicator {
+  display: inline;
+}
+
+.main-button::before,
+.main-button::after {
+  content: '';
+  position: absolute;
+  border-color: var(--main-yellow);
+  border-style: solid;
+  width: 10px;
+  height: 100%;
+}
+
+.main-button::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 2px 2px;
+}
+
+.main-button::after {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 2px 0;
 }
