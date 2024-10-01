@@ -14,4 +14,4 @@ node_modules/
 *.pot
 
 signal-cli-config*
-.yarn
+.yarn/

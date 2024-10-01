@@ -1,15 +1,13 @@
 import asyncio
 
+from config import CFG
 from svarog.logger import log
 
 
-def send_message(
+def send_signal_message(
     message: str,
 ):
     from signalbot import SignalBot
-    from config import config
-
-    CFG = config()
 
     recipient = CFG.SIGNAL_TO
     signal_bot = SignalBot({"signal_service": f"{CFG.SIGNAL_HOST}:{CFG.SIGNAL_PORT}", "phone_number": CFG.SIGNAL_FROM})
