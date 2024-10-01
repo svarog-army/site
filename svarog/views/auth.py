@@ -6,7 +6,7 @@ from svarog import forms as f
 from svarog.logger import log
 
 
-auth_blueprint = Blueprint("auth", __name__)
+auth_blueprint = Blueprint("auth", __name__, url_prefix="/admin")
 
 
 @auth_blueprint.route("/login", methods=["GET", "POST"])
@@ -19,7 +19,7 @@ def login():
             login_user(user)
             log(log.INFO, "Login successful.")
             flash("Login successful.", "success")
-            return redirect(url_for("admin.get_all_users"))
+            return redirect(url_for("admin.admins"))
         elif user and user.is_admin:
             login_user(user)
             log(log.INFO, "Login successful.")
@@ -39,4 +39,4 @@ def logout():
     logout_user()
     log(log.INFO, "You were logged out.")
     session.clear()
-    return redirect(url_for("admin.auth.login"))
+    return redirect(url_for("auth.login"))
