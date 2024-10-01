@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-01 15:28+0300\n"
+"POT-Creation-Date: 2024-10-01 17:45+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -86,6 +86,51 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш  проявити себе в ЗСУ та отримаєш "
 "можливість вибрати свій шлях у військовій кар'єрі"
+
+#: svarog/templates/our-values.html:3
+msgid "OUR VALUES"
+msgstr "НАШІ ЦІННОСТІ"
+
+#: svarog/templates/our-values.html:15
+msgid "BROTHERHOOD"
+msgstr "ПОБРАТИМСТВО"
+
+#: svarog/templates/our-values.html:19 svarog/templates/our-values.html:36
+#: svarog/templates/our-values.html:53 svarog/templates/our-values.html:70
+msgid ""
+"During the one-week training, you will feel your weaknesses and "
+"strengths, you will understand how you can show yourself most effectively"
+" in the Armed Forces and you will receive During the one-week training, "
+"you will feel your weaknesses and strengths"
+msgstr ""
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони"
+
+#: svarog/templates/our-values.html:32
+msgid "TACTICS"
+msgstr "ТАКТИКА"
+
+#: svarog/templates/our-values.html:49
+msgid "NATION"
+msgstr "НАЦІЯ"
+
+#: svarog/templates/our-values.html:66
+msgid "SPIRIT"
+msgstr "ДУХ"
+
+#: svarog/templates/recruit.html:6
+msgid "WE STARTED RECRUITING VOLUNTEERS"
+msgstr "МИ РОЗПОЧАЛИ НАБІР ДОБРОВОЛЬЦІВ"
+
+#: svarog/templates/recruit.html:10
+msgid ""
+"During the one-week training, you will feel your weaknesses and "
+"strengths, you will understand how you can show yourself most effectively"
+" in the Armed Forces, and you will receive"
+msgstr ""
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
 #: svarog/templates/under_construction.html:66
 msgid "424th separate battalion of unmanned systems"
