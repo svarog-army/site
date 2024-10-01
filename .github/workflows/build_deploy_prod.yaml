@@ -13,6 +13,8 @@ env:
   DEPLOY_SSH_KEY: ${{ secrets.SSH_KEY_PROD }}
   DEPLOY_SSH_PORT: ${{ secrets.SSH_PORT_PROD }}
   DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  SIGNAL_BOT_CONFIG_BASE64: ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }}
+
 
 jobs:
   deploy:
@@ -37,8 +39,11 @@ jobs:
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
+          envs: SIGNAL_BOT_CONFIG_BASE64
           script: |
             cd ~/svarog_prod &&
+            echo $SIGNAL_BOT_CONFIG_BASE64 | base64 -d > signal-cli-config.tar.gz &&
+            tar -xzf signal-cli-config.tar.gz &&
             mv compose.prod.yaml compose.yaml &&
             docker compose pull &&
             docker compose up -d &&

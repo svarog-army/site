@@ -57,6 +57,12 @@ class BaseConfig(BaseSettings):
     BABEL_DEFAULT_LOCALE: str = "uk"
     BABEL_SUPPORTED_LOCALES: list[str] = ["uk", "en"]
 
+    # Signal Bot
+    SIGNAL_HOST: str
+    SIGNAL_PORT: str
+    SIGNAL_FROM: str
+    SIGNAL_TO: str
+
     @staticmethod
     def configure(app):
         # Implement this method to do further configuration on your app.
