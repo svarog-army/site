@@ -22,11 +22,20 @@ services:
       ALCHEMICAL_DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-passwd}@db:5432/db
     depends_on:
       - db
+      - signal
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.svarog_py.rule=Host(`stage.svarog.424bat.army`)'
       - 'traefik.http.routers.svarog_py.tls=true'
       - 'traefik.http.routers.svarog_py.tls.certresolver=myresolver'
+
+  signal:
+    image: bbernhard/signal-cli-rest-api:latest
+    restart: always
+    environment:
+      - MODE=json-rpc
+    volumes:
+      - "./signal-cli-config:/home/.local/share/signal-cli"
 
   # api:
   #   image: simple2b/flask-app:0.1

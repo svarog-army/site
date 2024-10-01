@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "svarog"
-version = "0.0.17"
+version = "0.0.18"
 description = ""
 authors = ["kostia <saintkos117@gmail.com>"]
 
@@ -24,6 +24,7 @@ pydantic-settings = "^2.0.3"
 email-validator = "^2.2.0"
 wtforms-sqlalchemy = "^0.4.1"
 flask-babel = "^4.0.0"
+signalbot = "^0.10.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"

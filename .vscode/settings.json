@@ -16,6 +16,7 @@
     "jsonify",
     "pydantic",
     "pytest",
+    "signalbot",
     "sqlalchemy",
     "svarog",
     "tailwindcss",
