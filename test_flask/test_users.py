@@ -60,6 +60,6 @@ def test_delete_user(populate: FlaskClient):
     login(populate)
     user: m.User = db.session.scalar(m.User.select())
     uc = db.session.query(m.User).count()
-    response = populate.delete(f"/user/delete/{user.uuid}")
+    response = populate.delete(f"/admin/delete/{user.uuid}")
     assert db.session.query(m.User).filter(m.User.is_deleted.is_(False)).count() < uc
     assert response.status_code == 202

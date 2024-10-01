@@ -25,7 +25,6 @@ def create_app(environment="development"):
     from svarog.views import (
         main_blueprint,
         auth_blueprint,
-        user_blueprint,
         multilingual,
         application_blueprint,
         admin_blueprint,
@@ -67,7 +66,6 @@ def create_app(environment="development"):
     # Register blueprints.
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
-    app.register_blueprint(user_blueprint)
     app.register_blueprint(application_blueprint)
     app.register_blueprint(multilingual)
     app.register_blueprint(admin_blueprint)
