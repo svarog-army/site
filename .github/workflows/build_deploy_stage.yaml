@@ -116,6 +116,17 @@ jobs:
     if: ${{ needs.on-develop-branch-check.outputs.on_develop == 'true' }}
     steps:
       - uses: actions/checkout@v4
+      - name: Get signal config
+        run: echo ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }} | base64 -d > signal-cli-config.tar.gz
+      - name: Copy signal config archive
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ env.DEPLOY_HOST }}
+          username: ${{ env.DEPLOY_USER_NAME }}
+          key: ${{ env.DEPLOY_SSH_KEY }}
+          port: ${{ env.DEPLOY_SSH_PORT }}
+          source: signal-cli-config.tar.gz
+          target: ~/svarog_py
       - name: update compose file
         uses: appleboy/scp-action@master
         with:
@@ -135,7 +146,6 @@ jobs:
           envs: SIGNAL_BOT_CONFIG_BASE64
           script: |
             cd ~/svarog_py &&
-            echo ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }} | base64 -d > signal-cli-config.tar.gz &&
             tar -xzf signal-cli-config.tar.gz &&
             mv compose.staging.yaml compose.yaml &&
             docker compose pull &&
