@@ -5,12 +5,12 @@ TEST_EMAIL = "sam@test.com"
 
 
 def test_auth_pages(client):
-    response = client.get("/login")
+    response = client.get("/admin/login")
     assert response.status_code == 200
-    response = client.get("/logout")
+    response = client.get("/admin/logout")
     assert response.status_code == 302
-    response = client.get("/forgot")
-    assert response.status_code == 200
+    response = client.get("/admin/")
+    assert response.status_code == 302
 
 
 def test_login_and_logout(client):
