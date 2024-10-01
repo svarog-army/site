@@ -5,6 +5,8 @@ from config import CFG
 
 multilingual = Blueprint("multilingual", __name__, template_folder="templates", url_prefix="/<lang_code>")
 
+SERVICE_ROUTES = ["admin", "auth", "favicon.ico", "static"]
+
 
 @multilingual.url_defaults
 def add_language_code(endpoint, values):
