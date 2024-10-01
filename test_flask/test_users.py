@@ -8,7 +8,7 @@ from test_flask.utils import login
 def test_list(populate: FlaskClient):
     login(populate)
     DEFAULT_PAGE_SIZE = app.config["DEFAULT_PAGE_SIZE"]
-    response = populate.get("/admin/users")
+    response = populate.get("/admin/admins")
     assert response
     assert response.status_code == 200
     html = response.data.decode()
@@ -19,15 +19,15 @@ def test_list(populate: FlaskClient):
     assert users[10].username not in html
 
     populate.application.config["PAGE_LINKS_NUMBER"] = 6
-    response = populate.get("/admin/users?page=6")
+    response = populate.get("/admin/admins?page=6")
     assert response
     assert response.status_code == 200
     html = response.data.decode()
-    assert "/admin/users?page=6" in html
-    assert "/admin/users?page=3" in html
-    assert "/admin/users?page=8" in html
-    assert "/admin/users?page=10" not in html
-    assert "/admin/users?page=2" not in html
+    assert "/admin/admins?page=6" in html
+    assert "/admin/admins?page=3" in html
+    assert "/admin/admins?page=8" in html
+    assert "/admin/admins?page=10" not in html
+    assert "/admin/admins?page=2" not in html
 
 
 def test_create_admin(runner: FlaskCliRunner):
@@ -48,7 +48,7 @@ def test_populate_db(runner: FlaskCliRunner):
 def test_edit_user(populate: FlaskClient):
     login(populate)
     user: m.User = db.session.scalar(m.User.select())
-    response = populate.get(f"/user/get-edit-form/{user.uuid}")
+    response = populate.get(f"/admin/get-edit-form/{user.uuid}")
     assert response.status_code == 200
     assert user.username in response.data.decode()
     assert user.email in response.data.decode()
