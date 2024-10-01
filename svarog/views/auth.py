@@ -1,11 +1,8 @@
-from flask_mail import Message
 from flask import Blueprint, render_template, url_for, redirect, flash, request, session
-from flask import current_app as app
-from flask_login import login_user, logout_user, login_required, current_user
+from flask_login import login_user, logout_user, login_required
 
 from svarog import models as m
 from svarog import forms as f
-from svarog import mail, db
 from svarog.logger import log
 
 
@@ -27,7 +24,7 @@ def login():
             login_user(user)
             log(log.INFO, "Login successful.")
             flash("Login successful.", "success")
-            return redirect(url_for("admin.get_all_admins"))
+            return redirect(url_for("admin.admins"))
 
         flash("Wrong user ID or password.", "danger")
 
