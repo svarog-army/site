@@ -28,6 +28,7 @@ def create_app(environment="development"):
         multilingual,
         application_blueprint,
         admin_blueprint,
+        recruit_blueprint,
     )
     from svarog import models as m
 
@@ -69,6 +70,7 @@ def create_app(environment="development"):
     app.register_blueprint(application_blueprint)
     app.register_blueprint(multilingual)
     app.register_blueprint(admin_blueprint)
+    app.register_blueprint(recruit_blueprint)
 
     @app.route("/")
     def home():

@@ -8,7 +8,7 @@
     class="rounded-lg relative w-full max-w-2xl max-h-full bg-white"
     onclick="event.stopPropagation();">
     <form
-      action="{{url_for('admin.save')}}"
+      action="{{url_for('recruit.save')}}"
       method="post"
       class="relative bg-white rounded-lg shadow dark:bg-gray-700">
       {{ form.hidden_tag() }}
@@ -16,68 +16,136 @@
       <div
         class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-          {{_("Edit user")}}
+          {{_("Recruit") + " " + form.full_name.data}}
         </h3>
       </div>
       <!-- Modal body -->
       <div class="p-6 space-y-6">
         <div class="grid grid-cols-6 gap-6">
           <div class="col-span-6 sm:col-span-3">
-            <label
-              for="username"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >{{_("Name")}}</label
-            >
-            {{ form.username(class_="shadow-sm bg-gray-50 border border-gray-300
-            text-gray-900 text-sm rounded-lg focus:ring-blue-600
-            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
-            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
-            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
-          </div>
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >{{_("Email")}}</label
-            >
-            {{ form.email(class_="shadow-sm bg-gray-50 border border-gray-300
-            text-gray-900 text-sm rounded-lg focus:ring-blue-600
-            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
-            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
-            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
-          </div>
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="password"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >{{_("Password")}}</label
-            >
-            {{ form.password(class_="shadow-sm bg-gray-50 border border-gray-300
-            text-gray-900 text-sm rounded-lg focus:ring-blue-600
-            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
-            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
-            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
-          </div>
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="password_confirmation"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >{{_("Confirmation Password")}}</label
-            >
-            {{ form.password_confirmation(class_="shadow-sm bg-gray-50 border
+            <!-- prettier-ignore -->
+            <label for="full_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Name")}}</label >
+            {{ form.full_name(class_="shadow-sm bg-gray-50 border
             border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
             focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
             dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
             dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label
-              for="is_admin"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >{{_("Admin")}}</label
-            >
-            {{ form.is_admin(class_="shadow-sm bg-gray-50 border border-gray-300
+            <!-- prettier-ignore -->
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Email")}}</label >
+            {{ form.email(class_="shadow-sm bg-gray-50 border border-gray-300
             text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="birth_date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Birth Date")}}</label >
+            {{ form.birth_date(class_="shadow-sm bg-gray-50 border
+            border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Phone")}}</label >
+            {{ form.phone(class_="shadow-sm bg-gray-50 border border-gray-300
+            text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="city_of_actual_residence" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("From")}}</label >
+            {{ form.city_of_actual_residence(class_="shadow-sm bg-gray-50 border
+            border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="education" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Education")}}</label >
+            {{ form.education(class_="shadow-sm bg-gray-50 border
+            border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="skills" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Skills")}}</label >
+            {{ form.skills(class_="shadow-sm bg-gray-50 border border-gray-300
+            text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="last_job" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Last Job")}}</label >
+            {{ form.last_job(class_="shadow-sm bg-gray-50 border border-gray-300
+            text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="health_problems" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Health Problems")}}</label >
+            {{ form.health_problems(class_="shadow-sm bg-gray-50 border
+            border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="have_driver_license" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Driver License")}}</label >
+            {{ form.have_driver_license(class_="shadow-sm bg-gray-50 border
+            border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="uav_experience" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("UAV Experience")}}</label >
+            {{ form.uav_experience(class_="shadow-sm bg-gray-50 border
+            border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Status")}}</label >
+            {{ form.status(class_="shadow-sm bg-gray-50 border border-gray-300
+            text-gray-900 text-sm rounded-lg focus:ring-blue-600
+            focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+            dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <!-- prettier-ignore -->
+            <label for="is_serviceman" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("military serviceman")}}</label >
+            {{ form.is_serviceman(class_="shadow-sm bg-gray-50 border
+            border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
             focus:border-blue-600 block p-2.5 dark:bg-gray-600
             dark:border-gray-500 dark:placeholder-gray-400 dark:text-black
             dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
@@ -86,12 +154,24 @@
       </div>
       <!-- Modal footer -->
       <div
+        class="flex items-center p-1 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 w-full">
+        <div class="w-full p-6">
+          <!-- prettier-ignore -->
+          <label for="comments" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Comments")}}</label >
+          {{ form.comments(class_="shadow-sm bg-gray-50 border border-gray-300
+          text-gray-900 text-sm rounded-lg focus:ring-blue-600
+          focus:border-blue-600 p-2.5 dark:bg-gray-600 dark:border-gray-500
+          dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500
+          dark:focus:border-blue-500 block w-full") }}
+        </div>
+      </div>
+      <div
         class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
         <button
           name="submit"
           type="submit"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          {{_("Save all")}}
+          {{_("Save changes")}}
         </button>
       </div>
     </form>
