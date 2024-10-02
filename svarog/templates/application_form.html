@@ -11,7 +11,7 @@
     action="{{url_for('application.create')}}"
     method="post"
     class="lg:flex-1">
-    <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2 items-end">
       {{ application_form.hidden_tag() }}
       <div class="group">
         <!-- prettier-ignore -->
@@ -42,21 +42,20 @@
         border-b-white/50 focus:outline-none focus-visible:ring-0
         focus:border-b-white transition")}}
       </div>
-
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="email" class="block text-white/50  group-focus-within:text-white transition" >Електронна пошта*</label >
+        <label for="city_of_actual_residence" class="block text-white/50  group-focus-within:text-white transition" >Місто фактичного проживання*</label >
         <!-- prettier-ignore -->
-        {{application_form.email(autocomplete="off", class="block w-full
+        {{application_form.city_of_actual_residence(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
         border-b-white/50 focus:outline-none focus-visible:ring-0
         focus:border-b-white transition")}}
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="city_of_actual_residence" class="block text-white/50  group-focus-within:text-white transition" >Місто фактичного проживання*</label >
+        <label for="email" class="block text-white/50  group-focus-within:text-white transition" >Електронна пошта*</label >
         <!-- prettier-ignore -->
-        {{application_form.city_of_actual_residence(autocomplete="off", class="block w-full
+        {{application_form.email(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
         border-b-white/50 focus:outline-none focus-visible:ring-0
         focus:border-b-white transition")}}
@@ -106,15 +105,14 @@
         border-b-white/50 focus:outline-none focus-visible:ring-0
         focus:border-b-white transition")}}
       </div>
-      <div class="group lg:col-span-2">
+      <div class="group">
         <!-- prettier-ignore -->
-        <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition"> Чи Ви є військовослужбовцем?* </label>
-
-        <div class="flex items-center flex-row">
-          <!-- Radio button "Так" -->
-          <!-- prettier-ignore -->
-          {{ application_form.is_serviceman(class="h-8 w-40 flex flex-row justify-between text-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800") }}
-        </div>
+        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >Оберіть спеціальність*</label >
+        <!-- prettier-ignore -->
+        {{application_form.applied_specialties(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
       </div>
       <div class="group">
         <!-- prettier-ignore -->
@@ -125,15 +123,18 @@
         border-b-white/50 focus:outline-none focus-visible:ring-0
         focus:border-b-white transition")}}
       </div>
-      <div class="group">
+
+      <div class="group lg:col-span-2">
         <!-- prettier-ignore -->
-        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >Оберіть спеціальність*</label >
-        <!-- prettier-ignore -->
-        {{application_form.applied_specialties(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
+        <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition"> Чи Ви є військовослужбовцем?* </label>
+
+        <div class="flex items-center flex-row">
+          <!-- Radio button "Так" -->
+          <!-- prettier-ignore -->
+          {{ application_form.is_serviceman(class="h-8 w-40 flex flex-row justify-between text-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800") }}
+        </div>
       </div>
+
       <!-- prettier-ignore -->
       <!--{# <div class=" group">
                                 <label for="applied_specialties" class="block text-white/50  group-focus-within:text-white transition"> Оберіть спеціальності* </label>
