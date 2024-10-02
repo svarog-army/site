@@ -1,12 +1,16 @@
-<section class="container px-5 flex gap-14 flex-col">
-  <div class="flex flex-col gap-5">
+<section
+  class="container px-5 flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-[70px] bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
+  <div class="flex flex-col gap-5 lg:flex-1">
     <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
     <p class="text-base">
       {{_("In order to get into the ranks of the Force of Unmanned Systems, you
       need to apply by filling out the questionnaire.")}}
     </p>
   </div>
-  <form action="{{url_for('application.create')}}" method="post">
+  <form
+    action="{{url_for('application.create')}}"
+    method="post"
+    class="lg:flex-1">
     <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2">
       {{ application_form.hidden_tag() }}
       <div class="group">
@@ -102,14 +106,14 @@
         border-b-white/50 focus:outline-none focus-visible:ring-0
         focus:border-b-white transition")}}
       </div>
-      <div class="group">
+      <div class="group lg:col-span-2">
         <!-- prettier-ignore -->
         <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition"> Чи Ви є військовослужбовцем?* </label>
 
         <div class="flex items-center flex-row">
           <!-- Radio button "Так" -->
           <!-- prettier-ignore -->
-          {{ application_form.is_serviceman(class="h-8 w-40 flex flex-row justify-between text-white bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800") }}
+          {{ application_form.is_serviceman(class="h-8 w-40 flex flex-row justify-between text-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800") }}
         </div>
       </div>
       <div class="group">
@@ -141,12 +145,11 @@
                                   {% endfor %}
                                 </select>
                               </div> #}-->
-      <div
-        class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+      <div class="flex items-center p-6 space-x-2 lg:col-span-2">
         <button
           name="submit"
           type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          class="frame-border w-max relative px-4 text-lg bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
           {{_("Save new application")}}
         </button>
       </div>
