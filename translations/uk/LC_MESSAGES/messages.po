@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-02 12:18+0300\n"
+"POT-Creation-Date: 2024-10-02 15:39+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -71,6 +71,34 @@ msgstr "Офіційний веб-сайт 424-го окремого батал�
 #: svarog/templates/button.html:3 svarog/templates/head.html:21
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
+
+#: svarog/templates/footer.html:5
+msgid "SEPARATE BATTALION OF UNMANNED SYSTEMS"
+msgstr "ОКРЕМИЙ БАТАЛЬЙОН БЕЗПІЛОТНИХ СИСТЕМ"
+
+#: svarog/templates/footer.html:21
+msgid "Main"
+msgstr "Головна"
+
+#: svarog/templates/footer.html:22
+msgid "About us"
+msgstr "Про нас"
+
+#: svarog/templates/footer.html:23
+msgid "FAQ"
+msgstr "Запитання"
+
+#: svarog/templates/footer.html:24
+msgid "Vacancies"
+msgstr "Вакансії"
+
+#: svarog/templates/footer.html:25
+msgid "Contacts"
+msgstr "Контакти"
+
+#: svarog/templates/footer.html:29
+msgid "CONTACT CENTER"
+msgstr "КОНТАКТ ЦЕНТР"
 
 #: svarog/templates/hero.html:7
 msgid "CHOOSE YOUR WAY WITH USF"
