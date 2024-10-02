@@ -12,6 +12,7 @@ from flask_babel import _
 from svarog import db
 from svarog import forms as f
 from svarog import models as m
+from svarog.controllers import send_signal_message, create_new_application_message
 from svarog.logger import log
 
 application_bp = Blueprint("application", __name__, url_prefix="/application")
@@ -70,5 +71,6 @@ def create():
 
     log(log.INFO, "Form submitted. Application: [%s]", application)
     application.save()
+    send_signal_message(create_new_application_message(application))
     flash(_("Application applied successfully"), "success")
     return redirect(url_for("home"))
