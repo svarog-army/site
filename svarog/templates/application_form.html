@@ -1,0 +1,155 @@
+<section class="container px-5 flex gap-14 flex-col">
+  <div class="flex flex-col gap-5">
+    <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
+    <p class="text-base">
+      {{_("In order to get into the ranks of the Force of Unmanned Systems, you
+      need to apply by filling out the questionnaire.")}}
+    </p>
+  </div>
+  <form action="{{url_for('application.create')}}" method="post">
+    <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      {{ application_form.hidden_tag() }}
+      <div class="group">
+        <!-- prettier-ignore -->
+        <!-- prettier-ignore -->
+        <label for="full_name" class="block text-white/50  group-focus-within:text-white transition"
+          >Прізвище та імʼя*</label
+        >
+        {{application_form.full_name(autocomplete="off", class=" block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="birth_date" class="block text-white/50  group-focus-within:text-white transition " >Дата народження*</label >
+        <!-- prettier-ignore -->
+        {{application_form.birth_date(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="phone" class="block text-white/50  group-focus-within:text-white transition" >Телефон*</label >
+        <!-- prettier-ignore -->
+        {{application_form.phone(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="email" class="block text-white/50  group-focus-within:text-white transition" >Електронна пошта*</label >
+        <!-- prettier-ignore -->
+        {{application_form.email(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="city_of_actual_residence" class="block text-white/50  group-focus-within:text-white transition" >Місто фактичного проживання*</label >
+        <!-- prettier-ignore -->
+        {{application_form.city_of_actual_residence(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="education" class="block text-white/50  group-focus-within:text-white transition" >Освіта, спеціальність*</label >
+        <!-- prettier-ignore -->
+        {{application_form.education(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="skills" class="block text-white/50  group-focus-within:text-white transition" >Професійні навички (скіли)*</label >
+        <!-- prettier-ignore -->
+        {{application_form.skills(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="last_job" class="block text-white/50  group-focus-within:text-white transition" >Остання цивільна посада*</label >
+        <!-- prettier-ignore -->
+        {{application_form.last_job(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="health_problems" class="block text-white/50  group-focus-within:text-white transition" >Чи наявні у Вас критичні проблеми зі здоровʼям*</label >
+        <!-- prettier-ignore -->
+        {{application_form.health_problems(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="have_driver_license" class="block text-white/50  group-focus-within:text-white transition" >Наявність водійського посвідчення. Якщо так - які категорії?*</label >
+        <!-- prettier-ignore -->
+        {{application_form.have_driver_license(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition"> Чи Ви є військовослужбовцем?* </label>
+
+        <div class="flex items-center flex-row">
+          <!-- Radio button "Так" -->
+          <!-- prettier-ignore -->
+          {{ application_form.is_serviceman(class="h-8 w-40 flex flex-row justify-between text-white bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800") }}
+        </div>
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >Чи маєте досвід з БПЛА (якщо так, який саме)*</label >
+        <!-- prettier-ignore -->
+        {{application_form.uav_experience(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <div class="group">
+        <!-- prettier-ignore -->
+        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >Оберіть спеціальність*</label >
+        <!-- prettier-ignore -->
+        {{application_form.applied_specialties(autocomplete="off", class="block w-full
+        text-white/50c focus:text-white bg-transparent border-0 border-b
+        border-b-white/50 focus:outline-none focus-visible:ring-0
+        focus:border-b-white transition")}}
+      </div>
+      <!-- prettier-ignore -->
+      <!--{# <div class=" group">
+                                <label for="applied_specialties" class="block text-white/50  group-focus-within:text-white transition"> Оберіть спеціальності* </label>
+                                <label class="block text-white/50  group-focus-within:text-white transition" for="applied_specialties">Parent (optional)</label>
+                                <select name="applied_specialties" multiple  class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                                  {% for specialty in specialties %}
+                                  <option value="{{ specialty.id }}">{{ specialty.name }}</option>
+                                  {% endfor %}
+                                </select>
+                              </div> #}-->
+      <div
+        class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button
+          name="submit"
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          {{_("Save new application")}}
+        </button>
+      </div>
+    </fieldset>
+  </form>
+</section>

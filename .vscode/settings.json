@@ -30,5 +30,6 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "cSpell.language": "en,uk"
+  "cSpell.language": "en,uk",
+  "djlint.showInstallError": false
 }

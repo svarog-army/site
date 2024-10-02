@@ -8,7 +8,10 @@ from svarog import models as m
 
 
 class ApplicationForm(FlaskForm):
-    full_name = StringField("Full Name", [DataRequired()])
+    full_name = StringField(
+        "Full Name",
+        [DataRequired()],
+    )
     birth_date = DateField("Birth Date", [DataRequired()])
     phone = StringField("Phone", [DataRequired()])
     email = EmailField("Email", [DataRequired(), Email()])
