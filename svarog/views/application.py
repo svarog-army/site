@@ -43,14 +43,14 @@ def create():
         last_job=form.last_job.data,
         health_problems=form.health_problems.data,
         have_driver_license=form.have_driver_license.data,
-        is_serviceman=True if form.is_serviceman.data == "yes" else False,
+        is_serviceman=form.is_serviceman.data == "yes",
         uav_experience=form.uav_experience.data,
         specialties=form.applied_specialties.data,
     )
     existing_recruit = db.session.scalar(sa.select(m.Recruit).where(m.Recruit.phone == form.phone.data))
     if existing_recruit:
         application.recruit_id = existing_recruit.id
-        existing_recruit.applications.extend(application.applied_specialties)
+        application.recruit = existing_recruit
     else:
         recruit = m.Recruit(
             full_name=form.full_name.data,
