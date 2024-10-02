@@ -17,7 +17,7 @@
         <!-- prettier-ignore -->
         <!-- prettier-ignore -->
         <label for="full_name" class="block text-white/50  group-focus-within:text-white transition"
-          >Прізвище та імʼя*</label
+          >{{_("Full name")}}*</label
         >
         {{application_form.full_name(autocomplete="off", class=" block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -26,7 +26,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="birth_date" class="block text-white/50  group-focus-within:text-white transition " >Дата народження*</label >
+        <label for="birth_date" class="block text-white/50  group-focus-within:text-white transition " >{{_("Date of birth")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.birth_date(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -35,7 +35,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="phone" class="block text-white/50  group-focus-within:text-white transition" >Телефон*</label >
+        <label for="phone" class="block text-white/50  group-focus-within:text-white transition" >{{_("Phone")}}</label >
         <!-- prettier-ignore -->
         {{application_form.phone(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -44,7 +44,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="city_of_actual_residence" class="block text-white/50  group-focus-within:text-white transition" >Місто фактичного проживання*</label >
+        <label for="city_of_actual_residence" class="block text-white/50  group-focus-within:text-white transition" >{{_("City of actual residence")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.city_of_actual_residence(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -53,7 +53,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="email" class="block text-white/50  group-focus-within:text-white transition" >Електронна пошта*</label >
+        <label for="email" class="block text-white/50  group-focus-within:text-white transition" >{{_("Email")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.email(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -62,7 +62,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="education" class="block text-white/50  group-focus-within:text-white transition" >Освіта, спеціальність*</label >
+        <label for="education" class="block text-white/50  group-focus-within:text-white transition" >{{_("Education, specialty")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.education(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -71,7 +71,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="skills" class="block text-white/50  group-focus-within:text-white transition" >Професійні навички (скіли)*</label >
+        <label for="skills" class="block text-white/50  group-focus-within:text-white transition" >{{_("Professional skills")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.skills(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -80,7 +80,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="last_job" class="block text-white/50  group-focus-within:text-white transition" >Остання цивільна посада*</label >
+        <label for="last_job" class="block text-white/50  group-focus-within:text-white transition" >{{_("Last civilian position")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.last_job(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -89,7 +89,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="health_problems" class="block text-white/50  group-focus-within:text-white transition" >Чи наявні у Вас критичні проблеми зі здоровʼям*</label >
+        <label for="health_problems" class="block text-white/50  group-focus-within:text-white transition" >{{_("Do you have critical health problems")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.health_problems(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -98,7 +98,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="have_driver_license" class="block text-white/50  group-focus-within:text-white transition" >Наявність водійського посвідчення. Якщо так - які категорії?*</label >
+        <label for="have_driver_license" class="block text-white/50  group-focus-within:text-white transition">{{_("Having a driver's license. If so, what categories?")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.have_driver_license(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -107,7 +107,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >Оберіть спеціальність*</label >
+        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >{{_("Choose a specialty")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.applied_specialties(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -116,7 +116,7 @@
       </div>
       <div class="group">
         <!-- prettier-ignore -->
-        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >Чи маєте досвід з БПЛА (якщо так, який саме)*</label >
+        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >{{_("Do you have experience with UAVs (if so, what kind)")}}*</label >
         <!-- prettier-ignore -->
         {{application_form.uav_experience(autocomplete="off", class="block w-full
         text-white/50c focus:text-white bg-transparent border-0 border-b
@@ -126,7 +126,7 @@
 
       <div class="group lg:col-span-2">
         <!-- prettier-ignore -->
-        <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition"> Чи Ви є військовослужбовцем?* </label>
+        <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition">{{_("Are you a military serviceman?")}}* </label>
 
         <div class="flex items-center flex-row">
           <!-- Radio button "Так" -->
