@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       screens: {
         desktop: '1440px',
+        widescreen: '1920px',
       },
     },
   },
