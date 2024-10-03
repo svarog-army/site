@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 11:49+0300\n"
+"POT-Creation-Date: 2024-10-03 15:55+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -27,28 +27,21 @@ msgstr "Так"
 msgid "No"
 msgstr "Ні"
 
-#: svarog/templates/about-us.html:19
+#: svarog/templates/about-us.html:16
 msgid "ABOUT US"
 msgstr "ПРО НАС"
 
-#: svarog/templates/about-us.html:22 svarog/templates/about-us.html:57
-#: svarog/templates/about-us.html:92
-#, fuzzy
+#: svarog/templates/about-us.html:20 svarog/templates/about-us.html:46
+#: svarog/templates/about-us.html:72
 msgid ""
-"During the one-week training, you will feel your weaknesses and\n"
-"          strengths, you will understand how you can most effectively "
-"show\n"
-"          yourself in the Armed Forces, and you will get During the one-"
-"week\n"
-"          training, you will feel your weaknesses and strengths, you will"
-"\n"
-"          understand how you can most effectively show yourself in the "
-"Armed\n"
-"          Forces, and you will get During the one-week training, you will"
-" feel\n"
-"          your weaknesses and strengths, you will understand what you can"
-" do\n"
-"          most effectively in the Armed Forces and you will get"
+"During the one-week training, you will feel your weaknesses and "
+"strengths, you will understand how you can most effectively show yourself"
+" in the Armed Forces, and you will get During the one-week training, you "
+"will feel your weaknesses and strengths, you will understand how you can "
+"most effectively show yourself in the Armed Forces, and you will get "
+"During the one-week training, you will feel your weaknesses and "
+"strengths, you will understand what you can do most effectively in the "
+"Armed Forces and you will get"
 msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
@@ -57,20 +50,17 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/about-us.html:54
+#: svarog/templates/about-us.html:42
 msgid "WHAT WE DO?"
 msgstr "ЩО МИ РОБИМО?"
 
-#: svarog/templates/about-us.html:89
+#: svarog/templates/about-us.html:68
 msgid "OUR MISSION"
 msgstr "НАША МІСІЯ"
 
-#: svarog/templates/about-us.html:108 svarog/templates/about-us.html:117
-#: svarog/templates/about-us.html:126 svarog/templates/about-us.html:135
-#, fuzzy
-msgid ""
-"During the one-week training, you will feel your\n"
-"              weaknesses"
+#: svarog/templates/about-us.html:78 svarog/templates/about-us.html:82
+#: svarog/templates/about-us.html:86 svarog/templates/about-us.html:90
+msgid "During the one-week training, you will feel your weaknesses"
 msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
 
 #: svarog/templates/application_form.html:5
@@ -156,8 +146,8 @@ msgstr ""
 msgid "Save new application"
 msgstr "Надіслати заявку"
 
-#: svarog/templates/base.html:8 svarog/templates/base.html:14
-#: svarog/templates/base.html:22 svarog/templates/base.html:27
+#: svarog/templates/base.html:17 svarog/templates/base.html:23
+#: svarog/templates/base.html:31 svarog/templates/base.html:36
 #: svarog/templates/under_construction.html:7
 #: svarog/templates/under_construction.html:13
 #: svarog/templates/under_construction.html:21
@@ -165,7 +155,7 @@ msgstr "Надіслати заявку"
 msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
-#: svarog/templates/button.html:3 svarog/templates/head.html:22
+#: svarog/templates/button.html:3 svarog/templates/head.html:21
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
@@ -327,7 +317,7 @@ msgstr "КОНТАКТ ЦЕНТР"
 msgid "CHOOSE YOUR WAY WITH USF"
 msgstr "ОБЕРИ СВІЙ ШЛЯХ З ОББС"
 
-#: svarog/templates/hero.html:12
+#: svarog/templates/hero.html:11
 msgid ""
 "During the one-week training, you will feel your weaknesses and "
 "strengths, you will understand how you can prove yourself most "
@@ -506,7 +496,7 @@ msgstr "Користувача оновлено!"
 msgid "User added!"
 msgstr "Додано користувача!"
 
-#: svarog/views/application.py:76
+#: svarog/views/application.py:77
 msgid "Application applied successfully"
 msgstr "Заявка успішно подана"
 
@@ -518,6 +508,7 @@ msgstr "Заявка успішно подана"
 
 #~ msgid "Date of birth*"
 #~ msgstr "Дата народження*"
+
 #~ msgid "About us"
 #~ msgstr "Про нас"
 
