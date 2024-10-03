@@ -120,3 +120,35 @@ Now the bot is ready to use. To send a sample message do:
 
 3. Set the SIGNAL_BOT_CONFIG_BASE64 secret at repo settings in Github to the content of the signal-cli-config.tar.gz.base64 file.
 
+
+## How to work with translations (i18n)
+1. In HTML you need to write text in special brackets
+(the text language must be the default language for your project):
+```bash
+<h1>{{_("Your text")}}</h1>
+```
+2. Run scripts in this order:
+```bash
+./translate-compile.sh
+```
+```bash
+./translate-update.sh
+```
+3. Go to the `messages.po` file and check the text, it should be:
+```bash
+#: svarog/templates/your-template.html:10 <--- your file path and text line
+#, fuzzy <--- this means that you need to check whether the text was compiled correctly
+msgid "Your text"
+msgstr "" <--- here you need to insert your text in another language
+```
+**It is important to remove `#, fuzzy`, otherwise the translation won't be applied.**
+
+How it should look after the changes:
+```bash
+#: svarog/templates/your-template.html:10
+msgid "Your text"
+msgstr "Ваш текст"
+```
+
+4. Repeat `step 2`
+5. Restart `debugger`
