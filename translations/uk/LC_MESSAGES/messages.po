@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 16:39+0300\n"
+"POT-Creation-Date: 2024-10-03 18:41+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -181,7 +181,7 @@ msgstr "Надіслати заявку"
 msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
-#: svarog/templates/button.html:3 svarog/templates/head.html:21
+#: svarog/templates/button.html:3 svarog/templates/head.html:23
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
@@ -323,7 +323,7 @@ msgstr "Cookie policy"
 
 #: svarog/templates/footer.html:23
 msgid "Privacy policy"
-msgstr "Політика конфіденційності!!"
+msgstr "Політика конфіденційності"
 
 #: svarog/templates/footer.html:27
 msgid "CONTACT CENTER"
