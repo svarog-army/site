@@ -12,8 +12,10 @@ from flask_babel import _
 from svarog import db
 from svarog import forms as f
 from svarog import models as m
-from svarog.controllers import send_signal_message, create_new_application_message
+
+# from svarog.controllers import send_signal_message, create_new_application_message # disabled for now
 from svarog.logger import log
+from svarog.utils import YesOrNo
 
 application_bp = Blueprint("application", __name__, url_prefix="/application")
 
@@ -43,7 +45,7 @@ def create():
         last_job=form.last_job.data,
         health_problems=form.health_problems.data,
         have_driver_license=form.have_driver_license.data,
-        is_serviceman=form.is_serviceman.data == "yes",
+        is_serviceman=form.is_serviceman.data == YesOrNo.YES.value,
         uav_experience=form.uav_experience.data,
         specialties=form.applied_specialties.data,
     )
@@ -71,6 +73,6 @@ def create():
 
     log(log.INFO, "Form submitted. Application: [%s]", application)
     application.save()
-    send_signal_message(create_new_application_message(application))
+    # send_signal_message(create_new_application_message(application)) # disabled for now
     flash(_("Application applied successfully"), "success")
     return redirect(url_for("home"))

@@ -1,6 +1,6 @@
 <section
-  id="application-form-wrapper"
-  class="container px-5 flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-[70px] bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
+  id="application-form-wrapper сontainer mx-auto px-5 lg:px-16"
+  class="container px-5 flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-16 bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
   <div class="flex flex-col gap-5 lg:flex-1">
     <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
     <p class="text-base">
@@ -106,14 +106,25 @@
         border-b-white/50 focus:outline-none focus-visible:ring-0
         focus:border-b-white transition")}}
       </div>
-      <div class="group">
+      <div class="group h-full flex flex-col justify-between">
+        <label
+          for="uav_experience"
+          class="block text-white/50 group-focus-within:text-white transition pointer-events-none"
+          >{{_("Choose a specialty")}}*</label
+        >
         <!-- prettier-ignore -->
-        <label for="uav_experience" class="block text-white/50  group-focus-within:text-white transition" >{{_("Choose a specialty")}}*</label >
+        <details class="relative list-none">
+          <summary class="list-none text-white/50 group-focus-within:text-white  bg-transparent border-0 border-b
+          border-b-white/50
+           transition">{{_("Click to choose")}} </summary>
+            {{application_form.applied_specialties(autocomplete="off", class="flex flex-col gap-2 w-full
+            border border-white/50 rounded
+            text-white/50c focus:text-white
+            focus:outline-none focus-visible:ring-0
+            transition absolute top-8 left-0 bg-black p-2 z-10 [&>li]:flex [&>li]:gap-2 [&>li]:items-center   [&>li>input]:text-yellow-400 [&>li>input]:bg-transparent [&>li>input]:border-yellow-300 [&>li>input]:rounded focus:[&>li>input]:ring-transparent focus:[&>li>input]:ring-2 ")}}
+          </details>
+
         <!-- prettier-ignore -->
-        {{application_form.applied_specialties(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
       </div>
       <div class="group">
         <!-- prettier-ignore -->
@@ -129,11 +140,17 @@
         <!-- prettier-ignore -->
         <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition">{{_("Are you a military serviceman?")}}* </label>
 
-        <div class="flex items-center flex-row">
-          <!-- Radio button "Так" -->
-          <!-- prettier-ignore -->
-          {{ application_form.is_serviceman(class="h-8 w-40 flex flex-row justify-between text-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800") }}
-        </div>
+        <!-- Radio button "Так" -->
+        <!-- prettier-ignore -->
+        {{ application_form.is_serviceman(class="h-8  flex flex-row gap-8 text-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 [&>li]:flex [&>li]:items-center [&>li]:gap-1") }}
+      </div>
+      <div class="group lg:col-span-2">
+        <!-- prettier-ignore -->
+        <label for="is_serviceman" class="block text-white/50  group-focus-within:text-white transition">{{_("Do you give your concent to process your personal data by UAV Forces recruiting center?")}}* </label>
+
+        <!-- Radio button "Так" -->
+        <!-- prettier-ignore -->
+        {{ application_form.allow_data_processing(class="h-8  flex flex-row gap-8 text-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 [&>li]:flex [&>li]:items-center [&>li]:gap-1") }}
       </div>
 
       <!-- prettier-ignore -->
