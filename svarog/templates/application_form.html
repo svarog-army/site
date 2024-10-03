@@ -1,17 +1,19 @@
-<section id="application-form-wrapper сontainer mx-auto px-5 lg:px-16"
-  class=" px-5 flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-16 bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
-
-
-  <div class="container mx-auto flex flex-col justify-between gap-14 md:flex-row">
+<section
+  id="application-form-wrapper"
+  class="px-5 flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-16 bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
+  <div
+    class="container mx-auto flex flex-col justify-between gap-14 md:flex-row">
     <div class="flex flex-col gap-5 max-w-[476px] lg:flex-1">
       <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
       <p class="text-base">
-        {{_("In order to get into the ranks of the Force of Unmanned Systems, you need to apply by filling out the
-        questionnaire.")}}
+        {{_("In order to get into the ranks of the Force of Unmanned Systems, you need to apply by filling out the questionnaire.")}}
       </p>
     </div>
 
-    <form action="{{url_for('application.create')}}" method="post" class="lg:flex-1 max-w-[640px]">
+    <form
+      action="{{url_for('application.create')}}"
+      method="post"
+      class="lg:flex-1 max-w-[640px]">
       <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2 items-end">
         {{ application_form.hidden_tag() }}
         <div class="group">
@@ -117,9 +119,11 @@
           focus:border-b-white transition")}}
         </div>
         <div class="group h-full flex flex-col justify-between">
-          <label for="uav_experience"
-            class="block text-white/50 group-focus-within:text-white transition pointer-events-none">{{_("Choose a
-            specialty")}}*</label>
+          <label
+            for="uav_experience"
+            class="block text-white/50 group-focus-within:text-white transition pointer-events-none"
+            >{{_("Choose a specialty")}}*</label
+          >
           <!-- prettier-ignore -->
           <details class="relative list-none">
             <summary class="list-none text-white/50 group-focus-within:text-white  bg-transparent border-0 border-b
@@ -182,7 +186,9 @@
                                   </select>
                                 </div> #}-->
         <div class="flex items-center p-6 space-x-2 lg:col-span-2">
-          <button name="submit" type="submit"
+          <button
+            name="submit"
+            type="submit"
             class="frame-border w-max relative px-4 text-lg bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
             {{_("Save new application")}}
           </button>

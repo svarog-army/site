@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 18:41+0300\n"
+"POT-Creation-Date: 2024-10-03 19:04+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -72,92 +72,89 @@ msgstr "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
 #: svarog/templates/application_form.html:9
 msgid ""
 "In order to get into the ranks of the Force of Unmanned Systems, you need"
-" to apply by filling out the\n"
-"        questionnaire."
+" to apply by filling out the questionnaire."
 msgstr ""
 "Для того, щоб потрапити до лав Сили безпілотних систем, необхідно подати "
 "заявку, заповнивши анкету."
 
-#: svarog/templates/application_form.html:20
+#: svarog/templates/application_form.html:22
 msgid ""
 "Full\n"
 "            name"
 msgstr "Прізвище та ім'я"
 
-#: svarog/templates/application_form.html:29
+#: svarog/templates/application_form.html:31
 msgid ""
 "Date of\n"
 "            birth"
 msgstr "Дата народження"
 
-#: svarog/templates/application_form.html:40
+#: svarog/templates/application_form.html:42
 msgid "Phone"
 msgstr "Номер телефону"
 
-#: svarog/templates/application_form.html:50
+#: svarog/templates/application_form.html:52
 msgid ""
 "City of actual\n"
 "            residence"
 msgstr "Місто фактичного проживання"
 
 #: svarog/templates/admin/edit_modal.html:41
-#: svarog/templates/application_form.html:61
+#: svarog/templates/application_form.html:63
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: svarog/templates/application_form.html:70
+#: svarog/templates/application_form.html:72
 msgid ""
 "Education,\n"
 "            specialty"
 msgstr "Освіта, спеціальність"
 
-#: svarog/templates/application_form.html:80
+#: svarog/templates/application_form.html:82
 msgid ""
 "Professional\n"
 "            skills"
 msgstr "Професійні навички (скіли)"
 
-#: svarog/templates/application_form.html:90
+#: svarog/templates/application_form.html:92
 msgid ""
 "Last civilian\n"
 "            position"
 msgstr "Остання цивільна посада"
 
-#: svarog/templates/application_form.html:100
+#: svarog/templates/application_form.html:102
 msgid ""
 "Do you\n"
 "            have critical health problems"
 msgstr "Чи наявні у вас критичні проблеми зі здоровʼям?"
 
-#: svarog/templates/application_form.html:111
+#: svarog/templates/application_form.html:113
 msgid ""
 "Having a driver's license. If so,\n"
 "            what categories?"
 msgstr "Наявність водійського посвідчення. Якщо так - які категорії?"
 
-#: svarog/templates/application_form.html:121
-msgid ""
-"Choose a\n"
-"            specialty"
+#: svarog/templates/application_form.html:125
+msgid "Choose a specialty"
 msgstr "Оберіть спеціальність"
 
-#: svarog/templates/application_form.html:127
+#: svarog/templates/application_form.html:131
 msgid "Click to choose"
 msgstr "Клікніть щоб вибрати"
 
-#: svarog/templates/application_form.html:141
+#: svarog/templates/application_form.html:145
 msgid ""
 "Do you\n"
 "            have experience with UAVs (if so, what kind)"
 msgstr "Чи маєте досвід з БПЛА (якщо так, який саме?)"
 
-#: svarog/templates/application_form.html:152
+#: svarog/templates/application_form.html:156
 msgid ""
 "Are you\n"
 "            a military serviceman?"
 msgstr "Чи Ви є військовослужбовцем?"
 
-#: svarog/templates/application_form.html:163
+#: svarog/templates/application_form.html:167
 msgid ""
 "Do you\n"
 "            give your concent to process your personal data by UAV Forces"
@@ -167,7 +164,7 @@ msgstr ""
 "рекрутингу Сил Безпілотних Систем? (Інформація НЕ буде передана до ТЦК та"
 " СП)"
 
-#: svarog/templates/application_form.html:187
+#: svarog/templates/application_form.html:193
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
 msgstr "Надіслати заявку"
@@ -181,7 +178,7 @@ msgstr "Надіслати заявку"
 msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
-#: svarog/templates/button.html:3 svarog/templates/head.html:23
+#: svarog/templates/button.html:4 svarog/templates/head.html:23
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
