@@ -1,24 +1,25 @@
-<div class="text-black absolute flex justify-between items-center w-full px-5 lg:px-16 mt-12">
-  <!-- Hide for now -->
-  <div class="cursor-pointer invisible">
-    <img src="{{url_for('static',filename='img/burger-menu.svg')}}" class="h-8 mr-3" alt="Simple2b Logo" />
-  </div>
-
-
-  <form class="flex gap-8" action="{{url_for('main.change_locale')}}" method="post">
-    {{ form.hidden_tag() }}
-    <div class="hidden sm:block">
-      <label for="local_select" class="sr-only">Language select</label>
-      <select id="local_select" name="locale" onchange="this.form.submit()"
-        class="block py-2.5 px-0 w-full text-sm text-black border-none dark:text-white bg-transparent focus:outline-none focus:ring-0 0 peer">
-        <option value="uk" {% if g.lang_code=='uk' %} selected {% endif %}>УКР</option>
-        <option value="en" {% if g.lang_code=='en' %} selected {% endif %}>EN</option>
-      </select>
+<div class="flex justify-center">
+  <div class="container absolute flex justify-between items-center w-full px-5 lg:px-16 mt-12 text-black">
+    <!-- Hide for now -->
+    <div class="cursor-pointer invisible">
+      <img src="{{url_for('static',filename='img/burger-menu.svg')}}" class="h-8 mr-3" alt="Simple2b Logo" />
     </div>
 
-    <button
-      class="frame-border relative py-2 px-5 bg-transparent text-[--main-yellow] uppercase text-base border-none cursor-pointer">
-      {{_("SUBMIT APPLICATION")}}
-    </button>
-  </form>
+    <form class="flex gap-8" action="{{url_for('main.change_locale')}}" method="post">
+      {{ form.hidden_tag() }}
+      <div class="hidden sm:block">
+        <label for="local_select" class="sr-only">Language select</label>
+        <select id="local_select" name="locale" onchange="this.form.submit()"
+          class="block py-2.5 px-0 w-full text-sm text-black border-none dark:text-white bg-transparent focus:outline-none focus:ring-0 0 peer">
+          <option value="uk" {% if g.lang_code=='uk' %} selected {% endif %}>УКР</option>
+          <option value="en" {% if g.lang_code=='en' %} selected {% endif %}>EN</option>
+        </select>
+      </div>
+
+      <button
+        class="frame-border relative py-2 px-5 bg-transparent text-[--main-yellow] uppercase text-base border-none cursor-pointer">
+        {{_("SUBMIT APPLICATION")}}
+      </button>
+    </form>
+  </div>
 </div>
