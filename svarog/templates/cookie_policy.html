@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block content %}
+<section class="px-6 lg:px-16 pt-32 flex flex-col gap-4">
+  <h1 class="text-4xl font-semibold pb-5">Cookie policy</h1>
+  <p>
+    <strong>{{_("Cookie Policy for 424bat.army website")}}</strong>
+  </p>
+  <p>
+    <strong>1. {{_("Introduction")}}</strong>
+  </p>
+  <p>
+    {{_("This Cookie Policy explains how the 424bat.army website (the “Site”)
+    uses cookies and similar technologies to collect and process information
+    about you. We use cookies to ensure the Site works properly and provide a
+    better user experience.")}}
+  </p>
+  <p><strong>2. {{_("What Are Cookies")}}</strong></p>
+  <p>
+    {{_("Cookies are small text files that are stored on your device when you
+    visit the website. They are used for collection information about your
+    choices and settings, and to collect data for analysis and improvement of
+    the functioning of the Site.")}}
+  </p>
+  <p><strong>3. {{_("Types of cookies we use")}}</strong></p>
+  <ul class="list-disc ml-6">
+    <li>
+      <em>{{_("The files are necessary for work")}}</em>:{{_("These files help
+      ensure the correct operation of the Site and access to basic
+      functions.")}}
+    </li>
+    <li>
+      <em>{{_("Analytics files")}}</em>: {{_("We use cookies to collect
+      anonymous data about the use of the Site in order to understand how users
+      interact with the content and improve its quality.")}}
+    </li>
+  </ul>
+  <p><strong>4. {{_("Management of cookies")}}</strong></p>
+  <p>
+    {{_("You have the option to manage the use of cookies through the settings
+    your web browser. You can choose to block all cookies or get a warning
+    before saving them. Note that disabling cookies may limit access to some of
+    the Site's functions.")}}
+  </p>
+  <p><strong>5. {{_("Disclaimer")}}</strong></p>
+  <p>
+    {{_("We are not responsible for cookies and third-party technologies, which
+    can be used on the Site. We recommend that you review the policy privacy and
+    use of cookies by these third parties.")}}
+  </p>
+  <p><strong>6. {{_("Changes to the Cookies Policy")}}</strong></p>
+  <p>
+    {{_("We may update this Policy from time to time. Please periodically review
+    this document to be aware of any changes.")}}
+  </p>
+  <p>{{_("Thank you for using the 424bat.army Site!")}}</p>
+</section>
+{% endblock %}

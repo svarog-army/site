@@ -169,6 +169,132 @@ msgstr "Офіційний веб-сайт 424-го окремого батал�
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
+#: svarog/templates/cookie_policy.html:5
+msgid "Cookie Policy for 424bat.army website"
+msgstr "Політика використання файлів cookie для веб-сайту 424bat.army"
+
+#: svarog/templates/cookie_policy.html:8
+msgid "Introduction"
+msgstr "Вступ"
+
+#: svarog/templates/cookie_policy.html:11
+msgid ""
+"This Cookie Policy explains how the 424bat.army website (the “Site”)\n"
+"    uses cookies and similar technologies to collect and process "
+"information\n"
+"    about you. We use cookies to ensure the Site works properly and "
+"provide a\n"
+"    better user experience."
+msgstr ""
+"Ця Політика використання файлів cookie пояснює, як веб-сайт 424bat.army "
+"(далі – “Сайт”) використовує файли cookie та подібні технології для збору"
+" та обробки інформації про вас. Ми використовуємо файли cookie для "
+"забезпечення належної роботи Сайту та надання кращого користувацького "
+"досвіду."
+
+#: svarog/templates/cookie_policy.html:16
+msgid "What Are Cookies"
+msgstr "Що таке файли cookie?"
+
+#: svarog/templates/cookie_policy.html:18
+msgid ""
+"Cookies are small text files that are stored on your device when you\n"
+"    visit the website. They are used for collection information about "
+"your\n"
+"    choices and settings, and to collect data for analysis and "
+"improvement of\n"
+"    the functioning of the Site."
+msgstr ""
+"Ця Політика використання файлів cookie пояснює, як веб-сайт 424bat.army "
+"(далі – “Сайт”) використовує файли cookie та подібні технології для збору"
+" та обробки інформації про вас. Ми використовуємо файли cookie для "
+"забезпечення належної роботи Сайту та надання кращого користувацького "
+"досвіду."
+
+#: svarog/templates/cookie_policy.html:23
+msgid "Types of cookies we use"
+msgstr "Типи файлів cookie, які ми використовуємо"
+
+#: svarog/templates/cookie_policy.html:26
+msgid "The files are necessary for work"
+msgstr "Файли необхідні для роботи"
+
+#: svarog/templates/cookie_policy.html:26
+msgid ""
+"These files help\n"
+"      ensure the correct operation of the Site and access to basic\n"
+"      functions."
+msgstr ""
+"Ці файли допомагають забезпечити правильну роботу Сайту та доступ до "
+"основних функцій."
+
+#: svarog/templates/cookie_policy.html:31
+msgid "Analytics files"
+msgstr "Файли аналітики"
+
+#: svarog/templates/cookie_policy.html:31
+msgid ""
+"We use cookies to collect\n"
+"      anonymous data about the use of the Site in order to understand how"
+" users\n"
+"      interact with the content and improve its quality."
+msgstr ""
+"Ми використовуємо файли cookie для збору анонімних даних про використання"
+" Сайту, щоб розуміти, як користувачі взаємодіють з контентом та покращити"
+" його якість."
+
+#: svarog/templates/cookie_policy.html:36
+msgid "Management of cookies"
+msgstr "Керування файлами cookie"
+
+#: svarog/templates/cookie_policy.html:38
+msgid ""
+"You have the option to manage the use of cookies through the settings\n"
+"    your web browser. You can choose to block all cookies or get a "
+"warning\n"
+"    before saving them. Note that disabling cookies may limit access to "
+"some of\n"
+"    the Site's functions."
+msgstr ""
+"Ви маєте можливість керувати використанням файлів cookie через "
+"налаштування вашого веб-браузера. Ви можете вибрати блокування всіх "
+"файлів cookie або отримати попередження перед їх збереженням. Зверніть "
+"увагу, що вимкнення файлів cookie може призвести до обмеження доступу до "
+"деяких функцій Сайту."
+
+#: svarog/templates/cookie_policy.html:43
+msgid "Disclaimer"
+msgstr "Відмова від відповідальності"
+
+#: svarog/templates/cookie_policy.html:45
+msgid ""
+"We are not responsible for cookies and third-party technologies, which\n"
+"    can be used on the Site. We recommend that you review the policy "
+"privacy and\n"
+"    use of cookies by these third parties."
+msgstr ""
+"Ми не несемо відповідальність за файли cookie та технології третіх "
+"сторін, які можуть використовуватися на Сайті. Рекомендуємо переглядати "
+"політику конфіденційності та використання файлів cookie цих третіх "
+"сторін."
+
+#: svarog/templates/cookie_policy.html:49
+#, fuzzy
+msgid "Changes to the Cookies Policy"
+msgstr "Зміни в Політиці використання файлів cookie"
+
+#: svarog/templates/cookie_policy.html:51
+msgid ""
+"We may update this Policy from time to time. Please periodically review\n"
+"    this document to be aware of any changes."
+msgstr ""
+"Ми можемо час від часу оновлювати цю Політику. Будь ласка, періодично "
+"переглядайте цей документ, щоб бути в курсі будь-яких змін."
+
+#: svarog/templates/cookie_policy.html:54
+msgid "Thank you for using the 424bat.army Site!"
+msgstr "Дякуємо за використання Сайту 424bat.army!"
+
 #: svarog/templates/footer.html:5
 msgid "SEPARATE BATTALION OF UNMANNED SYSTEMS"
 msgstr "ОКРЕМИЙ БАТАЛЬЙОН БЕЗПІЛОТНИХ СИСТЕМ"
@@ -178,8 +304,8 @@ msgid "Main"
 msgstr "Головна"
 
 #: svarog/templates/footer.html:22
-msgid "About us"
-msgstr "Про нас"
+msgid "Cookie policy"
+msgstr "Cookie policy"
 
 #: svarog/templates/footer.html:23
 msgid "FAQ"
@@ -392,4 +518,6 @@ msgstr "Заявка успішно подана"
 
 #~ msgid "Date of birth*"
 #~ msgstr "Дата народження*"
+#~ msgid "About us"
+#~ msgstr "Про нас"
 

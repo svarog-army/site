@@ -8,9 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        container: '1440px',
+      },
       screens: {
         desktop: '1440px',
-        widescreen: '1920px',
       },
     },
   },

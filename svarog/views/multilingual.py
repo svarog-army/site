@@ -1,8 +1,6 @@
 import sqlalchemy as sa
-
-from flask import render_template, Blueprint, g, redirect, request, current_app, abort, url_for
+from flask import Blueprint, abort, current_app, g, redirect, render_template, request, url_for
 from flask_wtf import FlaskForm
-
 
 from config import CFG
 from svarog import db
@@ -49,3 +47,9 @@ def index():
     specialties = db.session.scalars(sa.select(m.Specialty)).all()
 
     return render_template("index.html", form=FlaskForm(), application_form=form, specialties=specialties)
+
+
+@multilingual.route("/cookie_policy/", methods=["GET"])
+def cookie_policy():
+    form = f.ApplicationForm()
+    return render_template("cookie_policy.html", form=form)
