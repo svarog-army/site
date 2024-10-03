@@ -1,122 +1,135 @@
 <section
   id="application-form-wrapper"
-  class="сontainer mx-auto px-5 lg:px-16 flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-16 bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
-  <div class="flex flex-col gap-5 lg:flex-1">
-    <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
-    <p class="text-base">
-      {{_("In order to get into the ranks of the Force of Unmanned Systems, you
-      need to apply by filling out the questionnaire.")}}
-    </p>
-  </div>
-  <form
-    action="{{url_for('application.create')}}"
-    method="post"
-    class="lg:flex-1">
-    <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2 items-end">
-      {{ application_form.hidden_tag() }}
-      <div class="group">
-        <!-- prettier-ignore -->
-        <!-- prettier-ignore -->
-        <label for="full_name" class="block text-white/50  group-focus-within:text-white transition"
-          >{{_("Full name")}}*</label
-        >
-        {{application_form.full_name(autocomplete="off", class=" block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="birth_date" class="block text-white/50  group-focus-within:text-white transition " >{{_("Date of birth")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.birth_date(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="phone" class="block text-white/50  group-focus-within:text-white transition" >{{_("Phone")}}</label >
-        <!-- prettier-ignore -->
-        {{application_form.phone(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="city_of_actual_residence" class="block text-white/50  group-focus-within:text-white transition" >{{_("City of actual residence")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.city_of_actual_residence(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="email" class="block text-white/50  group-focus-within:text-white transition" >{{_("Email")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.email(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="education" class="block text-white/50  group-focus-within:text-white transition" >{{_("Education, specialty")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.education(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="skills" class="block text-white/50  group-focus-within:text-white transition" >{{_("Professional skills")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.skills(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="last_job" class="block text-white/50  group-focus-within:text-white transition" >{{_("Last civilian position")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.last_job(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="health_problems" class="block text-white/50  group-focus-within:text-white transition" >{{_("Do you have critical health problems")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.health_problems(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group">
-        <!-- prettier-ignore -->
-        <label for="have_driver_license" class="block text-white/50  group-focus-within:text-white transition">{{_("Having a driver's license. If so, what categories?")}}*</label >
-        <!-- prettier-ignore -->
-        {{application_form.have_driver_license(autocomplete="off", class="block w-full
-        text-white/50c focus:text-white bg-transparent border-0 border-b
-        border-b-white/50 focus:outline-none focus-visible:ring-0
-        focus:border-b-white transition")}}
-      </div>
-      <div class="group h-full flex flex-col justify-between">
-        <label
-          for="uav_experience"
-          class="block text-white/50 group-focus-within:text-white transition pointer-events-none"
-          >{{_("Choose a specialty")}}*</label
-        >
-        <!-- prettier-ignore -->
-        <details class="relative list-none">
-          <summary class="list-none text-white/50 group-focus-within:text-white  bg-transparent border-0 border-b
-          border-b-white/50
-           transition">{{_("Click to choose")}} </summary>
+  class="px-5 flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-16 bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
+  <div
+    class="container mx-auto flex flex-col justify-between gap-14 md:flex-row">
+    <div class="flex flex-col gap-5 max-w-[476px] lg:flex-1">
+      <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
+      <p class="text-base">
+        {{_("In order to get into the ranks of the Force of Unmanned Systems,
+        you need to apply by filling out the questionnaire.")}}
+      </p>
+    </div>
+
+    <form
+      action="{{url_for('application.create')}}"
+      method="post"
+      class="lg:flex-1 max-w-[640px]">
+      <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2 items-end">
+        {{ application_form.hidden_tag() }}
+        <div class="group">
+          <!-- prettier-ignore -->
+          <!-- prettier-ignore -->
+          <label for="full_name" class="block text-white/50  group-focus-within:text-white transition">{{_("Full
+            name")}}*</label>
+          {{application_form.full_name(autocomplete="off", class=" block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="birth_date" class="block text-white/50  group-focus-within:text-white transition ">{{_("Date of
+            birth")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.birth_date(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="phone"
+            class="block text-white/50  group-focus-within:text-white transition">{{_("Phone")}}</label>
+          <!-- prettier-ignore -->
+          {{application_form.phone(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="city_of_actual_residence"
+            class="block text-white/50  group-focus-within:text-white transition">{{_("City of actual
+            residence")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.city_of_actual_residence(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="email"
+            class="block text-white/50  group-focus-within:text-white transition">{{_("Email")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.email(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="education" class="block text-white/50  group-focus-within:text-white transition">{{_("Education,
+            specialty")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.education(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="skills" class="block text-white/50  group-focus-within:text-white transition">{{_("Professional
+            skills")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.skills(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="last_job" class="block text-white/50  group-focus-within:text-white transition">{{_("Last civilian
+            position")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.last_job(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="health_problems" class="block text-white/50  group-focus-within:text-white transition">{{_("Do you
+            have critical health problems")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.health_problems(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group">
+          <!-- prettier-ignore -->
+          <label for="have_driver_license"
+            class="block text-white/50  group-focus-within:text-white transition">{{_("Having a driver's license. If so,
+            what categories?")}}*</label>
+          <!-- prettier-ignore -->
+          {{application_form.have_driver_license(autocomplete="off", class="block w-full
+          text-white/50c focus:text-white bg-transparent border-0 border-b
+          border-b-white/20 focus:outline-none focus-visible:ring-0
+          focus:border-b-white transition")}}
+        </div>
+        <div class="group h-full flex flex-col justify-between">
+          <label
+            for="uav_experience"
+            class="block text-white/50 group-focus-within:text-white transition pointer-events-none"
+            >{{_("Choose a specialty")}}*</label
+          >
+          <!-- prettier-ignore -->
+          <details class="relative list-none">
+            <summary class="list-none text-white/50 group-focus-within:text-white  bg-transparent border-0 border-b
+            border-b-white/20
+             transition">{{_("Click to choose")}} </summary>
             {{application_form.applied_specialties(autocomplete="off", class="flex flex-col gap-2 w-full
             border border-white/50 rounded
             text-white/50c focus:text-white
@@ -174,7 +187,9 @@
                                   </select>
                                 </div> #}-->
         <div class="flex items-center p-6 space-x-2 lg:col-span-2">
-          <button name="submit" type="submit"
+          <button
+            name="submit"
+            type="submit"
             class="frame-border w-max relative px-4 text-lg bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
             {{_("Save new application")}}
           </button>
