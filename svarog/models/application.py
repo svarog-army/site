@@ -24,7 +24,6 @@ class Application(db.Model, ModelMixin):
     birth_date: orm.Mapped[date] = orm.mapped_column(sa.Date)
     phone: orm.Mapped[str] = orm.mapped_column(
         sa.String(64),
-        unique=True,
     )
     email: orm.Mapped[str | None] = orm.mapped_column(sa.String(256))
     city_of_actual_residence: orm.Mapped[str] = orm.mapped_column(sa.String(64))

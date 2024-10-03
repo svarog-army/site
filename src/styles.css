@@ -43,3 +43,47 @@
   right: 0;
   border-width: 1px 1px 1px 0;
 }
+
+/* Style the radio button */
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffd700;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+}
+
+/* Create the inner circle for the checked state */
+input[type='radio']::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #ffd700;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style for the checked state */
+input[type='radio']:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Add a subtle glow effect */
+input[type='radio']:checked {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+input[type='radio']:checked {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
