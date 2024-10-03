@@ -21,7 +21,8 @@ def create_new_application_message(application: m.Application) -> str:
 def send_signal_message(
     message: str,
 ):
-    from signalbot import SignalBot, SendMessageError
+    from signalbot import SignalBot
+    # from signalbot import SignalBot, SendMessageError
 
     # try:
     ensure_event_loop()
