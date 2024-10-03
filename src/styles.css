@@ -21,6 +21,15 @@
 .htmx-request.htmx-indicator {
   display: inline;
 }
+.frame-border {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--main-yellow);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
 .frame-border::before,
 .frame-border::after {
@@ -30,6 +39,7 @@
   border-style: solid;
   width: 10px;
   height: 100%;
+  transition: all 0.3s ease;
 }
 
 .frame-border::before {
@@ -44,6 +54,20 @@
   border-width: 1px 1px 1px 0;
 }
 
+/* Hover effects */
+.frame-border:hover {
+  background-color: rgba(255, 215, 0, 0.1); /* Slight yellow tint */
+}
+
+.frame-border:hover::before {
+  left: -5px;
+  width: 15px;
+}
+
+.frame-border:hover::after {
+  right: -5px;
+  width: 15px;
+}
 /* Style the radio button */
 input[type='radio'] {
   -webkit-appearance: none;
