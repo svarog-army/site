@@ -25,6 +25,15 @@ const baseConfig = {
     filename: 'js/base.js', // <--- Will be compiled to this single file
   },
 };
+const cookieConfig = {
+  entry: {
+    main: './src/cookies.ts',
+  },
+  output: {
+    path: path.resolve(__dirname, './svarog/static'),
+    filename: 'js/cookies.js', // <--- Will be compiled to this single file
+  },
+};
 
 const userConfig = {
   entry: {
@@ -46,7 +55,7 @@ const adminConfig = {
   },
 };
 
-const configs = [baseConfig, userConfig, adminConfig].map(conf =>
+const configs = [baseConfig, userConfig, adminConfig, cookieConfig].map(conf =>
   merge(defaultConfig, conf),
 );
 

@@ -6,6 +6,8 @@
   --main-yellow: #ffc823;
   --main-black: #000000;
   color: white;
+  --main-red: #ff0000;
+  --main-green: #00ff00;
 }
 
 .text-danger {
