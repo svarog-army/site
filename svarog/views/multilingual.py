@@ -54,6 +54,7 @@ def cookie_policy():
     form = f.ApplicationForm()
     return render_template("cookie_policy.html", form=form)
 
+
 @multilingual.route("/privacy_policy/", methods=["GET"])
 def privacy_policy():
     form = f.ApplicationForm()
