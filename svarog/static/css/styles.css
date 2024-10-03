@@ -2429,6 +2429,11 @@ input:checked + .toggle-bg {
   cursor: pointer;
 }
 
+a:hover {
+  color: var(--main-yellow);
+  text-decoration: underline;
+}
+
 .frame-border::before,
 .frame-border::after {
   content: '';
@@ -2520,6 +2525,55 @@ img {
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px var(--main-yellow);
+}
+
+.recruitment_center {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before,
+.recruitment_center::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before {
+  top: -6px;
+  left: -6px;
+  border-top: 1px solid #ffd700;
+  border-left: 1px solid #ffd700;
+}
+
+.recruitment_center::after {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 1px solid #ffd700;
+  border-right: 1px solid #ffd700;
+}
+
+.recruitment_center:hover::before,
+.recruitment_center:hover::after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  opacity: 1;
+}
+
+form label:hover {
+  color: var(--main-yellow);
+}
+
+.values:hover {
+  border-color: var(--main-yellow);
+  transform: scale(1.05);
+}
+
+.values {
+  transition: all 0.3s ease;
 }
 
 .hover\:border-gray-300:hover {
