@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 16:30+0300\n"
+"POT-Creation-Date: 2024-10-03 16:32+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -18,6 +18,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
+
+#: svarog/forms/application.py:26
+msgid "Yes"
+msgstr "Так"
+
+#: svarog/forms/application.py:27
+msgid "No"
+msgstr "Ні"
 
 #: svarog/templates/about-us.html:16
 msgid "ABOUT US"
@@ -55,6 +63,85 @@ msgstr "НАША МІСІЯ"
 msgid "During the one-week training, you will feel your weaknesses"
 msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
 
+#: svarog/templates/application_form.html:5
+msgid "FILL THE FORM AND JOIN US"
+msgstr "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
+
+#: svarog/templates/application_form.html:7
+msgid ""
+"In order to get into the ranks of the Force of Unmanned Systems, you\n"
+"      need to apply by filling out the questionnaire."
+msgstr ""
+"Для того, щоб потрапити до лав Сили безпілотних систем, необхідно подати "
+"заявку, заповнивши анкету."
+
+#: svarog/templates/application_form.html:21
+msgid "Full name"
+msgstr "Прізвище та ім'я"
+
+#: svarog/templates/application_form.html:30
+msgid "Date of birth"
+msgstr "Дата народження"
+
+#: svarog/templates/application_form.html:39
+msgid "Phone"
+msgstr "Номер телефону"
+
+#: svarog/templates/application_form.html:48
+msgid "City of actual residence"
+msgstr "Місто фактичного проживання"
+
+#: svarog/templates/admin/edit_modal.html:41
+#: svarog/templates/application_form.html:57
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: svarog/templates/application_form.html:66
+msgid "Education, specialty"
+msgstr "Освіта, спеціальність"
+
+#: svarog/templates/application_form.html:75
+msgid "Professional skills"
+msgstr "Професійні навички (скіли)"
+
+#: svarog/templates/application_form.html:84
+msgid "Last civilian position"
+msgstr "Остання цивільна посада"
+
+#: svarog/templates/application_form.html:93
+msgid "Do you have critical health problems"
+msgstr "Чи наявні у вас критичні проблеми зі здоровʼям?"
+
+#: svarog/templates/application_form.html:102
+msgid "Having a driver's license. If so, what categories?"
+msgstr "Наявність водійського посвідчення. Якщо так - які категорії?"
+
+#: svarog/templates/application_form.html:113
+msgid "Choose a specialty"
+msgstr "Оберіть спеціальність"
+
+#: svarog/templates/application_form.html:119
+msgid "Click to choose"
+msgstr "Клікніть щоб вибрати"
+
+#: svarog/templates/application_form.html:131
+msgid "Do you have experience with UAVs (if so, what kind)"
+msgstr "Чи маєте досвід з БПЛА (якщо так, який саме?)"
+
+#: svarog/templates/application_form.html:141
+msgid "Are you a military serviceman?"
+msgstr "Чи Ви є військовослужбовцем?"
+
+#: svarog/templates/application_form.html:149
+msgid ""
+"Do you give your concent to process your personal data by UAV Forces "
+"recruiting center?"
+msgstr ""
+"Ви погоджуєтесь на обробку персональних даних для використання в цілях "
+"рекрутингу Сил Безпілотних Систем? (Інформація НЕ буде передана до ТЦК та"
+" СП)"
+
+#: svarog/templates/application_form.html:172
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
 msgstr "Надіслати заявку"
@@ -715,95 +802,97 @@ msgstr ""
 #: svarog/templates/admin/admins.html:31 svarog/templates/admin/admins.html:56
 #: svarog/templates/admin/edit_modal.html:77
 msgid "Admin"
-msgstr ""
+msgstr "Адмін"
 
 #: svarog/templates/admin/add_modal.html:97
 msgid "Save new user"
-msgstr ""
+msgstr "Зберегти нового користувача"
 
 #: svarog/templates/admin/admins.html:6
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: svarog/templates/admin/admins.html:22
 msgid "Add user"
-msgstr ""
+msgstr "Додати користувача"
 
 #: svarog/templates/admin/admins.html:31
 #: svarog/templates/admin/edit_modal.html:29
 msgid "Name"
-msgstr ""
+msgstr "Ім'я"
 
 #: svarog/templates/admin/admins.html:31
 msgid "Actions"
-msgstr ""
+msgstr "Дії"
 
 #: svarog/templates/admin/admins.html:56
 msgid "User"
-msgstr ""
+msgstr "Користувач"
 
 #: svarog/templates/admin/admins.html:61
 msgid "Edit"
-msgstr ""
+msgstr "Редагувати"
 
 #: svarog/templates/admin/admins.html:65
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 #: svarog/templates/admin/admins.html:82
 msgid "First"
-msgstr ""
+msgstr "Перший"
 
 #: svarog/templates/admin/admins.html:91
 msgid "Previous"
-msgstr ""
+msgstr "Попередній"
 
 #: svarog/templates/admin/admins.html:116
 msgid "Next"
-msgstr ""
+msgstr "Наступний"
 
 #: svarog/templates/admin/admins.html:126
 msgid "Last"
-msgstr ""
+msgstr "Останній"
 
 #: svarog/templates/admin/edit_modal.html:19
 msgid "Edit user"
-msgstr ""
-
-#: svarog/templates/admin/edit_modal.html:41
-msgid "Email"
-msgstr ""
+msgstr "Редагувати користувача"
 
 #: svarog/templates/admin/edit_modal.html:53
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: svarog/templates/admin/edit_modal.html:65
 msgid "Confirmation Password"
-msgstr ""
+msgstr "Підтвердити пароль"
 
 #: svarog/templates/admin/edit_modal.html:94
 msgid "Save all"
-msgstr ""
+msgstr "Зберегти все"
 
 #: svarog/views/admin.py:83
 msgid "Cannot save user data"
-msgstr ""
+msgstr "Неможливо зберегти дані користувача"
 
 #: svarog/views/admin.py:92
 msgid "User updated!"
-msgstr ""
+msgstr "Користувача оновлено!"
 
 #: svarog/views/admin.py:126
 msgid "User added!"
-msgstr ""
+msgstr "Додано користувача!"
 
-#: svarog/views/application.py:73
+#: svarog/views/application.py:77
 msgid "Application applied successfully"
 msgstr "Заявка успішно подана"
 
 #~ msgid "bububu"
 #~ msgstr "бубубу"
+
+#~ msgid "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
+#~ msgstr "3333"
+
+#~ msgid "Date of birth*"
+#~ msgstr "Дата народження*"
 
 #~ msgid "About us"
 #~ msgstr "Про нас"

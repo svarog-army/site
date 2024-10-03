@@ -25,6 +25,7 @@ def test_application_form(client: FlaskClient, runner: FlaskCliRunner):
         "is_serviceman": "yes",
         "uav_experience": "test",
         "applied_specialties": [specialties[0], specialties[1]],
+        "allow_data_processing": "yes",
     }
     res = client.get("/application/get-application-form")
     assert res.status_code == 200

@@ -1133,6 +1133,10 @@ input:checked + .toggle-bg {
   top: 3rem;
 }
 
+.top-8 {
+  top: 2rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1519,6 +1523,10 @@ input:checked + .toggle-bg {
   resize: both;
 }
 
+.list-decimal {
+  list-style-type: decimal;
+}
+
 .list-disc {
   list-style-type: disc;
 }
@@ -1527,14 +1535,14 @@ input:checked + .toggle-bg {
   list-style-type: none;
 }
 
-.list-decimal {
-  list-style-type: decimal;
-}
-
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-4 {
@@ -1611,6 +1619,14 @@ input:checked + .toggle-bg {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-14 {
+  gap: 3.5rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-3 {
@@ -1706,6 +1722,10 @@ input:checked + .toggle-bg {
 
 .overflow-x-scroll {
   overflow-x: scroll;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
 
 .truncate {
@@ -1816,8 +1836,21 @@ input:checked + .toggle-bg {
   border-color: rgb(255 255 255 / 0.2);
 }
 
+.border-white\/50 {
+  border-color: rgb(255 255 255 / 0.5);
+}
+
+.border-b-white\/50 {
+  border-bottom-color: rgb(255 255 255 / 0.5);
+}
+
 .bg-\[--main-black\] {
   background-color: var(--main-black);
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-blue-50 {
@@ -1924,6 +1957,10 @@ input:checked + .toggle-bg {
 
 .bg-\[url\(\'\.\.\/\.\.\/static\/img\/map\.svg\'\)\] {
   background-image: url('../../static/img/map.svg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/static\/img\/plane-bg-mobile\.png\'\)\] {
+  background-image: url('../../static/img/plane-bg-mobile.png');
 }
 
 .bg-\[url\(\'\.\.\/\.\.\/static\/img\/recruit\/recruit-bg-mobile\.png\'\)\] {
@@ -2265,6 +2302,10 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-white\/50 {
+  color: rgb(255 255 255 / 0.5);
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2392,6 +2433,50 @@ input:checked + .toggle-bg {
   border-width: 1px 1px 1px 0;
 }
 
+/* Style the radio button */
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffd700;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+}
+
+/* Create the inner circle for the checked state */
+
+input[type='radio']::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #ffd700;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style for the checked state */
+
+input[type='radio']:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Add a subtle glow effect */
+
+input[type='radio']:checked {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -2472,6 +2557,16 @@ input:checked + .toggle-bg {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.focus\:border-b-white:focus {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.focus\:text-white:focus {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2523,6 +2618,17 @@ input:checked + .toggle-bg {
 .focus\:ring-red-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(248 180 180 / var(--tw-ring-opacity));
+}
+
+.focus-visible\:ring-0:focus-visible {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.group:focus-within .group-focus-within\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-gray-900 {
@@ -2833,6 +2939,10 @@ input:checked + .toggle-bg {
     width: 100%;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-\[4fr_1fr\] {
     grid-template-columns: 4fr 1fr;
   }
@@ -2863,6 +2973,10 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .lg\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -2879,8 +2993,16 @@ input:checked + .toggle-bg {
     width: 400px;
   }
 
+  .lg\:max-w-full {
+    max-width: 100%;
+  }
+
   .lg\:max-w-xl {
     max-width: 36rem;
+  }
+
+  .lg\:flex-1 {
+    flex: 1 1 0%;
   }
 
   .lg\:flex-row {
@@ -2889,6 +3011,10 @@ input:checked + .toggle-bg {
 
   .lg\:justify-self-end {
     justify-self: end;
+  }
+
+  .lg\:bg-\[url\(\'\.\.\/\.\.\/static\/img\/plane-bg\.png\'\)\] {
+    background-image: url('../../static/img/plane-bg.png');
   }
 
   .lg\:px-16 {
@@ -2967,4 +3093,48 @@ input:checked + .toggle-bg {
     font-size: 4.5rem;
     line-height: 1;
   }
+}
+
+.\[\&\>li\>input\]\:rounded>li>input {
+  border-radius: 0.25rem;
+}
+
+.\[\&\>li\>input\]\:border-yellow-300>li>input {
+  --tw-border-opacity: 1;
+  border-color: rgb(250 202 21 / var(--tw-border-opacity));
+}
+
+.\[\&\>li\>input\]\:bg-transparent>li>input {
+  background-color: transparent;
+}
+
+.\[\&\>li\>input\]\:text-yellow-400>li>input {
+  --tw-text-opacity: 1;
+  color: rgb(227 160 8 / var(--tw-text-opacity));
+}
+
+.focus\:\[\&\>li\>input\]\:ring-2>li>input:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:\[\&\>li\>input\]\:ring-transparent>li>input:focus {
+  --tw-ring-color: transparent;
+}
+
+.\[\&\>li\]\:flex>li {
+  display: flex;
+}
+
+.\[\&\>li\]\:items-center>li {
+  align-items: center;
+}
+
+.\[\&\>li\]\:gap-1>li {
+  gap: 0.25rem;
+}
+
+.\[\&\>li\]\:gap-2>li {
+  gap: 0.5rem;
 }
