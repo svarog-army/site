@@ -2,6 +2,7 @@ from flask import render_template, Blueprint, g, redirect, request, current_app,
 from flask_wtf import FlaskForm
 
 from config import CFG
+from svarog import forms as f
 
 multilingual = Blueprint("multilingual", __name__, template_folder="templates", url_prefix="/<lang_code>")
 
@@ -40,3 +41,9 @@ def index():
         return render_template("under_construction.html", form=FlaskForm())
 
     return render_template("index.html", form=FlaskForm())
+
+
+@multilingual.route("/cookie_policy/", methods=["GET"])
+def cookie_policy():
+    form = f.ApplicationForm()
+    return render_template("cookie_policy.html", form=form)
