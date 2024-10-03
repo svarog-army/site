@@ -1427,8 +1427,16 @@ input:checked + .toggle-bg {
   max-width: 378px;
 }
 
+.max-w-\[476px\] {
+  max-width: 476px;
+}
+
 .max-w-\[496px\] {
   max-width: 496px;
+}
+
+.max-w-\[640px\] {
+  max-width: 640px;
 }
 
 .max-w-\[796px\] {
@@ -1623,6 +1631,10 @@ input:checked + .toggle-bg {
 
 .gap-14 {
   gap: 3.5rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-2 {
@@ -1840,8 +1852,8 @@ input:checked + .toggle-bg {
   border-color: rgb(255 255 255 / 0.5);
 }
 
-.border-b-white\/50 {
-  border-bottom-color: rgb(255 255 255 / 0.5);
+.border-b-white\/20 {
+  border-bottom-color: rgb(255 255 255 / 0.2);
 }
 
 .bg-\[--main-black\] {

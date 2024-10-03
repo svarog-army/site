@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 16:33+0300\n"
+"POT-Creation-Date: 2024-10-03 16:39+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -31,17 +31,19 @@ msgstr "Ні"
 msgid "ABOUT US"
 msgstr "ПРО НАС"
 
-#: svarog/templates/about-us.html:20 svarog/templates/about-us.html:46
-#: svarog/templates/about-us.html:72
+#: svarog/templates/about-us.html:20 svarog/templates/about-us.html:50
+#: svarog/templates/about-us.html:80
 msgid ""
 "During the one-week training, you will feel your weaknesses and "
-"strengths, you will understand how you can most effectively show yourself"
-" in the Armed Forces, and you will get During the one-week training, you "
-"will feel your weaknesses and strengths, you will understand how you can "
-"most effectively show yourself in the Armed Forces, and you will get "
-"During the one-week training, you will feel your weaknesses and "
-"strengths, you will understand what you can do most effectively in the "
-"Armed Forces and you will get"
+"strengths, you will understand how you\n"
+"          can most effectively show yourself in the Armed Forces, and you"
+" will get During the one-week training, you\n"
+"          will feel your weaknesses and strengths, you will understand "
+"how you can most effectively show yourself in the\n"
+"          Armed Forces, and you will get During the one-week training, "
+"you will feel your weaknesses and strengths, you\n"
+"          will understand what you can do most effectively in the Armed "
+"Forces and you will get"
 msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
@@ -50,98 +52,122 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/about-us.html:42
+#: svarog/templates/about-us.html:46
 msgid "WHAT WE DO?"
 msgstr "ЩО МИ РОБИМО?"
 
-#: svarog/templates/about-us.html:68
+#: svarog/templates/about-us.html:76
 msgid "OUR MISSION"
 msgstr "НАША МІСІЯ"
 
-#: svarog/templates/about-us.html:78 svarog/templates/about-us.html:82
-#: svarog/templates/about-us.html:86 svarog/templates/about-us.html:90
+#: svarog/templates/about-us.html:90 svarog/templates/about-us.html:94
+#: svarog/templates/about-us.html:98 svarog/templates/about-us.html:102
 msgid "During the one-week training, you will feel your weaknesses"
 msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
 
-#: svarog/templates/application_form.html:5
+#: svarog/templates/application_form.html:7
 msgid "FILL THE FORM AND JOIN US"
 msgstr "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
 
-#: svarog/templates/application_form.html:7
+#: svarog/templates/application_form.html:9
 msgid ""
-"In order to get into the ranks of the Force of Unmanned Systems, you\n"
-"      need to apply by filling out the questionnaire."
+"In order to get into the ranks of the Force of Unmanned Systems, you need"
+" to apply by filling out the\n"
+"        questionnaire."
 msgstr ""
 "Для того, щоб потрапити до лав Сили безпілотних систем, необхідно подати "
 "заявку, заповнивши анкету."
 
-#: svarog/templates/application_form.html:21
-msgid "Full name"
+#: svarog/templates/application_form.html:20
+msgid ""
+"Full\n"
+"            name"
 msgstr "Прізвище та ім'я"
 
-#: svarog/templates/application_form.html:30
-msgid "Date of birth"
+#: svarog/templates/application_form.html:29
+msgid ""
+"Date of\n"
+"            birth"
 msgstr "Дата народження"
 
-#: svarog/templates/application_form.html:39
+#: svarog/templates/application_form.html:40
 msgid "Phone"
 msgstr "Номер телефону"
 
-#: svarog/templates/application_form.html:48
-msgid "City of actual residence"
+#: svarog/templates/application_form.html:50
+msgid ""
+"City of actual\n"
+"            residence"
 msgstr "Місто фактичного проживання"
 
 #: svarog/templates/admin/edit_modal.html:41
-#: svarog/templates/application_form.html:57
+#: svarog/templates/application_form.html:61
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: svarog/templates/application_form.html:66
-msgid "Education, specialty"
+#: svarog/templates/application_form.html:70
+msgid ""
+"Education,\n"
+"            specialty"
 msgstr "Освіта, спеціальність"
 
-#: svarog/templates/application_form.html:75
-msgid "Professional skills"
+#: svarog/templates/application_form.html:80
+msgid ""
+"Professional\n"
+"            skills"
 msgstr "Професійні навички (скіли)"
 
-#: svarog/templates/application_form.html:84
-msgid "Last civilian position"
+#: svarog/templates/application_form.html:90
+msgid ""
+"Last civilian\n"
+"            position"
 msgstr "Остання цивільна посада"
 
-#: svarog/templates/application_form.html:93
-msgid "Do you have critical health problems"
+#: svarog/templates/application_form.html:100
+msgid ""
+"Do you\n"
+"            have critical health problems"
 msgstr "Чи наявні у вас критичні проблеми зі здоровʼям?"
 
-#: svarog/templates/application_form.html:102
-msgid "Having a driver's license. If so, what categories?"
+#: svarog/templates/application_form.html:111
+msgid ""
+"Having a driver's license. If so,\n"
+"            what categories?"
 msgstr "Наявність водійського посвідчення. Якщо так - які категорії?"
 
-#: svarog/templates/application_form.html:113
-msgid "Choose a specialty"
+#: svarog/templates/application_form.html:121
+msgid ""
+"Choose a\n"
+"            specialty"
 msgstr "Оберіть спеціальність"
 
-#: svarog/templates/application_form.html:119
+#: svarog/templates/application_form.html:127
 msgid "Click to choose"
 msgstr "Клікніть щоб вибрати"
 
-#: svarog/templates/application_form.html:131
-msgid "Do you have experience with UAVs (if so, what kind)"
+#: svarog/templates/application_form.html:141
+msgid ""
+"Do you\n"
+"            have experience with UAVs (if so, what kind)"
 msgstr "Чи маєте досвід з БПЛА (якщо так, який саме?)"
 
-#: svarog/templates/application_form.html:141
-msgid "Are you a military serviceman?"
+#: svarog/templates/application_form.html:152
+msgid ""
+"Are you\n"
+"            a military serviceman?"
 msgstr "Чи Ви є військовослужбовцем?"
 
-#: svarog/templates/application_form.html:149
+#: svarog/templates/application_form.html:163
 msgid ""
-"Do you give your concent to process your personal data by UAV Forces "
-"recruiting center?"
+"Do you\n"
+"            give your concent to process your personal data by UAV Forces"
+" recruiting center?"
 msgstr ""
 "Ви погоджуєтесь на обробку персональних даних для використання в цілях "
 "рекрутингу Сил Безпілотних Систем? (Інформація НЕ буде передана до ТЦК та"
 " СП)"
 
-#: svarog/templates/application_form.html:172
+#: svarog/templates/application_form.html:187
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
 msgstr "Надіслати заявку"

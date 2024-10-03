@@ -35,10 +35,12 @@
     <div>
       <label for="local_select" class="sr-only">Language select</label>
       <select id="local_select" name="locale" onchange="this.form.submit()"
-        class="block py-2.5 px-0 w-full text-sm text-black border-none dark:text-white bg-transparent focus:outline-none focus:ring-0 0 peer">
-        <option value="uk" {% if g.lang_code=='uk' %} selected {% endif %}>УКР</option>
-        <option value="en" {% if g.lang_code=='en' %} selected {% endif %}>EN</option>
-      </select>
+      class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-none appearance-none focus:outline-none focus:ring-0 peer cursor-pointer">
+      <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="uk" {% if g.lang_code=='uk' %}
+        selected {% endif %}>УКР</option>
+      <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="en" {% if g.lang_code=='en' %}
+        selected {% endif %}>EN</option>
+    </select>
     </div>
   </form>
 </div>
