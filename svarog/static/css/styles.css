@@ -2513,6 +2513,15 @@ input[type='radio']:checked {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
+img {
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--main-yellow);
+}
+
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
