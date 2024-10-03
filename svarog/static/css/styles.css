@@ -2423,6 +2423,21 @@ input:checked + .toggle-bg {
   display: inline;
 }
 
+.frame-border {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--main-yellow);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--main-yellow);
+  text-decoration: underline;
+}
+
 .frame-border::before,
 .frame-border::after {
   content: '';
@@ -2431,6 +2446,7 @@ input:checked + .toggle-bg {
   border-style: solid;
   width: 10px;
   height: 100%;
+  transition: all 0.3s ease;
 }
 
 .frame-border::before {
@@ -2443,6 +2459,23 @@ input:checked + .toggle-bg {
   top: 0;
   right: 0;
   border-width: 1px 1px 1px 0;
+}
+
+/* Hover effects */
+
+.frame-border:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+  /* Slight yellow tint */
+}
+
+.frame-border:hover::before {
+  left: -5px;
+  width: 15px;
+}
+
+.frame-border:hover::after {
+  right: -5px;
+  width: 15px;
 }
 
 /* Style the radio button */
@@ -2487,6 +2520,64 @@ input[type='radio']:checked::before {
 
 input[type='radio']:checked {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+img {
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--main-yellow);
+}
+
+.recruitment_center {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before,
+.recruitment_center::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before {
+  top: -6px;
+  left: -6px;
+  border-top: 1px solid #ffd700;
+  border-left: 1px solid #ffd700;
+}
+
+.recruitment_center::after {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 1px solid #ffd700;
+  border-right: 1px solid #ffd700;
+}
+
+.recruitment_center:hover::before,
+.recruitment_center:hover::after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  opacity: 1;
+}
+
+form label:hover {
+  color: var(--main-yellow);
+}
+
+.values:hover {
+  border-color: var(--main-yellow);
+  transform: scale(1.05);
+}
+
+.values {
+  transition: all 0.3s ease;
 }
 
 .hover\:border-gray-300:hover {
