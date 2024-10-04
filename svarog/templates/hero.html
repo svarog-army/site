@@ -1,9 +1,7 @@
-<div
-  class="flex flex-col justify-center bg-gray-800 h-screen w-full bg-cover bg-right sm:bg-center bg-no-repeat bg-[url('../../static/img/hero-bg-mobile.png')] sm:bg-[url('../../static/img/hero-bg.png')]">
+<div class="flex flex-col justify-center bg-gray-800 h-screen w-full bg-cover bg-right sm:bg-center bg-no-repeat bg-[url('../../static/img/hero-bg-mobile.png')] sm:bg-[url('../../static/img/hero-bg.png')]">
   <div class="container mx-auto px-5 lg:px-16">
     <div class="max-w-[796px]">
-      <h1
-        class="text-white uppercase font-extrabold text-5xl lg:text-8xl lg:leading-[108px] mb-8">
+      <h1 class="text-white uppercase font-extrabold text-5xl lg:text-8xl lg:leading-[108px] mb-8">
         {{_("JOIN OUR FIRE")}}
       </h1>
 
@@ -12,7 +10,13 @@
         {{_('Join 424 obBpS "SVAROG" and burn all the enemies of Ukraine with your rage!')}}
       </p>
 
-      {% include 'button.html' %}
+      <div class="flex flex-col gap-4 sm:flex-row">
+        {% include 'button.html' %}
+
+        <a href="#vacancy-gallery" class="frame-border relative py-3 px-5 bg-transparent text-[--main-yellow] uppercase text-xl border-none cursor-pointer">
+          {{_("VIEW VACANCIES")}}
+        </a>
+      </div>
     </div>
   </div>
 </div>

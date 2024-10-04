@@ -1419,8 +1419,8 @@ input:checked + .toggle-bg {
   width: 20rem;
 }
 
-.w-\[310px\] {
-  width: 310px;
+.w-\[264px\] {
+  width: 264px;
 }
 
 .w-full {
@@ -2012,10 +2012,6 @@ input:checked + .toggle-bg {
   background-image: url('../../static/img/recruit/recruit-bg-mobile.png');
 }
 
-.bg-auto {
-  background-size: auto;
-}
-
 .bg-cover {
   background-size: cover;
 }
@@ -2145,6 +2141,10 @@ input:checked + .toggle-bg {
 
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .pb-4 {
@@ -2478,7 +2478,6 @@ h6 {
 .frame-border {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
   color: var(--main-yellow);
   background-color: transparent;
   transition: all 0.3s ease;
@@ -3062,6 +3061,10 @@ form label:hover {
   .sm\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
