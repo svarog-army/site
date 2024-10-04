@@ -32,5 +32,6 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "cSpell.language": "en,uk",
-  "djlint.showInstallError": false
+  "djlint.showInstallError": false,
+  "html.format.wrapLineLength": 1024
 }
