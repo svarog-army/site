@@ -6,7 +6,8 @@
     <div class="flex flex-col gap-5 max-w-[476px] lg:flex-1">
       <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
       <p class="text-base">
-        {{_("In order to get into the ranks of the Force of Unmanned Systems, you need to apply by filling out the questionnaire.")}}
+        {{_("In order to get into the ranks of the Force of Unmanned Systems,
+        you need to apply by filling out the questionnaire.")}}
       </p>
     </div>
 
@@ -125,19 +126,21 @@
             >{{_("Choose a specialty")}}*</label
           >
           <!-- prettier-ignore -->
-          <details class="relative list-none">
-            <summary class="list-none text-white/50 group-focus-within:text-white  bg-transparent border-0 border-b
-            border-b-white/20
-             transition">{{_("Click to choose")}} </summary>
-            {{application_form.applied_specialties(autocomplete="off", class="flex flex-col gap-2 w-full
-            border border-white/50 rounded
-            text-white/50c focus:text-white
-            focus:outline-none focus-visible:ring-0
-            transition absolute top-8 left-0 bg-black p-2 z-10 [&>li]:flex [&>li]:gap-2 [&>li]:items-center
-            [&>li>input]:text-yellow-400 [&>li>input]:bg-transparent [&>li>input]:border-yellow-300 [&>li>input]:rounded
-            focus:[&>li>input]:ring-transparent focus:[&>li>input]:ring-2 ")}}
-          </details>
-
+          <div>
+            <details id="specialties-details" class="relative list-none">
+              <summary class="list-none text-white/50 group-focus-within:text-white  bg-transparent border-0 border-b
+              border-b-white/20
+              transition">{{_("Click to choose")}} </summary>
+              {{application_form.applied_specialties(autocomplete="off", class="flex flex-col gap-2 w-full
+              border border-white/50 rounded
+              text-white/50c focus:text-white
+              focus:outline-none focus-visible:ring-0
+              transition absolute top-8 left-0 bg-black p-2 z-10 [&>li]:flex [&>li]:gap-2 [&>li]:items-center
+              [&>li>input]:text-yellow-400 [&>li>input]:bg-transparent [&>li>input]:border-yellow-300 [&>li>input]:rounded
+              focus:[&>li>input]:ring-transparent focus:[&>li>input]:ring-2 ")}}
+            </details>
+            <div id="selected-items" class="selected-items"></div>
+          </div>
           <!-- prettier-ignore -->
         </div>
         <div class="group">

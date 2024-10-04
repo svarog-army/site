@@ -205,3 +205,14 @@ form label:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(85, 85, 85);
 }
+
+.selected-items p {
+  padding: 4px;
+  color: var(--main-yellow);
+  border-radius: 5px;
+  font-size: 11px;
+}
+.selected-items {
+  position: absolute;
+  display: flex;
+}
