@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 19:04+0300\n"
+"POT-Creation-Date: 2024-10-04 12:08+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -816,6 +816,77 @@ msgstr "424 окремий батальйон безпілотних систе�
 #: svarog/templates/under_construction.html:74
 msgid "site is under construction"
 msgstr "сайт знаходиться в стані розробки"
+
+#: svarog/templates/vacancy-gallery.html:3
+msgid "VACANCIES"
+msgstr "ВАКАНСІЇ"
+
+#: svarog/templates/vacancy-gallery.html:14
+msgid "UAV pilot"
+msgstr "Пілот БПЛА"
+
+#: svarog/templates/vacancy-gallery.html:16
+#: svarog/templates/vacancy-gallery.html:45
+#: svarog/templates/vacancy-gallery.html:72
+#: svarog/templates/vacancy-gallery.html:99
+#: svarog/templates/vacancy-gallery.html:126
+#: svarog/templates/vacancy-gallery.html:153
+#: svarog/templates/vacancy-gallery.html:182
+#: svarog/templates/vacancy-gallery.html:211
+msgid ""
+"During the one-week training, you will feel your weaknesses and\n"
+"          strengths, you will understand how you can most effectively "
+"show\n"
+"          yourself in the Armed Forces, and you will get During the one-"
+"week\n"
+"          training, you will feel your weaknesses and strengths, you will"
+"\n"
+"          understand how you can most effectively show yourself in the "
+"Armed\n"
+"          Forces, and you will get During the one-week training, you will"
+" feel\n"
+"          your weaknesses and strengths, you will understand what you can"
+" do\n"
+"          most effectively in the Armed Forces and you will get"
+msgstr ""
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
+
+#: svarog/templates/vacancy-gallery.html:42
+msgid "Driver-Electrician"
+msgstr "Водій-Електрик"
+
+#: svarog/templates/vacancy-gallery.html:70
+msgid "Master"
+msgstr "Майстер"
+
+#: svarog/templates/vacancy-gallery.html:97
+msgid "Decryptor"
+msgstr "Дешифрувальник"
+
+#: svarog/templates/vacancy-gallery.html:124
+msgid "Airman"
+msgstr "Авіаційний Механік"
+
+#: svarog/templates/vacancy-gallery.html:151
+msgid "Sapper"
+msgstr "Сапер"
+
+#: svarog/templates/vacancy-gallery.html:179
+msgid "Radio electronic combat operator"
+msgstr "Оператор РЕБ"
+
+#: svarog/templates/vacancy-gallery.html:208
+msgid "The liaison officer"
+msgstr "Зв'язківець"
+
+#: svarog/templates/vacancy-gallery.html:231
+msgid "Scroll"
+msgstr "Прокрутіть"
 
 #: svarog/templates/admin/add_modal.html:67
 msgid "Confirm Password"
