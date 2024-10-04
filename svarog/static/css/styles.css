@@ -1310,6 +1310,11 @@ input:checked + .toggle-bg {
   display: none;
 }
 
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -1334,6 +1339,10 @@ input:checked + .toggle-bg {
   height: 2rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
 .h-\[260px\] {
   height: 260px;
 }
@@ -1356,10 +1365,6 @@ input:checked + .toggle-bg {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-80 {
-  height: 20rem;
 }
 
 .max-h-full {
@@ -1425,10 +1430,6 @@ input:checked + .toggle-bg {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-60 {
-  width: 15rem;
 }
 
 .max-w-2xl {
@@ -2138,11 +2139,6 @@ input:checked + .toggle-bg {
   padding-bottom: 1rem;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2447,6 +2443,16 @@ input:checked + .toggle-bg {
   --main-yellow: #ffc823;
   --main-black: #000000;
   color: white;
+  font-family: 'Ruberoid Regular', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ruberoid Bold', sans-serif;
 }
 
 .text-danger {
@@ -3130,10 +3136,6 @@ form label:hover {
     margin-top: 5rem;
   }
 
-  .lg\:h-80 {
-    height: 20rem;
-  }
-
   .lg\:w-4\/12 {
     width: 33.333333%;
   }
@@ -3148,10 +3150,6 @@ form label:hover {
 
   .lg\:w-\[700px\] {
     width: 700px;
-  }
-
-  .lg\:w-2 {
-    width: 0.5rem;
   }
 
   .lg\:max-w-full {
