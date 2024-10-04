@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 12:20+0300\n"
+"POT-Creation-Date: 2024-10-04 12:30+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -810,7 +810,6 @@ msgid "Daily from 09:00 to 18:00"
 msgstr "Щодня з 09:00 до 18:00"
 
 #: svarog/templates/sidebar.html:23
-#, fuzzy
 msgid "Users"
 msgstr "Користувачі"
 
@@ -829,6 +828,77 @@ msgstr "424 окремий батальйон безпілотних систе�
 #: svarog/templates/under_construction.html:74
 msgid "site is under construction"
 msgstr "сайт знаходиться в стані розробки"
+
+#: svarog/templates/vacancy-gallery.html:3
+msgid "VACANCIES"
+msgstr "ВАКАНСІЇ"
+
+#: svarog/templates/vacancy-gallery.html:13
+msgid "UAV pilot"
+msgstr "Пілот БПЛА"
+
+#: svarog/templates/vacancy-gallery.html:15
+#: svarog/templates/vacancy-gallery.html:43
+#: svarog/templates/vacancy-gallery.html:69
+#: svarog/templates/vacancy-gallery.html:95
+#: svarog/templates/vacancy-gallery.html:121
+#: svarog/templates/vacancy-gallery.html:147
+#: svarog/templates/vacancy-gallery.html:175
+#: svarog/templates/vacancy-gallery.html:203
+msgid ""
+"During the one-week training, you will feel your weaknesses and\n"
+"          strengths, you will understand how you can most effectively "
+"show\n"
+"          yourself in the Armed Forces, and you will get During the one-"
+"week\n"
+"          training, you will feel your weaknesses and strengths, you will"
+"\n"
+"          understand how you can most effectively show yourself in the "
+"Armed\n"
+"          Forces, and you will get During the one-week training, you will"
+" feel\n"
+"          your weaknesses and strengths, you will understand what you can"
+" do\n"
+"          most effectively in the Armed Forces and you will get"
+msgstr ""
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
+
+#: svarog/templates/vacancy-gallery.html:40
+msgid "Driver-Electrician"
+msgstr "Водій-Електрик"
+
+#: svarog/templates/vacancy-gallery.html:67
+msgid "Master"
+msgstr "Майстер"
+
+#: svarog/templates/vacancy-gallery.html:93
+msgid "Decryptor"
+msgstr "Дешифрувальник"
+
+#: svarog/templates/vacancy-gallery.html:119
+msgid "Airman"
+msgstr "Авіаційний Механік"
+
+#: svarog/templates/vacancy-gallery.html:145
+msgid "Sapper"
+msgstr "Сапер"
+
+#: svarog/templates/vacancy-gallery.html:172
+msgid "Radio electronic combat operator"
+msgstr "Оператор РЕБ"
+
+#: svarog/templates/vacancy-gallery.html:200
+msgid "The liaison officer"
+msgstr "Зв'язківець"
+
+#: svarog/templates/vacancy-gallery.html:223
+msgid "Scroll"
+msgstr "Прокрутіть"
 
 #: svarog/templates/admin/add_modal.html:67
 msgid "Confirm Password"
@@ -929,7 +999,6 @@ msgid "From"
 msgstr "Звідки"
 
 #: svarog/templates/recruit/edit_modal.html:76
-#, fuzzy
 msgid "Education"
 msgstr "НАЦІЯ"
 
@@ -938,7 +1007,6 @@ msgid "Skills"
 msgstr "Навички"
 
 #: svarog/templates/recruit/edit_modal.html:96
-#, fuzzy
 msgid "Last Job"
 msgstr "Останнє місце роботи"
 
@@ -955,12 +1023,10 @@ msgid "UAV Experience"
 msgstr "Досвід роботи з БПЛА"
 
 #: svarog/templates/recruit/edit_modal.html:136
-#, fuzzy
 msgid "Status"
 msgstr "ТАКТИКА"
 
 #: svarog/templates/recruit/edit_modal.html:146
-#, fuzzy
 msgid "military serviceman"
 msgstr "Чи Ви є військовослужбовцем?"
 
@@ -970,7 +1036,6 @@ msgid "Comments"
 msgstr "Коментарі"
 
 #: svarog/templates/recruit/edit_modal.html:174
-#, fuzzy
 msgid "Save changes"
 msgstr "Зберегти нового користувача"
 
