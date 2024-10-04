@@ -2,7 +2,7 @@ from datetime import datetime
 
 import sqlalchemy as sa
 from flask import Blueprint, flash, redirect, render_template, request, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 from flask_babel import _
 
 from svarog import db
@@ -23,12 +23,16 @@ BLANK_PASSWORD = "********"
 @admin_blueprint.route("/", methods=["GET"])
 @login_required
 def index():
-    return redirect(url_for("admin.admins"))
+    if current_user.is_admin:
+        return redirect(url_for("admin.admins"))
+    return redirect(url_for("recruit.recruits"))
 
 
 @admin_blueprint.route("/admins", methods=["GET"])
 @login_required
 def admins():
+    if not current_user.is_admin:
+        return redirect(url_for("admin.index"))
     q = request.args.get("q", type=str, default=None)
     where = m.User.is_deleted.is_(False)
     if q:

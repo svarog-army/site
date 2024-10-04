@@ -46,15 +46,13 @@ def init(app: Flask):
     def create_specialties():
         """Create specialties"""
         specialties = [
-            "Оператор БПЛА",
+            "Водій-Електрик",
             "Пілот БПЛА",
             "Майстер",
-            "Водій",
             "Авіаційний механік",
             "Дешифрувальник",
-            "Механік",
             "Сапер",
-            "Оператор комплексу РЕБ",
+            "Оператор РЕБ",
             "Зв'язківець",
         ]
         counter = 0
@@ -66,3 +64,12 @@ def init(app: Flask):
             m.Specialty(name=spec).save()
             counter += 1
         print(f"{counter} specialties created")
+
+    @app.cli.command("fill-recruits")
+    @click.option("--count", default=100, type=int)
+    def fill_recruits(count: int):
+        """Fill recruits table with dummy data."""
+        from svarog.controllers import fill_test_recruits
+
+        fill_test_recruits(count)
+        print(f"DB populated by {count} recruits")
