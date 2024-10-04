@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 12:30+0300\n"
+"POT-Creation-Date: 2024-10-04 14:33+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -185,15 +185,15 @@ msgstr "Офіційний веб-сайт 424-го окремого батал�
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
-#: svarog/templates/cookie_policy.html:5
+#: svarog/templates/cookie_policy.html:6
 msgid "Cookie Policy for 424bat.army website"
 msgstr "Політика використання файлів cookie для веб-сайту 424bat.army"
 
-#: svarog/templates/cookie_policy.html:8
+#: svarog/templates/cookie_policy.html:9
 msgid "Introduction"
 msgstr "Вступ"
 
-#: svarog/templates/cookie_policy.html:11
+#: svarog/templates/cookie_policy.html:12
 msgid ""
 "This Cookie Policy explains how the 424bat.army website (the “Site”)\n"
 "    uses cookies and similar technologies to collect and process "
@@ -208,11 +208,11 @@ msgstr ""
 "забезпечення належної роботи Сайту та надання кращого користувацького "
 "досвіду."
 
-#: svarog/templates/cookie_policy.html:16
+#: svarog/templates/cookie_policy.html:17
 msgid "What Are Cookies"
 msgstr "Що таке файли cookie?"
 
-#: svarog/templates/cookie_policy.html:18
+#: svarog/templates/cookie_policy.html:19
 msgid ""
 "Cookies are small text files that are stored on your device when you\n"
 "    visit the website. They are used for collection information about "
@@ -226,15 +226,15 @@ msgstr ""
 "інформації про ваші вибори та налаштування, а також для збору даних для "
 "аналізу та покращення функціонування Сайту."
 
-#: svarog/templates/cookie_policy.html:23
+#: svarog/templates/cookie_policy.html:24
 msgid "Types of cookies we use"
 msgstr "Типи файлів cookie, які ми використовуємо"
 
-#: svarog/templates/cookie_policy.html:26
+#: svarog/templates/cookie_policy.html:27
 msgid "The files are necessary for work"
 msgstr "Файли необхідні для роботи"
 
-#: svarog/templates/cookie_policy.html:26
+#: svarog/templates/cookie_policy.html:27
 msgid ""
 "These files help\n"
 "      ensure the correct operation of the Site and access to basic\n"
@@ -243,11 +243,11 @@ msgstr ""
 "Ці файли допомагають забезпечити правильну роботу Сайту та доступ до "
 "основних функцій."
 
-#: svarog/templates/cookie_policy.html:31
+#: svarog/templates/cookie_policy.html:32
 msgid "Analytics files"
 msgstr "Файли аналітики"
 
-#: svarog/templates/cookie_policy.html:31
+#: svarog/templates/cookie_policy.html:32
 msgid ""
 "We use cookies to collect\n"
 "      anonymous data about the use of the Site in order to understand how"
@@ -258,11 +258,11 @@ msgstr ""
 " Сайту, щоб розуміти, як користувачі взаємодіють з контентом та покращити"
 " його якість."
 
-#: svarog/templates/cookie_policy.html:36
+#: svarog/templates/cookie_policy.html:37
 msgid "Management of cookies"
 msgstr "Керування файлами cookie"
 
-#: svarog/templates/cookie_policy.html:38
+#: svarog/templates/cookie_policy.html:39
 msgid ""
 "You have the option to manage the use of cookies through the settings\n"
 "    your web browser. You can choose to block all cookies or get a "
@@ -277,11 +277,11 @@ msgstr ""
 "увагу, що вимкнення файлів cookie може призвести до обмеження доступу до "
 "деяких функцій Сайту."
 
-#: svarog/templates/cookie_policy.html:43
+#: svarog/templates/cookie_policy.html:44
 msgid "Disclaimer"
 msgstr "Відмова від відповідальності"
 
-#: svarog/templates/cookie_policy.html:45
+#: svarog/templates/cookie_policy.html:46
 msgid ""
 "We are not responsible for cookies and third-party technologies, which\n"
 "    can be used on the Site. We recommend that you review the policy "
@@ -293,11 +293,11 @@ msgstr ""
 "політику конфіденційності та використання файлів cookie цих третіх "
 "сторін."
 
-#: svarog/templates/cookie_policy.html:49
+#: svarog/templates/cookie_policy.html:50
 msgid "Changes to the Cookies Policy"
 msgstr "Зміни в Політиці використання файлів cookie"
 
-#: svarog/templates/cookie_policy.html:51
+#: svarog/templates/cookie_policy.html:52
 msgid ""
 "We may update this Policy from time to time. Please periodically review\n"
 "    this document to be aware of any changes."
@@ -305,7 +305,7 @@ msgstr ""
 "Ми можемо час від часу оновлювати цю Політику. Будь ласка, періодично "
 "переглядайте цей документ, щоб бути в курсі будь-яких змін."
 
-#: svarog/templates/cookie_policy.html:54
+#: svarog/templates/cookie_policy.html:55
 msgid "Thank you for using the 424bat.army Site!"
 msgstr "Дякуємо за використання Сайту 424bat.army!"
 
@@ -338,8 +338,8 @@ msgid ""
 "Join 424 obBpS \"SVAROG\" and burn all the enemies of Ukraine with your "
 "rage!"
 msgstr ""
-"Приєднуйся до 424 обБпС \"SVAROG\" та запечи своєю люттю всіх ворогів України!"
-
+"Приєднуйся до 424 обБпС \"SVAROG\" та запечи своєю люттю всіх ворогів "
+"України!"
 
 #: svarog/templates/our-values.html:3
 msgid "OUR VALUES"
@@ -373,15 +373,15 @@ msgstr "НАЦІЯ"
 msgid "SPIRIT"
 msgstr "ДУХ"
 
-#: svarog/templates/privacy_policy.html:3
+#: svarog/templates/privacy_policy.html:4
 msgid "Privacy Policy"
 msgstr "Політика конфіденційності"
 
-#: svarog/templates/privacy_policy.html:6
+#: svarog/templates/privacy_policy.html:7
 msgid "General provisions"
 msgstr "Загальні положення"
 
-#: svarog/templates/privacy_policy.html:9
+#: svarog/templates/privacy_policy.html:10
 msgid ""
 "Privacy policy – rules governing the collection, processing, use and\n"
 "    protection of personal data that may be requested/received when using"
@@ -393,7 +393,7 @@ msgstr ""
 "запитані/отримані при використанні вебпорталу 424bat.army (далі –  "
 "Портал)."
 
-#: svarog/templates/privacy_policy.html:14
+#: svarog/templates/privacy_policy.html:15
 msgid ""
 " Personal data – information or a set of information about a natural or\n"
 "    legal person who is identified or can be specifically identified."
@@ -402,7 +402,7 @@ msgstr ""
 "юридичну особу, яка ідентифікована або може бути конкретно "
 "ідентифікована."
 
-#: svarog/templates/privacy_policy.html:18
+#: svarog/templates/privacy_policy.html:19
 msgid ""
 " The Portal administrator treats with great respect the confidential\n"
 "    (personal) information of any persons who use the information posted "
@@ -423,7 +423,7 @@ msgstr ""
 "тим самим створюючи і забезпечуючи максимально комфортні умови для "
 "використання Порталу."
 
-#: svarog/templates/privacy_policy.html:26
+#: svarog/templates/privacy_policy.html:27
 msgid ""
 " By filling out the data in the registration form and marking the fact\n"
 "    that you have read this Privacy Policy (hereinafter – the Policy), "
@@ -440,7 +440,7 @@ msgstr ""
 "рольового доступу, підготовки статистичної, адміністративної та іншої "
 "інформації з питань професійного навчання."
 
-#: svarog/templates/privacy_policy.html:33
+#: svarog/templates/privacy_policy.html:34
 msgid ""
 "Before using the Portal, carefully familiarize yourself with your\n"
 "    rights and obligations regarding the processing of personal data, "
@@ -453,11 +453,11 @@ msgstr ""
 "Перед використанням Порталу уважно ознайомтесь з Вашими правами та "
 "обов’язками щодо обробки персональних даних, які зазначені "
 
-#: svarog/templates/privacy_policy.html:39
+#: svarog/templates/privacy_policy.html:40
 msgid "Collection and use of personal data"
 msgstr "Збір та використання персональних даних"
 
-#: svarog/templates/privacy_policy.html:42
+#: svarog/templates/privacy_policy.html:43
 msgid ""
 "The collection of personal data is carried out solely according to your\n"
 "    conscious and voluntary decision as the subject of personal data to "
@@ -471,7 +471,7 @@ msgstr ""
 "функціональних можливостей Порталу та відповідно до сформульованої в цій "
 "Політиці мети обробки персональних даних."
 
-#: svarog/templates/privacy_policy.html:48
+#: svarog/templates/privacy_policy.html:49
 msgid ""
 "The scope and type of collection and use of your personal data varies\n"
 "    depending on the role in which you plan to use the functionality of "
@@ -482,7 +482,7 @@ msgstr ""
 "залежно від того, в якій ролі Ви плануєте використовувати функціональні "
 "можливості Порталу"
 
-#: svarog/templates/privacy_policy.html:53
+#: svarog/templates/privacy_policy.html:54
 msgid ""
 "Depending on the role you have chosen, by registering on the Portal and\n"
 "    filling in your personal account data, you provide the following data:"
@@ -490,7 +490,7 @@ msgstr ""
 "Здійснюючи залежно від обраної Вами ролі реєстрацію на Порталі та "
 "заповнюючи дані особистого облікового запису Ви надаєте наступні дані:"
 
-#: svarog/templates/privacy_policy.html:57
+#: svarog/templates/privacy_policy.html:58
 msgid ""
 "Full name, date of birth, gender, or other identification data, phone\n"
 "    number and e-mail;"
@@ -498,7 +498,7 @@ msgstr ""
 "ПІБ, дата народження, стать, або інші ідентифікаційні дані, номер "
 "телефону та e-mail;"
 
-#: svarog/templates/privacy_policy.html:61
+#: svarog/templates/privacy_policy.html:62
 msgid ""
 "information related to your professional activity: place of work,\n"
 "    position, position category, specialty, qualification, scientific "
@@ -509,11 +509,11 @@ msgstr ""
 "посада, категорія посади, спеціальність, кваліфікація, науковий ступінь, "
 "вчене звання тощо;"
 
-#: svarog/templates/privacy_policy.html:65
+#: svarog/templates/privacy_policy.html:66
 msgid "additional registration"
 msgstr "додаткові реєстраційні."
 
-#: svarog/templates/privacy_policy.html:67
+#: svarog/templates/privacy_policy.html:68
 msgid ""
 "With further use of the Portal, information about what is contained in\n"
 "    requests for feedback forms / electronic messages is automatically\n"
@@ -523,25 +523,25 @@ msgstr ""
 "інформації про що містяться в запитах форм зворотного зв’язку / "
 "електронних повідомленнях."
 
-#: svarog/templates/privacy_policy.html:72
+#: svarog/templates/privacy_policy.html:73
 msgid "Purpose of collection, processing and use of personal data"
 msgstr "Мета збору, обробки та використання персональних даних"
 
-#: svarog/templates/privacy_policy.html:75
+#: svarog/templates/privacy_policy.html:76
 msgid ""
 "The collection, processing and use of personal data is carried out for\n"
 "    the purpose of:"
 msgstr "Збір, обробка та використання персональних даних здійснюється з метою:"
 
-#: svarog/templates/privacy_policy.html:78
+#: svarog/templates/privacy_policy.html:79
 msgid "provision of role access, in particular:"
 msgstr "забезпечення рольового доступу, зокрема:"
 
-#: svarog/templates/privacy_policy.html:79
+#: svarog/templates/privacy_policy.html:80
 msgid "registration of Portal entities;"
 msgstr "реєстрації суб’єктів Порталу; "
 
-#: svarog/templates/privacy_policy.html:81
+#: svarog/templates/privacy_policy.html:82
 msgid ""
 "organization of electronic interaction of Portal subjects through\n"
 "    personal accounts;"
@@ -549,17 +549,17 @@ msgstr ""
 "організації електронної взаємодії суб’єктів Порталу через особисті "
 "кабінети;"
 
-#: svarog/templates/privacy_policy.html:85
+#: svarog/templates/privacy_policy.html:86
 msgid ""
 "generalization and systematization of registers and structured data, in\n"
 "    particular:"
 msgstr "узагальнення та систематизації реєстрів та структурованих даних, зокрема:"
 
-#: svarog/templates/privacy_policy.html:88
+#: svarog/templates/privacy_policy.html:89
 msgid "formation of the list;"
 msgstr "формування переліку;"
 
-#: svarog/templates/privacy_policy.html:90
+#: svarog/templates/privacy_policy.html:91
 msgid ""
 "monitoring, summarization and analysis of statistical data generated by\n"
 "    the subjects of the Portal as a result of its use."
@@ -567,7 +567,7 @@ msgstr ""
 "моніторинг, узагальнення та аналіз статистичних даних, що формуються "
 "суб’єктами Порталу в результаті його використання."
 
-#: svarog/templates/privacy_policy.html:94
+#: svarog/templates/privacy_policy.html:95
 msgid ""
 "Personal data are stored for no longer than is necessary for the\n"
 "    purpose of their collection, processing and use or until you stop "
@@ -579,11 +579,11 @@ msgstr ""
 "припинення Вами використання Порталу шляхом видалення свого облікового "
 "запису на Порталі."
 
-#: svarog/templates/privacy_policy.html:99
+#: svarog/templates/privacy_policy.html:100
 msgid "Access to personal data"
 msgstr "Доступ до персональних даних"
 
-#: svarog/templates/privacy_policy.html:102
+#: svarog/templates/privacy_policy.html:103
 msgid ""
 "Full access to personal data of registered Portal subjects is granted\n"
 "    to an authorized person of the Portal administrator."
@@ -591,11 +591,11 @@ msgstr ""
 "Повний доступ до персональних даних зареєстрованих суб’єктів Порталу "
 "надано уповноваженій особі адміністратора Порталу."
 
-#: svarog/templates/privacy_policy.html:106
+#: svarog/templates/privacy_policy.html:107
 msgid "Transfer of personal data to third parties"
 msgstr "Передача персональних даних третім особам"
 
-#: svarog/templates/privacy_policy.html:109
+#: svarog/templates/privacy_policy.html:110
 msgid ""
 "The Portal Administrator (424 Battalion of Unmanned Systems) does not\n"
 "    transfer or disclose personal data received from registered Portal "
@@ -606,7 +606,7 @@ msgstr ""
 "передає та не розголошує персональні дані, які отримує від зареєстрованих"
 " суб’єктів Порталу, третім особам. "
 
-#: svarog/templates/privacy_policy.html:114
+#: svarog/templates/privacy_policy.html:115
 msgid ""
 "The disclosure of personal data is possible in cases determined by the\n"
 "    current legislation of Ukraine, as well as in the case of the "
@@ -620,7 +620,7 @@ msgstr ""
 "надають технічну підтримку та/або послуги щодо удосконалення Порталу на "
 "умовах договору та за умови не розголошення персональних даних."
 
-#: svarog/templates/privacy_policy.html:121
+#: svarog/templates/privacy_policy.html:122
 msgid ""
 "The portal may contain hyperlinks to third-party websites and other\n"
 "    resources on the Internet of third parties. Third-party resources may"
@@ -642,11 +642,11 @@ msgstr ""
 "відповідальності за будь-яку інформацію, матеріали, розміщені на ресурсах"
 " третіх осіб."
 
-#: svarog/templates/privacy_policy.html:130
+#: svarog/templates/privacy_policy.html:131
 msgid "Protection of personal data"
 msgstr "Захист персональних даних"
 
-#: svarog/templates/privacy_policy.html:133
+#: svarog/templates/privacy_policy.html:134
 msgid ""
 "The Portal administrator takes the necessary procedural and technical\n"
 "    measures to protect your personal data from their loss, unauthorized "
@@ -657,11 +657,11 @@ msgstr ""
 "щодо захисту Ваших персональних даних від їх втрати, неправомірного "
 "доступу  до них або їх розповсюдження на Порталі."
 
-#: svarog/templates/privacy_policy.html:138
+#: svarog/templates/privacy_policy.html:139
 msgid "Changes to the terms of the Policy"
 msgstr "Зміни до умов Політики"
 
-#: svarog/templates/privacy_policy.html:141
+#: svarog/templates/privacy_policy.html:142
 msgid ""
 "The Portal Administrator may change this Policy to accurately reflect\n"
 "    the methods of collection, processing, use, access and protection of\n"
@@ -671,7 +671,7 @@ msgstr ""
 "відображала методи збору, обробки, використання, доступу та захисту "
 "персональних даних."
 
-#: svarog/templates/privacy_policy.html:146
+#: svarog/templates/privacy_policy.html:147
 msgid ""
 "Accordingly, you should review this Policy periodically. When the\n"
 "    Portal administrator changes this Policy, he will update the “last "
@@ -685,15 +685,15 @@ msgstr ""
 "зміни» у верхній частині цієї Політики. Зміни до цієї Політики є "
 "ефективними, коли вони опубліковані."
 
-#: svarog/templates/privacy_policy.html:152
+#: svarog/templates/privacy_policy.html:153
 msgid "Your rights"
 msgstr "Ваші права"
 
-#: svarog/templates/privacy_policy.html:154
+#: svarog/templates/privacy_policy.html:155
 msgid "By registering on the Portal, you have the right to:"
 msgstr "Зареєструвавшись на Порталі, Ви маєте право:"
 
-#: svarog/templates/privacy_policy.html:156
+#: svarog/templates/privacy_policy.html:157
 msgid ""
 "to receive information about the sources of collection and the place of\n"
 "    storage of your personal data, its purpose"
@@ -701,7 +701,7 @@ msgstr ""
 "отримувати інформацію про джерела збору та місце збереження своїх "
 "персональних даних, мету їх обробки;"
 
-#: svarog/templates/privacy_policy.html:163
+#: svarog/templates/privacy_policy.html:164
 msgid ""
 "receive information about the conditions for providing access to\n"
 "    personal data, in particular information about third parties to whom "
@@ -712,7 +712,7 @@ msgstr ""
 "зокрема інформацію про третіх осіб, яким передаються Ваші персональні "
 "дані;"
 
-#: svarog/templates/privacy_policy.html:169
+#: svarog/templates/privacy_policy.html:170
 msgid ""
 "receive information about the processing and use of your personal data\n"
 "    later than thirty calendar days from the date of receipt of the "
@@ -725,7 +725,7 @@ msgstr ""
 "(крім випадків, передбачених Законом України «Про захист персональних "
 "даних») інформацію щодо обробки та використання Ваших персональних даних;"
 
-#: svarog/templates/privacy_policy.html:176
+#: svarog/templates/privacy_policy.html:177
 msgid ""
 "submit a reasoned claim to the owner of personal data with an objection\n"
 "    to the processing of your personal data;"
@@ -733,7 +733,7 @@ msgstr ""
 "пред’являти вмотивовану вимогу володільцю персональних даних із "
 "запереченням щодо обробки Ваших персональних даних;"
 
-#: svarog/templates/privacy_policy.html:181
+#: svarog/templates/privacy_policy.html:182
 msgid ""
 "file complaints about the processing of your personal data by the owner\n"
 "    or administrator of personal data to the Human Rights Commissioner of"
@@ -744,7 +744,7 @@ msgstr ""
 "володільцем чи розпорядником персональних даних до Уповноваженого "
 "Верховної ради України з прав людини або до суду;"
 
-#: svarog/templates/privacy_policy.html:187
+#: svarog/templates/privacy_policy.html:188
 msgid ""
 "save legal remedies in case of violation of the legislation on the\n"
 "    protection of personal data;"
@@ -752,15 +752,15 @@ msgstr ""
 "застосовувати засоби правового захисту в разі порушення законодавства про"
 " захист персональних даних;"
 
-#: svarog/templates/privacy_policy.html:191
+#: svarog/templates/privacy_policy.html:192
 msgid "withdraw consent to the processing of your personal data."
 msgstr "відкликати згоду на обробку Ваших персональних даних."
 
-#: svarog/templates/privacy_policy.html:194
+#: svarog/templates/privacy_policy.html:195
 msgid "Location of personal data"
 msgstr "Місце знаходження персональних даних"
 
-#: svarog/templates/privacy_policy.html:197
+#: svarog/templates/privacy_policy.html:198
 msgid ""
 "The owner and administrator of personal data is 424 Battalion of\n"
 "    Unmanned Systems."
@@ -781,33 +781,42 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/recruitment-contacts.html:7
+#: svarog/templates/recruitment-contacts.html:6
 msgid "CONTACTS OF RECRUITMENT CENTERS"
 msgstr "КОНТАКТИ РЕКРУТИНГОВИХ ЦЕНТРІВ"
 
-#: svarog/templates/recruitment-contacts.html:12
-#: svarog/templates/recruitment-contacts.html:17
-#: svarog/templates/recruitment-contacts.html:22
+#: svarog/templates/recruitment-contacts.html:13
 #: svarog/templates/recruitment-contacts.html:27
-#: svarog/templates/recruitment-contacts.html:32
+#: svarog/templates/recruitment-contacts.html:34
+#: svarog/templates/recruitment-contacts.html:41
 msgid "KYIV"
 msgstr "КИЇВ"
 
-#: svarog/templates/recruitment-contacts.html:13
-#: svarog/templates/recruitment-contacts.html:18
-#: svarog/templates/recruitment-contacts.html:23
-#: svarog/templates/recruitment-contacts.html:28
-#: svarog/templates/recruitment-contacts.html:33
+#: svarog/templates/recruitment-contacts.html:15
+#: svarog/templates/recruitment-contacts.html:29
+#: svarog/templates/recruitment-contacts.html:36
+#: svarog/templates/recruitment-contacts.html:43
 msgid "ave. Peremohy, 83/2"
 msgstr "просп. Перемоги, 83/2"
 
-#: svarog/templates/recruitment-contacts.html:14
-#: svarog/templates/recruitment-contacts.html:19
-#: svarog/templates/recruitment-contacts.html:24
-#: svarog/templates/recruitment-contacts.html:29
-#: svarog/templates/recruitment-contacts.html:34
+#: svarog/templates/recruitment-contacts.html:16
+#: svarog/templates/recruitment-contacts.html:30
+#: svarog/templates/recruitment-contacts.html:37
+#: svarog/templates/recruitment-contacts.html:44
 msgid "Daily from 09:00 to 18:00"
 msgstr "Щодня з 09:00 до 18:00"
+
+#: svarog/templates/recruitment-contacts.html:20
+msgid "BUCHA"
+msgstr "БУЧА"
+
+#: svarog/templates/recruitment-contacts.html:22
+msgid "Energetykiv st. 12"
+msgstr "вул. Енергетиків 12"
+
+#: svarog/templates/recruitment-contacts.html:23
+msgid "Interview by appointment"
+msgstr "Співбесіда по домовленості"
 
 #: svarog/templates/sidebar.html:23
 msgid "Users"
