@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 19:04+0300\n"
+"POT-Creation-Date: 2024-10-04 11:22+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -90,6 +90,8 @@ msgid ""
 msgstr "Дата народження"
 
 #: svarog/templates/application_form.html:42
+#: svarog/templates/recruit/edit_modal.html:56
+#: svarog/templates/recruit/recruits.html:26
 msgid "Phone"
 msgstr "Номер телефону"
 
@@ -101,6 +103,7 @@ msgstr "Місто фактичного проживання"
 
 #: svarog/templates/admin/edit_modal.html:41
 #: svarog/templates/application_form.html:63
+#: svarog/templates/recruit/edit_modal.html:36
 msgid "Email"
 msgstr "Електронна пошта"
 
@@ -809,6 +812,19 @@ msgstr "просп. Перемоги, 83/2"
 msgid "Daily from 09:00 to 18:00"
 msgstr "Щодня з 09:00 до 18:00"
 
+#: svarog/templates/sidebar.html:23
+#, fuzzy
+msgid "Users"
+msgstr "Користувачі"
+
+#: svarog/templates/sidebar.html:45
+msgid "Recruits"
+msgstr "Новобранці"
+
+#: svarog/templates/sidebar.html:64
+msgid "Sign Out"
+msgstr "Вийти"
+
 #: svarog/templates/under_construction.html:66
 msgid "424th separate battalion of unmanned systems"
 msgstr "424 окремий батальйон безпілотних систем"
@@ -819,7 +835,7 @@ msgstr "сайт знаходиться в стані розробки"
 
 #: svarog/templates/admin/add_modal.html:67
 msgid "Confirm Password"
-msgstr ""
+msgstr "Підтвердьте пароль"
 
 #: svarog/templates/admin/add_modal.html:80
 #: svarog/templates/admin/admins.html:31 svarog/templates/admin/admins.html:56
@@ -832,6 +848,8 @@ msgid "Save new user"
 msgstr "Зберегти нового користувача"
 
 #: svarog/templates/admin/admins.html:6
+#: svarog/templates/recruit/recruits.html:6
+#: svarog/templates/recruit/recruits.html:18
 msgid "Search"
 msgstr "Пошук"
 
@@ -841,6 +859,8 @@ msgstr "Додати користувача"
 
 #: svarog/templates/admin/admins.html:31
 #: svarog/templates/admin/edit_modal.html:29
+#: svarog/templates/recruit/edit_modal.html:27
+#: svarog/templates/recruit/recruits.html:26
 msgid "Name"
 msgstr "Ім'я"
 
@@ -853,26 +873,32 @@ msgid "User"
 msgstr "Користувач"
 
 #: svarog/templates/admin/admins.html:61
+#: svarog/templates/recruit/recruits.html:63
 msgid "Edit"
 msgstr "Редагувати"
 
 #: svarog/templates/admin/admins.html:65
+#: svarog/templates/recruit/recruits.html:67
 msgid "Delete"
 msgstr "Видалити"
 
 #: svarog/templates/admin/admins.html:82
+#: svarog/templates/recruit/recruits.html:84
 msgid "First"
 msgstr "Перший"
 
 #: svarog/templates/admin/admins.html:91
+#: svarog/templates/recruit/recruits.html:93
 msgid "Previous"
 msgstr "Попередній"
 
 #: svarog/templates/admin/admins.html:116
+#: svarog/templates/recruit/recruits.html:118
 msgid "Next"
 msgstr "Наступний"
 
 #: svarog/templates/admin/admins.html:126
+#: svarog/templates/recruit/recruits.html:128
 msgid "Last"
 msgstr "Останній"
 
@@ -892,15 +918,74 @@ msgstr "Підтвердити пароль"
 msgid "Save all"
 msgstr "Зберегти все"
 
-#: svarog/views/admin.py:83
+#: svarog/templates/recruit/edit_modal.html:19
+msgid "Recruit"
+msgstr "Рекрут"
+
+#: svarog/templates/recruit/edit_modal.html:46
+msgid "Birth Date"
+msgstr "День народження"
+
+#: svarog/templates/recruit/edit_modal.html:66
+#: svarog/templates/recruit/recruits.html:26
+msgid "From"
+msgstr "Звідки"
+
+#: svarog/templates/recruit/edit_modal.html:76
+#, fuzzy
+msgid "Education"
+msgstr "НАЦІЯ"
+
+#: svarog/templates/recruit/edit_modal.html:86
+msgid "Skills"
+msgstr "Навички"
+
+#: svarog/templates/recruit/edit_modal.html:96
+#, fuzzy
+msgid "Last Job"
+msgstr "Останнє місце роботи"
+
+#: svarog/templates/recruit/edit_modal.html:106
+msgid "Health Problems"
+msgstr "Проблеми зі здоров'ям"
+
+#: svarog/templates/recruit/edit_modal.html:116
+msgid "Driver License"
+msgstr "Посвідчення водія"
+
+#: svarog/templates/recruit/edit_modal.html:126
+msgid "UAV Experience"
+msgstr "Досвід роботи з БПЛА"
+
+#: svarog/templates/recruit/edit_modal.html:136
+#, fuzzy
+msgid "Status"
+msgstr "ТАКТИКА"
+
+#: svarog/templates/recruit/edit_modal.html:146
+#, fuzzy
+msgid "military serviceman"
+msgstr "Чи Ви є військовослужбовцем?"
+
+#: svarog/templates/recruit/edit_modal.html:160
+#: svarog/templates/recruit/recruits.html:26
+msgid "Comments"
+msgstr "Коментарі"
+
+#: svarog/templates/recruit/edit_modal.html:174
+#, fuzzy
+msgid "Save changes"
+msgstr "Зберегти нового користувача"
+
+#: svarog/views/admin.py:87 svarog/views/recruit.py:82
 msgid "Cannot save user data"
 msgstr "Неможливо зберегти дані користувача"
 
-#: svarog/views/admin.py:92
+#: svarog/views/admin.py:96
 msgid "User updated!"
 msgstr "Користувача оновлено!"
 
-#: svarog/views/admin.py:126
+#: svarog/views/admin.py:130
 msgid "User added!"
 msgstr "Додано користувача!"
 
@@ -908,46 +993,6 @@ msgstr "Додано користувача!"
 msgid "Application applied successfully"
 msgstr "Заявка успішно подана"
 
-#~ msgid "bububu"
-#~ msgstr "бубубу"
-
-#~ msgid "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
-#~ msgstr "3333"
-
-#~ msgid "Date of birth*"
-#~ msgstr "Дата народження*"
-
-#~ msgid "About us"
-#~ msgstr "Про нас"
-
-#~ msgid "FAQ"
-#~ msgstr "Запитання"
-
-#~ msgid "Vacancies"
-#~ msgstr "Вакансії"
-
-#~ msgid "Contacts"
-#~ msgstr "Контакти"
-
-#~ msgid "The owner and administrator of personal data is 424 OBBS."
-#~ msgstr ""
-
-#~ msgid "Privacy policy rules ."
-#~ msgstr "Політика конфіденційності!!!!!!!!!"
-
-#~ msgid "General"
-#~ msgstr "bubu"
-
-#~ msgid ""
-#~ "Privacy policy rules governing the collection, processing, use and\n"
-#~ "    protection of personal data that may be requested"
-#~ msgstr ""
-#~ "Політика конфіденційності – правила, якими "
-#~ "регламентується збір, обробка, використання і"
-#~ " захист персональних даних, що можуть "
-#~ "бути запитані/отримані при використанні "
-#~ "вебпорталу 424bat.army (далі –  Портал)."
-
-#~ msgid "Privacy policy rules collection"
-#~ msgstr "Політика конфіденційності ааа"
-
+#: svarog/views/recruit.py:99
+msgid "Recruit data updated!"
+msgstr "Інформація про рекрута оновлена!"

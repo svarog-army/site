@@ -43,6 +43,7 @@ class Recruit(db.Model, ModelMixin):
     uav_experience: orm.Mapped[str] = orm.mapped_column(sa.Text)
 
     status: orm.Mapped[str] = orm.mapped_column(sa.Enum(RecruitStatus), default=RecruitStatus.APPLIED)
+    comments: orm.Mapped[str] = orm.mapped_column(sa.Text, server_default="")
 
     created_at: orm.Mapped[datetime] = orm.mapped_column(
         sa.DateTime,
