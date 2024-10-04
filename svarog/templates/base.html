@@ -47,6 +47,19 @@
   <!-- styles -->
   <!-- prettier-ignore -->
   <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: "Ruberoid Regular";
+      src: url("../static/fonts/Ruberoid-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Ruberoid Bold";
+      src: url("../static/fonts/Ruberoid-Bold.ttf") format("truetype");
+    }
+  </style>
+
   <!-- prettier-ignore -->
   {% block links %}
   {% endblock %}
