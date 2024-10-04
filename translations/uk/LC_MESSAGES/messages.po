@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 14:33+0300\n"
+"POT-Creation-Date: 2024-10-04 16:20+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -27,12 +27,36 @@ msgstr "Так"
 msgid "No"
 msgstr "Ні"
 
-#: svarog/templates/about-us.html:16
+#: svarog/templates/about-us.html:13
 msgid "ABOUT US"
 msgstr "ПРО НАС"
 
-#: svarog/templates/about-us.html:20 svarog/templates/about-us.html:50
-#: svarog/templates/about-us.html:80
+#: svarog/templates/about-us.html:17
+msgid ""
+"We are the blacksmiths of the future in the newly formed battalion of the"
+" Svarog Unmanned Systems Forces. Our fire is the source of strength and "
+"innovation that drives us forward. As a Phoenix, we are constantly "
+"reborn: from a civilian to a warrior, from a novice to a master of "
+"unmanned systems. In the flame of challenges, we are hardened, become "
+"stronger and ready to defend our common future. Drones, technology and an"
+" invincible spirit are our weapons. We are a team united by a single "
+"goal. Our path leads to victory through skill, cooperation, and an "
+"unquenchable fire in our hearts."
+msgstr ""
+"Ми — ковалі майбутнього в новоствореному батальйоні Сил Безпілотних "
+"Систем «Сварог». Наш вогонь — це джерело сили й інновацій, що рухає нас "
+"вперед. Як Фенікс, ми постійно перероджуємось: з цивільного — у воїна, з "
+"новачка — у майстра безпілотних систем. У полум'ї викликів ми гартуємось,"
+" стаємо сильнішими й готовими захищати наше спільне майбутнє. Дрони, "
+"технології й непереможний дух — це наша зброя. Ми — команда, що об'єднана"
+" єдиною метою. Наш шлях веде до перемоги через майстерність, співпрацю та"
+" незламний вогонь у наших серцях."
+
+#: svarog/templates/about-us.html:41
+msgid "WHAT WE DO?"
+msgstr "ЩО МИ РОБИМО?"
+
+#: svarog/templates/about-us.html:45 svarog/templates/about-us.html:75
 msgid ""
 "During the one-week training, you will feel your weaknesses and "
 "strengths, you will understand how you\n"
@@ -52,16 +76,12 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/about-us.html:46
-msgid "WHAT WE DO?"
-msgstr "ЩО МИ РОБИМО?"
-
-#: svarog/templates/about-us.html:76
+#: svarog/templates/about-us.html:71
 msgid "OUR MISSION"
 msgstr "НАША МІСІЯ"
 
-#: svarog/templates/about-us.html:90 svarog/templates/about-us.html:94
-#: svarog/templates/about-us.html:98 svarog/templates/about-us.html:102
+#: svarog/templates/about-us.html:85 svarog/templates/about-us.html:89
+#: svarog/templates/about-us.html:93 svarog/templates/about-us.html:97
 msgid "During the one-week training, you will feel your weaknesses"
 msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
 
@@ -329,11 +349,11 @@ msgstr "Політика конфіденційності"
 msgid "CONTACT CENTER"
 msgstr "КОНТАКТ ЦЕНТР"
 
-#: svarog/templates/hero.html:7
+#: svarog/templates/hero.html:5
 msgid "JOIN OUR FIRE"
 msgstr "ДОЛУЧАЙСЯ ДО НАШОГО ВОГНЮ"
 
-#: svarog/templates/hero.html:12
+#: svarog/templates/hero.html:10
 msgid ""
 "Join 424 obBpS \"SVAROG\" and burn all the enemies of Ukraine with your "
 "rage!"
@@ -341,16 +361,21 @@ msgstr ""
 "Приєднуйся до 424 обБпС \"SVAROG\" та запечи своєю люттю всіх ворогів "
 "України!"
 
+#: svarog/templates/hero.html:17
+msgid "VIEW VACANCIES"
+msgstr "ПЕРЕГЛЯНУТИ ВАКАНСІЇ"
+
 #: svarog/templates/our-values.html:3
 msgid "OUR VALUES"
 msgstr "НАШІ ЦІННОСТІ"
 
-#: svarog/templates/our-values.html:15
-msgid "BROTHERHOOD"
-msgstr "ПОБРАТИМСТВО"
+#: svarog/templates/our-values.html:14
+msgid "SPIRIT"
+msgstr "ДУХ"
 
-#: svarog/templates/our-values.html:19 svarog/templates/our-values.html:36
-#: svarog/templates/our-values.html:53 svarog/templates/our-values.html:70
+#: svarog/templates/our-values.html:18 svarog/templates/our-values.html:34
+#: svarog/templates/our-values.html:50 svarog/templates/our-values.html:66
+#: svarog/templates/our-values.html:82
 msgid ""
 "During the one-week training, you will feel your weaknesses and "
 "strengths, you will understand how you can show yourself most effectively"
@@ -361,17 +386,22 @@ msgstr ""
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони"
 
-#: svarog/templates/our-values.html:32
-msgid "TACTICS"
-msgstr "ТАКТИКА"
+#: svarog/templates/our-values.html:30
+msgid "UNITY"
+msgstr "ЄДНІСТЬ"
 
-#: svarog/templates/our-values.html:49
-msgid "NATION"
-msgstr "НАЦІЯ"
+#: svarog/templates/our-values.html:46
+msgid "TRAINING"
+msgstr "ПІДГОТОВКА"
 
-#: svarog/templates/our-values.html:66
-msgid "SPIRIT"
-msgstr "ДУХ"
+#: svarog/templates/our-values.html:62
+#, fuzzy
+msgid "INNOVATIONS"
+msgstr "ІННОВАЦІЇ"
+
+#: svarog/templates/our-values.html:78
+msgid "HUMANITY"
+msgstr "ЛЮДЯНІСТЬ"
 
 #: svarog/templates/privacy_policy.html:4
 msgid "Privacy Policy"
@@ -781,40 +811,31 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/recruitment-contacts.html:6
+#: svarog/templates/recruitment-contacts.html:5
 msgid "CONTACTS OF RECRUITMENT CENTERS"
 msgstr "КОНТАКТИ РЕКРУТИНГОВИХ ЦЕНТРІВ"
 
-#: svarog/templates/recruitment-contacts.html:13
-#: svarog/templates/recruitment-contacts.html:27
-#: svarog/templates/recruitment-contacts.html:34
-#: svarog/templates/recruitment-contacts.html:41
+#: svarog/templates/recruitment-contacts.html:11
 msgid "KYIV"
 msgstr "КИЇВ"
 
-#: svarog/templates/recruitment-contacts.html:15
-#: svarog/templates/recruitment-contacts.html:29
-#: svarog/templates/recruitment-contacts.html:36
-#: svarog/templates/recruitment-contacts.html:43
+#: svarog/templates/recruitment-contacts.html:13
 msgid "ave. Peremohy, 83/2"
 msgstr "просп. Перемоги, 83/2"
 
-#: svarog/templates/recruitment-contacts.html:16
-#: svarog/templates/recruitment-contacts.html:30
-#: svarog/templates/recruitment-contacts.html:37
-#: svarog/templates/recruitment-contacts.html:44
+#: svarog/templates/recruitment-contacts.html:14
 msgid "Daily from 09:00 to 18:00"
 msgstr "Щодня з 09:00 до 18:00"
 
-#: svarog/templates/recruitment-contacts.html:20
+#: svarog/templates/recruitment-contacts.html:18
 msgid "BUCHA"
 msgstr "БУЧА"
 
-#: svarog/templates/recruitment-contacts.html:22
+#: svarog/templates/recruitment-contacts.html:20
 msgid "Energetykiv st. 12"
 msgstr "вул. Енергетиків 12"
 
-#: svarog/templates/recruitment-contacts.html:23
+#: svarog/templates/recruitment-contacts.html:21
 msgid "Interview by appointment"
 msgstr "Співбесіда по домовленості"
 
@@ -1085,4 +1106,10 @@ msgstr "Інформація про рекрута оновлена!"
 #~ " чому найефективніше зможеш  проявити себе"
 #~ " в ЗСУ та отримаєш можливість вибрати"
 #~ " свій шлях у військовій кар'єрі"
+
+#~ msgid "BROTHERHOOD"
+#~ msgstr "ПОБРАТИМСТВО"
+
+#~ msgid "TACTICS"
+#~ msgstr "ТАКТИКА"
 

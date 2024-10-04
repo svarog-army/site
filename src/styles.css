@@ -34,7 +34,6 @@ h6 {
 .frame-border {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
   color: var(--main-yellow);
   background-color: transparent;
   transition: all 0.3s ease;
