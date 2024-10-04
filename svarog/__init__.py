@@ -91,6 +91,8 @@ def create_app(environment="development"):
     # Error handlers.
     @app.errorhandler(HTTPException)
     def handle_http_error(exc):
-        return render_template("error.html", error=exc), exc.code
+        from flask_wtf import FlaskForm
+
+        return render_template("error.html", error=exc, form=FlaskForm()), exc.code
 
     return app
