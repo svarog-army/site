@@ -1,0 +1,46 @@
+<div class="container mx-auto grid grid-cols-[2fr_1fr] md:grid-cols-[4fr_1fr] justify-items-end px-5 py-20 lg:px-16">
+  <div class="flex flex-col gap-10 md:justify-between justify-self-start md:w-full md:flex-row">
+    <div>
+      <h2 class="text-3xl mb-8 max-w-[378px]">
+        {{_("SEPARATE BATTALION OF UNMANNED SYSTEMS")}}
+      </h2>
+
+      <div class="flex gap-3">
+        <a href="https://www.instagram.com/svarog.usf/" target="_blank">
+          <img src="{{ url_for('static',filename='img/instagram.svg') }}" width="24" height="24" alt="Instagram" />
+        </a>
+
+        <a href="https://t.me/svarog_usf" target="_blank">
+          <img src="{{ url_for('static',filename='img/telegram.svg') }}" width="24" height="24" alt="Telegram" />
+        </a>
+      </div>
+
+    </div>
+
+    <ul class="space-y-4">
+      <li><a href="{{ url_for('multilingual.index') }}">{{ _("Main") }}</a></li>
+      <li><a href="{{ url_for('multilingual.cookie_policy') }}">{{ _("Cookie policy") }}</a></li>
+      <li><a href="{{ url_for('multilingual.privacy_policy') }}">{{ _("Privacy policy") }}</a></li>
+    </ul>
+
+    <div>
+      <h3 class="text-2xl mb-6">{{_("CONTACT CENTER")}}</h3>
+      <a class="block mb-3 text-[--main-yellow] underline" href="tel:+380950188592">+380950188592</a>
+      <a class="block text-[--main-yellow] underline" href="mailto:name@gmail.com">name@gmail.com</a>
+    </div>
+  </div>
+
+  <form class="flex gap-8 lg:justify-self-end" action="{{url_for('main.change_locale')}}" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+      <label for="local_select" class="sr-only">Language select</label>
+      <select id="local_select" name="locale" onchange="this.form.submit()"
+      class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-none appearance-none focus:outline-none focus:ring-0 peer cursor-pointer">
+      <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="uk" {% if g.lang_code=='uk' %}
+        selected {% endif %}>УКР</option>
+      <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="en" {% if g.lang_code=='en' %}
+        selected {% endif %}>EN</option>
+    </select>
+    </div>
+  </form>
+</div>

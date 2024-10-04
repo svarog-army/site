@@ -1,7 +1,11 @@
-from flask import render_template, Blueprint, g, redirect, request, current_app, abort, url_for
+import sqlalchemy as sa
+from flask import Blueprint, abort, current_app, g, redirect, render_template, request, url_for
 from flask_wtf import FlaskForm
 
 from config import CFG
+from svarog import db
+from svarog import forms as f
+from svarog import models as m
 
 multilingual = Blueprint("multilingual", __name__, template_folder="templates", url_prefix="/<lang_code>")
 
@@ -39,4 +43,19 @@ def index():
     if CFG.PARKING:
         return render_template("under_construction.html", form=FlaskForm())
 
-    return render_template("index.html", form=FlaskForm())
+    form = f.ApplicationForm()
+    specialties = db.session.scalars(sa.select(m.Specialty)).all()
+
+    return render_template("index.html", form=FlaskForm(), application_form=form, specialties=specialties)
+
+
+@multilingual.route("/cookie_policy/", methods=["GET"])
+def cookie_policy():
+    form = f.ApplicationForm()
+    return render_template("cookie_policy.html", form=form)
+
+
+@multilingual.route("/privacy_policy/", methods=["GET"])
+def privacy_policy():
+    form = f.ApplicationForm()
+    return render_template("privacy_policy.html", form=form)

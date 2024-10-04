@@ -1,0 +1,27 @@
+<div class="flex justify-center">
+  <div class="container absolute flex justify-between items-center w-full px-5 lg:px-16 mt-12 text-black">
+    <!-- Hide for now -->
+    <div class="cursor-pointer invisible">
+      <img src="{{url_for('static',filename='img/burger-menu.svg')}}" class="h-8 mr-3" alt="Navigation menu" />
+    </div>
+
+    <form class="flex gap-8" action="{{url_for('main.change_locale')}}" method="post">
+      {{ form.hidden_tag() }}
+      <div class="hidden sm:block">
+        <label for="local_select" class="sr-only">Language select</label>
+        <select id="local_select" name="locale" onchange="this.form.submit()"
+          class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-none appearance-none focus:outline-none focus:ring-0 peer cursor-pointer">
+          <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="uk" {% if g.lang_code=='uk' %}
+            selected {% endif %}>УКР</option>
+          <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="en" {% if g.lang_code=='en' %}
+            selected {% endif %}>EN</option>
+        </select>
+      </div>
+
+      <a href="#application-form-wrapper"
+        class="frame-border relative py-2 px-5 bg-transparent text-[--main-yellow] uppercase text-base border-none cursor-pointer">
+        {{_("SUBMIT APPLICATION")}}
+      </a>
+    </form>
+  </div>
+</div>

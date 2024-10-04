@@ -20,7 +20,8 @@ class Specialty(db.Model, ModelMixin):
     id: orm.Mapped[int] = orm.mapped_column(primary_key=True)
     uuid: orm.Mapped[str] = orm.mapped_column(sa.String(32), default=gen_uuid, index=True)
 
-    name: orm.Mapped[str] = orm.mapped_column(sa.String(64))
+    name_en: orm.Mapped[str] = orm.mapped_column(sa.String(64), server_default="None")
+    name_uk: orm.Mapped[str] = orm.mapped_column(sa.String(64), server_default="Нема")
 
     created_at: orm.Mapped[datetime] = orm.mapped_column(
         sa.DateTime,
@@ -34,3 +35,7 @@ class Specialty(db.Model, ModelMixin):
         secondary=application_specialty,
         back_populates="specialties",
     )
+
+    @property
+    def name(self) -> str:
+        return self.name_en

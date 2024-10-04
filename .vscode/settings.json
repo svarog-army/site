@@ -9,6 +9,7 @@
   "cSpell.words": [
     "backref",
     "dotenv",
+    "Dron",
     "fastapi",
     "flowbite",
     "HTMX",
@@ -16,6 +17,7 @@
     "jsonify",
     "pydantic",
     "pytest",
+    "signalbot",
     "sqlalchemy",
     "svarog",
     "tailwindcss",
@@ -29,5 +31,6 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "cSpell.language": "en,uk"
+  "cSpell.language": "en,uk",
+  "djlint.showInstallError": false
 }

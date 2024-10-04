@@ -2,17 +2,176 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-yellow: #ffc823;
+  --main-black: #000000;
+  color: white;
+}
 
 .text-danger {
-    color: red;
+  color: red;
 }
 
-.htmx-indicator{
-    display: none;
+.htmx-indicator {
+  display: none;
 }
-.htmx-request .htmx-indicator{
-    display:inline;
+.htmx-request .htmx-indicator {
+  display: inline;
 }
-.htmx-request.htmx-indicator{
-    display:inline;
+.htmx-request.htmx-indicator {
+  display: inline;
+}
+.frame-border {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--main-yellow);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--main-yellow);
+  text-decoration: underline;
+}
+
+.frame-border::before,
+.frame-border::after {
+  content: '';
+  position: absolute;
+  border-color: var(--main-yellow);
+  border-style: solid;
+  width: 10px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.frame-border::before {
+  top: 0;
+  left: 0;
+  border-width: 1px 0 1px 1px;
+}
+
+.frame-border::after {
+  top: 0;
+  right: 0;
+  border-width: 1px 1px 1px 0;
+}
+
+/* Hover effects */
+.frame-border:hover {
+  background-color: rgba(255, 215, 0, 0.1); /* Slight yellow tint */
+}
+
+.frame-border:hover::before {
+  left: -5px;
+  width: 15px;
+}
+
+.frame-border:hover::after {
+  right: -5px;
+  width: 15px;
+}
+/* Style the radio button */
+input[type='radio'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffd700;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+}
+
+/* Create the inner circle for the checked state */
+input[type='radio']::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #ffd700;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style for the checked state */
+input[type='radio']:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Add a subtle glow effect */
+input[type='radio']:checked {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+input[type='radio']:checked {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+img {
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--main-yellow);
+}
+
+.recruitment_center {
+  position: relative;
+
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before,
+.recruitment_center::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before {
+  top: -6px;
+  left: -6px;
+  border-top: 1px solid #ffd700;
+  border-left: 1px solid #ffd700;
+}
+
+.recruitment_center::after {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 1px solid #ffd700;
+  border-right: 1px solid #ffd700;
+}
+
+.recruitment_center:hover::before,
+.recruitment_center:hover::after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  opacity: 1;
+}
+
+form label:hover {
+  color: var(--main-yellow);
+}
+
+.values:hover {
+  border-color: var(--main-yellow);
+  transform: scale(1.05);
+}
+
+.values {
+  transition: all 0.3s ease;
 }
