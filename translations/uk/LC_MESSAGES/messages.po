@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-05 11:38+0300\n"
+"POT-Creation-Date: 2024-10-05 14:35+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -865,60 +865,143 @@ msgid "UAV pilot"
 msgstr "Пілот БПЛА"
 
 #: svarog/templates/vacancy-gallery.html:16
-#: svarog/templates/vacancy-gallery.html:44
-#: svarog/templates/vacancy-gallery.html:70
-#: svarog/templates/vacancy-gallery.html:96
-#: svarog/templates/vacancy-gallery.html:122
-#: svarog/templates/vacancy-gallery.html:148
-#: svarog/templates/vacancy-gallery.html:176
 msgid ""
-"During the one-week training, you will feel your weaknesses and\n"
-"          strengths, you will understand how you can most effectively "
-"show\n"
-"          yourself in the Armed Forces, and you will get During the one-"
-"week\n"
-"          training, you will feel your weaknesses and strengths, you will"
-"\n"
-"          understand how you can most effectively show yourself in the "
-"Armed\n"
-"          Forces, and you will get During the one-week training, you will"
-" feel\n"
-"          your weaknesses and strengths, you will understand what you can"
-" do\n"
-"          most effectively in the Armed Forces and you will get"
+"Key responsibilities include operating unmanned aerial vehicles\n"
+"          for reconnaissance and combat missions, preparing the equipment"
+" for\n"
+"          flights, and analyzing the data collected. The operator "
+"collaborates\n"
+"          with other units to ensure effective coordination of combat\n"
+"          operations"
 msgstr ""
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
+"Основні обов’язки включають управління безпілотними літальними апаратами "
+"для виконання розвідувальних та бойових завдань, підготовку техніки до "
+"польотів, а також аналіз отриманих даних. Оператор взаємодіє з іншими "
+"підрозділами для ефективної координації бойових дій"
 
-#: svarog/templates/vacancy-gallery.html:41
+#: svarog/templates/vacancy-gallery.html:38
 msgid "Driver-Electrician"
 msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancy-gallery.html:68
+#: svarog/templates/vacancy-gallery.html:41
+msgid ""
+"Key responsibilities include transporting personnel and cargo,\n"
+"          maintaining the assigned vehicle in good technical condition,\n"
+"          monitoring its technical status, and ensuring timely "
+"maintenance. The\n"
+"          driver also participates in tasks that support the efficient "
+"operation\n"
+"          of military units"
+msgstr ""
+"Основні обов'язки включають перевезення особового складу та вантажів, "
+"підтримку технічної справності закріпленого автомобіля, контроль за його "
+"технічним станом, а також своєчасне проведення технічного обслуговування."
+" Водій бере участь у виконанні завдань для забезпечення ефективної роботи"
+" військових підрозділів."
+
+#: svarog/templates/vacancy-gallery.html:62
 msgid "Master"
 msgstr "Майстер"
 
-#: svarog/templates/vacancy-gallery.html:94
+#: svarog/templates/vacancy-gallery.html:64
+msgid ""
+"Responsible for preparing engineering munitions and equipment for\n"
+"          UAVs, as well as ensuring the maintenance of munitions. If you "
+"have\n"
+"          experience in manufacturing, explosives, pyrotechnics, or "
+"maintenance,\n"
+"          this position is for you!"
+msgstr ""
+"Відповідає за підготовку інженерних боєприпасів та спорядження для БпЛА, "
+"а також забезпечує технічне обслуговування боєприпасів. Якщо ви маєте "
+"досвід роботи у виробництві, вибухотехніці, піротехніці або технічному "
+"обслуговуванні, ця вакансія для Вас!"
+
+#: svarog/templates/vacancy-gallery.html:84
+msgid "Technician"
+msgstr "Технік"
+
+#: svarog/templates/vacancy-gallery.html:87
+msgid ""
+"Key responsibilities include preparing UAVs for flights, performing "
+"maintenance and repairs, monitoring the operation of drones during "
+"missions, and troubleshooting issues. Collaborates with operators to "
+"optimize mission execution. Technical training and attention to detail "
+"are required"
+msgstr ""
+"Основні обов’язки: підготовка БПЛА до польотів, виконання технічного "
+"обслуговування та ремонту, моніторинг роботи апаратів під час місій і "
+"оперативне усунення неполадок. Співпраця з операторами для оптимізації "
+"виконання завдань. Вимагається технічна підготовка та уважність до "
+"деталей"
+
+#: svarog/templates/vacancy-gallery.html:104
 msgid "Decryptor"
 msgstr "Дешифрувальник"
 
-#: svarog/templates/vacancy-gallery.html:120
+#: svarog/templates/vacancy-gallery.html:107
+msgid ""
+"Responsible for analyzing and decrypting data from UAVs for tactical and "
+"strategic tasks. If you have experience in data analytics, cryptography, "
+"or cybersecurity, this position is for you!"
+msgstr ""
+"Відповідає за аналіз та розшифрування даних з БпЛА для тактичних і "
+"стратегічних завдань. Якщо у вас є досвід у сфері аналітики даних, "
+"криптографії або кібербезпеки, ця вакансія для Вас!"
+
+#: svarog/templates/vacancy-gallery.html:124
 msgid "Airman"
 msgstr "Авіаційний Механік"
 
-#: svarog/templates/vacancy-gallery.html:146
+#: svarog/templates/vacancy-gallery.html:127
+msgid ""
+"Responsible for the repair and maintenance of UAV components. If you have"
+" experience in repairing electronics, engines, or mechanical systems, "
+"particularly in aviation technology, this position is for you!"
+msgstr ""
+"Відповідає за ремонт і технічне обслуговування компонентів БпЛА. Якщо у "
+"вас є досвід у ремонті електроніки, двигунів або механічних систем, "
+"зокрема в авіатехніці, ця вакансія для Вас!"
+
+#: svarog/templates/vacancy-gallery.html:144
 msgid "Sapper"
 msgstr "Сапер"
 
-#: svarog/templates/vacancy-gallery.html:173
+#: svarog/templates/vacancy-gallery.html:146
+msgid ""
+"Key responsibilities include demining areas, detecting and\n"
+"          neutralizing explosive devices, and performing engineering "
+"tasks to\n"
+"          prepare routes and fortifications. The sapper ensures the "
+"safety of\n"
+"          personnel and civilians while collaborating with other units"
+msgstr ""
+"Основні обов'язки: розмінування території, виявлення та знешкодження "
+"вибухонебезпечних предметів, виконання інженерних робіт для підготовки "
+"шляхів руху та фортифікаційних споруд. Сапер забезпечує безпеку особового"
+" складу та цивільного населення, співпрацюючи з іншими підрозділами"
+
+#: svarog/templates/vacancy-gallery.html:167
 msgid "Radio electronic combat operator"
 msgstr "Оператор РЕБ"
 
-#: svarog/templates/vacancy-gallery.html:226
+#: svarog/templates/vacancy-gallery.html:170
+msgid ""
+"Key responsibilities include conducting electronic warfare tasks,\n"
+"          monitoring the radio frequency spectrum, and using specialized\n"
+"          equipment to jam and neutralize enemy signals. The operator "
+"ensures\n"
+"          the protection of own systems and collaborates with other units"
+" to\n"
+"          effectively execute combat missions"
+msgstr ""
+"Основні обов’язки включають виконання завдань радіоелектронної боротьби, "
+"моніторинг радіочастотного спектру, використання спеціалізованого "
+"обладнання для глушіння та нейтралізації ворожих сигналів. Оператор "
+"забезпечує захист власних систем і співпрацює з іншими підрозділами для "
+"ефективного виконання бойових завдань"
+
+#: svarog/templates/vacancy-gallery.html:217
 msgid "Scroll"
 msgstr "Прокрутіть"
 
@@ -1117,4 +1200,38 @@ msgstr "Інформація про рекрута оновлена!"
 
 #~ msgid "The liaison officer"
 #~ msgstr "Зв'язківець"
+
+#~ msgid ""
+#~ "During the one-week training, you will feel your weaknesses and\n"
+#~ "          strengths, you will understand "
+#~ "how you can most effectively show\n"
+#~ ""
+#~ "          yourself in the Armed Forces,"
+#~ " and you will get During the "
+#~ "one-week\n"
+#~ "          training, you will feel your"
+#~ " weaknesses and strengths, you will\n"
+#~ "          understand how you can most"
+#~ " effectively show yourself in the "
+#~ "Armed\n"
+#~ "          Forces, and you will get "
+#~ "During the one-week training, you "
+#~ "will feel\n"
+#~ "          your weaknesses and strengths, "
+#~ "you will understand what you can "
+#~ "do\n"
+#~ "          most effectively in the Armed Forces and you will get"
+#~ msgstr ""
+#~ "Протягом тижневого вишколу відчуєш свої "
+#~ "слабкі та сильні сторони, зрозумієш, в"
+#~ " чому найефективніше зможеш проявити себе"
+#~ " в ЗСУ та отримаєш Протягом тижневого"
+#~ " вишколу відчуєш свої слабкі та "
+#~ "сильні сторони, зрозумієш, в чому "
+#~ "найефективніше зможеш проявити себе в "
+#~ "ЗСУ та отримаєш Протягом тижневого "
+#~ "вишколу відчуєш свої слабкі та сильні"
+#~ " сторони, зрозумієш, в чому найефективніше"
+#~ " зможеш проявити себе в ЗСУ та "
+#~ "отримаєш"
 
