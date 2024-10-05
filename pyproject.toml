@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "svarog"
-version = "0.0.39"
+version = "0.0.40"
 description = ""
 authors = ["kostia <saintkos117@gmail.com>"]
 
