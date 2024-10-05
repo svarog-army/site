@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 16:52+0300\n"
+"POT-Creation-Date: 2024-10-05 11:38+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -89,95 +89,93 @@ msgstr "Протягом тижневого вишколу відчуєш сво
 msgid "FILL THE FORM AND JOIN US"
 msgstr "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
 
-#: svarog/templates/application_form.html:9
-msgid ""
-"In order to get into the ranks of the Force of Unmanned Systems, you need"
-" to apply by filling out the questionnaire."
+#: svarog/templates/application_form.html:10
+msgid "To join the ranks of our battalion, please fill out the application form"
 msgstr ""
-"Для того, щоб потрапити до лав Сили безпілотних систем, необхідно подати "
-"заявку, заповнивши анкету."
+"Для того, щоб потрапити до лав нашого батальйону, будь ласка, заповни "
+"анкету"
 
-#: svarog/templates/application_form.html:22
+#: svarog/templates/application_form.html:23
 msgid ""
 "Full\n"
 "            name"
 msgstr "Прізвище та ім'я"
 
-#: svarog/templates/application_form.html:31
+#: svarog/templates/application_form.html:32
 msgid ""
 "Date of\n"
 "            birth"
 msgstr "Дата народження"
 
-#: svarog/templates/application_form.html:42
+#: svarog/templates/application_form.html:43
 #: svarog/templates/recruit/edit_modal.html:56
 #: svarog/templates/recruit/recruits.html:26
 msgid "Phone"
 msgstr "Номер телефону"
 
-#: svarog/templates/application_form.html:52
+#: svarog/templates/application_form.html:53
 msgid ""
 "City of actual\n"
 "            residence"
 msgstr "Місто фактичного проживання"
 
 #: svarog/templates/admin/edit_modal.html:41
-#: svarog/templates/application_form.html:63
+#: svarog/templates/application_form.html:64
 #: svarog/templates/recruit/edit_modal.html:36
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: svarog/templates/application_form.html:72
+#: svarog/templates/application_form.html:73
 msgid ""
 "Education,\n"
 "            specialty"
 msgstr "Освіта, спеціальність"
 
-#: svarog/templates/application_form.html:82
+#: svarog/templates/application_form.html:83
 msgid ""
 "Professional\n"
 "            skills"
 msgstr "Професійні навички (скіли)"
 
-#: svarog/templates/application_form.html:92
+#: svarog/templates/application_form.html:93
 msgid ""
 "Last civilian\n"
 "            position"
 msgstr "Остання цивільна посада"
 
-#: svarog/templates/application_form.html:102
+#: svarog/templates/application_form.html:103
 msgid ""
 "Do you\n"
 "            have critical health problems"
 msgstr "Чи наявні у вас критичні проблеми зі здоровʼям?"
 
-#: svarog/templates/application_form.html:113
+#: svarog/templates/application_form.html:114
 msgid ""
 "Having a driver's license. If so,\n"
 "            what categories?"
 msgstr "Наявність водійського посвідчення. Якщо так - які категорії?"
 
-#: svarog/templates/application_form.html:125
+#: svarog/templates/application_form.html:126
 msgid "Choose a specialty"
 msgstr "Оберіть спеціальність"
 
-#: svarog/templates/application_form.html:131
+#: svarog/templates/application_form.html:133
 msgid "Click to choose"
 msgstr "Клікніть щоб вибрати"
 
-#: svarog/templates/application_form.html:145
+#: svarog/templates/application_form.html:148
 msgid ""
 "Do you\n"
 "            have experience with UAVs (if so, what kind)"
 msgstr "Чи маєте досвід з БПЛА (якщо так, який саме?)"
 
-#: svarog/templates/application_form.html:156
+#: svarog/templates/application_form.html:159
 msgid ""
 "Are you\n"
 "            a military serviceman?"
 msgstr "Чи Ви є військовослужбовцем?"
 
-#: svarog/templates/application_form.html:167
+#: svarog/templates/application_form.html:170
 msgid ""
 "Do you\n"
 "            give your concent to process your personal data by UAV Forces"
@@ -187,7 +185,7 @@ msgstr ""
 "рекрутингу Сил Безпілотних Систем? (Інформація НЕ буде передана до ТЦК та"
 " СП)"
 
-#: svarog/templates/application_form.html:193
+#: svarog/templates/application_form.html:196
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
 msgstr "Надіслати заявку"
@@ -862,18 +860,17 @@ msgstr "сайт знаходиться в стані розробки"
 msgid "VACANCIES"
 msgstr "ВАКАНСІЇ"
 
-#: svarog/templates/vacancy-gallery.html:13
+#: svarog/templates/vacancy-gallery.html:14
 msgid "UAV pilot"
 msgstr "Пілот БПЛА"
 
-#: svarog/templates/vacancy-gallery.html:15
-#: svarog/templates/vacancy-gallery.html:43
-#: svarog/templates/vacancy-gallery.html:69
-#: svarog/templates/vacancy-gallery.html:95
-#: svarog/templates/vacancy-gallery.html:121
-#: svarog/templates/vacancy-gallery.html:147
-#: svarog/templates/vacancy-gallery.html:175
-#: svarog/templates/vacancy-gallery.html:203
+#: svarog/templates/vacancy-gallery.html:16
+#: svarog/templates/vacancy-gallery.html:44
+#: svarog/templates/vacancy-gallery.html:70
+#: svarog/templates/vacancy-gallery.html:96
+#: svarog/templates/vacancy-gallery.html:122
+#: svarog/templates/vacancy-gallery.html:148
+#: svarog/templates/vacancy-gallery.html:176
 msgid ""
 "During the one-week training, you will feel your weaknesses and\n"
 "          strengths, you will understand how you can most effectively "
@@ -897,35 +894,31 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/vacancy-gallery.html:40
+#: svarog/templates/vacancy-gallery.html:41
 msgid "Driver-Electrician"
 msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancy-gallery.html:67
+#: svarog/templates/vacancy-gallery.html:68
 msgid "Master"
 msgstr "Майстер"
 
-#: svarog/templates/vacancy-gallery.html:93
+#: svarog/templates/vacancy-gallery.html:94
 msgid "Decryptor"
 msgstr "Дешифрувальник"
 
-#: svarog/templates/vacancy-gallery.html:119
+#: svarog/templates/vacancy-gallery.html:120
 msgid "Airman"
 msgstr "Авіаційний Механік"
 
-#: svarog/templates/vacancy-gallery.html:145
+#: svarog/templates/vacancy-gallery.html:146
 msgid "Sapper"
 msgstr "Сапер"
 
-#: svarog/templates/vacancy-gallery.html:172
+#: svarog/templates/vacancy-gallery.html:173
 msgid "Radio electronic combat operator"
 msgstr "Оператор РЕБ"
 
-#: svarog/templates/vacancy-gallery.html:200
-msgid "The liaison officer"
-msgstr "Зв'язківець"
-
-#: svarog/templates/vacancy-gallery.html:223
+#: svarog/templates/vacancy-gallery.html:226
 msgid "Scroll"
 msgstr "Прокрутіть"
 
@@ -1111,4 +1104,17 @@ msgstr "Інформація про рекрута оновлена!"
 
 #~ msgid "TACTICS"
 #~ msgstr "ТАКТИКА"
+
+#~ msgid ""
+#~ "In order to get into the ranks "
+#~ "of the Force of Unmanned Systems, "
+#~ "you need to apply by filling out"
+#~ " the questionnaire."
+#~ msgstr ""
+#~ "Для того, щоб потрапити до лав "
+#~ "Сили безпілотних систем, необхідно подати "
+#~ "заявку, заповнивши анкету."
+
+#~ msgid "The liaison officer"
+#~ msgstr "Зв'язківець"
 

@@ -6,8 +6,8 @@
     <div class="flex flex-col gap-5 max-w-[476px] lg:flex-1">
       <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
       <p class="text-base">
-        {{_("In order to get into the ranks of the Force of Unmanned Systems,
-        you need to apply by filling out the questionnaire.")}}
+        <!-- prettier-ignore -->
+        {{_("To join the ranks of our battalion, please fill out the application form")}}
       </p>
     </div>
 
@@ -40,7 +40,7 @@
         <div class="group">
           <!-- prettier-ignore -->
           <label for="phone"
-            class="block text-white/50  group-focus-within:text-white transition">{{_("Phone")}}</label>
+            class="block text-white/50  group-focus-within:text-white transition">{{_("Phone")}}*</label>
           <!-- prettier-ignore -->
           {{application_form.phone(autocomplete="off", class="block w-full
           text-white/50c focus:text-white bg-transparent border-0 border-b
