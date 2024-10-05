@@ -13,6 +13,8 @@
         <a href="https://t.me/svarog_usf" target="_blank">
           <img src="{{ url_for('static',filename='img/telegram.svg') }}" width="24" height="24" alt="Telegram" />
         </a>
+
+        <pre class="text-slate-700">{{config.VERSION}}</pre>
       </div>
 
     </div>
@@ -21,6 +23,7 @@
       <li><a href="{{ url_for('multilingual.index') }}">{{ _("Main") }}</a></li>
       <li><a href="{{ url_for('multilingual.cookie_policy') }}">{{ _("Cookie policy") }}</a></li>
       <li><a href="{{ url_for('multilingual.privacy_policy') }}">{{ _("Privacy policy") }}</a></li>
+      <li class="text-slate-500"><a href="https://simple2b.com" target="_blank">{{ _("Developed by Simple2B ©") }}</a></li>
     </ul>
 
     <div>
@@ -41,6 +44,7 @@
       <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="en" {% if g.lang_code=='en' %}
         selected {% endif %}>EN</option>
     </select>
+
     </div>
   </form>
 </div>
