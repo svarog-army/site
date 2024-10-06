@@ -126,14 +126,14 @@ input[type='radio']:checked {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
-img {
+/* img {
   transition: all 0.3s ease;
 }
 
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px var(--main-yellow);
-}
+} */
 
 .recruitment_center {
   position: relative;

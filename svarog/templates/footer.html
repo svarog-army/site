@@ -7,11 +7,11 @@
 
       <div class="flex gap-3">
         <a href="https://www.instagram.com/svarog.usf/" target="_blank">
-          <img src="{{ url_for('static',filename='img/instagram.svg') }}" width="24" height="24" alt="Instagram" />
+          <img src="{{ url_for('static',filename='img/instagram.svg') }}" width="24" height="24" alt="Instagram" class="hover:scale-110 active:opacity-50 active:scale-100 transition"/>
         </a>
 
         <a href="https://t.me/svarog_usf" target="_blank">
-          <img src="{{ url_for('static',filename='img/telegram.svg') }}" width="24" height="24" alt="Telegram" />
+          <img src="{{ url_for('static',filename='img/telegram.svg') }}" width="24" height="24" alt="Telegram" class="hover:scale-110 active:opacity-50 active:scale-100 transition"/>
         </a>
 
         <pre class="text-slate-700">{{config.VERSION}}</pre>
