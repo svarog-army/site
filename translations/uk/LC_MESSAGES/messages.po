@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-06 10:47+0300\n"
+"POT-Creation-Date: 2024-10-06 10:52+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -371,11 +371,11 @@ msgstr "ПЕРЕГЛЯНУТИ ВАКАНСІЇ"
 msgid "OUR VALUES"
 msgstr "НАШІ ЦІННОСТІ"
 
-#: svarog/templates/our-values.html:16
+#: svarog/templates/our-values.html:11
 msgid "SPIRIT"
 msgstr "ДУХ"
 
-#: svarog/templates/our-values.html:20
+#: svarog/templates/our-values.html:15
 msgid ""
 "The fire in our hearts helps us overcome any challenges. Even in the "
 "toughest conditions, we remain steadfast, with unwavering determination, "
@@ -384,40 +384,39 @@ msgstr ""
 "Вогонь в наших серцях допомагає долати будь-які труднощі. Навіть в "
 "найважчих умовах ми зберігаємо рішучість, силу волі та бойовий дух"
 
-#: svarog/templates/our-values.html:33
+#: svarog/templates/our-values.html:23
 msgid "COMMUNITY"
 msgstr "СПІЛЬНОТА"
 
-#: svarog/templates/our-values.html:37
-#, fuzzy
+#: svarog/templates/our-values.html:27
 msgid ""
 "We build our team not just on skills, but on mutual trust and respect. "
-"It’s not about where, but with whom! People are our greatest asset, and a"
+"It's not about where, but with whom! People are our greatest asset, and a"
 " shared goal makes us stronger"
 msgstr ""
 "Ми будуємо команду не лише на основі навичок, а й на взаємній довірі та "
 "повазі. Адже не важливо де, важливо з ким! Люди наша головна цінність, а "
 "спільна мета робить нас сильнішими"
 
-#: svarog/templates/our-values.html:50
+#: svarog/templates/our-values.html:35
 msgid "PREPARATION"
 msgstr "ПІДГОТОВКА"
 
-#: svarog/templates/our-values.html:54
+#: svarog/templates/our-values.html:39
 msgid ""
 "Thorough preparation ensures our success. We provide the highest level of"
 " training so that every fighter is ready for challenges and can act "
 "confidently in any situation"
 msgstr ""
-"ретельна підготовка гарантує наш успіх. Ми забезпечуємо найвищий рівень "
+"Ретельна підготовка гарантує наш успіх. Ми забезпечуємо найвищий рівень "
 "тренувань, щоб кожен боєць був готовий до викликів та діяв впевнено в "
 "будь-якій ситуації"
 
-#: svarog/templates/our-values.html:67
+#: svarog/templates/our-values.html:47
 msgid "INNOVATION"
 msgstr "ІННОВАЦІЇ"
 
-#: svarog/templates/our-values.html:71
+#: svarog/templates/our-values.html:51
 msgid ""
 "We embrace cutting-edge technologies and the latest solutions. Innovation"
 " allows us to stay one step ahead of the enemy and continuously improve"
@@ -425,11 +424,11 @@ msgstr ""
 "Ми використовуємо передові технології та новітні рішення. Інновації "
 "дозволяють нам бути на крок попереду ворога і постійно вдосконалюватися"
 
-#: svarog/templates/our-values.html:84
+#: svarog/templates/our-values.html:59
 msgid "DIGNITY"
 msgstr "ГІДНІСТЬ"
 
-#: svarog/templates/our-values.html:88
+#: svarog/templates/our-values.html:63
 msgid ""
 "We hold human dignity in the highest regard and act with honor. Care, "
 "respect for our comrades, and mutual support form the foundation of our "
