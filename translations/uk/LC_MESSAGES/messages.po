@@ -955,7 +955,6 @@ msgid "Technician"
 msgstr "Технік"
 
 #: svarog/templates/vacancy-gallery.html:79
-#, fuzzy
 msgid ""
 "Key responsibilities include preparing UAV for flights, performing "
 "maintenance and repairs, monitoring the operation of drones during "
