@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-07 07:42+0300\n"
+"POT-Creation-Date: 2024-10-07 12:17+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -199,7 +199,7 @@ msgstr "Надіслати заявку"
 msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
-#: svarog/templates/button.html:4 svarog/templates/head.html:23
+#: svarog/templates/button.html:4 svarog/templates/head.html:24
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
@@ -327,6 +327,34 @@ msgstr ""
 msgid "Thank you for using the 424bat.army Site!"
 msgstr "Дякуємо за використання Сайту 424bat.army!"
 
+#: svarog/templates/cookies.html:14
+msgid ""
+"Our site uses cookies to improve your experience during your visit. "
+"Cookies help us analyze site traffic and understand how you interact with"
+" our content."
+msgstr ""
+"Наш сайт використовує файли cookie для покращення вашого досвіду під час "
+"відвідування. Файли cookie допомагають нам аналізувати трафік на сайті та"
+" розуміти, як ви взаємодієте з нашим контентом."
+
+#: svarog/templates/cookies.html:18
+msgid "By clicking \"Accept all cookies\", you agree to the use of cookies."
+msgstr ""
+"Клацнувши \"Дозволити все\", ви погоджуєтеся на використання файлів "
+"cookie."
+
+#: svarog/templates/cookies.html:22
+msgid "Show details"
+msgstr "Показати деталі"
+
+#: svarog/templates/cookies.html:28
+msgid "DECLINE COOKIES"
+msgstr "ЗАБОРОНИТИ ВСЕ"
+
+#: svarog/templates/cookies.html:30
+msgid "ACCEPT ALL COOKIES"
+msgstr "ДОЗВОЛИТИ ВСЕ"
+
 #: svarog/templates/footer.html:5
 msgid "SEPARATE BATTALION OF UNMANNED SYSTEMS"
 msgstr "ОКРЕМИЙ БАТАЛЬЙОН БЕЗПІЛОТНИХ СИСТЕМ"
@@ -371,11 +399,11 @@ msgstr "ПЕРЕГЛЯНУТИ ВАКАНСІЇ"
 msgid "OUR VALUES"
 msgstr "НАШІ ЦІННОСТІ"
 
-#: svarog/templates/our-values.html:11
+#: svarog/templates/our-values.html:12
 msgid "SPIRIT"
 msgstr "ДУХ"
 
-#: svarog/templates/our-values.html:15
+#: svarog/templates/our-values.html:16
 msgid ""
 "The fire in our hearts helps us overcome any challenges. Even in the "
 "toughest conditions, we remain steadfast, with unwavering determination, "
@@ -384,11 +412,11 @@ msgstr ""
 "Вогонь в наших серцях допомагає долати будь-які труднощі. Навіть в "
 "найважчих умовах ми зберігаємо рішучість, силу волі та бойовий дух"
 
-#: svarog/templates/our-values.html:23
+#: svarog/templates/our-values.html:26
 msgid "COMMUNITY"
 msgstr "СПІЛЬНОТА"
 
-#: svarog/templates/our-values.html:27
+#: svarog/templates/our-values.html:30
 msgid ""
 "We build our team not just on skills, but on mutual trust and respect. "
 "It's not about where, but with whom! People are our greatest asset, and a"
@@ -398,11 +426,11 @@ msgstr ""
 "повазі. Адже не важливо де, важливо з ким! Люди наша головна цінність, а "
 "спільна мета робить нас сильнішими"
 
-#: svarog/templates/our-values.html:35
+#: svarog/templates/our-values.html:40
 msgid "PREPARATION"
 msgstr "ПІДГОТОВКА"
 
-#: svarog/templates/our-values.html:39
+#: svarog/templates/our-values.html:44
 msgid ""
 "Thorough preparation ensures our success. We provide the highest level of"
 " training so that every fighter is ready for challenges and can act "
@@ -412,11 +440,11 @@ msgstr ""
 "тренувань, щоб кожен боєць був готовий до викликів та діяв впевнено в "
 "будь-якій ситуації"
 
-#: svarog/templates/our-values.html:47
+#: svarog/templates/our-values.html:54
 msgid "INNOVATION"
 msgstr "ІННОВАЦІЇ"
 
-#: svarog/templates/our-values.html:51
+#: svarog/templates/our-values.html:58
 msgid ""
 "We embrace cutting-edge technologies and the latest solutions. Innovation"
 " allows us to stay one step ahead of the enemy and continuously improve"
@@ -424,11 +452,11 @@ msgstr ""
 "Ми використовуємо передові технології та новітні рішення. Інновації "
 "дозволяють нам бути на крок попереду ворога і постійно вдосконалюватися"
 
-#: svarog/templates/our-values.html:59
+#: svarog/templates/our-values.html:68
 msgid "DIGNITY"
 msgstr "ГІДНІСТЬ"
 
-#: svarog/templates/our-values.html:63
+#: svarog/templates/our-values.html:72
 msgid ""
 "We hold human dignity in the highest regard and act with honor. Care, "
 "respect for our comrades, and mutual support form the foundation of our "
@@ -522,7 +550,6 @@ msgid "Collection and use of personal data"
 msgstr "Збір та використання персональних даних"
 
 #: svarog/templates/privacy_policy.html:43
-#, fuzzy
 msgid ""
 "The collection of personal data is carried out solely according to your\n"
 "    conscious and voluntary decision as the subject of personal data to "
@@ -902,11 +929,11 @@ msgstr "ВАКАНСІЇ"
 msgid "Scroll"
 msgstr "Прокрутіть"
 
-#: svarog/templates/vacancy-gallery.html:41
+#: svarog/templates/vacancy-gallery.html:37
 msgid "UAV pilot"
 msgstr "Пілот БПЛА"
 
-#: svarog/templates/vacancy-gallery.html:44
+#: svarog/templates/vacancy-gallery.html:40
 msgid ""
 "You will carry out reconnaissance or combat missions, directly guiding "
 "the “bird” and witnessing enemy strikes firsthand. You’ll be responsible "
@@ -920,11 +947,11 @@ msgstr ""
 "любиш дрони, авіацію або симулятори, це твоя можливість вивести свої "
 "навички на новий рівень!"
 
-#: svarog/templates/vacancy-gallery.html:62
+#: svarog/templates/vacancy-gallery.html:54
 msgid "Driver-Electrician"
 msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancy-gallery.html:66
+#: svarog/templates/vacancy-gallery.html:58
 msgid ""
 "Your main task is to operate vehicles for transporting personnel, "
 "equipment, and UAVs. You'll be responsible for smooth logistics and "
@@ -936,11 +963,11 @@ msgstr ""
 "та технічну справність автомобіля. Якщо у тебе є права категорії B, C або"
 " D, ця робота для тебе!"
 
-#: svarog/templates/vacancy-gallery.html:83
+#: svarog/templates/vacancy-gallery.html:71
 msgid "Master"
 msgstr "Майстер"
 
-#: svarog/templates/vacancy-gallery.html:86
+#: svarog/templates/vacancy-gallery.html:74
 msgid ""
 "Proper preparation of munitions for UAVs is a key task for the success of"
 " operations. The Master is responsible for loading explosives and "
@@ -954,11 +981,11 @@ msgstr ""
 " або досвід у піротехніці, ця робота дасть змогу працювати з передовими "
 "технологіями для перемоги!"
 
-#: svarog/templates/vacancy-gallery.html:103
+#: svarog/templates/vacancy-gallery.html:87
 msgid "Technician"
 msgstr "Технік"
 
-#: svarog/templates/vacancy-gallery.html:106
+#: svarog/templates/vacancy-gallery.html:90
 msgid ""
 "Key responsibilities include preparing UAV for flights, performing "
 "maintenance and repairs, monitoring the operation of drones during "
@@ -972,11 +999,11 @@ msgstr ""
 "виконання завдань. Вимагається технічна підготовка та уважність до "
 "деталей"
 
-#: svarog/templates/vacancy-gallery.html:123
+#: svarog/templates/vacancy-gallery.html:103
 msgid "Decryptor"
 msgstr "Дешифрувальник"
 
-#: svarog/templates/vacancy-gallery.html:126
+#: svarog/templates/vacancy-gallery.html:106
 msgid ""
 "You will work with video footage captured by reconnaissance UAVs, "
 "analyzing it to identify enemy equipment and priority targets. If you "
@@ -988,11 +1015,11 @@ msgstr ""
 "ти уважний до деталей, любиш працювати з візуальною інформацією і хочеш "
 "впливати на бойові рішення, ця робота для тебе!"
 
-#: svarog/templates/vacancy-gallery.html:143
+#: svarog/templates/vacancy-gallery.html:119
 msgid "Airman"
 msgstr "Авіаційний Механік"
 
-#: svarog/templates/vacancy-gallery.html:146
+#: svarog/templates/vacancy-gallery.html:122
 msgid ""
 "This position offers the opportunity to work with advanced unmanned "
 "aerial vehicles, responsible for their repair and maintenance—from "
@@ -1006,11 +1033,11 @@ msgstr ""
 "технічних викликів, ця робота дозволить тобі бути на передовій сучасної "
 "авіації!"
 
-#: svarog/templates/vacancy-gallery.html:163
+#: svarog/templates/vacancy-gallery.html:135
 msgid "Sapper"
 msgstr "Сапер"
 
-#: svarog/templates/vacancy-gallery.html:166
+#: svarog/templates/vacancy-gallery.html:138
 msgid ""
 "You will detect and neutralize explosive devices, ensuring the safety of "
 "your unit and UAV operations. This is not only a critical role on the "
@@ -1025,11 +1052,11 @@ msgstr ""
 "актуальною, допомагаючи знешкоджувати загрози і після війни. Якщо ти "
 "сміливий і уважний, ця професія дасть тобі змогу змінювати світ на краще!"
 
-#: svarog/templates/vacancy-gallery.html:184
+#: svarog/templates/vacancy-gallery.html:152
 msgid "Radio electronic combat operator"
 msgstr "Оператор РЕБ"
 
-#: svarog/templates/vacancy-gallery.html:188
+#: svarog/templates/vacancy-gallery.html:156
 msgid ""
 "Your mission is to disrupt the enemy’s plans by blocking their "
 "communications and navigation while protecting our units from hostile "

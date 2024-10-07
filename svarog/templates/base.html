@@ -90,6 +90,7 @@
     {% block content %}{% endblock %}
   </div>
 
+  {% include 'cookies.html' %}
   <!-- Footer -->
   {% include 'footer.html' %}
 
@@ -100,12 +101,12 @@
 
   </div>
   <script src="{{ url_for('static', filename='js/base.js') }}" type="text/javascript" defer></script>
+  <script src="{{ url_for('static', filename='js/cookies.js') }}" type="text/javascript" defer></script>
 
   <div id="not-found"></div>
   {% include 'spinner.html' %}
 
   {% block scripts %} {% endblock %}
-
 </body>
 
 </html>
