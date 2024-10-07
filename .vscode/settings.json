@@ -22,6 +22,7 @@
     "nplurals",
     "pydantic",
     "pytest",
+    "Ruberoid",
     "signalbot",
     "sqlalchemy",
     "svarog",
@@ -29,6 +30,7 @@
     "werkzeug",
     "wsgi",
     "wtforms",
+    "Клікніть",
     "скіли"
   ],
   "python.testing.pytestEnabled": true,

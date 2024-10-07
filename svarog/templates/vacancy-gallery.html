@@ -1,7 +1,34 @@
 <div id="vacancy-gallery" class="container mx-auto py-20 px-10 xl:px-16">
-  <h2 class="mb-10 text-4xl max-w-[496px] 2xl:max-w-none break-words">
+  <h2 class="text-4xl max-w-[496px] 2xl:max-w-none break-words">
     {{_("VACANCIES")}}
   </h2>
+
+  <div class="flex items-center">
+    <p class="text-[--main-yellow]">{{_("Scroll")}}</p>
+    <div class="w-10 h-10">
+      <svg
+        viewBox="0 0 24.00 24.00"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="#ffffff">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke="#CCCCCC"
+          stroke-width="0.192"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 12H20M20 12L16 8M20 12L16 16"
+            stroke="#ffc823"
+            stroke-width="0.672"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
 
   <div class="overflow-auto flex gap-8 w-full pb-10">
     <div
@@ -176,9 +203,7 @@
           class="frame-border w-mx relative px-4 text-xl bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
           09
         </div>
-        <h3 class="mb-3 text-xl text-[--main-yellow]">
-          {{_("Signalman")}}
-        </h3>
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("Signalman")}}</h3>
         <p class="leading-5">
           <!-- prettier-ignore -->
           {{_("The success of combat operations depends on you! As a signalman, you will be responsible for ensuring reliable and uninterrupted communication between units, which is critical for every mission. If you have a background in telecommunications and want to be a key link in coordinating operations, this position is perfect for you!")}}
@@ -192,32 +217,5 @@
         alt="Signalman" />
     </div>
     #}
-  </div>
-
-  <div class="flex items-center">
-    <p class="text-[--main-yellow]">{{_("Scroll")}}</p>
-    <div class="w-10 h-10">
-      <svg
-        viewBox="0 0 24.00 24.00"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="#ffffff">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke="#CCCCCC"
-          stroke-width="0.192"></g>
-        <g id="SVGRepo_iconCarrier">
-          <path
-            d="M4 12H20M20 12L16 8M20 12L16 16"
-            stroke="#ffc823"
-            stroke-width="0.672"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </g>
-      </svg>
-    </div>
   </div>
 </div>
