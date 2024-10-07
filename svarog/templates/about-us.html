@@ -2,22 +2,22 @@
   <div class="flex items-start gap-12">
     <div class="flex flex-col justify-between gap-16 lg:flex-row">
       <img
-        class="sm:hidden opacity-0 intersect:opacity-100 translate-y-2/4 intersect:translate-y-0 transition ease-out duration-500 intersect-once intersect-half"
+        class="sm:hidden"
         src="{{ url_for('static',filename='img/about-us/about-us-mobile-1.png') }}"
         alt="About us" />
       <img
-        class="w-1/2 object-contain hidden sm:block opacity-0 intersect:opacity-100 -translate-x-3/4 intersect:translate-x-0 transition ease-out duration-700 intersect-once intersect-full"
+        class="w-1/2 object-contain hidden sm:block"
         src="{{ url_for('static',filename='img/about-us/about-us-1.png') }}"
         alt="About us" />
 
       <div class="flex flex-col justify-between gap-6">
         <h2
-          class="text-4xl leading-[54px] opacity-0 intersect:opacity-100 mobile-range:translate-y-3/4 mobile-range:intersect:translate-y-0 transition ease-out duration-500 desktop:translate-x-2/4 desktop:intersect:translate-x-0 intersect-once intersect-full">
+          class="text-4xl leading-[54px]">
           {{_("ABOUT US")}}
         </h2>
 
         <p
-          class="leading-5 opacity-0 intersect:opacity-100 mobile-range:translate-y-2/4 mobile-range:intersect:translate-y-0 transition ease-out duration-300 desktop:translate-x-2/4 desktop:intersect:translate-x-0 desktop:duration-700 intersect-once intersect-full">
+          class="leading-5">
           <!-- prettier-ignore -->
           {{_("We are the blacksmiths of the future in the newly formed Svarog battalion of Unmanned Systems Forces. Our fire is the source of strength and innovation that drives us forward. As a Phoenix, we are constantly reborn: from a civilian to a warrior, from a novice to a master of unmanned systems. In the flame of challenges, we are hardened, become stronger and ready to defend our common future. Drones, technology and an invincible spirit are our weapons. We are a team united by a single goal. Our path leads to victory through skill, cooperation, and an unquenchable fire in our hearts.")}}
         </p>
