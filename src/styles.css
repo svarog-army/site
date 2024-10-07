@@ -198,13 +198,13 @@ form label:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(64, 64, 64);
+  background: rgb(104, 104, 104);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(85, 85, 85);
+  background: var(--main-yellow);
 }
 
 .selected-items p {
