@@ -33,7 +33,7 @@
             {{_("Date of birth")}}*
           </label>
           <!-- prettier-ignore -->
-          {{application_form.birth_date(autocomplete="off", class="block w-full text-white/50c focus:text-white bg-transparent border-0 border-b border-b-white/20 focus:outline-none focus-visible:ring-0 focus:border-b-white transition", id="birth_date")}}
+          {{application_form.birth_date(autocomplete="off", class="block w-full text-white/50c focus:text-white bg-transparent border-0 border-b border-b-white/20 focus:outline-none focus-visible:ring-0 focus:border-b-white transition", max="2006-01-01", id="birth_date")}}
           <span
             class="absolute bottom-3 right-2 flex items-center pr-3 cursor-pointer pointer-events-none">
             <svg
@@ -184,7 +184,7 @@
           <!-- prettier-ignore -->
           {{ application_form.is_serviceman(class="h-8 flex flex-row gap-8 text-white border-gray-300 rounded
           focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800
-          dark:focus:ring-offset-gray-800 [&>li]:flex [&>li]:items-center [&>li]:gap-1") }}
+          dark:focus:ring-offset-gray-800 [&>li]:flex [&>li]:items-center [&>li]:gap-1 cursor-pointer") }}
         </div>
         <div class="group lg:col-span-2">
           <!-- prettier-ignore -->
@@ -195,7 +195,7 @@
           <!-- prettier-ignore -->
           {{ application_form.allow_data_processing(class="h-8 flex flex-row gap-8 text-white border-gray-300 rounded
           focus:ring-blue-500 focus:ring-2 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800
-          dark:focus:ring-offset-gray-800 [&>li]:flex [&>li]:items-center [&>li]:gap-1") }}
+          dark:focus:ring-offset-gray-800 [&>li]:flex [&>li]:items-center [&>li]:gap-1 cursor-pointer") }}
         </div>
 
         <!-- prettier-ignore -->
