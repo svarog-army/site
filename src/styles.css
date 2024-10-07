@@ -217,3 +217,7 @@ form label:hover {
   position: absolute;
   display: flex;
 }
+
+.non-selectable *::selection {
+  background-color: transparent;
+}

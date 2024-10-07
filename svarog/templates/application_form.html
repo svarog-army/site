@@ -27,15 +27,36 @@
           border-b-white/20 focus:outline-none focus-visible:ring-0
           focus:border-b-white transition")}}
         </div>
+        <div class="group relative">
+          <!-- prettier-ignore -->
+          <label for="birth_date" class="block text-white/50 group-focus-within:text-white transition">
+            {{_("Date of birth")}}*
+          </label>
+          <!-- prettier-ignore -->
+          {{application_form.birth_date(autocomplete="off", class="block w-full text-white/50c focus:text-white bg-transparent border-0 border-b border-b-white/20 focus:outline-none focus-visible:ring-0 focus:border-b-white transition", id="birth_date")}}
+          <span
+            class="absolute bottom-3 right-2 flex items-center pr-3 cursor-pointer pointer-events-none">
+            <svg
+              class="w-4 h-4 text-white/50"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1v3m5-3v3m5-3v3M1 7h18M5 11h10M2 3h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"></path>
+            </svg>
+          </span>
+        </div>
         <div class="group">
           <!-- prettier-ignore -->
-          <label for="birth_date" class="block text-white/50  group-focus-within:text-white transition ">{{_("Date of
-            birth")}}*</label>
+          <label for="phone"
+            class="block text-white/50  group-focus-within:text-white transition">{{_("Phone")}}*</label>
           <!-- prettier-ignore -->
-          {{application_form.birth_date(autocomplete="off", class="block w-full
-          text-white/50c focus:text-white bg-transparent border-0 border-b
-          border-b-white/20 focus:outline-none focus-visible:ring-0
-          focus:border-b-white transition")}}
+          {{application_form.phone(autocomplete="off", class="block w-full text-white/50c focus:text-white bg-transparent border-0 border-b border-b-white/20 focus:outline-none focus-visible:ring-0 focus:border-b-white transition ")}}
         </div>
         <div class="group">
           <!-- prettier-ignore -->
@@ -45,7 +66,7 @@
           {{application_form.phone(autocomplete="off", class="block w-full
           text-white/50c focus:text-white bg-transparent border-0 border-b
           border-b-white/20 focus:outline-none focus-visible:ring-0
-          focus:border-b-white transition")}}
+          focus:border-b-white transition ")}}
         </div>
         <div class="group">
           <!-- prettier-ignore -->
