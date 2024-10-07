@@ -43,15 +43,6 @@ declineCookiesButton.addEventListener('click', () => {
   modal.hide();
 });
 
-// Accert necessary cookies button flow
-const acceptNecessaryCookiesButton = document.querySelector(
-  '#acceptNecessaryCookiesButton',
-);
-
-acceptNecessaryCookiesButton.addEventListener('click', () => {
-  localStorage.setItem('consentMode', 'necessary');
-  modal.hide();
-});
 
 // Close cookies modal button flow
 const closeCookiesModalButton = document.querySelector(
