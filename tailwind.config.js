@@ -13,8 +13,9 @@ module.exports = {
       },
       screens: {
         desktop: '1440px',
+        'mobile-range': { min: '320px', max: '1439px' },
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'), require('tailwindcss-intersect')],
 };
