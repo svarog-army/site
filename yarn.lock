@@ -3629,6 +3629,11 @@ svgo@^3.0.2:
     csso "^5.0.5"
     picocolors "^1.0.0"
 
+tailwindcss-intersect@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss-intersect/-/tailwindcss-intersect-2.0.1.tgz#1fed95e81944f9352c7b5d1deb5b9cc43e183531"
+  integrity sha512-0NcIGTKvJwNvMZBKMiykddJdKmJUb3eeVCvy366UP7tS/Sxdxc5E3pR9rwPMLxmhFIYiMdbCKn2G7GfZ8zB/TQ==
+
 tailwindcss@^3.4.13:
   version "3.4.13"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.13.tgz#3d11e5510660f99df4f1bfb2d78434666cb8f831"

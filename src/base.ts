@@ -1,5 +1,7 @@
 import 'flowbite';
+import { Observer } from 'tailwindcss-intersect';
 
+Observer.start();
 export interface HTMXEventDetail {
   xhr: XMLHttpRequest;
   target: HTMLElement;
