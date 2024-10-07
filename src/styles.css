@@ -6,8 +6,16 @@
   --main-yellow: #ffc823;
   --main-black: #000000;
   color: white;
-  --main-red: #ff0000;
-  --main-green: #00ff00;
+  font-family: 'Ruberoid Regular', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ruberoid Bold', sans-serif;
 }
 
 .text-danger {
@@ -23,6 +31,19 @@
 .htmx-request.htmx-indicator {
   display: inline;
 }
+.frame-border {
+  position: relative;
+  display: inline-block;
+  color: var(--main-yellow);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--main-yellow);
+  text-decoration: underline;
+}
 
 .frame-border::before,
 .frame-border::after {
@@ -32,6 +53,7 @@
   border-style: solid;
   width: 10px;
   height: 100%;
+  transition: all 0.3s ease;
 }
 
 .frame-border::before {
@@ -46,6 +68,20 @@
   border-width: 1px 1px 1px 0;
 }
 
+/* Hover effects */
+.frame-border:hover {
+  background-color: rgba(255, 215, 0, 0.1); /* Slight yellow tint */
+}
+
+.frame-border:hover::before {
+  left: -5px;
+  width: 15px;
+}
+
+.frame-border:hover::after {
+  right: -5px;
+  width: 15px;
+}
 /* Style the radio button */
 input[type='radio'] {
   -webkit-appearance: none;
@@ -88,4 +124,95 @@ input[type='radio']:checked {
 
 input[type='radio']:checked {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* img {
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--main-yellow);
+} */
+
+.recruitment_center {
+  position: relative;
+
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before,
+.recruitment_center::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.recruitment_center::before {
+  top: -6px;
+  left: -6px;
+  border-top: 1px solid #ffd700;
+  border-left: 1px solid #ffd700;
+}
+
+.recruitment_center::after {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 1px solid #ffd700;
+  border-right: 1px solid #ffd700;
+}
+
+.recruitment_center:hover::before,
+.recruitment_center:hover::after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  opacity: 1;
+}
+
+form label:hover {
+  color: var(--main-yellow);
+}
+
+.values:hover {
+  border-color: var(--main-yellow);
+  transform: scale(1.05);
+}
+
+.values {
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(64, 64, 64);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(85, 85, 85);
+}
+
+.selected-items p {
+  padding: 4px;
+  color: var(--main-yellow);
+  border-radius: 5px;
+  font-size: 11px;
+}
+.selected-items {
+  position: absolute;
+  display: flex;
 }

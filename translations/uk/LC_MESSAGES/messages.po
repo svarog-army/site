@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-03 11:49+0300\n"
+"POT-Creation-Date: 2024-10-07 07:42+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -27,28 +27,47 @@ msgstr "Так"
 msgid "No"
 msgstr "Ні"
 
-#: svarog/templates/about-us.html:19
+#: svarog/templates/about-us.html:14
 msgid "ABOUT US"
 msgstr "ПРО НАС"
 
-#: svarog/templates/about-us.html:22 svarog/templates/about-us.html:57
-#: svarog/templates/about-us.html:92
-#, fuzzy
+#: svarog/templates/about-us.html:18
 msgid ""
-"During the one-week training, you will feel your weaknesses and\n"
-"          strengths, you will understand how you can most effectively "
-"show\n"
-"          yourself in the Armed Forces, and you will get During the one-"
-"week\n"
-"          training, you will feel your weaknesses and strengths, you will"
-"\n"
-"          understand how you can most effectively show yourself in the "
-"Armed\n"
-"          Forces, and you will get During the one-week training, you will"
-" feel\n"
-"          your weaknesses and strengths, you will understand what you can"
-" do\n"
-"          most effectively in the Armed Forces and you will get"
+"We are the blacksmiths of the future in the newly formed Svarog battalion"
+" of Unmanned Systems Forces. Our fire is the source of strength and "
+"innovation that drives us forward. As a Phoenix, we are constantly "
+"reborn: from a civilian to a warrior, from a novice to a master of "
+"unmanned systems. In the flame of challenges, we are hardened, become "
+"stronger and ready to defend our common future. Drones, technology and an"
+" invincible spirit are our weapons. We are a team united by a single "
+"goal. Our path leads to victory through skill, cooperation, and an "
+"unquenchable fire in our hearts."
+msgstr ""
+"Ми — ковалі майбутнього в новоствореному батальйоні Сил Безпілотних "
+"Систем «Сварог». Наш вогонь — це джерело сили й інновацій, що рухає нас "
+"вперед. Як Фенікс, ми постійно перероджуємось: з цивільного — у воїна, з "
+"новачка — у майстра безпілотних систем. У полум'ї викликів ми гартуємось,"
+" стаємо сильнішими й готовими захищати наше спільне майбутнє. Дрони, "
+"технології й непереможний дух — це наша зброя. Ми — команда, що об'єднана"
+" єдиною метою. Наш шлях веде до перемоги через майстерність, співпрацю та"
+" незламний вогонь у наших серцях."
+
+#: svarog/templates/about-us.html:42
+msgid "WHAT WE DO?"
+msgstr "ЩО МИ РОБИМО?"
+
+#: svarog/templates/about-us.html:46 svarog/templates/about-us.html:76
+msgid ""
+"During the one-week training, you will feel your weaknesses and "
+"strengths, you will understand how you\n"
+"          can most effectively show yourself in the Armed Forces, and you"
+" will get During the one-week training, you\n"
+"          will feel your weaknesses and strengths, you will understand "
+"how you can most effectively show yourself in the\n"
+"          Armed Forces, and you will get During the one-week training, "
+"you will feel your weaknesses and strengths, you\n"
+"          will understand what you can do most effectively in the Armed "
+"Forces and you will get"
 msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
@@ -57,107 +76,122 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/about-us.html:54
-msgid "WHAT WE DO?"
-msgstr "ЩО МИ РОБИМО?"
-
-#: svarog/templates/about-us.html:89
+#: svarog/templates/about-us.html:72
 msgid "OUR MISSION"
 msgstr "НАША МІСІЯ"
 
-#: svarog/templates/about-us.html:108 svarog/templates/about-us.html:117
-#: svarog/templates/about-us.html:126 svarog/templates/about-us.html:135
-#, fuzzy
-msgid ""
-"During the one-week training, you will feel your\n"
-"              weaknesses"
+#: svarog/templates/about-us.html:86 svarog/templates/about-us.html:90
+#: svarog/templates/about-us.html:94 svarog/templates/about-us.html:98
+msgid "During the one-week training, you will feel your weaknesses"
 msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
 
-#: svarog/templates/application_form.html:5
+#: svarog/templates/application_form.html:7
 msgid "FILL THE FORM AND JOIN US"
 msgstr "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
 
-#: svarog/templates/application_form.html:7
-msgid ""
-"In order to get into the ranks of the Force of Unmanned Systems, you\n"
-"      need to apply by filling out the questionnaire."
+#: svarog/templates/application_form.html:10
+msgid "To join the ranks of our battalion, please fill out the application form"
 msgstr ""
-"Для того, щоб потрапити до лав Сили безпілотних систем, необхідно подати "
-"заявку, заповнивши анкету."
+"Для того, щоб потрапити до лав нашого батальйону, будь ласка, заповни "
+"анкету"
 
-#: svarog/templates/application_form.html:21
-msgid "Full name"
+#: svarog/templates/application_form.html:23
+msgid ""
+"Full\n"
+"            name"
 msgstr "Прізвище та ім'я"
 
-#: svarog/templates/application_form.html:30
-msgid "Date of birth"
+#: svarog/templates/application_form.html:32
+msgid ""
+"Date of\n"
+"            birth"
 msgstr "Дата народження"
 
-#: svarog/templates/application_form.html:39
+#: svarog/templates/application_form.html:43
+#: svarog/templates/recruit/edit_modal.html:56
+#: svarog/templates/recruit/recruits.html:26
 msgid "Phone"
 msgstr "Номер телефону"
 
-#: svarog/templates/application_form.html:48
-msgid "City of actual residence"
+#: svarog/templates/application_form.html:53
+msgid ""
+"City of actual\n"
+"            residence"
 msgstr "Місто фактичного проживання"
 
 #: svarog/templates/admin/edit_modal.html:41
-#: svarog/templates/application_form.html:57
+#: svarog/templates/application_form.html:64
+#: svarog/templates/recruit/edit_modal.html:36
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: svarog/templates/application_form.html:66
-msgid "Education, specialty"
+#: svarog/templates/application_form.html:73
+msgid ""
+"Education,\n"
+"            specialty"
 msgstr "Освіта, спеціальність"
 
-#: svarog/templates/application_form.html:75
-msgid "Professional skills"
+#: svarog/templates/application_form.html:83
+msgid ""
+"Professional\n"
+"            skills"
 msgstr "Професійні навички (скіли)"
 
-#: svarog/templates/application_form.html:84
-msgid "Last civilian position"
+#: svarog/templates/application_form.html:93
+msgid ""
+"Last civilian\n"
+"            position"
 msgstr "Остання цивільна посада"
 
-#: svarog/templates/application_form.html:93
-msgid "Do you have critical health problems"
+#: svarog/templates/application_form.html:103
+msgid ""
+"Do you\n"
+"            have critical health problems"
 msgstr "Чи наявні у вас критичні проблеми зі здоровʼям?"
 
-#: svarog/templates/application_form.html:102
-msgid "Having a driver's license. If so, what categories?"
+#: svarog/templates/application_form.html:114
+msgid ""
+"Having a driver's license. If so,\n"
+"            what categories?"
 msgstr "Наявність водійського посвідчення. Якщо так - які категорії?"
 
-#: svarog/templates/application_form.html:113
+#: svarog/templates/application_form.html:126
 msgid "Choose a specialty"
 msgstr "Оберіть спеціальність"
 
-#: svarog/templates/application_form.html:119
+#: svarog/templates/application_form.html:133
 msgid "Click to choose"
 msgstr "Клікніть щоб вибрати"
 
-#: svarog/templates/application_form.html:131
-msgid "Do you have experience with UAVs (if so, what kind)"
+#: svarog/templates/application_form.html:148
+msgid ""
+"Do you\n"
+"            have experience with UAV (if so, what kind)"
 msgstr "Чи маєте досвід з БПЛА (якщо так, який саме?)"
 
-#: svarog/templates/application_form.html:141
-msgid "Are you a military serviceman?"
+#: svarog/templates/application_form.html:159
+msgid ""
+"Are you\n"
+"            a military serviceman?"
 msgstr "Чи Ви є військовослужбовцем?"
 
-#: svarog/templates/application_form.html:149
+#: svarog/templates/application_form.html:170
 msgid ""
-"Do you give your concent to process your personal data by UAV Forces "
-"recruiting center?"
+"Do you\n"
+"            give your concent to process your personal data by UAV Forces"
+" recruiting center?"
 msgstr ""
 "Ви погоджуєтесь на обробку персональних даних для використання в цілях "
 "рекрутингу Сил Безпілотних Систем? (Інформація НЕ буде передана до ТЦК та"
 " СП)"
 
-#: svarog/templates/application_form.html:172
+#: svarog/templates/application_form.html:196
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
 msgstr "Надіслати заявку"
 
-#: svarog/templates/base.html:8 svarog/templates/base.html:14
-#: svarog/templates/base.html:22 svarog/templates/base.html:27
+#: svarog/templates/base.html:17 svarog/templates/base.html:23
+#: svarog/templates/base.html:31 svarog/templates/base.html:36
 #: svarog/templates/under_construction.html:7
 #: svarog/templates/under_construction.html:13
 #: svarog/templates/under_construction.html:21
@@ -165,19 +199,19 @@ msgstr "Надіслати заявку"
 msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
-#: svarog/templates/button.html:3 svarog/templates/head.html:22
+#: svarog/templates/button.html:4 svarog/templates/head.html:23
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
-#: svarog/templates/cookie_policy.html:5
+#: svarog/templates/cookie_policy.html:6
 msgid "Cookie Policy for 424bat.army website"
 msgstr "Політика використання файлів cookie для веб-сайту 424bat.army"
 
-#: svarog/templates/cookie_policy.html:8
+#: svarog/templates/cookie_policy.html:9
 msgid "Introduction"
 msgstr "Вступ"
 
-#: svarog/templates/cookie_policy.html:11
+#: svarog/templates/cookie_policy.html:12
 msgid ""
 "This Cookie Policy explains how the 424bat.army website (the “Site”)\n"
 "    uses cookies and similar technologies to collect and process "
@@ -192,11 +226,11 @@ msgstr ""
 "забезпечення належної роботи Сайту та надання кращого користувацького "
 "досвіду."
 
-#: svarog/templates/cookie_policy.html:16
+#: svarog/templates/cookie_policy.html:17
 msgid "What Are Cookies"
 msgstr "Що таке файли cookie?"
 
-#: svarog/templates/cookie_policy.html:18
+#: svarog/templates/cookie_policy.html:19
 msgid ""
 "Cookies are small text files that are stored on your device when you\n"
 "    visit the website. They are used for collection information about "
@@ -205,21 +239,20 @@ msgid ""
 "improvement of\n"
 "    the functioning of the Site."
 msgstr ""
-"Ця Політика використання файлів cookie пояснює, як веб-сайт 424bat.army "
-"(далі – “Сайт”) використовує файли cookie та подібні технології для збору"
-" та обробки інформації про вас. Ми використовуємо файли cookie для "
-"забезпечення належної роботи Сайту та надання кращого користувацького "
-"досвіду."
+"Файли cookie – це невеликі текстові файли, які зберігаються на вашому "
+"пристрої, коли ви відвідуєте веб-сайт. Вони використовуються для збору "
+"інформації про ваші вибори та налаштування, а також для збору даних для "
+"аналізу та покращення функціонування Сайту."
 
-#: svarog/templates/cookie_policy.html:23
+#: svarog/templates/cookie_policy.html:24
 msgid "Types of cookies we use"
 msgstr "Типи файлів cookie, які ми використовуємо"
 
-#: svarog/templates/cookie_policy.html:26
+#: svarog/templates/cookie_policy.html:27
 msgid "The files are necessary for work"
 msgstr "Файли необхідні для роботи"
 
-#: svarog/templates/cookie_policy.html:26
+#: svarog/templates/cookie_policy.html:27
 msgid ""
 "These files help\n"
 "      ensure the correct operation of the Site and access to basic\n"
@@ -228,11 +261,11 @@ msgstr ""
 "Ці файли допомагають забезпечити правильну роботу Сайту та доступ до "
 "основних функцій."
 
-#: svarog/templates/cookie_policy.html:31
+#: svarog/templates/cookie_policy.html:32
 msgid "Analytics files"
 msgstr "Файли аналітики"
 
-#: svarog/templates/cookie_policy.html:31
+#: svarog/templates/cookie_policy.html:32
 msgid ""
 "We use cookies to collect\n"
 "      anonymous data about the use of the Site in order to understand how"
@@ -243,11 +276,11 @@ msgstr ""
 " Сайту, щоб розуміти, як користувачі взаємодіють з контентом та покращити"
 " його якість."
 
-#: svarog/templates/cookie_policy.html:36
+#: svarog/templates/cookie_policy.html:37
 msgid "Management of cookies"
 msgstr "Керування файлами cookie"
 
-#: svarog/templates/cookie_policy.html:38
+#: svarog/templates/cookie_policy.html:39
 msgid ""
 "You have the option to manage the use of cookies through the settings\n"
 "    your web browser. You can choose to block all cookies or get a "
@@ -262,11 +295,11 @@ msgstr ""
 "увагу, що вимкнення файлів cookie може призвести до обмеження доступу до "
 "деяких функцій Сайту."
 
-#: svarog/templates/cookie_policy.html:43
+#: svarog/templates/cookie_policy.html:44
 msgid "Disclaimer"
 msgstr "Відмова від відповідальності"
 
-#: svarog/templates/cookie_policy.html:45
+#: svarog/templates/cookie_policy.html:46
 msgid ""
 "We are not responsible for cookies and third-party technologies, which\n"
 "    can be used on the Site. We recommend that you review the policy "
@@ -278,12 +311,11 @@ msgstr ""
 "політику конфіденційності та використання файлів cookie цих третіх "
 "сторін."
 
-#: svarog/templates/cookie_policy.html:49
-#, fuzzy
+#: svarog/templates/cookie_policy.html:50
 msgid "Changes to the Cookies Policy"
 msgstr "Зміни в Політиці використання файлів cookie"
 
-#: svarog/templates/cookie_policy.html:51
+#: svarog/templates/cookie_policy.html:52
 msgid ""
 "We may update this Policy from time to time. Please periodically review\n"
 "    this document to be aware of any changes."
@@ -291,7 +323,7 @@ msgstr ""
 "Ми можемо час від часу оновлювати цю Політику. Будь ласка, періодично "
 "переглядайте цей документ, щоб бути в курсі будь-яких змін."
 
-#: svarog/templates/cookie_policy.html:54
+#: svarog/templates/cookie_policy.html:55
 msgid "Thank you for using the 424bat.army Site!"
 msgstr "Дякуємо за використання Сайту 424bat.army!"
 
@@ -299,76 +331,507 @@ msgstr "Дякуємо за використання Сайту 424bat.army!"
 msgid "SEPARATE BATTALION OF UNMANNED SYSTEMS"
 msgstr "ОКРЕМИЙ БАТАЛЬЙОН БЕЗПІЛОТНИХ СИСТЕМ"
 
-#: svarog/templates/footer.html:21
+#: svarog/templates/footer.html:23
 msgid "Main"
 msgstr "Головна"
 
-#: svarog/templates/footer.html:22
+#: svarog/templates/footer.html:24
 msgid "Cookie policy"
 msgstr "Cookie policy"
 
-#: svarog/templates/footer.html:23
-msgid "FAQ"
-msgstr "Запитання"
-
-#: svarog/templates/footer.html:24
-msgid "Vacancies"
-msgstr "Вакансії"
-
 #: svarog/templates/footer.html:25
-msgid "Contacts"
-msgstr "Контакти"
+msgid "Privacy policy"
+msgstr "Політика конфіденційності"
 
-#: svarog/templates/footer.html:29
+#: svarog/templates/footer.html:26
+msgid "Developed by Simple2B ©"
+msgstr "Розроблено Simple2B ©"
+
+#: svarog/templates/footer.html:30
 msgid "CONTACT CENTER"
 msgstr "КОНТАКТ ЦЕНТР"
 
-#: svarog/templates/hero.html:7
-msgid "CHOOSE YOUR WAY WITH USF"
-msgstr "ОБЕРИ СВІЙ ШЛЯХ З ОББС"
+#: svarog/templates/hero.html:5
+msgid "JOIN OUR FIRE"
+msgstr "ДОЛУЧАЙСЯ ДО НАШОГО ВОГНЮ"
 
-#: svarog/templates/hero.html:12
+#: svarog/templates/hero.html:10
 msgid ""
-"During the one-week training, you will feel your weaknesses and "
-"strengths, you will understand how you can prove yourself most "
-"effectively in the Armed Forces, and you will have the opportunity to "
-"choose your path in a military career"
+"Join 424-th sbUS \"SVAROG\" and burn all the enemies of Ukraine with your"
+" rage!"
 msgstr ""
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш  проявити себе в ЗСУ та отримаєш "
-"можливість вибрати свій шлях у військовій кар'єрі"
+"Приєднуйся до 424 обБпС \"SVAROG\" та запечи своєю люттю всіх ворогів "
+"України!"
+
+#: svarog/templates/hero.html:17
+msgid "VIEW VACANCIES"
+msgstr "ПЕРЕГЛЯНУТИ ВАКАНСІЇ"
 
 #: svarog/templates/our-values.html:3
 msgid "OUR VALUES"
 msgstr "НАШІ ЦІННОСТІ"
 
-#: svarog/templates/our-values.html:15
-msgid "BROTHERHOOD"
-msgstr "ПОБРАТИМСТВО"
-
-#: svarog/templates/our-values.html:19 svarog/templates/our-values.html:36
-#: svarog/templates/our-values.html:53 svarog/templates/our-values.html:70
-msgid ""
-"During the one-week training, you will feel your weaknesses and "
-"strengths, you will understand how you can show yourself most effectively"
-" in the Armed Forces and you will receive During the one-week training, "
-"you will feel your weaknesses and strengths"
-msgstr ""
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони"
-
-#: svarog/templates/our-values.html:32
-msgid "TACTICS"
-msgstr "ТАКТИКА"
-
-#: svarog/templates/our-values.html:49
-msgid "NATION"
-msgstr "НАЦІЯ"
-
-#: svarog/templates/our-values.html:66
+#: svarog/templates/our-values.html:11
 msgid "SPIRIT"
 msgstr "ДУХ"
+
+#: svarog/templates/our-values.html:15
+msgid ""
+"The fire in our hearts helps us overcome any challenges. Even in the "
+"toughest conditions, we remain steadfast, with unwavering determination, "
+"willpower, and fighting spirit"
+msgstr ""
+"Вогонь в наших серцях допомагає долати будь-які труднощі. Навіть в "
+"найважчих умовах ми зберігаємо рішучість, силу волі та бойовий дух"
+
+#: svarog/templates/our-values.html:23
+msgid "COMMUNITY"
+msgstr "СПІЛЬНОТА"
+
+#: svarog/templates/our-values.html:27
+msgid ""
+"We build our team not just on skills, but on mutual trust and respect. "
+"It's not about where, but with whom! People are our greatest asset, and a"
+" shared goal makes us stronger"
+msgstr ""
+"Ми будуємо команду не лише на основі навичок, а й на взаємній довірі та "
+"повазі. Адже не важливо де, важливо з ким! Люди наша головна цінність, а "
+"спільна мета робить нас сильнішими"
+
+#: svarog/templates/our-values.html:35
+msgid "PREPARATION"
+msgstr "ПІДГОТОВКА"
+
+#: svarog/templates/our-values.html:39
+msgid ""
+"Thorough preparation ensures our success. We provide the highest level of"
+" training so that every fighter is ready for challenges and can act "
+"confidently in any situation"
+msgstr ""
+"Ретельна підготовка гарантує наш успіх. Ми забезпечуємо найвищий рівень "
+"тренувань, щоб кожен боєць був готовий до викликів та діяв впевнено в "
+"будь-якій ситуації"
+
+#: svarog/templates/our-values.html:47
+msgid "INNOVATION"
+msgstr "ІННОВАЦІЇ"
+
+#: svarog/templates/our-values.html:51
+msgid ""
+"We embrace cutting-edge technologies and the latest solutions. Innovation"
+" allows us to stay one step ahead of the enemy and continuously improve"
+msgstr ""
+"Ми використовуємо передові технології та новітні рішення. Інновації "
+"дозволяють нам бути на крок попереду ворога і постійно вдосконалюватися"
+
+#: svarog/templates/our-values.html:59
+msgid "DIGNITY"
+msgstr "ГІДНІСТЬ"
+
+#: svarog/templates/our-values.html:63
+msgid ""
+"We hold human dignity in the highest regard and act with honor. Care, "
+"respect for our comrades, and mutual support form the foundation of our "
+"battalion"
+msgstr ""
+"Ми поважаємо людську гідність і діємо з честю. Турбота, повага до "
+"побратимів і взаємопідтримка є основою нашого батальйону"
+
+#: svarog/templates/privacy_policy.html:4
+msgid "Privacy Policy"
+msgstr "Політика конфіденційності"
+
+#: svarog/templates/privacy_policy.html:7
+msgid "General provisions"
+msgstr "Загальні положення"
+
+#: svarog/templates/privacy_policy.html:10
+msgid ""
+"Privacy policy – rules governing the collection, processing, use and\n"
+"    protection of personal data that may be requested/received when using"
+" the\n"
+"    424bat.army web portal (hereinafter referred to as the Portal)."
+msgstr ""
+"Політика конфіденційності – правила, якими регламентується збір, обробка,"
+" використання і захист персональних даних, що можуть бути "
+"запитані/отримані при використанні вебпорталу 424bat.army (далі –  "
+"Портал)."
+
+#: svarog/templates/privacy_policy.html:15
+msgid ""
+" Personal data – information or a set of information about a natural or\n"
+"    legal person who is identified or can be specifically identified."
+msgstr ""
+"Персональні дані – відомості чи сукупність відомостей про фізичну або "
+"юридичну особу, яка ідентифікована або може бути конкретно "
+"ідентифікована."
+
+#: svarog/templates/privacy_policy.html:19
+msgid ""
+" The Portal administrator treats with great respect the confidential\n"
+"    (personal) information of any persons who use the information posted "
+"on the\n"
+"    Portal, as well as the subjects of the Portal – users registered on "
+"the\n"
+"    Portal, authorized persons of providers, teachers (trainers), "
+"therefore we\n"
+"    strive to protect confidentiality personal data, thereby creating and"
+"\n"
+"    providing the most comfortable conditions for using the Portal."
+msgstr ""
+"Адміністратор Порталу з великою повагою ставиться до конфіденційної "
+"(персональної) інформації будь-яких осіб, які використовують інформацію, "
+"розміщену на Порталі, а також суб'єктів Порталу – зареєстрованих на "
+"Порталі користувачів, уповноважених осіб провайдерів, викладачів "
+"(тренерів), тому прагнемо захищати конфіденційність персональних даних, "
+"тим самим створюючи і забезпечуючи максимально комфортні умови для "
+"використання Порталу."
+
+#: svarog/templates/privacy_policy.html:27
+msgid ""
+" By filling out the data in the registration form and marking the fact\n"
+"    that you have read this Privacy Policy (hereinafter – the Policy), "
+"you give\n"
+"    your consent to the processing of your personal data for the purpose "
+"of\n"
+"    providing role access, preparing statistical, administrative and "
+"other\n"
+"    information on professional training."
+msgstr ""
+"Заповнюючи дані реєстраційної форми та проставляючи відмітку про "
+"ознайомлення з даною Політикою конфіденційності (далі – Політика), Ви "
+"надаєте згоду на обробку Ваших персональних даних з метою забезпечення "
+"рольового доступу, підготовки статистичної, адміністративної та іншої "
+"інформації з питань професійного навчання."
+
+#: svarog/templates/privacy_policy.html:34
+msgid ""
+"Before using the Portal, carefully familiarize yourself with your\n"
+"    rights and obligations regarding the processing of personal data, "
+"which are\n"
+"    specified in article 8 of the Law of Ukraine “On the Protection of "
+"Personal\n"
+"    Data”, this Policy, and also express your full agreement with its "
+"terms."
+msgstr ""
+"Перед використанням Порталу уважно ознайомтесь з Вашими правами та "
+"обов'язками щодо обробки персональних даних, які зазначені "
+
+#: svarog/templates/privacy_policy.html:40
+msgid "Collection and use of personal data"
+msgstr "Збір та використання персональних даних"
+
+#: svarog/templates/privacy_policy.html:43
+#, fuzzy
+msgid ""
+"The collection of personal data is carried out solely according to your\n"
+"    conscious and voluntary decision as the subject of personal data to "
+"use the\n"
+"    Portal’s functionality and in accordance with the purpose of personal"
+" data\n"
+"    processing formulated in this Policy."
+msgstr ""
+"Збір персональних даних здійснюється виключно за Вашим свідомим та "
+"добровільним рішенням як суб'єкта персональних даних для використання "
+"функціональних можливостей Порталу та відповідно до сформульованої в цій "
+"Політиці мети обробки персональних даних."
+
+#: svarog/templates/privacy_policy.html:49
+msgid ""
+"The scope and type of collection and use of your personal data varies\n"
+"    depending on the role in which you plan to use the functionality of "
+"the\n"
+"    Portal."
+msgstr ""
+"Масштаби і тип збору та використання Ваших персональних даних різняться "
+"залежно від того, в якій ролі Ви плануєте використовувати функціональні "
+"можливості Порталу"
+
+#: svarog/templates/privacy_policy.html:54
+msgid ""
+"Depending on the role you have chosen, by registering on the Portal and\n"
+"    filling in your personal account data, you provide the following data:"
+msgstr ""
+"Здійснюючи залежно від обраної Вами ролі реєстрацію на Порталі та "
+"заповнюючи дані особистого облікового запису Ви надаєте наступні дані:"
+
+#: svarog/templates/privacy_policy.html:58
+msgid ""
+"Full name, date of birth, gender, or other identification data, phone\n"
+"    number and e-mail;"
+msgstr ""
+"ПІБ, дата народження, стать, або інші ідентифікаційні дані, номер "
+"телефону та e-mail;"
+
+#: svarog/templates/privacy_policy.html:62
+msgid ""
+"information related to your professional activity: place of work,\n"
+"    position, position category, specialty, qualification, scientific "
+"degree,\n"
+"    academic title, etc.;"
+msgstr ""
+"відомості, що стосуються Вашої професійної діяльності: місце роботи, "
+"посада, категорія посади, спеціальність, кваліфікація, науковий ступінь, "
+"вчене звання тощо;"
+
+#: svarog/templates/privacy_policy.html:66
+msgid "additional registration"
+msgstr "додаткові реєстраційні."
+
+#: svarog/templates/privacy_policy.html:68
+msgid ""
+"With further use of the Portal, information about what is contained in\n"
+"    requests for feedback forms / electronic messages is automatically\n"
+"    collected."
+msgstr ""
+"При подальшому використанні Порталу автоматично здійснюється збір "
+"інформації про що містяться в запитах форм зворотного зв'язку / "
+"електронних повідомленнях."
+
+#: svarog/templates/privacy_policy.html:73
+msgid "Purpose of collection, processing and use of personal data"
+msgstr "Мета збору, обробки та використання персональних даних"
+
+#: svarog/templates/privacy_policy.html:76
+msgid ""
+"The collection, processing and use of personal data is carried out for\n"
+"    the purpose of:"
+msgstr "Збір, обробка та використання персональних даних здійснюється з метою:"
+
+#: svarog/templates/privacy_policy.html:79
+msgid "provision of role access, in particular:"
+msgstr "забезпечення рольового доступу, зокрема:"
+
+#: svarog/templates/privacy_policy.html:80
+msgid "registration of Portal entities;"
+msgstr "реєстрації суб'єктів Порталу; "
+
+#: svarog/templates/privacy_policy.html:82
+msgid ""
+"organization of electronic interaction of Portal subjects through\n"
+"    personal accounts;"
+msgstr ""
+"організації електронної взаємодії суб'єктів Порталу через особисті "
+"кабінети;"
+
+#: svarog/templates/privacy_policy.html:86
+msgid ""
+"generalization and systematization of registers and structured data, in\n"
+"    particular:"
+msgstr "узагальнення та систематизації реєстрів та структурованих даних, зокрема:"
+
+#: svarog/templates/privacy_policy.html:89
+msgid "formation of the list;"
+msgstr "формування переліку;"
+
+#: svarog/templates/privacy_policy.html:91
+msgid ""
+"monitoring, summarization and analysis of statistical data generated by\n"
+"    the subjects of the Portal as a result of its use."
+msgstr ""
+"моніторинг, узагальнення та аналіз статистичних даних, що формуються "
+"суб'єктами Порталу в результаті його використання."
+
+#: svarog/templates/privacy_policy.html:95
+msgid ""
+"Personal data are stored for no longer than is necessary for the\n"
+"    purpose of their collection, processing and use or until you stop "
+"using the\n"
+"    Portal by deleting your account on the Portal."
+msgstr ""
+"Персональні дані зберігаються на строк не більше, ніж це необхідно "
+"відповідно до мети їх збору, обробки та використання або до моменту "
+"припинення Вами використання Порталу шляхом видалення свого облікового "
+"запису на Порталі."
+
+#: svarog/templates/privacy_policy.html:100
+msgid "Access to personal data"
+msgstr "Доступ до персональних даних"
+
+#: svarog/templates/privacy_policy.html:103
+msgid ""
+"Full access to personal data of registered Portal subjects is granted\n"
+"    to an authorized person of the Portal administrator."
+msgstr ""
+"Повний доступ до персональних даних зареєстрованих суб'єктів Порталу "
+"надано уповноваженій особі адміністратора Порталу."
+
+#: svarog/templates/privacy_policy.html:107
+msgid "Transfer of personal data to third parties"
+msgstr "Передача персональних даних третім особам"
+
+#: svarog/templates/privacy_policy.html:110
+msgid ""
+"The Portal Administrator (424 Battalion of Unmanned Systems) does not\n"
+"    transfer or disclose personal data received from registered Portal "
+"subjects\n"
+"    to third parties."
+msgstr ""
+"Адміністратор Порталу (424 ОКРЕМИЙ БАТАЛЬЙОН БЕЗПІЛОТНИХ СИСТЕМ) не "
+"передає та не розголошує персональні дані, які отримує від зареєстрованих"
+" суб'єктів Порталу, третім особам. "
+
+#: svarog/templates/privacy_policy.html:115
+msgid ""
+"The disclosure of personal data is possible in cases determined by the\n"
+"    current legislation of Ukraine, as well as in the case of the "
+"involvement of\n"
+"    third parties that provide technical support and/or services for the\n"
+"    improvement of the Portal under the terms of the contract and on the\n"
+"    condition that personal data is not disclosed."
+msgstr ""
+"Розкриття персональних даних можливе у випадках, визначених чинним "
+"законодавством України, а також у випадку залучення третіх сторін, що "
+"надають технічну підтримку та/або послуги щодо удосконалення Порталу на "
+"умовах договору та за умови не розголошення персональних даних."
+
+#: svarog/templates/privacy_policy.html:122
+msgid ""
+"The portal may contain hyperlinks to third-party websites and other\n"
+"    resources on the Internet of third parties. Third-party resources may"
+" be\n"
+"    governed by their own terms of use and privacy. Third-party resources"
+" and\n"
+"    their content are not checked by us for compliance with requirements\n"
+"    (authenticity, completeness, legality, etc.). 424 Battalion of "
+"Unmanned\n"
+"    Systems is not responsible for any information, materials posted on "
+"the\n"
+"    resources of third parties."
+msgstr ""
+"Портал може містити гіперпосилання на сторонні веб-сайти та інші ресурси "
+"в мережі Інтернет третіх осіб. Ресурси третіх осіб можуть регулюватися "
+"власними правилами користування та конфіденційності. Ресурси третіх осіб "
+"та їх контент не перевіряються нами на відповідність вимогам "
+"(правдивість, повноти, законності тощо). 424 ОББпС не несе "
+"відповідальності за будь-яку інформацію, матеріали, розміщені на ресурсах"
+" третіх осіб."
+
+#: svarog/templates/privacy_policy.html:131
+msgid "Protection of personal data"
+msgstr "Захист персональних даних"
+
+#: svarog/templates/privacy_policy.html:134
+msgid ""
+"The Portal administrator takes the necessary procedural and technical\n"
+"    measures to protect your personal data from their loss, unauthorized "
+"access\n"
+"    to them or their distribution on the Portal."
+msgstr ""
+"Адміністратор Порталу вживає необхідних процедурних і технічних заходів "
+"щодо захисту Ваших персональних даних від їх втрати, неправомірного "
+"доступу  до них або їх розповсюдження на Порталі."
+
+#: svarog/templates/privacy_policy.html:139
+msgid "Changes to the terms of the Policy"
+msgstr "Зміни до умов Політики"
+
+#: svarog/templates/privacy_policy.html:142
+msgid ""
+"The Portal Administrator may change this Policy to accurately reflect\n"
+"    the methods of collection, processing, use, access and protection of\n"
+"    personal data."
+msgstr ""
+"Адміністратор Порталу може змінювати цю Політику, щоб вона точно "
+"відображала методи збору, обробки, використання, доступу та захисту "
+"персональних даних."
+
+#: svarog/templates/privacy_policy.html:147
+msgid ""
+"Accordingly, you should review this Policy periodically. When the\n"
+"    Portal administrator changes this Policy, he will update the “last "
+"modified”\n"
+"    date at the top of this Policy. Changes to this Policy are effective "
+"when\n"
+"    posted."
+msgstr ""
+"Відповідно Ви повинні переглядати цю Політику періодично. Коли "
+"адміністратор Порталу змінює цю Політику, він оновлює дату «останньої "
+"зміни» у верхній частині цієї Політики. Зміни до цієї Політики є "
+"ефективними, коли вони опубліковані."
+
+#: svarog/templates/privacy_policy.html:153
+msgid "Your rights"
+msgstr "Ваші права"
+
+#: svarog/templates/privacy_policy.html:155
+msgid "By registering on the Portal, you have the right to:"
+msgstr "Зареєструвавшись на Порталі, Ви маєте право:"
+
+#: svarog/templates/privacy_policy.html:157
+msgid ""
+"to receive information about the sources of collection and the place of\n"
+"    storage of your personal data, its purpose"
+msgstr ""
+"отримувати інформацію про джерела збору та місце збереження своїх "
+"персональних даних, мету їх обробки;"
+
+#: svarog/templates/privacy_policy.html:164
+msgid ""
+"receive information about the conditions for providing access to\n"
+"    personal data, in particular information about third parties to whom "
+"your\n"
+"    personal data is transferred;"
+msgstr ""
+"отримувати інформацію про умови надання доступу до персональних даних, "
+"зокрема інформацію про третіх осіб, яким передаються Ваші персональні "
+"дані;"
+
+#: svarog/templates/privacy_policy.html:170
+msgid ""
+"receive information about the processing and use of your personal data\n"
+"    later than thirty calendar days from the date of receipt of the "
+"request\n"
+"    (except for visits provided for by the Law of Ukraine “On the "
+"Protection of\n"
+"    Personal Data“);"
+msgstr ""
+"отримувати не пізніше тридцяти календарних днів з дня надходження запиту "
+"(крім випадків, передбачених Законом України «Про захист персональних "
+"даних») інформацію щодо обробки та використання Ваших персональних даних;"
+
+#: svarog/templates/privacy_policy.html:177
+msgid ""
+"submit a reasoned claim to the owner of personal data with an objection\n"
+"    to the processing of your personal data;"
+msgstr ""
+"пред'являти вмотивовану вимогу володільцю персональних даних із "
+"запереченням щодо обробки Ваших персональних даних;"
+
+#: svarog/templates/privacy_policy.html:182
+msgid ""
+"file complaints about the processing of your personal data by the owner\n"
+"    or administrator of personal data to the Human Rights Commissioner of"
+" the\n"
+"    Verkhovna Rada of Ukraine or to the court;"
+msgstr ""
+"звертатися із скаргами щодо опрацювання Ваших персональних даних "
+"володільцем чи розпорядником персональних даних до Уповноваженого "
+"Верховної ради України з прав людини або до суду;"
+
+#: svarog/templates/privacy_policy.html:188
+msgid ""
+"save legal remedies in case of violation of the legislation on the\n"
+"    protection of personal data;"
+msgstr ""
+"застосовувати засоби правового захисту в разі порушення законодавства про"
+" захист персональних даних;"
+
+#: svarog/templates/privacy_policy.html:192
+msgid "withdraw consent to the processing of your personal data."
+msgstr "відкликати згоду на обробку Ваших персональних даних."
+
+#: svarog/templates/privacy_policy.html:195
+msgid "Location of personal data"
+msgstr "Місце знаходження персональних даних"
+
+#: svarog/templates/privacy_policy.html:198
+msgid ""
+"The owner and administrator of personal data is 424 Battalion of\n"
+"    Unmanned Systems."
+msgstr ""
+"Володільцем та розпорядником персональних даних є 424 ОКРЕМИЙ БАТАЛЬЙОН "
+"БЕЗПІЛОТНИХ СИСТЕМ"
 
 #: svarog/templates/recruit.html:6
 msgid "WE STARTED RECRUITING VOLUNTEERS"
@@ -383,33 +846,45 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/recruitment-contacts.html:7
+#: svarog/templates/recruitment-contacts.html:5
 msgid "CONTACTS OF RECRUITMENT CENTERS"
-msgstr "КОНТАКТИ РЕКРУТИНГОВИХ ЦЕНТРІВ"
+msgstr "КОНТАКТИ РЕКРУТ ЦЕНТРІВ"
 
-#: svarog/templates/recruitment-contacts.html:12
-#: svarog/templates/recruitment-contacts.html:17
-#: svarog/templates/recruitment-contacts.html:22
-#: svarog/templates/recruitment-contacts.html:27
-#: svarog/templates/recruitment-contacts.html:32
+#: svarog/templates/recruitment-contacts.html:11
 msgid "KYIV"
 msgstr "КИЇВ"
 
 #: svarog/templates/recruitment-contacts.html:13
-#: svarog/templates/recruitment-contacts.html:18
-#: svarog/templates/recruitment-contacts.html:23
-#: svarog/templates/recruitment-contacts.html:28
-#: svarog/templates/recruitment-contacts.html:33
 msgid "ave. Peremohy, 83/2"
 msgstr "просп. Перемоги, 83/2"
 
 #: svarog/templates/recruitment-contacts.html:14
-#: svarog/templates/recruitment-contacts.html:19
-#: svarog/templates/recruitment-contacts.html:24
-#: svarog/templates/recruitment-contacts.html:29
-#: svarog/templates/recruitment-contacts.html:34
 msgid "Daily from 09:00 to 18:00"
 msgstr "Щодня з 09:00 до 18:00"
+
+#: svarog/templates/recruitment-contacts.html:18
+msgid "BUCHA"
+msgstr "БУЧА"
+
+#: svarog/templates/recruitment-contacts.html:20
+msgid "Energetykiv st. 12"
+msgstr "вул. Енергетиків 12"
+
+#: svarog/templates/recruitment-contacts.html:21
+msgid "Interview by appointment"
+msgstr "Співбесіда по домовленості"
+
+#: svarog/templates/sidebar.html:23
+msgid "Users"
+msgstr "Користувачі"
+
+#: svarog/templates/sidebar.html:45
+msgid "Recruits"
+msgstr "Новобранці"
+
+#: svarog/templates/sidebar.html:64
+msgid "Sign Out"
+msgstr "Вийти"
 
 #: svarog/templates/under_construction.html:66
 msgid "424th separate battalion of unmanned systems"
@@ -419,9 +894,157 @@ msgstr "424 окремий батальйон безпілотних систе�
 msgid "site is under construction"
 msgstr "сайт знаходиться в стані розробки"
 
+#: svarog/templates/vacancy-gallery.html:3
+msgid "VACANCIES"
+msgstr "ВАКАНСІЇ"
+
+#: svarog/templates/vacancy-gallery.html:7
+msgid "Scroll"
+msgstr "Прокрутіть"
+
+#: svarog/templates/vacancy-gallery.html:41
+msgid "UAV pilot"
+msgstr "Пілот БПЛА"
+
+#: svarog/templates/vacancy-gallery.html:44
+msgid ""
+"You will carry out reconnaissance or combat missions, directly guiding "
+"the “bird” and witnessing enemy strikes firsthand. You’ll be responsible "
+"for launching, flight control, and data collection from the UAV. If "
+"you’re passionate about drones, aviation, or simulators, this is your "
+"chance to take your skills to the next level!"
+msgstr ""
+"Ти будеш виконувати розвідувальні або бойові завдання безпосередньо "
+"керуючи \"пташкою\" і спостерігаючи ураження ворога від першої особи. Ти "
+"відповідатимеш за запуск, контроль польотів і збір даних з БпЛА. Якщо ти "
+"любиш дрони, авіацію або симулятори, це твоя можливість вивести свої "
+"навички на новий рівень!"
+
+#: svarog/templates/vacancy-gallery.html:62
+msgid "Driver-Electrician"
+msgstr "Водій-Електрик"
+
+#: svarog/templates/vacancy-gallery.html:66
+msgid ""
+"Your main task is to operate vehicles for transporting personnel, "
+"equipment, and UAVs. You'll be responsible for smooth logistics and "
+"ensuring the vehicle’s technical reliability. If you have a category B, "
+"C, or D driver's license, this job is for you!"
+msgstr ""
+"Твоя основна задача — керувати транспортом для перевезення особового "
+"складу, обладнання та БпЛА. Ти відповідатимеш за безперебійну логістику "
+"та технічну справність автомобіля. Якщо у тебе є права категорії B, C або"
+" D, ця робота для тебе!"
+
+#: svarog/templates/vacancy-gallery.html:83
+msgid "Master"
+msgstr "Майстер"
+
+#: svarog/templates/vacancy-gallery.html:86
+msgid ""
+"Proper preparation of munitions for UAVs is a key task for the success of"
+" operations. The Master is responsible for loading explosives and "
+"ensuring their safe use. If you have technical training or experience in "
+"pyrotechnics, this role offers the opportunity to work with cutting-edge "
+"technologies for victory!"
+msgstr ""
+"Правильна підготовка боєприпасів для БпЛА — одна з ключових задач для "
+"успіху операцій. Майстер відповідає за спорядження вибухових речовин і "
+"забезпечення їх безпечного використання. Якщо ти маєш технічну підготовку"
+" або досвід у піротехніці, ця робота дасть змогу працювати з передовими "
+"технологіями для перемоги!"
+
+#: svarog/templates/vacancy-gallery.html:103
+msgid "Technician"
+msgstr "Технік"
+
+#: svarog/templates/vacancy-gallery.html:106
+msgid ""
+"Key responsibilities include preparing UAV for flights, performing "
+"maintenance and repairs, monitoring the operation of drones during "
+"missions, and troubleshooting issues. Collaborates with operators to "
+"optimize mission execution. Technical training and attention to detail "
+"are required"
+msgstr ""
+"Основні обов'язки: підготовка БПЛА до польотів, виконання технічного "
+"обслуговування та ремонту, моніторинг роботи апаратів під час місій і "
+"оперативне усунення неполадок. Співпраця з операторами для оптимізації "
+"виконання завдань. Вимагається технічна підготовка та уважність до "
+"деталей"
+
+#: svarog/templates/vacancy-gallery.html:123
+msgid "Decryptor"
+msgstr "Дешифрувальник"
+
+#: svarog/templates/vacancy-gallery.html:126
+msgid ""
+"You will work with video footage captured by reconnaissance UAVs, "
+"analyzing it to identify enemy equipment and priority targets. If you "
+"have a keen eye for detail, enjoy working with visual information, and "
+"want to influence combat decisions, this job is for you!"
+msgstr ""
+"Ти будеш працювати з відеоматеріалами, знятими розвідувальними БпЛА, "
+"аналізуючи їх для виявлення ворожої техніки та пріоритетних цілей. Якщо "
+"ти уважний до деталей, любиш працювати з візуальною інформацією і хочеш "
+"впливати на бойові рішення, ця робота для тебе!"
+
+#: svarog/templates/vacancy-gallery.html:143
+msgid "Airman"
+msgstr "Авіаційний Механік"
+
+#: svarog/templates/vacancy-gallery.html:146
+msgid ""
+"This position offers the opportunity to work with advanced unmanned "
+"aerial vehicles, responsible for their repair and maintenance—from "
+"individual components to complex systems. If you have experience in "
+"technical repairs and are ready for new challenges, this job will place "
+"you at the forefront of modern aviation!"
+msgstr ""
+"Ця посада відкриває можливість працювати з передовими безпілотниками, "
+"відповідаючи за їх ремонт і обслуговування — від окремих компонентів до "
+"складних систем. Якщо ти маєш досвід ремонту техніки та готовий до нових "
+"технічних викликів, ця робота дозволить тобі бути на передовій сучасної "
+"авіації!"
+
+#: svarog/templates/vacancy-gallery.html:163
+msgid "Sapper"
+msgstr "Сапер"
+
+#: svarog/templates/vacancy-gallery.html:166
+msgid ""
+"You will detect and neutralize explosive devices, ensuring the safety of "
+"your unit and UAV operations. This is not only a critical role on the "
+"battlefield but also a guarantee of safety for civilians in the future. "
+"This profession will remain vital, helping to mitigate threats even after"
+" the war. If you are brave and attentive, this career will allow you to "
+"make a positive impact on the world!"
+msgstr ""
+"Ти виявлятимеш і знешкоджуватимеш вибухові пристрої, забезпечуючи безпеку"
+" підрозділу та операцій БпЛА. Це не лише критична робота на полі бою, але"
+" й гарантія безпеки цивільних у майбутньому. Ця професія залишатиметься "
+"актуальною, допомагаючи знешкоджувати загрози і після війни. Якщо ти "
+"сміливий і уважний, ця професія дасть тобі змогу змінювати світ на краще!"
+
+#: svarog/templates/vacancy-gallery.html:184
+msgid "Radio electronic combat operator"
+msgstr "Оператор РЕБ"
+
+#: svarog/templates/vacancy-gallery.html:188
+msgid ""
+"Your mission is to disrupt the enemy’s plans by blocking their "
+"communications and navigation while protecting our units from hostile "
+"UAVs. If you’re interested in radio technology and want to counter modern"
+" threats, this position will make you a key element in safeguarding our "
+"operations!"
+msgstr ""
+"Твоя місія — зірвати плани ворога, блокуючи його комунікації, навігацію "
+"та захищаючи наші підрозділи від ворожих БпЛА. Якщо тебе цікавить "
+"радіотехніка і ти хочеш протидіяти сучасним загрозам, на цій посаді ти "
+"станеш ключовим елементом захисту наших операцій!"
+
 #: svarog/templates/admin/add_modal.html:67
 msgid "Confirm Password"
-msgstr ""
+msgstr "Підтвердьте пароль"
 
 #: svarog/templates/admin/add_modal.html:80
 #: svarog/templates/admin/admins.html:31 svarog/templates/admin/admins.html:56
@@ -434,6 +1057,8 @@ msgid "Save new user"
 msgstr "Зберегти нового користувача"
 
 #: svarog/templates/admin/admins.html:6
+#: svarog/templates/recruit/recruits.html:6
+#: svarog/templates/recruit/recruits.html:18
 msgid "Search"
 msgstr "Пошук"
 
@@ -443,6 +1068,8 @@ msgstr "Додати користувача"
 
 #: svarog/templates/admin/admins.html:31
 #: svarog/templates/admin/edit_modal.html:29
+#: svarog/templates/recruit/edit_modal.html:27
+#: svarog/templates/recruit/recruits.html:26
 msgid "Name"
 msgstr "Ім'я"
 
@@ -455,26 +1082,32 @@ msgid "User"
 msgstr "Користувач"
 
 #: svarog/templates/admin/admins.html:61
+#: svarog/templates/recruit/recruits.html:63
 msgid "Edit"
 msgstr "Редагувати"
 
 #: svarog/templates/admin/admins.html:65
+#: svarog/templates/recruit/recruits.html:67
 msgid "Delete"
 msgstr "Видалити"
 
 #: svarog/templates/admin/admins.html:82
+#: svarog/templates/recruit/recruits.html:84
 msgid "First"
 msgstr "Перший"
 
 #: svarog/templates/admin/admins.html:91
+#: svarog/templates/recruit/recruits.html:93
 msgid "Previous"
 msgstr "Попередній"
 
 #: svarog/templates/admin/admins.html:116
+#: svarog/templates/recruit/recruits.html:118
 msgid "Next"
 msgstr "Наступний"
 
 #: svarog/templates/admin/admins.html:126
+#: svarog/templates/recruit/recruits.html:128
 msgid "Last"
 msgstr "Останній"
 
@@ -494,30 +1127,295 @@ msgstr "Підтвердити пароль"
 msgid "Save all"
 msgstr "Зберегти все"
 
-#: svarog/views/admin.py:83
+#: svarog/templates/recruit/edit_modal.html:19
+msgid "Recruit"
+msgstr "Рекрут"
+
+#: svarog/templates/recruit/edit_modal.html:46
+msgid "Birth Date"
+msgstr "День народження"
+
+#: svarog/templates/recruit/edit_modal.html:66
+#: svarog/templates/recruit/recruits.html:26
+msgid "From"
+msgstr "Звідки"
+
+#: svarog/templates/recruit/edit_modal.html:76
+msgid "Education"
+msgstr "НАЦІЯ"
+
+#: svarog/templates/recruit/edit_modal.html:86
+msgid "Skills"
+msgstr "Навички"
+
+#: svarog/templates/recruit/edit_modal.html:96
+msgid "Last Job"
+msgstr "Останнє місце роботи"
+
+#: svarog/templates/recruit/edit_modal.html:106
+msgid "Health Problems"
+msgstr "Проблеми зі здоров'ям"
+
+#: svarog/templates/recruit/edit_modal.html:116
+msgid "Driver License"
+msgstr "Посвідчення водія"
+
+#: svarog/templates/recruit/edit_modal.html:126
+msgid "UAV Experience"
+msgstr "Досвід роботи з БПЛА"
+
+#: svarog/templates/recruit/edit_modal.html:136
+msgid "Status"
+msgstr "ТАКТИКА"
+
+#: svarog/templates/recruit/edit_modal.html:146
+msgid "military serviceman"
+msgstr "Чи Ви є військовослужбовцем?"
+
+#: svarog/templates/recruit/edit_modal.html:160
+#: svarog/templates/recruit/recruits.html:26
+msgid "Comments"
+msgstr "Коментарі"
+
+#: svarog/templates/recruit/edit_modal.html:174
+msgid "Save changes"
+msgstr "Зберегти нового користувача"
+
+#: svarog/views/admin.py:87 svarog/views/recruit.py:82
 msgid "Cannot save user data"
 msgstr "Неможливо зберегти дані користувача"
 
-#: svarog/views/admin.py:92
+#: svarog/views/admin.py:96
 msgid "User updated!"
 msgstr "Користувача оновлено!"
 
-#: svarog/views/admin.py:126
+#: svarog/views/admin.py:130
 msgid "User added!"
 msgstr "Додано користувача!"
 
-#: svarog/views/application.py:76
+#: svarog/views/application.py:77
 msgid "Application applied successfully"
 msgstr "Заявка успішно подана"
 
-#~ msgid "bububu"
-#~ msgstr "бубубу"
+#: svarog/views/recruit.py:99
+msgid "Recruit data updated!"
+msgstr "Інформація про рекрута оновлена!"
 
-#~ msgid "ЗАПОВНІТЬ ФОРМУ ТА ПРИЄДНУЙТЕСЯ"
-#~ msgstr "3333"
+#~ msgid "CHOOSE YOUR WAY WITH USF"
+#~ msgstr "ОБЕРИ СВІЙ ШЛЯХ З ОББпС"
 
-#~ msgid "Date of birth*"
-#~ msgstr "Дата народження*"
-#~ msgid "About us"
-#~ msgstr "Про нас"
+#~ msgid ""
+#~ "During the one-week training, you "
+#~ "will feel your weaknesses and strengths,"
+#~ " you will understand how you can "
+#~ "prove yourself most effectively in the"
+#~ " Armed Forces, and you will have "
+#~ "the opportunity to choose your path "
+#~ "in a military career"
+#~ msgstr ""
+#~ "Протягом тижневого вишколу відчуєш свої "
+#~ "слабкі та сильні сторони, зрозумієш, в"
+#~ " чому найефективніше зможеш  проявити себе"
+#~ " в ЗСУ та отримаєш можливість вибрати"
+#~ " свій шлях у військовій кар'єрі"
+
+#~ msgid "BROTHERHOOD"
+#~ msgstr "ПОБРАТИМСТВО"
+
+#~ msgid "TACTICS"
+#~ msgstr "ТАКТИКА"
+
+#~ msgid ""
+#~ "In order to get into the ranks "
+#~ "of the Force of Unmanned Systems, "
+#~ "you need to apply by filling out"
+#~ " the questionnaire."
+#~ msgstr ""
+#~ "Для того, щоб потрапити до лав "
+#~ "Сили безпілотних систем, необхідно подати "
+#~ "заявку, заповнивши анкету."
+
+#~ msgid "The liaison officer"
+#~ msgstr "Зв'язківець"
+
+#~ msgid ""
+#~ "During the one-week training, you will feel your weaknesses and\n"
+#~ "          strengths, you will understand "
+#~ "how you can most effectively show\n"
+#~ ""
+#~ "          yourself in the Armed Forces,"
+#~ " and you will get During the "
+#~ "one-week\n"
+#~ "          training, you will feel your"
+#~ " weaknesses and strengths, you will\n"
+#~ "          understand how you can most"
+#~ " effectively show yourself in the "
+#~ "Armed\n"
+#~ "          Forces, and you will get "
+#~ "During the one-week training, you "
+#~ "will feel\n"
+#~ "          your weaknesses and strengths, "
+#~ "you will understand what you can "
+#~ "do\n"
+#~ "          most effectively in the Armed Forces and you will get"
+#~ msgstr ""
+#~ "Протягом тижневого вишколу відчуєш свої "
+#~ "слабкі та сильні сторони, зрозумієш, в"
+#~ " чому найефективніше зможеш проявити себе"
+#~ " в ЗСУ та отримаєш Протягом тижневого"
+#~ " вишколу відчуєш свої слабкі та "
+#~ "сильні сторони, зрозумієш, в чому "
+#~ "найефективніше зможеш проявити себе в "
+#~ "ЗСУ та отримаєш Протягом тижневого "
+#~ "вишколу відчуєш свої слабкі та сильні"
+#~ " сторони, зрозумієш, в чому найефективніше"
+#~ " зможеш проявити себе в ЗСУ та "
+#~ "отримаєш"
+
+#~ msgid ""
+#~ "During the one-week training, you "
+#~ "will feel your weaknesses and strengths,"
+#~ " you will understand how you can "
+#~ "show yourself most effectively in the"
+#~ " Armed Forces and you will receive"
+#~ " During the one-week training, you"
+#~ " will feel your weaknesses and "
+#~ "strengths"
+#~ msgstr ""
+#~ "Протягом тижневого вишколу відчуєш свої "
+#~ "слабкі та сильні сторони, зрозумієш, в"
+#~ " чому найефективніше зможеш проявити себе"
+#~ " в ЗСУ та отримаєш Протягом тижневого"
+#~ " вишколу відчуєш свої слабкі та "
+#~ "сильні сторони"
+
+#~ msgid "TRAINING"
+#~ msgstr "ПІДГОТОВКА"
+
+#~ msgid "HUMANITY"
+#~ msgstr "ЛЮДЯНІСТЬ"
+
+#~ msgid ""
+#~ "Key responsibilities include operating unmanned aerial vehicles\n"
+#~ "          for reconnaissance and combat "
+#~ "missions, preparing the equipment for\n"
+#~ "          flights, and analyzing the "
+#~ "data collected. The operator collaborates\n"
+#~ ""
+#~ "          with other units to ensure effective coordination of combat\n"
+#~ "          operations"
+#~ msgstr ""
+#~ "Основні обов'язки включають управління "
+#~ "безпілотними літальними апаратами для "
+#~ "виконання розвідувальних та бойових завдань,"
+#~ " підготовку техніки до польотів, а "
+#~ "також аналіз отриманих даних. Оператор "
+#~ "взаємодіє з іншими підрозділами для "
+#~ "ефективної координації бойових дій"
+
+#~ msgid ""
+#~ "Key responsibilities include transporting personnel and cargo,\n"
+#~ "          maintaining the assigned vehicle "
+#~ "in good technical condition,\n"
+#~ "          monitoring its technical status, "
+#~ "and ensuring timely maintenance. The\n"
+#~ "          driver also participates in "
+#~ "tasks that support the efficient "
+#~ "operation\n"
+#~ "          of military units"
+#~ msgstr ""
+#~ "Основні обов'язки включають перевезення "
+#~ "особового складу та вантажів, підтримку "
+#~ "технічної справності закріпленого автомобіля, "
+#~ "контроль за його технічним станом, а "
+#~ "також своєчасне проведення технічного "
+#~ "обслуговування. Водій бере участь у "
+#~ "виконанні завдань для забезпечення ефективної"
+#~ " роботи військових підрозділів."
+
+#~ msgid ""
+#~ "Responsible for preparing engineering munitions and equipment for\n"
+#~ "          UAV, as well as ensuring "
+#~ "the maintenance of munitions. If you "
+#~ "have\n"
+#~ "          experience in manufacturing, "
+#~ "explosives, pyrotechnics, or maintenance,\n"
+#~ "          this position is for you!"
+#~ msgstr ""
+#~ "Відповідає за підготовку інженерних "
+#~ "боєприпасів та спорядження для БпЛА, а"
+#~ " також забезпечує технічне обслуговування "
+#~ "боєприпасів. Якщо ви маєте досвід роботи"
+#~ " у виробництві, вибухотехніці, піротехніці "
+#~ "або технічному обслуговуванні, ця вакансія "
+#~ "для Вас!"
+
+#~ msgid ""
+#~ "Responsible for analyzing and decrypting "
+#~ "data from UAV for tactical and "
+#~ "strategic tasks. If you have experience"
+#~ " in data analytics, cryptography, or "
+#~ "cybersecurity, this position is for you!"
+#~ msgstr ""
+#~ "Відповідає за аналіз та розшифрування "
+#~ "даних з БпЛА для тактичних і "
+#~ "стратегічних завдань. Якщо у вас є "
+#~ "досвід у сфері аналітики даних, "
+#~ "криптографії або кібербезпеки, ця вакансія "
+#~ "для Вас!"
+
+#~ msgid ""
+#~ "Responsible for the repair and "
+#~ "maintenance of UAV components. If you"
+#~ " have experience in repairing electronics,"
+#~ " engines, or mechanical systems, "
+#~ "particularly in aviation technology, this "
+#~ "position is for you!"
+#~ msgstr ""
+#~ "Відповідає за ремонт і технічне "
+#~ "обслуговування компонентів БпЛА. Якщо у "
+#~ "вас є досвід у ремонті електроніки, "
+#~ "двигунів або механічних систем, зокрема "
+#~ "в авіатехніці, ця вакансія для Вас!"
+
+#~ msgid ""
+#~ "Key responsibilities include demining areas, detecting and\n"
+#~ "          neutralizing explosive devices, and"
+#~ " performing engineering tasks to\n"
+#~ "          prepare routes and fortifications."
+#~ " The sapper ensures the safety of"
+#~ "\n"
+#~ "          personnel and civilians while collaborating with other units"
+#~ msgstr ""
+#~ "Основні обов'язки: розмінування території, "
+#~ "виявлення та знешкодження вибухонебезпечних "
+#~ "предметів, виконання інженерних робіт для "
+#~ "підготовки шляхів руху та фортифікаційних "
+#~ "споруд. Сапер забезпечує безпеку особового "
+#~ "складу та цивільного населення, співпрацюючи"
+#~ " з іншими підрозділами"
+
+#~ msgid ""
+#~ "Key responsibilities include conducting electronic warfare tasks,\n"
+#~ "          monitoring the radio frequency "
+#~ "spectrum, and using specialized\n"
+#~ "          equipment to jam and "
+#~ "neutralize enemy signals. The operator "
+#~ "ensures\n"
+#~ "          the protection of own systems"
+#~ " and collaborates with other units to"
+#~ "\n"
+#~ "          effectively execute combat missions"
+#~ msgstr ""
+#~ "Основні обов'язки включають виконання завдань"
+#~ " радіоелектронної боротьби, моніторинг "
+#~ "радіочастотного спектру, використання "
+#~ "спеціалізованого обладнання для глушіння та"
+#~ " нейтралізації ворожих сигналів. Оператор "
+#~ "забезпечує захист власних систем і "
+#~ "співпрацює з іншими підрозділами для "
+#~ "ефективного виконання бойових завдань"
+
+#~ msgid "Simple2B"
+#~ msgstr ""
 

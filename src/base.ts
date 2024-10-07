@@ -1,5 +1,7 @@
 import 'flowbite';
+import { Observer } from 'tailwindcss-intersect';
 
+Observer.start();
 export interface HTMXEventDetail {
   xhr: XMLHttpRequest;
   target: HTMLElement;
@@ -64,3 +66,36 @@ themeToggleButtons.forEach(function (themeToggleBtn) {
     }
   });
 });
+
+const detailsElement = document.getElementById('specialties-details');
+const selectedItemsContainer = document.getElementById('selected-items');
+
+document.addEventListener('click', (event: MouseEvent) => {
+  if (
+    detailsElement &&
+    event.target instanceof Node &&
+    !detailsElement.contains(event.target)
+  ) {
+    detailsElement.removeAttribute('open');
+  }
+});
+
+detailsElement?.addEventListener('change', updateSelectedItems);
+
+function updateSelectedItems() {
+  if (!detailsElement || !selectedItemsContainer) return;
+
+  const checkedInputs = detailsElement.querySelectorAll<HTMLInputElement>(
+    'input[type="checkbox"]:checked',
+  );
+  const selectedItems = Array.from(checkedInputs).map(
+    input => input.nextElementSibling?.textContent || '',
+  );
+
+  selectedItemsContainer.innerHTML =
+    selectedItems.length > 0
+      ? selectedItems.map(item => `<p>${item}</p>`).join('')
+      : '';
+}
+
+updateSelectedItems();

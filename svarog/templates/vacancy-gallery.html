@@ -1,0 +1,185 @@
+<div id="vacancy-gallery" class="container mx-auto py-20 px-10 xl:px-16">
+  <h2 class="text-4xl max-w-[496px] 2xl:max-w-none break-words">
+    {{_("VACANCIES")}}
+  </h2>
+
+  <div class="flex items-center">
+    <p class="text-[--main-yellow]">{{_("Scroll")}}</p>
+    <div class="w-10 h-10">
+      <svg
+        viewBox="0 0 24.00 24.00"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="#ffffff">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke="#CCCCCC"
+          stroke-width="0.192"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 12H20M20 12L16 8M20 12L16 16"
+            stroke="#ffc823"
+            stroke-width="0.672"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="overflow-auto flex gap-8 w-full pb-10">
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("UAV pilot")}}</h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("You will carry out reconnaissance or combat missions, directly guiding the “bird” and witnessing enemy strikes firsthand. You’ll be responsible for launching, flight control, and data collection from the UAV. If you’re passionate about drones, aviation, or simulators, this is your chance to take your skills to the next level!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition shadow-white"
+        src="{{ url_for('static',filename='img/vacancies/pilot.png') }}"
+        alt="pilot" />
+    </div>
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">
+          {{_("Driver-Electrician")}}
+        </h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("Your main task is to operate vehicles for transporting personnel, equipment, and UAVs. You'll be responsible for smooth logistics and ensuring the vehicle’s technical reliability. If you have a category B, C, or D driver's license, this job is for you!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/driver.png') }}"
+        alt="Driver-Electrician" />
+    </div>
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("Master")}}</h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("Proper preparation of munitions for UAVs is a key task for the success of operations. The Master is responsible for loading explosives and ensuring their safe use. If you have technical training or experience in pyrotechnics, this role offers the opportunity to work with cutting-edge technologies for victory!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/master.png') }}"
+        alt="Master" />
+    </div>
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("Technician")}}</h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("Key responsibilities include preparing UAV for flights, performing maintenance and repairs, monitoring the operation of drones during missions, and troubleshooting issues. Collaborates with operators to optimize mission execution. Technical training and attention to detail are required")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/technician.png') }}"
+        alt="Technician" />
+    </div>
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("Decryptor")}}</h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("You will work with video footage captured by reconnaissance UAVs, analyzing it to identify enemy equipment and priority targets. If you have a keen eye for detail, enjoy working with visual information, and want to influence combat decisions, this job is for you!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/decryptor.png') }}"
+        alt="Decryptor" />
+    </div>
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("Airman")}}</h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("This position offers the opportunity to work with advanced unmanned aerial vehicles, responsible for their repair and maintenance—from individual components to complex systems. If you have experience in technical repairs and are ready for new challenges, this job will place you at the forefront of modern aviation!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/airman.png') }}"
+        alt="Airman" />
+    </div>
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("Sapper")}}</h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("You will detect and neutralize explosive devices, ensuring the safety of your unit and UAV operations. This is not only a critical role on the battlefield but also a guarantee of safety for civilians in the future. This profession will remain vital, helping to mitigate threats even after the war. If you are brave and attentive, this career will allow you to make a positive impact on the world!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/sapper.png') }}"
+        alt="Sapper" />
+    </div>
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">
+          {{_("Radio electronic combat operator")}}
+        </h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("Your mission is to disrupt the enemy’s plans by blocking their communications and navigation while protecting our units from hostile UAVs. If you’re interested in radio technology and want to counter modern threats, this position will make you a key element in safeguarding our operations!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/reb.png') }}"
+        alt="Radio electronic combat operator" />
+    </div>
+    {# The signalman
+    <div
+      class="lg:w-[700px] w-72 lg:flex-row flex-col-reverse flex gap-8 border-t border-[--main-yellow] pt-6 flex-none px-2">
+      <div class="flex-1 flex items-start flex-col gap-5">
+        <h3 class="mb-3 text-xl text-[--main-yellow]">{{_("Signalman")}}</h3>
+        <p class="leading-5">
+          <!-- prettier-ignore -->
+          {{_("The success of combat operations depends on you! As a signalman, you will be responsible for ensuring reliable and uninterrupted communication between units, which is critical for every mission. If you have a background in telecommunications and want to be a key link in coordinating operations, this position is perfect for you!")}}
+        </p>
+        {% include 'button.html' %}
+      </div>
+
+      <img
+        class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition"
+        src="{{ url_for('static',filename='img/vacancies/driver.png') }}"
+        alt="Signalman" />
+    </div>
+    #}
+  </div>
+</div>

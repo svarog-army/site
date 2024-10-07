@@ -1,7 +1,12 @@
 {% extends "base.html" %} {% block content %}
 <div>
-  {% include 'hero.html' %} {% include 'about-us.html' %} {% include
-  'recruit.html' %} {% include 'our-values.html' %} {% include
-  'recruitment-contacts.html' %} {% include'application_form.html' %}
+  {% include 'hero.html' %}
+  {% include 'about-us.html' %}
+  {% include 'our-values.html' %}
+  <!-- Hide for now -->
+  <!-- {% include 'recruit.html' %} -->
+  {% include 'vacancy-gallery.html'%}
+  {% include 'recruitment-contacts.html' %}
+  {% include 'application_form.html' %}
 </div>
 {% endblock %} {% block scripts %} {% endblock %}

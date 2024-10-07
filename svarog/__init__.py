@@ -25,10 +25,10 @@ def create_app(environment="development"):
     from svarog.views import (
         main_blueprint,
         auth_blueprint,
-        user_blueprint,
         multilingual,
         application_blueprint,
         admin_blueprint,
+        recruit_blueprint,
     )
     from svarog import models as m
 
@@ -67,10 +67,10 @@ def create_app(environment="development"):
     # Register blueprints.
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
-    app.register_blueprint(user_blueprint)
     app.register_blueprint(application_blueprint)
     app.register_blueprint(multilingual)
     app.register_blueprint(admin_blueprint)
+    app.register_blueprint(recruit_blueprint)
 
     @app.route("/")
     def home():
@@ -91,6 +91,8 @@ def create_app(environment="development"):
     # Error handlers.
     @app.errorhandler(HTTPException)
     def handle_http_error(exc):
-        return render_template("error.html", error=exc), exc.code
+        from flask_wtf import FlaskForm
+
+        return render_template("error.html", error=exc, form=FlaskForm()), exc.code
 
     return app

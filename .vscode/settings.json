@@ -8,6 +8,8 @@
   },
   "cSpell.words": [
     "backref",
+    "BUCHA",
+    "demining",
     "dotenv",
     "Dron",
     "fastapi",
@@ -15,8 +17,12 @@
     "HTMX",
     "ilike",
     "jsonify",
+    "msgid",
+    "msgstr",
+    "nplurals",
     "pydantic",
     "pytest",
+    "Ruberoid",
     "signalbot",
     "sqlalchemy",
     "svarog",
@@ -24,6 +30,7 @@
     "werkzeug",
     "wsgi",
     "wtforms",
+    "Клікніть",
     "скіли"
   ],
   "python.testing.pytestEnabled": true,
@@ -32,5 +39,6 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "cSpell.language": "en,uk",
-  "djlint.showInstallError": false
+  "djlint.showInstallError": false,
+  "html.format.wrapLineLength": 1024
 }

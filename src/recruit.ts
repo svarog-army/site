@@ -1,9 +1,10 @@
-
 // search flow
 const searchInput: HTMLInputElement = document.querySelector(
-  '#table-search-users',
+  '#table-search-recruits',
 );
-const searchInputButton = document.querySelector('#table-search-user-button');
+const searchInputButton = document.querySelector(
+  '#table-search-recruit-button',
+);
 if (searchInputButton && searchInput) {
   searchInputButton.addEventListener('click', () => {
     const url = new URL(window.location.href);
@@ -11,5 +12,3 @@ if (searchInputButton && searchInput) {
     window.location.href = `${url.href}`;
   });
 }
-
-

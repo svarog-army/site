@@ -14,7 +14,7 @@ services:
       PARKING: False
 
   app:
-    image: simple2b/svarog-app:0
+    image: simple2b/svarog-app:latest
     restart: always
     command: sh ./start_web.sh
     environment:
