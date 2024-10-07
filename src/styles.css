@@ -4,6 +4,7 @@
 
 :root {
   --main-yellow: #ffc823;
+  --main-yellow-hover: rgba(255, 200, 35, 0.8);
   --main-black: #000000;
   color: white;
   font-family: 'Ruberoid Regular', sans-serif;

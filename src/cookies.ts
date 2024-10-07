@@ -3,11 +3,8 @@ import type {ModalOptions, ModalInterface} from 'flowbite';
 
 const $cookiesModal: HTMLElement = document.querySelector('#cookiesModal');
 const modalOptions: ModalOptions = {
-  placement: 'bottom-right',
-  backdrop: 'dynamic',
-  backdropClasses:
-    'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
-  closable: true,
+  backdrop: 'static',
+  backdropClasses: '',
 };
 const modal: ModalInterface = new Modal($cookiesModal, modalOptions);
 
@@ -42,7 +39,6 @@ declineCookiesButton.addEventListener('click', () => {
   localStorage.setItem('consentMode', 'decline');
   modal.hide();
 });
-
 
 // Close cookies modal button flow
 const closeCookiesModalButton = document.querySelector(
