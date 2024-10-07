@@ -2913,6 +2913,16 @@ form label:hover {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.intersect\:translate-x-0:not([no-intersect]) {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.intersect\:translate-y-0:not([no-intersect]) {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .dark\:divide-gray-600:is(.dark *) > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-divide-opacity));
@@ -3376,6 +3386,11 @@ form label:hover {
   .lg\:ease-out {
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+
+  .lg\:intersect\:translate-x-0:not([no-intersect]) {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }
 
 @media (min-width: 1280px) {
@@ -3444,11 +3459,21 @@ form label:hover {
   .desktop\:duration-\[1s\] {
     transition-duration: 1s;
   }
+
+  .desktop\:intersect\:translate-x-0:not([no-intersect]) {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }
 
 @media (min-width: 320px) and (max-width: 1439px) {
   .mobile-range\:translate-y-1\/4 {
     --tw-translate-y: 25%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .mobile-range\:intersect\:translate-y-0:not([no-intersect]) {
+    --tw-translate-y: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
