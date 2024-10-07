@@ -1561,16 +1561,16 @@ input:checked + .toggle-bg {
   cursor: default;
 }
 
+.cursor-grab {
+  cursor: grab;
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.cursor-grab {
-  cursor: grab;
 }
 
 .resize {
