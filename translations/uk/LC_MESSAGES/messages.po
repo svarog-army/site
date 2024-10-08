@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-08 13:10+0300\n"
+"POT-Creation-Date: 2024-10-08 15:22+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -105,76 +105,75 @@ msgstr "Прізвище та ім'я"
 msgid "Date of birth"
 msgstr "Дата народження"
 
-#: svarog/templates/application_form.html:57
-#: svarog/templates/application_form.html:64
+#: svarog/templates/application_form.html:58
 #: svarog/templates/recruit/edit_modal.html:56
 #: svarog/templates/recruit/recruits.html:26
 msgid "Phone"
 msgstr "Номер телефону"
 
-#: svarog/templates/application_form.html:74
+#: svarog/templates/application_form.html:68
 msgid ""
 "City of actual\n"
 "            residence"
 msgstr "Місто фактичного проживання"
 
 #: svarog/templates/admin/edit_modal.html:41
-#: svarog/templates/application_form.html:85
+#: svarog/templates/application_form.html:79
 #: svarog/templates/recruit/edit_modal.html:36
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: svarog/templates/application_form.html:94
+#: svarog/templates/application_form.html:88
 msgid ""
 "Education,\n"
 "            specialty"
 msgstr "Освіта, спеціальність"
 
-#: svarog/templates/application_form.html:104
+#: svarog/templates/application_form.html:98
 msgid ""
 "Professional\n"
 "            skills"
 msgstr "Професійні навички (скіли)"
 
-#: svarog/templates/application_form.html:114
+#: svarog/templates/application_form.html:108
 msgid ""
 "Last civilian\n"
 "            position"
 msgstr "Остання цивільна посада"
 
-#: svarog/templates/application_form.html:124
+#: svarog/templates/application_form.html:118
 msgid ""
 "Do you\n"
 "            have critical health problems"
 msgstr "Чи наявні у вас критичні проблеми зі здоровʼям?"
 
-#: svarog/templates/application_form.html:135
+#: svarog/templates/application_form.html:129
 msgid ""
 "Having a driver's license. If so,\n"
 "            what categories?"
 msgstr "Наявність водійського посвідчення. Якщо так - які категорії?"
 
-#: svarog/templates/application_form.html:147
+#: svarog/templates/application_form.html:141
 msgid "Choose a specialty"
 msgstr "Оберіть спеціальність"
 
-#: svarog/templates/application_form.html:154
+#: svarog/templates/application_form.html:148
 msgid "Click to choose"
 msgstr "Клікніть щоб вибрати"
 
-#: svarog/templates/application_form.html:169
+#: svarog/templates/application_form.html:163
 msgid ""
 "Do you\n"
 "            have experience with UAV (if so, what kind)"
-msgstr "Чи маєте досвід з БПЛА (якщо так, який саме?)"
+msgstr "Чи маєте досвід з БпЛА (якщо так, який саме?)"
 
-#: svarog/templates/application_form.html:180
+#: svarog/templates/application_form.html:174
 msgid ""
 "Are you\n"
 "            a military serviceman?"
 msgstr "Чи Ви є військовослужбовцем?"
 
-#: svarog/templates/application_form.html:191
+#: svarog/templates/application_form.html:185
 msgid ""
 "Do you\n"
 "            give your concent to process your personal data by UAV Forces"
@@ -184,7 +183,7 @@ msgstr ""
 "рекрутингу Сил Безпілотних Систем? (Інформація НЕ буде передана до ТЦК та"
 " СП)"
 
-#: svarog/templates/application_form.html:217
+#: svarog/templates/application_form.html:211
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
 msgstr "Надіслати заявку"
@@ -918,7 +917,7 @@ msgstr "Прокрутіть"
 
 #: svarog/templates/vacancy-gallery.html:38
 msgid "UAV pilot"
-msgstr "Пілот БПЛА"
+msgstr "Пілот БпЛА"
 
 #: svarog/templates/vacancy-gallery.html:41
 msgid ""
@@ -980,7 +979,7 @@ msgid ""
 "optimize mission execution. Technical training and attention to detail "
 "are required"
 msgstr ""
-"Основні обов'язки: підготовка БПЛА до польотів, виконання технічного "
+"Основні обов'язки: підготовка БпЛА до польотів, виконання технічного "
 "обслуговування та ремонту, моніторинг роботи апаратів під час місій і "
 "оперативне усунення неполадок. Співпраця з операторами для оптимізації "
 "виконання завдань. Вимагається технічна підготовка та уважність до "
@@ -1176,7 +1175,7 @@ msgstr "Посвідчення водія"
 
 #: svarog/templates/recruit/edit_modal.html:126
 msgid "UAV Experience"
-msgstr "Досвід роботи з БПЛА"
+msgstr "Досвід роботи з БпЛА"
 
 #: svarog/templates/recruit/edit_modal.html:136
 msgid "Status"
