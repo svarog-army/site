@@ -46,18 +46,21 @@ def init(app: Flask):
     def create_specialties():
         """Create specialties"""
         specialties = [
+            ("UAV Operator", "Оператор БпЛА"),
             ("UAV Pilot", "Пілот БпЛА"),
             ("Handyman", "Майстер"),
-            ("Driver-Electrician", "Водій-Електрик"),
+            ("Driver", "Водій"),
             ("Aviation mechanic", "Авіаційний механік"),
             ("Decryptor", "Дешифрувальник"),
-            ("Airman", "Авіаційний Механік"),
+            ("Mechanic", "Механік"),
             ("Sapper", "Сапер"),
             ("The operator of the WB complex", "Оператор комплексу РЕБ"),
         ]
         counter = 0
         for en, uk in specialties:
-            existing = db.session.scalar(m.Specialty.select().where(m.Specialty.name_en == en))
+            existing = db.session.scalar(
+                m.Specialty.select().where(m.Specialty.name_en == en, m.Specialty.is_deleted.is_(False))
+            )
             if existing:
                 print(f"Specialty [{en}] already exists")
                 continue
