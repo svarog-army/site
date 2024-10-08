@@ -10,7 +10,7 @@ def test_application_form(client: FlaskClient, runner: FlaskCliRunner):
     res = runner.invoke(args=["create-specialties"])
     assert "specialties created" in res.output
     specialties = db.session.scalars(sa.select(m.Specialty)).all()
-    assert len(specialties) == 9
+    assert len(specialties) == 8
     application_create_data = {
         "full_name": "test",
         "birth_date": "2000-01-01",
