@@ -46,7 +46,7 @@ def init(app: Flask):
     def create_specialties():
         """Create specialties"""
         specialties = [
-            ("UAV Pilot", "Пілот БПЛА"),
+            ("UAV Pilot", "Пілот БпЛА"),
             ("Handyman", "Майстер"),
             ("Driver-Electrician", "Водій-Електрик"),
             ("Aviation mechanic", "Авіаційний механік"),
@@ -54,7 +54,6 @@ def init(app: Flask):
             ("Airman", "Авіаційний Механік"),
             ("Sapper", "Сапер"),
             ("The operator of the WB complex", "Оператор комплексу РЕБ"),
-            ("Communication operator", "Зв'язківець"),
         ]
         counter = 0
         for en, uk in specialties:
