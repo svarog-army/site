@@ -187,5 +187,6 @@ window.addEventListener('scroll', () => {
 });
 
 scrollTopButton?.addEventListener('click', () => {
+  scrollTopButton.classList.remove('show');
   window.scrollTo({top: 0, behavior: 'smooth'});
 });
