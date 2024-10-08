@@ -56,7 +56,7 @@ class ApplicationForm(FlaskForm):
     )
     applied_specialties = SpecialtyField(
         "Applied Specialties",
-        query_factory=lambda: db.session.query(m.Specialty),
+        query_factory=lambda: db.session.query(m.Specialty).where(m.Specialty.is_deleted.is_(False)),
         get_pk=lambda x: x.id,
         get_label=get_specialty_label,
         allow_blank=False,
