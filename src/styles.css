@@ -221,3 +221,12 @@ form label:hover {
 .non-selectable *::selection {
   background-color: transparent;
 }
+
+.scroll-top {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-top.show {
+  opacity: 1;
+}
