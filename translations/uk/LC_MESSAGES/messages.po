@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-07 12:17+0300\n"
+"POT-Creation-Date: 2024-10-08 13:10+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -27,11 +27,11 @@ msgstr "Так"
 msgid "No"
 msgstr "Ні"
 
-#: svarog/templates/about-us.html:14
+#: svarog/templates/about-us.html:16
 msgid "ABOUT US"
 msgstr "ПРО НАС"
 
-#: svarog/templates/about-us.html:18
+#: svarog/templates/about-us.html:22
 msgid ""
 "We are the blacksmiths of the future in the newly formed Svarog battalion"
 " of Unmanned Systems Forces. Our fire is the source of strength and "
@@ -52,11 +52,11 @@ msgstr ""
 " єдиною метою. Наш шлях веде до перемоги через майстерність, співпрацю та"
 " незламний вогонь у наших серцях."
 
-#: svarog/templates/about-us.html:42
+#: svarog/templates/about-us.html:46
 msgid "WHAT WE DO?"
 msgstr "ЩО МИ РОБИМО?"
 
-#: svarog/templates/about-us.html:46 svarog/templates/about-us.html:76
+#: svarog/templates/about-us.html:50 svarog/templates/about-us.html:80
 msgid ""
 "During the one-week training, you will feel your weaknesses and "
 "strengths, you will understand how you\n"
@@ -76,12 +76,12 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/about-us.html:72
+#: svarog/templates/about-us.html:76
 msgid "OUR MISSION"
 msgstr "НАША МІСІЯ"
 
-#: svarog/templates/about-us.html:86 svarog/templates/about-us.html:90
-#: svarog/templates/about-us.html:94 svarog/templates/about-us.html:98
+#: svarog/templates/about-us.html:90 svarog/templates/about-us.html:94
+#: svarog/templates/about-us.html:98 svarog/templates/about-us.html:102
 msgid "During the one-week training, you will feel your weaknesses"
 msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
 
@@ -101,81 +101,80 @@ msgid ""
 "            name"
 msgstr "Прізвище та ім'я"
 
-#: svarog/templates/application_form.html:32
-msgid ""
-"Date of\n"
-"            birth"
+#: svarog/templates/application_form.html:33
+msgid "Date of birth"
 msgstr "Дата народження"
 
-#: svarog/templates/application_form.html:43
+#: svarog/templates/application_form.html:57
+#: svarog/templates/application_form.html:64
 #: svarog/templates/recruit/edit_modal.html:56
 #: svarog/templates/recruit/recruits.html:26
 msgid "Phone"
 msgstr "Номер телефону"
 
-#: svarog/templates/application_form.html:53
+#: svarog/templates/application_form.html:74
 msgid ""
 "City of actual\n"
 "            residence"
 msgstr "Місто фактичного проживання"
 
 #: svarog/templates/admin/edit_modal.html:41
-#: svarog/templates/application_form.html:64
+#: svarog/templates/application_form.html:85
 #: svarog/templates/recruit/edit_modal.html:36
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: svarog/templates/application_form.html:73
+#: svarog/templates/application_form.html:94
 msgid ""
 "Education,\n"
 "            specialty"
 msgstr "Освіта, спеціальність"
 
-#: svarog/templates/application_form.html:83
+#: svarog/templates/application_form.html:104
 msgid ""
 "Professional\n"
 "            skills"
 msgstr "Професійні навички (скіли)"
 
-#: svarog/templates/application_form.html:93
+#: svarog/templates/application_form.html:114
 msgid ""
 "Last civilian\n"
 "            position"
 msgstr "Остання цивільна посада"
 
-#: svarog/templates/application_form.html:103
+#: svarog/templates/application_form.html:124
 msgid ""
 "Do you\n"
 "            have critical health problems"
 msgstr "Чи наявні у вас критичні проблеми зі здоровʼям?"
 
-#: svarog/templates/application_form.html:114
+#: svarog/templates/application_form.html:135
 msgid ""
 "Having a driver's license. If so,\n"
 "            what categories?"
 msgstr "Наявність водійського посвідчення. Якщо так - які категорії?"
 
-#: svarog/templates/application_form.html:126
+#: svarog/templates/application_form.html:147
 msgid "Choose a specialty"
 msgstr "Оберіть спеціальність"
 
-#: svarog/templates/application_form.html:133
+#: svarog/templates/application_form.html:154
 msgid "Click to choose"
 msgstr "Клікніть щоб вибрати"
 
-#: svarog/templates/application_form.html:148
+#: svarog/templates/application_form.html:169
 msgid ""
 "Do you\n"
 "            have experience with UAV (if so, what kind)"
 msgstr "Чи маєте досвід з БПЛА (якщо так, який саме?)"
 
-#: svarog/templates/application_form.html:159
+#: svarog/templates/application_form.html:180
 msgid ""
 "Are you\n"
 "            a military serviceman?"
 msgstr "Чи Ви є військовослужбовцем?"
 
-#: svarog/templates/application_form.html:170
+#: svarog/templates/application_form.html:191
 msgid ""
 "Do you\n"
 "            give your concent to process your personal data by UAV Forces"
@@ -185,7 +184,7 @@ msgstr ""
 "рекрутингу Сил Безпілотних Систем? (Інформація НЕ буде передана до ТЦК та"
 " СП)"
 
-#: svarog/templates/application_form.html:196
+#: svarog/templates/application_form.html:217
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
 msgstr "Надіслати заявку"
@@ -327,7 +326,7 @@ msgstr ""
 msgid "Thank you for using the 424bat.army Site!"
 msgstr "Дякуємо за використання Сайту 424bat.army!"
 
-#: svarog/templates/cookies.html:14
+#: svarog/templates/cookies.html:18
 msgid ""
 "Our site uses cookies to improve your experience during your visit. "
 "Cookies help us analyze site traffic and understand how you interact with"
@@ -337,21 +336,21 @@ msgstr ""
 "відвідування. Файли cookie допомагають нам аналізувати трафік на сайті та"
 " розуміти, як ви взаємодієте з нашим контентом."
 
-#: svarog/templates/cookies.html:18
+#: svarog/templates/cookies.html:22
 msgid "By clicking \"Accept all cookies\", you agree to the use of cookies."
 msgstr ""
 "Клацнувши \"Дозволити все\", ви погоджуєтеся на використання файлів "
 "cookie."
 
-#: svarog/templates/cookies.html:22
+#: svarog/templates/cookies.html:25
 msgid "Show details"
 msgstr "Показати деталі"
 
-#: svarog/templates/cookies.html:28
+#: svarog/templates/cookies.html:33
 msgid "DECLINE COOKIES"
 msgstr "ЗАБОРОНИТИ ВСЕ"
 
-#: svarog/templates/cookies.html:30
+#: svarog/templates/cookies.html:37
 msgid "ACCEPT ALL COOKIES"
 msgstr "ДОЗВОЛИТИ ВСЕ"
 
@@ -399,11 +398,11 @@ msgstr "ПЕРЕГЛЯНУТИ ВАКАНСІЇ"
 msgid "OUR VALUES"
 msgstr "НАШІ ЦІННОСТІ"
 
-#: svarog/templates/our-values.html:12
+#: svarog/templates/our-values.html:11
 msgid "SPIRIT"
 msgstr "ДУХ"
 
-#: svarog/templates/our-values.html:16
+#: svarog/templates/our-values.html:15
 msgid ""
 "The fire in our hearts helps us overcome any challenges. Even in the "
 "toughest conditions, we remain steadfast, with unwavering determination, "
@@ -412,11 +411,11 @@ msgstr ""
 "Вогонь в наших серцях допомагає долати будь-які труднощі. Навіть в "
 "найважчих умовах ми зберігаємо рішучість, силу волі та бойовий дух"
 
-#: svarog/templates/our-values.html:26
+#: svarog/templates/our-values.html:25
 msgid "COMMUNITY"
 msgstr "СПІЛЬНОТА"
 
-#: svarog/templates/our-values.html:30
+#: svarog/templates/our-values.html:29
 msgid ""
 "We build our team not just on skills, but on mutual trust and respect. "
 "It's not about where, but with whom! People are our greatest asset, and a"
@@ -426,11 +425,11 @@ msgstr ""
 "повазі. Адже не важливо де, важливо з ким! Люди наша головна цінність, а "
 "спільна мета робить нас сильнішими"
 
-#: svarog/templates/our-values.html:40
+#: svarog/templates/our-values.html:38
 msgid "PREPARATION"
 msgstr "ПІДГОТОВКА"
 
-#: svarog/templates/our-values.html:44
+#: svarog/templates/our-values.html:43
 msgid ""
 "Thorough preparation ensures our success. We provide the highest level of"
 " training so that every fighter is ready for challenges and can act "
@@ -440,11 +439,11 @@ msgstr ""
 "тренувань, щоб кожен боєць був готовий до викликів та діяв впевнено в "
 "будь-якій ситуації"
 
-#: svarog/templates/our-values.html:54
+#: svarog/templates/our-values.html:51
 msgid "INNOVATION"
 msgstr "ІННОВАЦІЇ"
 
-#: svarog/templates/our-values.html:58
+#: svarog/templates/our-values.html:55
 msgid ""
 "We embrace cutting-edge technologies and the latest solutions. Innovation"
 " allows us to stay one step ahead of the enemy and continuously improve"
@@ -452,11 +451,11 @@ msgstr ""
 "Ми використовуємо передові технології та новітні рішення. Інновації "
 "дозволяють нам бути на крок попереду ворога і постійно вдосконалюватися"
 
-#: svarog/templates/our-values.html:68
+#: svarog/templates/our-values.html:63
 msgid "DIGNITY"
 msgstr "ГІДНІСТЬ"
 
-#: svarog/templates/our-values.html:72
+#: svarog/templates/our-values.html:67
 msgid ""
 "We hold human dignity in the highest regard and act with honor. Care, "
 "respect for our comrades, and mutual support form the foundation of our "
@@ -873,31 +872,19 @@ msgstr ""
 "Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
 "зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
 
-#: svarog/templates/recruitment-contacts.html:5
+#: svarog/templates/recruitment-contacts.html:7
 msgid "CONTACTS OF RECRUITMENT CENTERS"
 msgstr "КОНТАКТИ РЕКРУТ ЦЕНТРІВ"
 
-#: svarog/templates/recruitment-contacts.html:11
-msgid "KYIV"
-msgstr "КИЇВ"
-
-#: svarog/templates/recruitment-contacts.html:13
-msgid "ave. Peremohy, 83/2"
-msgstr "просп. Перемоги, 83/2"
-
 #: svarog/templates/recruitment-contacts.html:14
-msgid "Daily from 09:00 to 18:00"
-msgstr "Щодня з 09:00 до 18:00"
-
-#: svarog/templates/recruitment-contacts.html:18
 msgid "BUCHA"
 msgstr "БУЧА"
 
-#: svarog/templates/recruitment-contacts.html:20
+#: svarog/templates/recruitment-contacts.html:16
 msgid "Energetykiv st. 12"
 msgstr "вул. Енергетиків 12"
 
-#: svarog/templates/recruitment-contacts.html:21
+#: svarog/templates/recruitment-contacts.html:17
 msgid "Interview by appointment"
 msgstr "Співбесіда по домовленості"
 
@@ -929,11 +916,11 @@ msgstr "ВАКАНСІЇ"
 msgid "Scroll"
 msgstr "Прокрутіть"
 
-#: svarog/templates/vacancy-gallery.html:37
+#: svarog/templates/vacancy-gallery.html:38
 msgid "UAV pilot"
 msgstr "Пілот БПЛА"
 
-#: svarog/templates/vacancy-gallery.html:40
+#: svarog/templates/vacancy-gallery.html:41
 msgid ""
 "You will carry out reconnaissance or combat missions, directly guiding "
 "the “bird” and witnessing enemy strikes firsthand. You’ll be responsible "
@@ -947,11 +934,11 @@ msgstr ""
 "любиш дрони, авіацію або симулятори, це твоя можливість вивести свої "
 "навички на новий рівень!"
 
-#: svarog/templates/vacancy-gallery.html:54
+#: svarog/templates/vacancy-gallery.html:56
 msgid "Driver-Electrician"
 msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancy-gallery.html:58
+#: svarog/templates/vacancy-gallery.html:60
 msgid ""
 "Your main task is to operate vehicles for transporting personnel, "
 "equipment, and UAVs. You'll be responsible for smooth logistics and "
@@ -963,11 +950,11 @@ msgstr ""
 "та технічну справність автомобіля. Якщо у тебе є права категорії B, C або"
 " D, ця робота для тебе!"
 
-#: svarog/templates/vacancy-gallery.html:71
+#: svarog/templates/vacancy-gallery.html:74
 msgid "Master"
 msgstr "Майстер"
 
-#: svarog/templates/vacancy-gallery.html:74
+#: svarog/templates/vacancy-gallery.html:77
 msgid ""
 "Proper preparation of munitions for UAVs is a key task for the success of"
 " operations. The Master is responsible for loading explosives and "
@@ -981,11 +968,11 @@ msgstr ""
 " або досвід у піротехніці, ця робота дасть змогу працювати з передовими "
 "технологіями для перемоги!"
 
-#: svarog/templates/vacancy-gallery.html:87
+#: svarog/templates/vacancy-gallery.html:91
 msgid "Technician"
 msgstr "Технік"
 
-#: svarog/templates/vacancy-gallery.html:90
+#: svarog/templates/vacancy-gallery.html:94
 msgid ""
 "Key responsibilities include preparing UAV for flights, performing "
 "maintenance and repairs, monitoring the operation of drones during "
@@ -999,11 +986,11 @@ msgstr ""
 "виконання завдань. Вимагається технічна підготовка та уважність до "
 "деталей"
 
-#: svarog/templates/vacancy-gallery.html:103
+#: svarog/templates/vacancy-gallery.html:108
 msgid "Decryptor"
 msgstr "Дешифрувальник"
 
-#: svarog/templates/vacancy-gallery.html:106
+#: svarog/templates/vacancy-gallery.html:111
 msgid ""
 "You will work with video footage captured by reconnaissance UAVs, "
 "analyzing it to identify enemy equipment and priority targets. If you "
@@ -1015,11 +1002,11 @@ msgstr ""
 "ти уважний до деталей, любиш працювати з візуальною інформацією і хочеш "
 "впливати на бойові рішення, ця робота для тебе!"
 
-#: svarog/templates/vacancy-gallery.html:119
+#: svarog/templates/vacancy-gallery.html:125
 msgid "Airman"
 msgstr "Авіаційний Механік"
 
-#: svarog/templates/vacancy-gallery.html:122
+#: svarog/templates/vacancy-gallery.html:128
 msgid ""
 "This position offers the opportunity to work with advanced unmanned "
 "aerial vehicles, responsible for their repair and maintenance—from "
@@ -1033,11 +1020,11 @@ msgstr ""
 "технічних викликів, ця робота дозволить тобі бути на передовій сучасної "
 "авіації!"
 
-#: svarog/templates/vacancy-gallery.html:135
+#: svarog/templates/vacancy-gallery.html:142
 msgid "Sapper"
 msgstr "Сапер"
 
-#: svarog/templates/vacancy-gallery.html:138
+#: svarog/templates/vacancy-gallery.html:145
 msgid ""
 "You will detect and neutralize explosive devices, ensuring the safety of "
 "your unit and UAV operations. This is not only a critical role on the "
@@ -1052,11 +1039,11 @@ msgstr ""
 "актуальною, допомагаючи знешкоджувати загрози і після війни. Якщо ти "
 "сміливий і уважний, ця професія дасть тобі змогу змінювати світ на краще!"
 
-#: svarog/templates/vacancy-gallery.html:152
+#: svarog/templates/vacancy-gallery.html:160
 msgid "Radio electronic combat operator"
 msgstr "Оператор РЕБ"
 
-#: svarog/templates/vacancy-gallery.html:156
+#: svarog/templates/vacancy-gallery.html:164
 msgid ""
 "Your mission is to disrupt the enemy’s plans by blocking their "
 "communications and navigation while protecting our units from hostile "
@@ -1445,4 +1432,13 @@ msgstr "Інформація про рекрута оновлена!"
 
 #~ msgid "Simple2B"
 #~ msgstr ""
+
+#~ msgid "KYIV"
+#~ msgstr "КИЇВ"
+
+#~ msgid "ave. Peremohy, 83/2"
+#~ msgstr "просп. Перемоги, 83/2"
+
+#~ msgid "Daily from 09:00 to 18:00"
+#~ msgstr "Щодня з 09:00 до 18:00"
 
