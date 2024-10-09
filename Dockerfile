@@ -15,14 +15,14 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK on
 
 # install poetry
 RUN pip install --user poetry
-ENV PATH="/home/app/.local/bin:${PATH}"
+ENV PATH="/home/app/.venv/bin:/home/app/.local/bin:${PATH}"
 
 # install app dependencies
 COPY --chown=app:app poetry.lock .
 COPY --chown=app:app pyproject.toml .
 COPY --chown=app:app poetry.toml .
 
-RUN poetry install --no-dev --no-interaction --no-ansi
+RUN poetry install --only main
 # add gunicorn
 RUN poetry add gunicorn
 
