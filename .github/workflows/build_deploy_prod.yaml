@@ -44,8 +44,8 @@ jobs:
           script: |
             cd ~/svarog_prod &&
             echo $SIGNAL_BOT_CONFIG_BASE64 | base64 -d > signal-cli-config.tar.gz &&
-            ./set_image_version.sh ${{github.ref_name}} &&
             mv compose.prod.yaml compose.yaml &&
+            ./set_image_version.sh ${{github.ref_name}} &&
             docker compose pull &&
             docker compose up -d &&
             docker system prune -f
