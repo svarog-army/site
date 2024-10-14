@@ -135,8 +135,10 @@ jobs:
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
-          source: compose.staging.yaml
+          source: "compose.staging.yaml,set_image_version.sh"
           target: ~/svarog_py
+      - name: Set tag version
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: deploy
         uses: appleboy/ssh-action@master
         with:
@@ -149,6 +151,8 @@ jobs:
           script: |
             cd ~/svarog_py &&
             mv compose.staging.yaml compose.yaml &&
+            echo ${{ env.RELEASE_VERSION }}  &&
+            echo ${{github.ref_name}} &&
             docker compose pull &&
             docker compose stop signal &&
             docker compose up -d &&
