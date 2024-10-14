@@ -30,7 +30,7 @@ jobs:
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
-          source: compose.prod.yaml
+          source: "compose.prod.yaml,set_image_version.sh"
           target: ~/svarog_prod
       - name: deploy
         uses: appleboy/ssh-action@v0.1.10
