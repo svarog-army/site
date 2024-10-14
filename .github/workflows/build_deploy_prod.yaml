@@ -43,6 +43,8 @@ jobs:
           script: |
             cd ~/svarog_prod &&
             echo $SIGNAL_BOT_CONFIG_BASE64 | base64 -d > signal-cli-config.tar.gz &&
+            echo "RELEASE VERSION" &&
+            echo ${{github.ref_name}} &&
             tar -xzf signal-cli-config.tar.gz &&
             mv compose.prod.yaml compose.yaml &&
             docker compose pull &&
