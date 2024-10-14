@@ -151,8 +151,7 @@ jobs:
           script: |
             cd ~/svarog_py &&
             mv compose.staging.yaml compose.yaml &&
-            echo ${{ env.RELEASE_VERSION }}  &&
-            echo ${{github.ref_name}} &&
+            ./set_image_version.sh ${{github.ref_name}} &&
             docker compose pull &&
             docker compose stop signal &&
             docker compose up -d &&
