@@ -140,6 +140,7 @@ img:hover {
   position: relative;
 
   transition: all 0.3s ease;
+  padding: 8px 0px;
 }
 
 .recruitment_center::before,
@@ -164,6 +165,7 @@ img:hover {
   right: -6px;
   border-bottom: 1px solid #ffd700;
   border-right: 1px solid #ffd700;
+  pointer-events: none;
 }
 
 .recruitment_center:hover::before,
@@ -171,6 +173,7 @@ img:hover {
   width: calc(100% + 12px);
   height: calc(100% + 12px);
   opacity: 1;
+  pointer-events: none;
 }
 
 form label:hover {
