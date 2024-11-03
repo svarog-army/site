@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-08 15:22+0300\n"
+"POT-Creation-Date: 2024-11-03 08:38+0200\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -1179,7 +1179,7 @@ msgstr "Досвід роботи з БпЛА"
 
 #: svarog/templates/recruit/edit_modal.html:136
 msgid "Status"
-msgstr "ТАКТИКА"
+msgstr "Статус"
 
 #: svarog/templates/recruit/edit_modal.html:146
 msgid "military serviceman"
