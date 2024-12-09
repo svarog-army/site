@@ -81,7 +81,7 @@ def create_app(environment="development"):
     # invite (/join) route
     @app.route("/join")
     def invite():
-        return redirect(url_for("home", _anchor="application-form-wrapper"))
+        return redirect("https://forms.gle/rnqPqKBaUQcXtJff8")
 
     # Set up flask login.
     @login_manager.user_loader
