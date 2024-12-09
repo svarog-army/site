@@ -78,6 +78,11 @@ def create_app(environment="development"):
             get_locale()
         return redirect(url_for("multilingual.index"))
 
+    # invite (/join) route
+    @app.route("/join")
+    def invite():
+        return redirect(url_for("home", _anchor="application-form-wrapper"))
+
     # Set up flask login.
     @login_manager.user_loader
     def get_user(id: int):
