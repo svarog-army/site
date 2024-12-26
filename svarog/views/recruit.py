@@ -26,7 +26,7 @@ def recruits():
     if q:
         where = sa.and_(where, m.Recruit.full_name.ilike(f"{q}%") | m.Recruit.phone.ilike(f"{q}%"))  # type: ignore
 
-    query = sa.select(m.Recruit).where(where).order_by(m.Recruit.id)
+    query = sa.select(m.Recruit).where(where).order_by(m.Recruit.id.desc())
     count_query = sa.select(sa.func.count()).select_from(m.Recruit).where(where)
     pagination = create_pagination(total=db.session.scalar(count_query))
 
