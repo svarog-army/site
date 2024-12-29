@@ -42,6 +42,6 @@ jobs:
             cd ~/svarog_prod &&
             mv compose.prod.yaml compose.yaml &&
             ./set_image_version.sh ${{github.ref_name}} &&
-            docker compose pull &&
-            docker compose up -d &&
+            docker-compose pull &&
+            docker-compose up -d &&
             docker system prune -f
