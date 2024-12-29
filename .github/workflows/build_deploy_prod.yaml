@@ -13,7 +13,6 @@ env:
   DEPLOY_SSH_KEY: ${{ secrets.SSH_KEY_PROD }}
   DEPLOY_SSH_PORT: ${{ secrets.SSH_PORT_PROD }}
   DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-  SIGNAL_BOT_CONFIG_BASE64: ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }}
 
 
 jobs:
@@ -39,11 +38,8 @@ jobs:
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
-          envs: SIGNAL_BOT_CONFIG_BASE64
-          # tar -xzf signal-cli-config.tar.gz && -> Disable signal config extraction for now
           script: |
             cd ~/svarog_prod &&
-            echo $SIGNAL_BOT_CONFIG_BASE64 | base64 -d > signal-cli-config.tar.gz &&
             mv compose.prod.yaml compose.yaml &&
             ./set_image_version.sh ${{github.ref_name}} &&
             docker compose pull &&

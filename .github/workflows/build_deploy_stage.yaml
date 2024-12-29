@@ -13,7 +13,6 @@ env:
   DEPLOY_SSH_KEY: ${{ secrets.SSH_KEY }}
   DEPLOY_SSH_PORT: ${{ secrets.SSH_PORT }}
   DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-  SIGNAL_BOT_CONFIG_BASE64: ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }}
 
 
 jobs:
@@ -116,18 +115,6 @@ jobs:
     if: ${{ needs.on-develop-branch-check.outputs.on_develop == 'true' }}
     steps:
       - uses: actions/checkout@v4
-      - name: Get signal config
-        run: |
-          echo "${{ env.SIGNAL_BOT_CONFIG_BASE64 }}" | base64 -d > signal-cli-config.tar.gz
-      - name: Copy signal config archive
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ env.DEPLOY_HOST }}
-          username: ${{ env.DEPLOY_USER_NAME }}
-          key: ${{ env.DEPLOY_SSH_KEY }}
-          port: ${{ env.DEPLOY_SSH_PORT }}
-          source: signal-cli-config.tar.gz
-          target: ~/svarog_py
       - name: update compose file
         uses: appleboy/scp-action@master
         with:
@@ -146,13 +133,10 @@ jobs:
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
-          envs: SIGNAL_BOT_CONFIG_BASE64
-          # tar -xzf signal-cli-config.tar.gz && -> Disable signal config extraction for now
           script: |
             cd ~/svarog_py &&
             mv compose.staging.yaml compose.yaml &&
             ./set_image_version.sh ${{github.ref_name}} &&
             docker compose pull &&
-            docker compose stop signal &&
             docker compose up -d &&
             docker system prune -f
