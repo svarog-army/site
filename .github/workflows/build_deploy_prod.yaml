@@ -24,13 +24,13 @@ jobs:
       - name: update compose file
         uses: appleboy/scp-action@v0.1.4
         with:
-          # change to peod envs
+          # change to prod envs
           host: ${{ env.DEPLOY_HOST }}
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           source: "compose.prod.yaml,set_image_version.sh"
-          target: ~/svarog_prod
+          target: ~/svarog
       - name: deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -39,7 +39,7 @@ jobs:
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           script: |
-            cd ~/svarog_prod &&
+            cd ~/svarog &&
             mv compose.prod.yaml compose.yaml &&
             ./set_image_version.sh ${{github.ref_name}} &&
             docker-compose pull &&
