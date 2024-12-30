@@ -2,3 +2,4 @@
 from .pagination import Pagination
 from .user import User
 from .token import Token, TokenData, Auth
+from .recruit import RecruitStatus
