@@ -12,6 +12,7 @@ from wtforms import (
 from wtforms.validators import DataRequired, Email
 
 from svarog import models as m
+from svarog import schema as s
 from svarog import db
 
 
@@ -61,10 +62,10 @@ class StatusForm(FlaskForm):
         "Status",
         [DataRequired()],
         choices=[
-            (m.RecruitStatus.APPLIED.value, "APPLIED"),
-            (m.RecruitStatus.IN_PROGRESS.value, "IN PROGRESS"),
-            (m.RecruitStatus.REJECTED.value, "REJECTED"),
-            (m.RecruitStatus.HIRED.value, "HIRED"),
+            (s.RecruitStatus.APPLIED.value, "APPLIED"),
+            (s.RecruitStatus.IN_PROGRESS.value, "IN PROGRESS"),
+            (s.RecruitStatus.REJECTED.value, "REJECTED"),
+            (s.RecruitStatus.HIRED.value, "HIRED"),
         ],
         default=None,
         render_kw={"onchange": "this.form.submit()"},

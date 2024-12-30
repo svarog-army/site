@@ -1,11 +1,12 @@
 from datetime import date, datetime
-from enum import Enum
+
 from typing import TYPE_CHECKING
 from itertools import chain
 
 import sqlalchemy as sa
 from sqlalchemy import orm
 
+from svarog import schema as s
 from svarog.database import db
 
 from .utils import ModelMixin, gen_uuid
@@ -13,13 +14,6 @@ from .utils import ModelMixin, gen_uuid
 if TYPE_CHECKING:
     from .application import Application
     from .specialty import Specialty
-
-
-class RecruitStatus(Enum):
-    APPLIED = "APPLIED"
-    IN_PROGRESS = "IN_PROGRESS"
-    REJECTED = "REJECTED"
-    HIRED = "HIRED"
 
 
 class Recruit(db.Model, ModelMixin):
@@ -44,7 +38,7 @@ class Recruit(db.Model, ModelMixin):
     is_serviceman: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
     uav_experience: orm.Mapped[str] = orm.mapped_column(sa.Text)
 
-    status: orm.Mapped[str] = orm.mapped_column(sa.Enum(RecruitStatus), default=RecruitStatus.APPLIED)
+    status: orm.Mapped[str] = orm.mapped_column(sa.Enum(s.RecruitStatus), default=s.RecruitStatus.APPLIED)
     comments: orm.Mapped[str] = orm.mapped_column(sa.Text, server_default="")
 
     created_at: orm.Mapped[datetime] = orm.mapped_column(

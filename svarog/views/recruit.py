@@ -2,12 +2,13 @@ from datetime import datetime
 
 import sqlalchemy as sa
 from flask import Blueprint, flash, redirect, render_template, request, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 from flask_babel import _
 
 from svarog import db
 from svarog import forms as f
 from svarog import models as m
+from svarog import schema as s
 from svarog.controllers.pagination import create_pagination
 from svarog.logger import log
 
@@ -58,9 +59,17 @@ def recruits():
 def get_edit_form(recruit_uuid: str):
     """htmx request"""
     recruit: m.Recruit | None = db.session.scalar(m.Recruit.select().where(m.Recruit.uuid == recruit_uuid))
+
     if not recruit or recruit.is_deleted:
         log(log.ERROR, "Recruit not found by id: [%s]", recruit_uuid)
         return render_template("toast.html", category="danger", message="User not found"), 404
+
+    recruit_status: s.RecruitStatus = (
+        s.RecruitStatus.IN_PROGRESS
+        if s.RecruitStatus(recruit.status) == s.RecruitStatus.APPLIED
+        else s.RecruitStatus(recruit.status)
+    )
+
     form = f.RecruitForm(
         recruit_uuid=recruit.uuid,
         full_name=recruit.full_name,
@@ -75,9 +84,16 @@ def get_edit_form(recruit_uuid: str):
         have_driver_license=recruit.have_driver_license,
         is_serviceman=recruit.is_serviceman,
         uav_experience=recruit.uav_experience,
-        status=recruit.status,
+        status=recruit_status,
         comments=recruit.comments,
     )
+
+    m.RecruitStatusChangeHistory(
+        recruit_id=recruit.id,
+        user_id=current_user.id,
+        status=recruit_status.value,
+    ).save()
+
     return render_template("recruit/edit_modal.html", form=form)
 
 
@@ -107,7 +123,17 @@ def save():
         recruit.status = form.status.data
         recruit.comments = form.comments.data
         recruit.save()
+
         flash(_("Recruit data updated!"), "success")
+
+        m.RecruitStatusChangeHistory(
+            recruit_id=recruit.id,
+            user_id=current_user.id,
+            status=form.status.data.value,
+        ).save()
+
+        log(log.INFO, "Recruit status change history saved successfully")
+
         if form.next_url.data:
             return redirect(form.next_url.data)
         return redirect(url_for("recruit.recruits"))
