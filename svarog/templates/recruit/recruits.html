@@ -74,21 +74,18 @@
         id="recruit-{{ recruit.uuid }}"
         class="border-b border-gray-300 dark:border-gray-600 {% if recruit.status.value == 'APPLIED' %}bg-gray-100 dark:bg-gray-600 {% elif recruit.status.value == 'IN_PROGRESS' %}bg-yellow-200/25 dark:bg-yellow-200/40 {% elif recruit.status.value == 'REJECTED' %}bg-red-400/25 dark:bg-red-400/40 {% elif recruit.status.value == 'HIRED' %}bg-green-400/25 dark:bg-green-400/40 {% else %}bg-gray-100 dark:bg-gray-600{% endif %}">
         <td
-          scope="row"
-          class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-          <div class="mx-auto">
-            <button
-              type="button"
-              hx-target="#recruit-edit-form"
-              hx-get="{{ url_for('recruit.get_edit_form', recruit_uuid=recruit.uuid) }}"
-              class="text-base font-semibold hover:underline">
-              {{ recruit.full_name }}
-            </button>
-            <div class="font-normal text-gray-700 dark:text-gray-200">
-              <a class="hover:text-blue-500" href="mailto:{{ recruit.email }}"
-                >{{ recruit.email }}</a
-              >
-            </div>
+          class="px-6 py-4 text-center text-gray-900 whitespace-nowrap dark:text-white">
+          <button
+            type="button"
+            hx-target="#recruit-edit-form"
+            hx-get="{{ url_for('recruit.get_edit_form', recruit_uuid=recruit.uuid) }}"
+            class="text-base text-center font-semibold hover:underline">
+            {{ recruit.full_name }}
+          </button>
+          <div class="font-normal text-gray-700 dark:text-gray-200">
+            <a class="hover:text-blue-500" href="mailto:{{ recruit.email }}"
+              >{{ recruit.email }}</a
+            >
           </div>
         </td>
         <td
@@ -100,7 +97,7 @@
           {{ _('Yes') if recruit.is_serviceman else _('No') }}
         </td>
         <td
-          class="p-4 max-w-64 text-base font-normal text-gray-900 dark:text-white">
+          class="p-4 max-w-64 text-base text-center font-normal text-gray-900 dark:text-white">
           {% for specialty in recruit.specialties %} {{ specialty['name_' ~
           g.lang_code] }}{% if not loop.last %}, {% endif %} {% endfor %}
         </td>
@@ -113,7 +110,8 @@
             method="POST"
             class="flex justify-center"
             action="{{ url_for('recruit.update_status', recruit_uuid=recruit.uuid) }}">
-            {{ recruit_forms[recruit.uuid].status(class_="shadow-sm bg-gray-50
+            {{ recruit_forms[recruit.uuid].hidden_tag() }} {{
+            recruit_forms[recruit.uuid].status(class_="shadow-sm bg-gray-50
             border border-gray-300 text-gray-900 text-sm rounded-lg
             focus:ring-blue-600 focus:border-blue-600 block w-40 p-2.5
             dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400
