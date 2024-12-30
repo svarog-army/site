@@ -3,7 +3,7 @@
   hx-trigger="click"
   hx-swap="delete"
   hx-get="{{url_for('main.no_content')}}"
-  class="fixed bg-opacity-80 bg-gray-600 top-0 left-0 right-0 z-50 items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full justify-end items-end flex">
+  class="fixed bg-opacity-80 bg-gray-600 top-0 left-0 right-0 z-50 items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full flex">
   <div
     class="rounded-lg relative w-full max-w-2xl max-h-full bg-white"
     onclick="event.stopPropagation();">
@@ -141,14 +141,18 @@
             dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
           </div>
 
-          <div class="col-span-6 sm:col-span-3">
+          <div class="col-span-6 flex gap-2 sm:col-span-3">
             <!-- prettier-ignore -->
-            <label for="is_serviceman" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("military serviceman")}}</label >
             {{ form.is_serviceman(class_="shadow-sm bg-gray-50 border
             border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600
             focus:border-blue-600 block p-2.5 dark:bg-gray-600
             dark:border-gray-500 dark:placeholder-gray-400 dark:text-black
             dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+            <label
+              for="is_serviceman"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >{{_("military serviceman")}}</label
+            >
           </div>
         </div>
       </div>
@@ -160,9 +164,9 @@
           <label for="comments" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >{{_("Comments")}}</label >
           {{ form.comments(class_="shadow-sm bg-gray-50 border border-gray-300
           text-gray-900 text-sm rounded-lg focus:ring-blue-600
-          focus:border-blue-600 p-2.5 dark:bg-gray-600 dark:border-gray-500
-          dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500
-          dark:focus:border-blue-500 block w-full") }}
+          focus:border-blue-600 p-2.5 dark:bg-gray-600 dark:text-white
+          dark:border-gray-500 dark:placeholder-gray-400 dark:text-black
+          dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full") }}
         </div>
       </div>
       <div

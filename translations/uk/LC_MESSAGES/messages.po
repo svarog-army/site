@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-03 08:38+0200\n"
+"POT-Creation-Date: 2024-12-29 20:14+0200\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: svarog/forms/application.py:26
+#: svarog/forms/application.py:26 svarog/templates/recruit/recruits.html:99
 msgid "Yes"
 msgstr "Так"
 
-#: svarog/forms/application.py:27
+#: svarog/forms/application.py:27 svarog/templates/recruit/recruits.html:99
 msgid "No"
 msgstr "Ні"
 
@@ -107,7 +107,6 @@ msgstr "Дата народження"
 
 #: svarog/templates/application_form.html:58
 #: svarog/templates/recruit/edit_modal.html:56
-#: svarog/templates/recruit/recruits.html:26
 msgid "Phone"
 msgstr "Номер телефону"
 
@@ -1070,8 +1069,8 @@ msgid "Save new user"
 msgstr "Зберегти нового користувача"
 
 #: svarog/templates/admin/admins.html:6
-#: svarog/templates/recruit/recruits.html:6
-#: svarog/templates/recruit/recruits.html:18
+#: svarog/templates/recruit/recruits.html:5
+#: svarog/templates/recruit/recruits.html:51
 msgid "Search"
 msgstr "Пошук"
 
@@ -1082,7 +1081,7 @@ msgstr "Додати користувача"
 #: svarog/templates/admin/admins.html:31
 #: svarog/templates/admin/edit_modal.html:29
 #: svarog/templates/recruit/edit_modal.html:27
-#: svarog/templates/recruit/recruits.html:26
+#: svarog/templates/recruit/recruits.html:59
 msgid "Name"
 msgstr "Ім'я"
 
@@ -1095,32 +1094,30 @@ msgid "User"
 msgstr "Користувач"
 
 #: svarog/templates/admin/admins.html:61
-#: svarog/templates/recruit/recruits.html:63
 msgid "Edit"
 msgstr "Редагувати"
 
 #: svarog/templates/admin/admins.html:65
-#: svarog/templates/recruit/recruits.html:67
 msgid "Delete"
 msgstr "Видалити"
 
 #: svarog/templates/admin/admins.html:82
-#: svarog/templates/recruit/recruits.html:84
+#: svarog/templates/recruit/recruits.html:137
 msgid "First"
 msgstr "Перший"
 
 #: svarog/templates/admin/admins.html:91
-#: svarog/templates/recruit/recruits.html:93
+#: svarog/templates/recruit/recruits.html:154
 msgid "Previous"
 msgstr "Попередній"
 
 #: svarog/templates/admin/admins.html:116
-#: svarog/templates/recruit/recruits.html:118
+#: svarog/templates/recruit/recruits.html:189
 msgid "Next"
 msgstr "Наступний"
 
 #: svarog/templates/admin/admins.html:126
-#: svarog/templates/recruit/recruits.html:128
+#: svarog/templates/recruit/recruits.html:206
 msgid "Last"
 msgstr "Останній"
 
@@ -1149,7 +1146,6 @@ msgid "Birth Date"
 msgstr "День народження"
 
 #: svarog/templates/recruit/edit_modal.html:66
-#: svarog/templates/recruit/recruits.html:26
 msgid "From"
 msgstr "Звідки"
 
@@ -1178,6 +1174,7 @@ msgid "UAV Experience"
 msgstr "Досвід роботи з БпЛА"
 
 #: svarog/templates/recruit/edit_modal.html:136
+#: svarog/templates/recruit/recruits.html:68
 msgid "Status"
 msgstr "Статус"
 
@@ -1186,7 +1183,7 @@ msgid "military serviceman"
 msgstr "Чи Ви є військовослужбовцем?"
 
 #: svarog/templates/recruit/edit_modal.html:160
-#: svarog/templates/recruit/recruits.html:26
+#: svarog/templates/recruit/recruits.html:67
 msgid "Comments"
 msgstr "Коментарі"
 
@@ -1194,7 +1191,19 @@ msgstr "Коментарі"
 msgid "Save changes"
 msgstr "Зберегти нового користувача"
 
-#: svarog/views/admin.py:87 svarog/views/recruit.py:82
+#: svarog/templates/recruit/recruits.html:61
+msgid "Date of receipt"
+msgstr "Дата надходження"
+
+#: svarog/templates/recruit/recruits.html:64
+msgid "Is there an MOS"
+msgstr "Чи є В/С"
+
+#: svarog/templates/recruit/recruits.html:66
+msgid "Position"
+msgstr "Посада"
+
+#: svarog/views/admin.py:87 svarog/views/recruit.py:93
 msgid "Cannot save user data"
 msgstr "Неможливо зберегти дані користувача"
 
@@ -1210,9 +1219,17 @@ msgstr "Додано користувача!"
 msgid "Application applied successfully"
 msgstr "Заявка успішно подана"
 
-#: svarog/views/recruit.py:99
+#: svarog/views/recruit.py:110
 msgid "Recruit data updated!"
 msgstr "Інформація про рекрута оновлена!"
+
+#: svarog/views/recruit.py:132
+msgid "Recruit not found"
+msgstr "Рекрута не знайдено"
+
+#: svarog/views/recruit.py:138
+msgid "Recruit status updated!"
+msgstr "Статус рекрута оновлений!"
 
 #~ msgid "CHOOSE YOUR WAY WITH USF"
 #~ msgstr "ОБЕРИ СВІЙ ШЛЯХ З ОББпС"

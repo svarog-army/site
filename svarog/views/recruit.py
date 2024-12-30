@@ -30,15 +30,26 @@ def recruits():
     count_query = sa.select(sa.func.count()).select_from(m.Recruit).where(where)
     pagination = create_pagination(total=db.session.scalar(count_query))
 
-    log(log.INFO, "Returning admins: [%s]", db.session.scalar(count_query))
+    log(log.INFO, "Returning recruits: [%s]", db.session.scalar(count_query))
+
+    recruits = (
+        db.session.execute(query.offset((pagination.page - 1) * pagination.per_page).limit(pagination.per_page))
+        .scalars()
+        .all()
+    )
+
+    recruit_forms = {}
+
+    for recruit in recruits:
+        form = f.StatusForm(status=recruit.status.value)
+        recruit_forms[recruit.uuid] = form
 
     return render_template(
         "recruit/recruits.html",
-        recruits=db.session.execute(
-            query.offset((pagination.page - 1) * pagination.per_page).limit(pagination.per_page)
-        ).scalars(),
+        recruits=recruits,
         page=pagination,
         search_query=q,
+        recruit_forms=recruit_forms,
     )
 
 
@@ -107,6 +118,31 @@ def save():
             for error in value:
                 flash(f"{error}", "danger")
     return redirect(url_for("recruit.get_edit_form"))
+
+
+@recruit_blueprint.route("/update_status/<recruit_uuid>", methods=["POST"])
+@login_required
+def update_status(recruit_uuid):
+    form = f.StatusForm()
+    if form.validate_on_submit():
+        query = m.Recruit.select().where(m.Recruit.uuid == recruit_uuid)
+        recruit: m.Recruit | None = db.session.scalar(query)
+        if not recruit:
+            log(log.ERROR, "Not found recruit by id: [%s]", recruit_uuid)
+            flash(_("Recruit not found"), "danger")
+            return redirect(url_for("recruit.recruits"))
+
+        recruit.status = form.status.data
+        recruit.save()
+
+        flash(_("Recruit status updated!"), "success")
+        return redirect(request.referrer or url_for("recruit.recruits"))
+    else:
+        log(log.ERROR, "Status update errors: [%s]", form.errors)
+        for key, value in form.errors.items():
+            for error in value:
+                flash(f"{error}", "danger")
+        return redirect(request.referrer or url_for("recruit.recruits"))
 
 
 @recruit_blueprint.route("/delete/<recruit_uuid>", methods=["DELETE"])
