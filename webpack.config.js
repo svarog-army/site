@@ -55,8 +55,22 @@ const adminConfig = {
   },
 };
 
-const configs = [baseConfig, recruitConfig, adminConfig, cookieConfig].map(conf =>
-  merge(defaultConfig, conf),
-);
+const landingConfig = {
+  entry: {
+    main: './src/landing.ts',
+  },
+  output: {
+    path: path.resolve(__dirname, './svarog/static'),
+    filename: 'js/landing.js', // <--- Will be compiled to this single file
+  },
+};
+
+const configs = [
+  baseConfig,
+  recruitConfig,
+  adminConfig,
+  cookieConfig,
+  landingConfig,
+].map(conf => merge(defaultConfig, conf));
 
 module.exports = configs;

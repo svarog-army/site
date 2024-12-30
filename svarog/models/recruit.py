@@ -1,6 +1,7 @@
 from datetime import date, datetime
 from enum import Enum
 from typing import TYPE_CHECKING
+from itertools import chain
 
 import sqlalchemy as sa
 from sqlalchemy import orm
@@ -11,6 +12,7 @@ from .utils import ModelMixin, gen_uuid
 
 if TYPE_CHECKING:
     from .application import Application
+    from .specialty import Specialty
 
 
 class RecruitStatus(Enum):
@@ -51,3 +53,16 @@ class Recruit(db.Model, ModelMixin):
     )
     is_deleted: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
     applications: orm.Mapped[list["Application"]] = orm.relationship("Application", back_populates="recruit")
+
+    @property
+    def specialties(self) -> list["Specialty"]:
+        flattened = list(chain.from_iterable(application.specialties for application in self.applications))
+
+        seen_uuids = set()
+        unique_specialties = []
+        for specialty in flattened:
+            if specialty.uuid not in seen_uuids:
+                seen_uuids.add(specialty.uuid)
+                unique_specialties.append(specialty)
+
+        return unique_specialties

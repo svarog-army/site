@@ -54,3 +54,18 @@ class RecruitForm(FlaskForm):
         query = m.Recruit.select().where(m.Recruit.email == field.data).where(m.Recruit.uuid != self.recruit_uuid.data)
         if db.session.scalar(query) is not None:
             raise ValidationError("This email is already registered.")
+
+
+class StatusForm(FlaskForm):
+    status = SelectField(
+        "Status",
+        [DataRequired()],
+        choices=[
+            (m.RecruitStatus.APPLIED.value, "APPLIED"),
+            (m.RecruitStatus.IN_PROGRESS.value, "IN PROGRESS"),
+            (m.RecruitStatus.REJECTED.value, "REJECTED"),
+            (m.RecruitStatus.HIRED.value, "HIRED"),
+        ],
+        default=None,
+        render_kw={"onchange": "this.form.submit()"},
+    )
