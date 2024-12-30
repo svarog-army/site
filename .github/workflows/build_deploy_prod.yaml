@@ -13,7 +13,6 @@ env:
   DEPLOY_SSH_KEY: ${{ secrets.SSH_KEY_PROD }}
   DEPLOY_SSH_PORT: ${{ secrets.SSH_PORT_PROD }}
   DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-  SIGNAL_BOT_CONFIG_BASE64: ${{ secrets.SIGNAL_BOT_CONFIG_BASE64 }}
 
 
 jobs:
@@ -25,13 +24,13 @@ jobs:
       - name: update compose file
         uses: appleboy/scp-action@v0.1.4
         with:
-          # change to peod envs
+          # change to prod envs
           host: ${{ env.DEPLOY_HOST }}
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           source: "compose.prod.yaml,set_image_version.sh"
-          target: ~/svarog_prod
+          target: ~/svarog
       - name: deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -39,13 +38,10 @@ jobs:
           username: ${{ env.DEPLOY_USER_NAME }}
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
-          envs: SIGNAL_BOT_CONFIG_BASE64
-          # tar -xzf signal-cli-config.tar.gz && -> Disable signal config extraction for now
           script: |
-            cd ~/svarog_prod &&
-            echo $SIGNAL_BOT_CONFIG_BASE64 | base64 -d > signal-cli-config.tar.gz &&
+            cd ~/svarog &&
             mv compose.prod.yaml compose.yaml &&
             ./set_image_version.sh ${{github.ref_name}} &&
-            docker compose pull &&
-            docker compose up -d &&
+            docker-compose pull &&
+            docker-compose up -d &&
             docker system prune -f
