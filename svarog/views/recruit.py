@@ -2,7 +2,7 @@ from datetime import datetime
 
 import sqlalchemy as sa
 from flask import Blueprint, flash, redirect, render_template, request, url_for
-from flask_login import login_required, current_user
+from flask_login import login_required
 from flask_babel import _
 
 from svarog import db
