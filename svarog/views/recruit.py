@@ -10,6 +10,7 @@ from svarog import forms as f
 from svarog import models as m
 from svarog import schema as s
 from svarog.controllers.pagination import create_pagination
+from svarog.controllers.recruit import change_recruit_status
 from svarog.logger import log
 
 recruit_blueprint = Blueprint(
@@ -88,11 +89,12 @@ def get_edit_form(recruit_uuid: str):
         comments=recruit.comments,
     )
 
-    m.RecruitStatusChangeHistory(
-        recruit_id=recruit.id,
-        user_id=current_user.id,
-        status=recruit_status.value,
-    ).save()
+    recruit.status = recruit_status.value
+    recruit.save()
+
+    change_recruit_status(recruit.id, recruit_status.value)
+
+    log(log.INFO, "Recruit status change history saved successfully")
 
     return render_template("recruit/edit_modal.html", form=form)
 
@@ -126,11 +128,7 @@ def save():
 
         flash(_("Recruit data updated!"), "success")
 
-        m.RecruitStatusChangeHistory(
-            recruit_id=recruit.id,
-            user_id=current_user.id,
-            status=form.status.data.value,
-        ).save()
+        change_recruit_status(recruit.id, form.status.data.value)
 
         log(log.INFO, "Recruit status change history saved successfully")
 

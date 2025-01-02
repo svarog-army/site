@@ -1,4 +1,5 @@
 from random import choice
+from flask_login import current_user
 
 from svarog import models as m
 from svarog import db
@@ -99,3 +100,11 @@ def fill_test_recruits(num: int = 100):
         )
         db.session.add(recruit)
     db.session.commit()
+
+
+def change_recruit_status(recruit_id: int, status: str):
+    m.RecruitStatusChangeEvent(
+        recruit_id=recruit_id,
+        user_id=current_user.id,
+        status=status,
+    ).save()

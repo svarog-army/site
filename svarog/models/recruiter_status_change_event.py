@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from .user import User
 
 
-class RecruitStatusChangeHistory(db.Model, ModelMixin):
-    __tablename__ = "recruit_status_change_history"
+class RecruitStatusChangeEvent(db.Model, ModelMixin):
+    __tablename__ = "recruit_status_change_events"
 
     id: orm.Mapped[int] = orm.mapped_column(primary_key=True)
     uuid: orm.Mapped[str] = orm.mapped_column(sa.String(32), default=gen_uuid, index=True)
