@@ -24,18 +24,17 @@ def recruits():
     q = request.args.get("q", type=str, default=None)
     status = request.args.get("status", type=str, default=None)
     specialty = request.args.get("specialty", type=str, default=None)
-    where = m.Recruit.is_deleted.is_(False)
+    where = sa.and_(m.Recruit.is_deleted.is_(False))
+
     if q:
-        where = sa.and_(where, m.Recruit.full_name.ilike(f"{q}%") | m.Recruit.phone.ilike(f"{q}%"))  # type: ignore
+        where = sa.and_(where, m.Recruit.full_name.ilike(f"{q}%") | m.Recruit.phone.ilike(f"{q}%"))
     if status:
         where = sa.and_(where, m.Recruit.status == status)
     if specialty:
-        where = sa.and_(
-            where,
-            m.Recruit.id.in_(
-                sa.select(m.Application.recruit_id).join(m.Application.specialties).where(m.Specialty.uuid == specialty)
-            ),
+        subquery = (
+            sa.select(m.Application.recruit_id).join(m.Application.specialties).where(m.Specialty.uuid == specialty)
         )
+        where = sa.and_(where, m.Recruit.id.in_(subquery))
 
     query = sa.select(m.Recruit).where(where).order_by(m.Recruit.created_at.desc())
     count_query = sa.select(sa.func.count()).select_from(m.Recruit).where(where)
