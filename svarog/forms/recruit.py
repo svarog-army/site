@@ -69,3 +69,23 @@ class StatusForm(FlaskForm):
         default=None,
         render_kw={"onchange": "this.form.submit()"},
     )
+
+
+class FilterForm(FlaskForm):
+    search = StringField("Search")
+    status = SelectField(
+        "Status",
+        choices=[
+            ("", "All"),
+            (m.RecruitStatus.APPLIED.value, "APPLIED"),
+            (m.RecruitStatus.IN_PROGRESS.value, "IN PROGRESS"),
+            (m.RecruitStatus.REJECTED.value, "REJECTED"),
+            (m.RecruitStatus.HIRED.value, "HIRED"),
+        ],
+        default="",
+    )
+    specialty = SelectField("Specialty", choices=[])
+
+    def __init__(self, specialty_choices=None, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.specialty.choices = specialty_choices or [("", "All")]
