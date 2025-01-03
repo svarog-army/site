@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import flowbite from 'flowbite/plugin';
+import tailwindcssIntersect from 'tailwindcss-intersect';
+
+export default {
   darkMode: 'class',
   content: [
     './svarog/templates/**/*.html',
@@ -17,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('flowbite/plugin'), require('tailwindcss-intersect')],
+  plugins: [flowbite, tailwindcssIntersect],
 };
