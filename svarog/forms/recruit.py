@@ -19,22 +19,28 @@ from svarog import db
 class RecruitForm(FlaskForm):
     next_url = StringField("next_url")
     recruit_uuid = HiddenField("recruit_uuid", [DataRequired()], render_kw={"readonly": True})
-    email = StringField("email", [DataRequired(), Email()], render_kw={"placeholder": "Email"})
-    full_name = StringField("Full Name", [DataRequired()], render_kw={"placeholder": "Full Name"})
-    birth_date = DateField("Birth Date", [DataRequired()], render_kw={"placeholder": "Birth Date"})
-    phone = StringField("Phone", [DataRequired()], render_kw={"placeholder": "Phone"})
+    email = StringField("email", [DataRequired(), Email()], render_kw={"placeholder": "Email", "readonly": True})
+    full_name = StringField("Full Name", [DataRequired()], render_kw={"placeholder": "Full Name", "readonly": True})
+    birth_date = DateField("Birth Date", [DataRequired()], render_kw={"placeholder": "Birth Date", "readonly": True})
+    phone = StringField("Phone", [DataRequired()], render_kw={"placeholder": "Phone", "readonly": True})
     city_of_actual_residence = StringField(
-        "City of Actual Residence", [DataRequired()], render_kw={"placeholder": "City of Actual Residence"}
+        "City of Actual Residence",
+        [DataRequired()],
+        render_kw={"placeholder": "City of Actual Residence", "readonly": True},
     )
-    education = StringField("Education", [DataRequired()], render_kw={"placeholder": "Education"})
-    skills = StringField("Skills", [DataRequired()], render_kw={"placeholder": "Skills"})
-    last_job = StringField("Last Job", [DataRequired()], render_kw={"placeholder": "Last Job"})
-    health_problems = StringField("Health Problems", [DataRequired()], render_kw={"placeholder": "Health Problems"})
+    education = StringField("Education", [DataRequired()], render_kw={"placeholder": "Education", "readonly": True})
+    skills = StringField("Skills", [DataRequired()], render_kw={"placeholder": "Skills", "readonly": True})
+    last_job = StringField("Last Job", [DataRequired()], render_kw={"placeholder": "Last Job", "readonly": True})
+    health_problems = StringField(
+        "Health Problems", [DataRequired()], render_kw={"placeholder": "Health Problems", "readonly": True}
+    )
     have_driver_license = StringField(
-        "Have Driver License", [DataRequired()], render_kw={"placeholder": "Have Driver License"}
+        "Have Driver License", [DataRequired()], render_kw={"placeholder": "Have Driver License", "readonly": True}
     )
-    is_serviceman = BooleanField("Is Serviceman")
-    uav_experience = TextAreaField("UAV Experience", [DataRequired()], render_kw={"placeholder": "UAV Experience"})
+    is_serviceman = BooleanField("Is Serviceman", render_kw={"readonly": True})
+    uav_experience = TextAreaField(
+        "UAV Experience", [DataRequired()], render_kw={"placeholder": "UAV Experience", "readonly": True}
+    )
     status = SelectField(
         "Status",
         [DataRequired()],
