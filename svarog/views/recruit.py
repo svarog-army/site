@@ -65,11 +65,8 @@ def get_edit_form(recruit_uuid: str):
         log(log.ERROR, "Recruit not found by id: [%s]", recruit_uuid)
         return render_template("toast.html", category="danger", message="User not found"), 404
 
-    recruit_status: s.RecruitStatus = (
-        s.RecruitStatus.IN_PROGRESS
-        if s.RecruitStatus(recruit.status) == s.RecruitStatus.APPLIED
-        else s.RecruitStatus(recruit.status)
-    )
+    if s.RecruitStatus(recruit.status) == s.RecruitStatus.APPLIED:
+        change_recruit_status(recruit, s.RecruitStatus.IN_PROGRESS)
 
     form = f.RecruitForm(
         recruit_uuid=recruit.uuid,
@@ -85,16 +82,9 @@ def get_edit_form(recruit_uuid: str):
         have_driver_license=recruit.have_driver_license,
         is_serviceman=recruit.is_serviceman,
         uav_experience=recruit.uav_experience,
-        status=recruit_status,
+        status=recruit.status,
         comments=recruit.comments,
     )
-
-    recruit.status = recruit_status.value
-    recruit.save()
-
-    change_recruit_status(recruit.id, recruit_status.value)
-
-    log(log.INFO, "Recruit status change history saved successfully")
 
     return render_template("recruit/edit_modal.html", form=form)
 
@@ -110,6 +100,9 @@ def save():
             log(log.ERROR, "Not found admin by id : [%s]", form.recruit_uuid.data)
             flash(_("Cannot save user data"), "danger")
             return redirect(url_for("admin.admins"))
+
+        change_recruit_status(recruit, s.RecruitStatus(form.status.data))
+
         recruit.full_name = form.full_name.data
         recruit.birth_date = form.birth_date.data
         recruit.phone = form.phone.data
@@ -122,15 +115,10 @@ def save():
         recruit.have_driver_license = form.have_driver_license.data
         recruit.is_serviceman = form.is_serviceman.data
         recruit.uav_experience = form.uav_experience.data
-        recruit.status = form.status.data
         recruit.comments = form.comments.data
         recruit.save()
 
         flash(_("Recruit data updated!"), "success")
-
-        change_recruit_status(recruit.id, form.status.data.value)
-
-        log(log.INFO, "Recruit status change history saved successfully")
 
         if form.next_url.data:
             return redirect(form.next_url.data)
