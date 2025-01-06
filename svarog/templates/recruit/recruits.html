@@ -1,60 +1,25 @@
 {% extends 'admin/base_admin.html' %} {% block content %}
 <div class="pt-8 relative overflow-x-auto shadow-md sm:rounded-lg">
-  <div
-    class="p-2 flex items-center justify-center py-4 bg-white dark:bg-gray-800">
+  <div class="p-2 flex items-center justify-center py-4 bg-white dark:bg-gray-800">
     <label for="table-search" class="sr-only">{{ _("Search") }}</label>
     <div class="relative">
-      <div
-        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <svg
-          class="w-5 h-5 text-gray-500 dark:text-gray-400"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill-rule="evenodd"
-            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-            clip-rule="evenodd"></path>
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
         </svg>
       </div>
-      <input
-        type="text"
-        id="table-search-recruits"
-        class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Search for recruits"
-        {%
-        if
-        search_query
-        %}
-        value="{{ search_query }}"
-        {%
-        endif
-        %} />
+      <input type="text" id="table-search-recruits" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for recruits" {% if search_query %} value="{{ search_query }}" {% endif %} />
     </div>
-    <button
-      type="button"
-      id="table-search-recruit-button"
-      class="px-3 py-2 text-xs text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ml-2 font-medium rounded-lg text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-      <svg
-        class="w-5 h-5 text-white"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <button type="button" id="table-search-recruit-button" class="px-3 py-2 text-xs text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ml-2 font-medium rounded-lg text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
       {{ _("Search") }}
     </button>
   </div>
 
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-    <thead
-      class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
       <tr>
         <th scope="col" class="p-4 text-center">{{ _("Name") }}</th>
         <th scope="col" class="p-4 text-center text-nowrap">
@@ -70,46 +35,30 @@
     </thead>
     <tbody>
       {% for recruit in recruits %}
-      <tr
-        id="recruit-{{ recruit.uuid }}"
-        class="border-b border-gray-300 dark:border-gray-600 {% if recruit.status.value == 'APPLIED' %}bg-gray-100 dark:bg-gray-600 {% elif recruit.status.value == 'IN_PROGRESS' %}bg-yellow-200/25 dark:bg-yellow-200/40 {% elif recruit.status.value == 'REJECTED' %}bg-red-400/25 dark:bg-red-400/40 {% elif recruit.status.value == 'HIRED' %}bg-green-400/25 dark:bg-green-400/40 {% else %}bg-gray-100 dark:bg-gray-600{% endif %}">
-        <td
-          class="px-6 py-4 text-center text-gray-900 whitespace-nowrap dark:text-white">
-          <button
-            type="button"
-            hx-target="#recruit-edit-form"
-            hx-get="{{ url_for('recruit.get_edit_form', recruit_uuid=recruit.uuid) }}"
-            class="text-base text-center font-semibold hover:underline">
+      <tr id="recruit-{{ recruit.uuid }}" class="border-b border-gray-300 dark:border-gray-600 {% if recruit.status.value == 'APPLIED' %}bg-gray-100 dark:bg-gray-600 {% elif recruit.status.value == 'IN_PROGRESS' %}bg-yellow-200/25 dark:bg-yellow-200/40 {% elif recruit.status.value == 'REJECTED' %}bg-red-400/25 dark:bg-red-400/40 {% elif recruit.status.value == 'HIRED' %}bg-green-400/25 dark:bg-green-400/40 {% else %}bg-gray-100 dark:bg-gray-600{% endif %}">
+        <td class="px-6 py-4 text-center text-gray-900 whitespace-nowrap dark:text-white">
+          <button type="button" hx-target="#recruit-edit-form" hx-get="{{ url_for('recruit.get_edit_form', recruit_uuid=recruit.uuid) }}" class="text-base text-center font-semibold hover:underline">
             {{ recruit.full_name }}
           </button>
           <div class="font-normal text-gray-700 dark:text-gray-200">
-            <a class="hover:text-blue-500" href="mailto:{{ recruit.email }}"
-              >{{ recruit.email }}</a
-            >
+            <a class="hover:text-blue-500" href="mailto:{{ recruit.email }}">{{ recruit.email }}</a>
           </div>
         </td>
-        <td
-          class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
+        <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
           {{ recruit.created_at.strftime('%d/%m/%Y') }}
         </td>
-        <td
-          class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
+        <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
           {{ _('Yes') if recruit.is_serviceman else _('No') }}
         </td>
-        <td
-          class="p-4 max-w-64 text-base text-center font-normal text-gray-900 dark:text-white">
+        <td class="p-4 max-w-64 text-base text-center font-normal text-gray-900 dark:text-white">
           {% for specialty in recruit.specialties %} {{ specialty['name_' ~
           g.lang_code] }}{% if not loop.last %}, {% endif %} {% endfor %}
         </td>
-        <td
-          class="p-4 max-w-64 text-base font-normal text-gray-900 break-words dark:text-white">
+        <td class="p-4 max-w-64 text-base font-normal text-gray-900 break-words dark:text-white">
           {{ recruit.comments|truncate(128) }}
         </td>
         <td class="p-4">
-          <form
-            method="POST"
-            class="flex justify-center"
-            action="{{ url_for('recruit.update_status', recruit_uuid=recruit.uuid) }}">
+          <form method="POST" class="flex justify-center" action="{{ url_for('recruit.update_status', recruit_uuid=recruit.uuid) }}">
             {{ recruit_forms[recruit.uuid].hidden_tag() }} {{
             recruit_forms[recruit.uuid].status(class_="shadow-sm bg-gray-50
             border border-gray-300 text-gray-900 text-sm rounded-lg
@@ -129,92 +78,44 @@
     <nav aria-label="Page navigation" class="mx-auto">
       <ul class="inline-flex items-center -space-x-px">
         <li>
-          <a
-            href="{{ url_for('recruit.recruits') }}?page=1&q={{ page.query }}"
-            class="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+          <a href="{{ url_for('recruit.recruits') }}?page=1&q={{ page.query }}" class="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             <span class="sr-only">{{ _("First") }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5">
-              <path
-                fill-rule="evenodd"
-                d="M15.79 14.77a.75.75 0 01-1.06.02l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 111.04 1.08L11.832 10l3.938 3.71a.75.75 0 01.02 1.06zm-6 0a.75.75 0 01-1.06.02l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 111.04 1.08L5.832 10l3.938 3.71a.75.75 0 01.02 1.06z"
-                clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M15.79 14.77a.75.75 0 01-1.06.02l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 111.04 1.08L11.832 10l3.938 3.71a.75.75 0 01.02 1.06zm-6 0a.75.75 0 01-1.06.02l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 111.04 1.08L5.832 10l3.938 3.71a.75.75 0 01.02 1.06z" clip-rule="evenodd" />
             </svg>
           </a>
         </li>
         <li>
-          <a
-            href="{{ url_for('recruit.recruits') }}?page={{ page.page - 1 if page.page > 1 else 1 }}&q={{ page.query }}"
-            class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+          <a href="{{ url_for('recruit.recruits') }}?page={{ page.page - 1 if page.page > 1 else 1 }}&q={{ page.query }}" class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             <span class="sr-only">{{ _("Previous") }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5">
-              <path
-                fill-rule="evenodd"
-                d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-                clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
             </svg>
           </a>
         </li>
         {% for p in page.pages_for_links %}
         <li>
           {% if p == page.page %}
-          <a
-            href="{{ url_for('recruit.recruits') }}?page={{ p }}&q={{ page.query }}"
-            aria-current="page"
-            class="z-10 px-3 py-2 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
-            >{{ p }}</a
-          >
+          <a href="{{ url_for('recruit.recruits') }}?page={{ p }}&q={{ page.query }}" aria-current="page" class="z-10 px-3 py-2 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">{{ p }}</a>
           {% else %}
-          <a
-            href="{{ url_for('recruit.recruits') }}?page={{ p }}&q={{ page.query }}"
-            class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >{{ p }}</a
-          >
+          <a href="{{ url_for('recruit.recruits') }}?page={{ p }}&q={{ page.query }}" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{{ p }}</a>
           {% endif %}
         </li>
         {% endfor %}
         <li>
-          <a
-            href="{{ url_for('recruit.recruits') }}?page={{ page.page + 1 if page.page < page.pages else page.pages }}&q={{ page.query }}"
-            class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+          <a href="{{ url_for('recruit.recruits') }}?page={{ page.page + 1 if page.page < page.pages else page.pages }}&q={{ page.query }}" class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             <span class="sr-only">{{ _("Next") }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
             </svg>
           </a>
         </li>
         <li>
-          <a
-            href="{{ url_for('recruit.recruits') }}?page={{ page.pages }}&q={{ page.query }}"
-            class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+          <a href="{{ url_for('recruit.recruits') }}?page={{ page.pages }}&q={{ page.query }}" class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             <span class="sr-only">{{ _("Last") }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5">
-              <path
-                fill-rule="evenodd"
-                d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd" />
-              <path
-                fill-rule="evenodd"
-                d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
             </svg>
           </a>
         </li>
@@ -225,8 +126,5 @@
 </div>
 <div id="recruit-edit-form"></div>
 {% endblock %} {% block scripts %}
-<script
-  src="{{ url_for('static', filename='js/recruit.js') }}"
-  type="text/javascript"
-  defer></script>
+<script src="{{ url_for('static', filename='js/recruit.js') }}" type="text/javascript" defer></script>
 {% endblock %}

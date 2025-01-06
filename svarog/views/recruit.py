@@ -8,7 +8,9 @@ from flask_babel import _
 from svarog import db
 from svarog import forms as f
 from svarog import models as m
+from svarog import schema as s
 from svarog.controllers.pagination import create_pagination
+from svarog.controllers.recruit import change_recruit_status
 from svarog.logger import log
 
 recruit_blueprint = Blueprint(
@@ -58,9 +60,14 @@ def recruits():
 def get_edit_form(recruit_uuid: str):
     """htmx request"""
     recruit: m.Recruit | None = db.session.scalar(m.Recruit.select().where(m.Recruit.uuid == recruit_uuid))
+
     if not recruit or recruit.is_deleted:
         log(log.ERROR, "Recruit not found by id: [%s]", recruit_uuid)
         return render_template("toast.html", category="danger", message="User not found"), 404
+
+    if s.RecruitStatus(recruit.status) == s.RecruitStatus.APPLIED:
+        change_recruit_status(recruit, s.RecruitStatus.IN_PROGRESS)
+
     form = f.RecruitForm(
         recruit_uuid=recruit.uuid,
         full_name=recruit.full_name,
@@ -78,6 +85,7 @@ def get_edit_form(recruit_uuid: str):
         status=recruit.status,
         comments=recruit.comments,
     )
+
     return render_template("recruit/edit_modal.html", form=form)
 
 
@@ -92,6 +100,9 @@ def save():
             log(log.ERROR, "Not found admin by id : [%s]", form.recruit_uuid.data)
             flash(_("Cannot save user data"), "danger")
             return redirect(url_for("admin.admins"))
+
+        change_recruit_status(recruit, s.RecruitStatus(form.status.data))
+
         recruit.full_name = form.full_name.data
         recruit.birth_date = form.birth_date.data
         recruit.phone = form.phone.data
@@ -104,10 +115,11 @@ def save():
         recruit.have_driver_license = form.have_driver_license.data
         recruit.is_serviceman = form.is_serviceman.data
         recruit.uav_experience = form.uav_experience.data
-        recruit.status = form.status.data
         recruit.comments = form.comments.data
         recruit.save()
+
         flash(_("Recruit data updated!"), "success")
+
         if form.next_url.data:
             return redirect(form.next_url.data)
         return redirect(url_for("recruit.recruits"))

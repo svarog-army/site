@@ -1,7 +1,10 @@
 from random import choice
+from flask_login import current_user
 
 from svarog import models as m
+from svarog import schema as s
 from svarog import db
+from svarog.logger import log
 
 TEST_CITIES = [
     "Київ",
@@ -99,3 +102,16 @@ def fill_test_recruits(num: int = 100):
         )
         db.session.add(recruit)
     db.session.commit()
+
+
+def change_recruit_status(recruit: m.Recruit, status: s.RecruitStatus):
+    recruit.status = status.value
+    recruit.save()
+
+    m.RecruitStatusChangeEvent(
+        recruit_id=recruit.id,
+        user_id=current_user.id,
+        status=status.value,
+    ).save()
+
+    log(log.INFO, "Recruit status change history saved successfully")
