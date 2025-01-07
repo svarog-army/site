@@ -3,7 +3,7 @@ from datetime import datetime
 import sqlalchemy as sa
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_required
-from flask_babel import _
+from flask_babel import _, get_locale
 
 from svarog import db
 from svarog import forms as f
@@ -24,9 +24,19 @@ recruit_blueprint = Blueprint(
 @login_required
 def recruits():
     q = request.args.get("q", type=str, default=None)
-    where = m.Recruit.is_deleted.is_(False)
+    status = request.args.get("status", type=str, default=None)
+    specialty = request.args.get("specialty", type=str, default=None)
+    where = sa.and_(m.Recruit.is_deleted.is_(False))
+
     if q:
-        where = sa.and_(where, m.Recruit.full_name.ilike(f"{q}%") | m.Recruit.phone.ilike(f"{q}%"))  # type: ignore
+        where = sa.and_(where, m.Recruit.full_name.ilike(f"{q}%") | m.Recruit.phone.ilike(f"{q}%"))
+    if status:
+        where = sa.and_(where, m.Recruit.status == status)
+    if specialty:
+        subquery = (
+            sa.select(m.Application.recruit_id).join(m.Application.specialties).where(m.Specialty.uuid == specialty)
+        )
+        where = sa.and_(where, m.Recruit.id.in_(subquery))
 
     query = sa.select(m.Recruit).where(where).order_by(m.Recruit.created_at.desc())
     count_query = sa.select(sa.func.count()).select_from(m.Recruit).where(where)
@@ -46,13 +56,46 @@ def recruits():
         form = f.StatusForm(status=recruit.status.value)
         recruit_forms[recruit.uuid] = form
 
+    specialties = db.session.query(m.Specialty).filter_by(is_deleted=False).all()
+    current_lang = str(get_locale())
+    specialty_choices = [("", "All")] + [
+        (specialty.uuid, specialty.name_uk if current_lang == "uk" else specialty.name) for specialty in specialties
+    ]
+    filter_form = f.FilterForm(search=q, status=status, specialty=specialty, specialty_choices=specialty_choices)
+
     return render_template(
         "recruit/recruits.html",
         recruits=recruits,
         page=pagination,
-        search_query=q,
+        filter_form=filter_form,
         recruit_forms=recruit_forms,
     )
+
+
+@recruit_blueprint.route("/filter", methods=["POST"])
+@login_required
+def filter():
+    specialties = db.session.query(m.Specialty).filter_by(is_deleted=False).all()
+    current_lang = str(get_locale())
+    specialty_choices = [("", "All")] + [
+        (specialty.uuid, specialty.name_uk if current_lang == "uk" else specialty.name) for specialty in specialties
+    ]
+
+    form = f.FilterForm(specialty_choices=specialty_choices)
+    if form.validate_on_submit():
+        query_params = {
+            "q": form.search.data,
+            "status": form.status.data,
+            "specialty": form.specialty.data,
+        }
+        query_params = {key: value for key, value in query_params.items() if value}
+        return redirect(url_for("recruit.recruits", **query_params))
+    else:
+        log(log.ERROR, "Status update errors: [%s]", form.errors)
+        for key, value in form.errors.items():
+            for error in value:
+                flash(f"{error}", "danger")
+        return redirect(request.referrer or url_for("recruit.recruits"))
 
 
 @recruit_blueprint.route("/get-edit-form/<recruit_uuid>", methods=["GET"])
