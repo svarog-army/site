@@ -84,10 +84,10 @@ class FilterForm(FlaskForm):
         "Status",
         choices=[
             ("", "All"),
-            (m.RecruitStatus.APPLIED.value, "APPLIED"),
-            (m.RecruitStatus.IN_PROGRESS.value, "IN PROGRESS"),
-            (m.RecruitStatus.REJECTED.value, "REJECTED"),
-            (m.RecruitStatus.HIRED.value, "HIRED"),
+            (s.RecruitStatus.APPLIED.value, "APPLIED"),
+            (s.RecruitStatus.IN_PROGRESS.value, "IN PROGRESS"),
+            (s.RecruitStatus.REJECTED.value, "REJECTED"),
+            (s.RecruitStatus.HIRED.value, "HIRED"),
         ],
         default="",
     )
