@@ -187,8 +187,7 @@ def update_status(recruit_uuid):
             flash(_("Recruit not found"), "danger")
             return redirect(url_for("recruit.recruits"))
 
-        recruit.status = form.status.data
-        recruit.save()
+        change_recruit_status(recruit, s.RecruitStatus(form.status.data))
 
         flash(_("Recruit status updated!"), "success")
         return redirect(request.referrer or url_for("recruit.recruits"))
