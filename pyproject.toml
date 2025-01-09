@@ -2,6 +2,7 @@
 name = "svarog"
 version = "1.1.21"
 description = ""
+package-mode = false
 authors = ["kostia <saintkos117@gmail.com>"]
 
 [tool.poetry.dependencies]
