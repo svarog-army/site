@@ -45,8 +45,8 @@ fi
 # get current package version
 VERSION=$(node -p "require('./package.json').version")
 
-# update poetry version
-poetry version $VERSION
+# update project version in pyproject.toml
+uvx --from=toml-cli toml set --toml-path=pyproject.toml project.version $VERSION
 
 git commit -am v${VERSION}
 git tag -a -m v${VERSION} v${VERSION}

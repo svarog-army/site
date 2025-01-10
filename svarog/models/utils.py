@@ -20,6 +20,11 @@ class ModelMixin(object):
             db.session.commit()
         return self
 
+    def refresh(self):
+        # Refresh this model from the database.
+        db.session.refresh(self)
+        return self
+
     @classmethod
     def count(cls) -> int:
         # Return count records of model.
