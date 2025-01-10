@@ -22,6 +22,7 @@
     "nplurals",
     "onchange",
     "pydantic",
+    "pyproject",
     "pytest",
     "Ruberoid",
     "signalbot",

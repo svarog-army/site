@@ -10,7 +10,7 @@ TRANSLATIONS_DIR = os.path.join(BASE_DIR, "translations")
 
 def get_version() -> str:
     with open("pyproject.toml", "rb") as f:
-        return tomllib.load(f)["tool"]["poetry"]["version"]
+        return tomllib.load(f)["project"]["version"]
 
 
 class BaseConfig(BaseSettings):
