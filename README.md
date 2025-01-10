@@ -3,7 +3,13 @@
 1. Run
 
 ```bash
-poetry install
+uv sync
+```
+
+If you do not have `uv` installed, you can install it by running:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 2. Create '.env' file (simply copy file .env.sample):

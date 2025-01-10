@@ -28,25 +28,26 @@ jobs:
       - name: Add pipx to PATH
         run: echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      - name: Setup poetry
-        uses: abatilo/actions-poetry@v3
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
-          poetry-version: 1.8.0
+          # Install a specific version of uv.
+          version: "0.5.16"
       - name: Install dependencies
         working-directory: .
         run: |
-          poetry install
+          uv sync
       - name: Lint with ruff
         working-directory: .
         run: |
-          poetry run ruff check .
-          poetry run ruff format --check .
+          uv run ruff check .
+          uv run ruff format --check .
       - name: Run mypy
         working-directory: .
         run: |
-          poetry run mypy
+          uv run mypy
       - name: Run pytest
         working-directory: .
         run: |
-          poetry run pytest test_flask
-          poetry run pytest test_api
+          uv run pytest test_flask
+          uv run pytest test_api
