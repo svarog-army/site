@@ -105,7 +105,6 @@ def create():
             name_en=form.name_en.data,
             name_uk=form.name_uk.data,
             is_active=form.is_active.data == "True",
-            is_deleted=form.is_deleted.data == "True",
         )
         admin.save()
         flash(_("Specialty created!"), "success")
@@ -126,6 +125,10 @@ def delete(specialty_uuid: str):
     if not specialty or specialty.is_deleted:
         log(log.INFO, "There is no specialty with id: [%s]", id)
         return render_template("toast.html", category="danger", message="Specialty not found"), 404
+    # check if specialty is used in any application
+    if specialty.applications:
+        log(log.INFO, "Specialty is used in applications: [%s]", specialty)
+        return render_template("toast.html", category="danger", message="Specialty is used in applications"), 400
     datetime_now = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
     specialty.is_deleted = True
     specialty.name_en = f"deleted_{specialty.name_en}_at_{datetime_now}"
