@@ -27,7 +27,10 @@ class Specialty(db.Model, ModelMixin):
         sa.DateTime,
         default=datetime.now,
     )
+
     is_deleted: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
+
+    is_active: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.true())
 
     # relationships
     applications: orm.Mapped[list["Application"]] = orm.relationship(

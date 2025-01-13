@@ -1,5 +1,6 @@
 from flask import g
 from flask_wtf import FlaskForm
+from sqlalchemy import and_
 from wtforms import DateField, EmailField, RadioField, StringField, SubmitField, widgets
 from wtforms.validators import DataRequired, Email
 from wtforms_sqlalchemy.fields import QuerySelectMultipleField
@@ -56,7 +57,9 @@ class ApplicationForm(FlaskForm):
     )
     applied_specialties = SpecialtyField(
         "Applied Specialties",
-        query_factory=lambda: db.session.query(m.Specialty).where(m.Specialty.is_deleted.is_(False)),
+        query_factory=lambda: db.session.query(m.Specialty).where(
+            and_(m.Specialty.is_deleted.is_(False), m.Specialty.is_active.is_(True))
+        ),
         get_pk=lambda x: x.id,
         get_label=get_specialty_label,
         allow_blank=False,
