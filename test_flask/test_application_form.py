@@ -14,7 +14,7 @@ def test_application_form(client: FlaskClient, runner: FlaskCliRunner):
     application_create_data = {
         "full_name": "test",
         "birth_date": "2000-01-01",
-        "phone": "1234567890",
+        "phone": "+380 (50) 505-05-05",
         "email": "test@gmail.com",
         "city_of_actual_residence": "test",
         "education": "test",

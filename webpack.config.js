@@ -65,12 +65,23 @@ const landingConfig = {
   },
 };
 
+const phoneFormattingConfig = {
+  entry: {
+    main: './src/phone-formatting.ts',
+  },
+  output: {
+    path: path.resolve(__dirname, './svarog/static'),
+    filename: 'js/phone-formatting.js',
+  },
+};
+
 const configs = [
   baseConfig,
   recruitConfig,
   adminConfig,
   cookieConfig,
   landingConfig,
+  phoneFormattingConfig,
 ].map(conf => merge(defaultConfig, conf));
 
 module.exports = configs;

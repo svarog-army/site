@@ -1,5 +1,8 @@
-<section id="application-form-wrapper" class="flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-16 bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
-  <div class="container mx-auto flex flex-col justify-between gap-14 md:flex-row">
+<section
+  id="application-form-wrapper"
+  class="flex gap-14 flex-col lg:flex-row lg:max-w-full lg:px-16 bg-cover bg-bottom bg-no-repeat lg:bg-[url('../../static/img/plane-bg.png')] bg-[url('../../static/img/plane-bg-mobile.png')]">
+  <div
+    class="container mx-auto flex flex-col justify-between gap-14 md:flex-row">
     <div class="flex flex-col gap-5 max-w-[476px] lg:flex-1">
       <h2 class="text-4xl">{{_("FILL THE FORM AND JOIN US")}}</h2>
       <p class="text-base">
@@ -8,7 +11,10 @@
       </p>
     </div>
 
-    <form action="{{url_for('application.create')}}" method="post" class="lg:flex-1 max-w-[640px]">
+    <form
+      action="{{url_for('application.create')}}"
+      method="post"
+      class="lg:flex-1 max-w-[640px]">
       <fieldset class="grid grid-cols-1 gap-8 md:grid-cols-2 items-end">
         {{ application_form.hidden_tag() }}
         <div class="group">
@@ -28,21 +34,35 @@
           </label>
           <!-- prettier-ignore -->
           {{application_form.birth_date(autocomplete="off", class="block w-full text-white/50c focus:text-white bg-transparent border-0 border-b border-b-white/20 focus:outline-none focus-visible:ring-0 focus:border-b-white transition", max="2006-01-01", id="birth_date")}}
-          <span class="absolute bottom-3 right-2 flex items-center pr-3 cursor-pointer pointer-events-none">
-            <svg class="w-4 h-4 text-white/50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v3m5-3v3m5-3v3M1 7h18M5 11h10M2 3h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"></path>
+          <span
+            class="absolute bottom-3 right-2 flex items-center pr-3 cursor-pointer pointer-events-none">
+            <svg
+              class="w-4 h-4 text-white/50"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1v3m5-3v3m5-3v3M1 7h18M5 11h10M2 3h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"></path>
             </svg>
           </span>
         </div>
-
         <div class="group">
-          <!-- prettier-ignore -->
-          <label for="phone" class="block text-white/50  group-focus-within:text-white transition cursor-pointer">{{_("Phone")}}*</label>
-          <!-- prettier-ignore -->
-          {{application_form.phone(autocomplete="off", class="block w-full
-          text-white/50c focus:text-white bg-transparent border-0 border-b
-          border-b-white/20 focus:outline-none focus-visible:ring-0
-          focus:border-b-white transition ")}}
+          <label
+            for="phone"
+            class="block text-white/50 group-focus-within:text-white transition cursor-pointer"
+            >{{_("Phone")}}*</label
+          >
+          {{application_form.phone(id="phone", autocomplete="off",
+          pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}", title="Enter a valid
+          Ukrainian phone number in the format: +380 (XX) XXX-XX-XX",
+          class="block w-full text-white/50c focus:text-white bg-transparent
+          border-0 border-b border-b-white/20 focus:outline-none
+          focus-visible:ring-0 focus:border-b-white transition")}}
         </div>
         <div class="group">
           <!-- prettier-ignore -->
@@ -114,7 +134,11 @@
           focus:border-b-white transition")}}
         </div>
         <div class="group h-full flex flex-col justify-between">
-          <label for="uav_experience" class="block text-white/50 group-focus-within:text-white transition pointer-events-none">{{_("Choose a specialty")}}*</label>
+          <label
+            for="uav_experience"
+            class="block text-white/50 group-focus-within:text-white transition pointer-events-none"
+            >{{_("Choose a specialty")}}*</label
+          >
           <!-- prettier-ignore -->
           <div>
             <details id="specialties-details" class="relative list-none">
@@ -179,7 +203,10 @@
                                   </select>
                                 </div> #}-->
         <div class="flex items-center p-6 space-x-2 lg:col-span-2">
-          <button name="submit" type="submit" class="frame-border w-max relative px-4 text-lg bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
+          <button
+            name="submit"
+            type="submit"
+            class="frame-border w-max relative px-4 text-lg bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
             {{_("Save new application")}}
           </button>
         </div>
@@ -187,3 +214,9 @@
     </form>
   </div>
 </section>
+{% block scripts %}
+<script
+  src="{{ url_for('static', filename='js/phone-formatting.js') }}"
+  type="text/javascript"
+  defer></script>
+{% endblock %}
