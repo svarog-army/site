@@ -51,16 +51,18 @@
             </svg>
           </span>
         </div>
-
         <div class="group">
-          <!-- prettier-ignore -->
-          <label for="phone"
-            class="block text-white/50  group-focus-within:text-white transition cursor-pointer">{{_("Phone")}}*</label>
-          <!-- prettier-ignore -->
-          {{application_form.phone(autocomplete="off", class="block w-full
-          text-white/50c focus:text-white bg-transparent border-0 border-b
-          border-b-white/20 focus:outline-none focus-visible:ring-0
-          focus:border-b-white transition ")}}
+          <label
+            for="phone"
+            class="block text-white/50 group-focus-within:text-white transition cursor-pointer"
+            >{{_("Phone")}}*</label
+          >
+          {{application_form.phone(id="phone", autocomplete="off",
+          pattern="\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}", title="Enter a valid
+          Ukrainian phone number in the format: +380 (XX) XXX-XX-XX",
+          class="block w-full text-white/50c focus:text-white bg-transparent
+          border-0 border-b border-b-white/20 focus:outline-none
+          focus-visible:ring-0 focus:border-b-white transition")}}
         </div>
         <div class="group">
           <!-- prettier-ignore -->
@@ -215,3 +217,9 @@
     </form>
   </div>
 </section>
+{% block scripts %}
+<script
+  src="{{ url_for('static', filename='js/phone-formatting.js') }}"
+  type="text/javascript"
+  defer></script>
+{% endblock %}

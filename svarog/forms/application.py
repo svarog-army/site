@@ -1,6 +1,7 @@
+import re
 from flask import g
 from flask_wtf import FlaskForm
-from wtforms import DateField, EmailField, RadioField, StringField, SubmitField, widgets
+from wtforms import DateField, EmailField, RadioField, StringField, SubmitField, widgets, ValidationError
 from wtforms.validators import DataRequired, Email
 from wtforms_sqlalchemy.fields import QuerySelectMultipleField
 from flask_babel import _
@@ -62,3 +63,7 @@ class ApplicationForm(FlaskForm):
         allow_blank=False,
     )
     submit = SubmitField("Save")
+
+    def validate_phone(form, field):
+        if not re.match(r"^\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}$", field.data):
+            raise ValidationError("Please enter a valid Ukrainian phone number in the format: +380 (XX) XXX-XX-XX")
