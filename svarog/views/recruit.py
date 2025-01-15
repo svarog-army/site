@@ -125,11 +125,11 @@ def get_edit_form(recruit_uuid: str):
         have_driver_license=recruit.have_driver_license,
         is_serviceman=recruit.is_serviceman,
         uav_experience=recruit.uav_experience,
-        status=recruit.status,
+        status=recruit.status.value,
         comments=recruit.comments,
     )
 
-    return render_template("recruit/edit_modal.html", form=form)
+    return render_template("recruit/edit_modal.html", form=form, recruit=recruit)
 
 
 @recruit_blueprint.route("/save", methods=["POST"])

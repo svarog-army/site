@@ -105,7 +105,7 @@ def fill_test_recruits(num: int = 100):
 
 
 def change_recruit_status(recruit: m.Recruit, status: s.RecruitStatus):
-    recruit.status = status.value
+    recruit.status = status
     recruit.save()
 
     m.RecruitStatusChangeEvent(

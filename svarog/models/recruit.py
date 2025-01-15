@@ -38,7 +38,7 @@ class Recruit(db.Model, ModelMixin):
     is_serviceman: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
     uav_experience: orm.Mapped[str] = orm.mapped_column(sa.Text)
 
-    status: orm.Mapped[str] = orm.mapped_column(sa.Enum(s.RecruitStatus), default=s.RecruitStatus.APPLIED)
+    status: orm.Mapped[s.RecruitStatus] = orm.mapped_column(sa.Enum(s.RecruitStatus), default=s.RecruitStatus.APPLIED)
     comments: orm.Mapped[str] = orm.mapped_column(sa.Text, server_default="")
 
     created_at: orm.Mapped[datetime] = orm.mapped_column(
