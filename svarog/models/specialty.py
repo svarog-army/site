@@ -42,3 +42,7 @@ class Specialty(db.Model, ModelMixin):
     @property
     def name(self) -> str:
         return self.name_en
+
+    @property
+    def can_be_deleted(self) -> bool:
+        return not self.applications
