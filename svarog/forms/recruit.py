@@ -37,7 +37,7 @@ class RecruitForm(FlaskForm):
     have_driver_license = StringField(
         "Have Driver License", [DataRequired()], render_kw={"placeholder": "Have Driver License", "readonly": True}
     )
-    is_serviceman = BooleanField("Is Serviceman", render_kw={"readonly": True})
+    is_serviceman = BooleanField("Is Serviceman", render_kw={"disabled": True})
     uav_experience = TextAreaField(
         "UAV Experience", [DataRequired()], render_kw={"placeholder": "UAV Experience", "readonly": True}
     )
