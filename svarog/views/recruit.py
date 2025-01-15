@@ -29,7 +29,7 @@ def recruits():
     where = sa.and_(m.Recruit.is_deleted.is_(False))
 
     if q:
-        where = sa.and_(where, m.Recruit.full_name.ilike(f"{q}%") | m.Recruit.phone.ilike(f"{q}%"))
+        where = sa.and_(where, m.Recruit.full_name.ilike(f"%{q}%") | m.Recruit.phone.ilike(f"%{q}%"))
     if status:
         where = sa.and_(where, m.Recruit.status == status)
     if specialty:
