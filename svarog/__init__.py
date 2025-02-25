@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request, g, redirect, url_for
+from flask import Flask, make_response, render_template, request, g, redirect, url_for
 from flask_login import LoginManager
 from werkzeug.exceptions import HTTPException
 from flask_migrate import Migrate
@@ -84,6 +84,14 @@ def create_app(environment="development"):
     @app.route("/join")
     def invite():
         return redirect("https://forms.gle/rnqPqKBaUQcXtJff8")
+
+    @app.route("/robots.txt")
+    def robots():
+        template = render_template("robots.txt", disallow=CFG.ROBOTS_DISALLOW)
+        res = make_response(template)
+        res.headers["Content-Type"] = "text/plain; charset=utf-8"
+        res.mimetype = "text/plain"
+        return res
 
     # Set up flask login.
     @login_manager.user_loader
