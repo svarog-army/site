@@ -62,6 +62,7 @@ class BaseConfig(BaseSettings):
     SIGNAL_PORT: str
     SIGNAL_FROM: str
     SIGNAL_TO: str
+    ROBOTS_DISALLOW: str = ""
 
     @staticmethod
     def configure(app):
