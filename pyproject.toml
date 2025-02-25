@@ -34,7 +34,6 @@ dev = [
     "mypy>=1.5.1,<2",
     "types-flask-migrate>=4.0.0.6,<5",
     "types-python-jose>=3.3.4.8,<4",
-    "pybabel>=0.0.0.dev0,<0.0.1",
     "ruff>=0.6.8,<0.7",
 ]
 
