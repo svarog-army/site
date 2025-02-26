@@ -78,7 +78,7 @@ def create_app(environment="development"):
     def home():
         if not g.get("lang_code", None):
             get_locale()
-        return redirect(url_for("multilingual.index"))
+        return redirect(url_for("multilingual.index"), code=301)
 
     # invite (/join) route
     @app.route("/join")

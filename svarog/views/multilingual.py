@@ -28,7 +28,7 @@ def before_request():
         adapter = current_app.url_map.bind("")
         try:
             endpoint, args = adapter.match("/uk" + request.full_path.rstrip("/ ?"))
-            return redirect(url_for(endpoint, **args), 301)
+            return redirect(url_for(endpoint, **args), code=301)
         except Exception:
             abort(404)
 

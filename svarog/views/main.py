@@ -33,7 +33,7 @@ def change_locale():
         log(log.INFO, "change_locale: relative_url: [%s]", relative_url)
         endpoint, args = adapter.match(relative_url)
         args["lang_code"] = g.lang_code  # type: ignore
-        return redirect(url_for(endpoint, **args))
+        return redirect(url_for(endpoint, **args), code=301)
     except Exception as e:
         log(log.ERROR, "Failed to change locale: %s", e)
         abort(404)
