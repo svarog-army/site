@@ -25,12 +25,6 @@
       <li><a href="{{ url_for('multilingual.privacy_policy') }}">{{ _("Privacy policy") }}</a></li>
       <li class="text-slate-500"><a href="https://simple2b.com" target="_blank">{{ _("Developed by Simple2B ©") }}</a></li>
     </ul>
-
-    <div>
-      <h3 class="text-2xl mb-6">{{_("CONTACT CENTER")}}</h3>
-      <a class="block mb-3 text-[--main-yellow] underline" href="tel:+380993329022">+380993329022</a>
-      <!-- <a class="block text-[--main-yellow] underline" href="mailto:name@gmail.com">name@gmail.com</a> -->
-    </div>
   </div>
 
   <form class="flex gap-8 lg:justify-self-end" action="{{url_for('main.change_locale')}}" method="post">
