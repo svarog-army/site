@@ -47,6 +47,11 @@ VERSION=$(node -p "require('./package.json').version")
 
 # update project version in pyproject.toml
 uvx --from=toml-cli toml set --toml-path=pyproject.toml project.version $VERSION
+if [ $? -ne 0 ]; then
+#   red colored echo
+    echo -e "\e[31mError: Failed to update project version in pyproject.toml\e[0m"
+  exit 1
+fi
 
 git commit -am v${VERSION}
 git tag -a -m v${VERSION} v${VERSION}
