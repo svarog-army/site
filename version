@@ -49,7 +49,7 @@ VERSION=$(node -p "require('./package.json').version")
 uvx --from=toml-cli toml set --toml-path=pyproject.toml project.version $VERSION
 if [ $? -ne 0 ]; then
 #   red colored echo
-    echo -e "\e[31mError: Failed to update project version in pyproject.toml\e[0m"
+    echo -e "uv tool does not exist??"
   exit 1
 fi
 
