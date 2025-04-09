@@ -24,7 +24,6 @@
           <!-- prettier-ignore -->
           {{_("You will carry out reconnaissance or combat missions, directly guiding the “bird” and witnessing enemy strikes firsthand. You’ll be responsible for launching, flight control, and data collection from the UAV. If you’re passionate about drones, aviation, or simulators, this is your chance to take your skills to the next level!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition shadow-white" src="{{ url_for('static',filename='img/vacancies/pilot.png') }}" draggable="false" alt="pilot" />
@@ -38,7 +37,6 @@
           <!-- prettier-ignore -->
           {{_("Your main task is to operate vehicles for transporting personnel, equipment, and UAVs. You'll be responsible for smooth logistics and ensuring the vehicle’s technical reliability. If you have a category B, C, or D driver's license, this job is for you!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/driver.png') }}" draggable="false" alt="Driver-Electrician" />
@@ -50,7 +48,6 @@
           <!-- prettier-ignore -->
           {{_("Proper preparation of munitions for UAVs is a key task for the success of operations. The Master is responsible for loading explosives and ensuring their safe use. If you have technical training or experience in pyrotechnics, this role offers the opportunity to work with cutting-edge technologies for victory!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/master.png') }}" draggable="false" alt="Master" />
@@ -62,7 +59,6 @@
           <!-- prettier-ignore -->
           {{_("Key responsibilities include preparing UAV for flights, performing maintenance and repairs, monitoring the operation of drones during missions, and troubleshooting issues. Collaborates with operators to optimize mission execution. Technical training and attention to detail are required")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/technician.png') }}" draggable="false" alt="Technician" />
@@ -74,7 +70,6 @@
           <!-- prettier-ignore -->
           {{_("You will work with video footage captured by reconnaissance UAVs, analyzing it to identify enemy equipment and priority targets. If you have a keen eye for detail, enjoy working with visual information, and want to influence combat decisions, this job is for you!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/decryptor.png') }}" draggable="false" alt="Decryptor" />
@@ -86,7 +81,6 @@
           <!-- prettier-ignore -->
           {{_("This position offers the opportunity to work with advanced unmanned aerial vehicles, responsible for their repair and maintenance—from individual components to complex systems. If you have experience in technical repairs and are ready for new challenges, this job will place you at the forefront of modern aviation!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/airman.png') }}" draggable="false" alt="Airman" />
@@ -98,7 +92,6 @@
           <!-- prettier-ignore -->
           {{_("You will detect and neutralize explosive devices, ensuring the safety of your unit and UAV operations. This is not only a critical role on the battlefield but also a guarantee of safety for civilians in the future. This profession will remain vital, helping to mitigate threats even after the war. If you are brave and attentive, this career will allow you to make a positive impact on the world!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/sapper.png') }}" draggable="false" alt="Sapper" />
@@ -112,7 +105,6 @@
           <!-- prettier-ignore -->
           {{_("Your mission is to disrupt the enemy’s plans by blocking their communications and navigation while protecting our units from hostile UAVs. If you’re interested in radio technology and want to counter modern threats, this position will make you a key element in safeguarding our operations!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/reb.png') }}" draggable="false" alt="Radio electronic combat operator" />
@@ -125,12 +117,16 @@
           <!-- prettier-ignore -->
           {{_("The success of combat operations depends on you! As a signalman, you will be responsible for ensuring reliable and uninterrupted communication between units, which is critical for every mission. If you have a background in telecommunications and want to be a key link in coordinating operations, this position is perfect for you!")}}
         </p>
-        {% include 'button.html' %}
       </div>
 
       <img class="sm:block object-cover lg:w-72 h-90 hover:scale-105 transition" src="{{ url_for('static',filename='img/vacancies/driver.png') }}" draggable="false" alt="Signalman" />
     </div>
     #}
+  </div>
+  <div class="p-5"> 
+    <div class="flex justify-center">
+      {% include 'button.html' %}
+    </div>
   </div>
 </div>
 {% block scripts %}
