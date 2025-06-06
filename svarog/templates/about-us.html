@@ -1,110 +1,112 @@
-<div class="container mx-auto py-20 lg:px-16">
-  <div class="flex items-start gap-12">
-    <div class="flex flex-col justify-between gap-16 lg:flex-row">
-      <img
-        class="sm:hidden"
-        src="{{ url_for('static',filename='img/about-us/about-us-mobile-1.png') }}"
-        alt="About us" />
-      <img
-        class="w-1/2 object-contain hidden sm:block"
-        src="{{ url_for('static',filename='img/about-us/about-us-1.png') }}"
-        alt="About us" />
+<div class="w-full h-full bg-no-repeat">
+  <div class="container mx-auto py-20 lg:px-16 bg-no-repeat">
+    <div class="flex items-start gap-12">
+      <div class="flex flex-col justify-between gap-16 lg:flex-row">
+        <img
+          class="sm:hidden"
+          src="{{ url_for('static',filename='img/about-us/about-us-mobile-1.png') }}"
+          alt="About us" />
+        <img
+          class="w-1/2 object-contain hidden sm:block"
+          src="{{ url_for('static',filename='img/about-us/about-us-1.png') }}"
+          alt="About us" />
 
-      <div class="flex flex-col justify-between gap-6">
-        <h2
-          class="text-4xl leading-[54px]">
-          {{_("ABOUT US")}}
-        </h2>
+        <div class="flex flex-col justify-between gap-6">
+          <h2
+            class="text-4xl leading-[54px]">
+            {{_("ABOUT US")}}
+          </h2>
 
-        <p
-          class="leading-5">
-          <!-- prettier-ignore -->
-          {{_("We are the blacksmiths of the future in the newly formed Svarog battalion of Unmanned Systems Forces. Our fire is the source of strength and innovation that drives us forward. As a Phoenix, we are constantly reborn: from a civilian to a warrior, from a novice to a master of unmanned systems. In the flame of challenges, we are hardened, become stronger and ready to defend our common future. Drones, technology and an invincible spirit are our weapons. We are a team united by a single goal. Our path leads to victory through skill, cooperation, and an unquenchable fire in our hearts.")}}
-        </p>
+          <p
+            class="leading-5">
+            <!-- prettier-ignore -->
+            {{_("We are the blacksmiths of the future in the newly formed Svarog battalion of Unmanned Systems Forces. Our fire is the source of strength and innovation that drives us forward. As a Phoenix, we are constantly reborn: from a civilian to a warrior, from a novice to a master of unmanned systems. In the flame of challenges, we are hardened, become stronger and ready to defend our common future. Drones, technology and an invincible spirit are our weapons. We are a team united by a single goal. Our path leads to victory through skill, cooperation, and an unquenchable fire in our hearts.")}}
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  {% include 'separator.html' %}
+    {% include 'separator.html' %}
 
-  <!-- Hide for now -->
+    <!-- Hide for now -->
 
-  <!-- <div class="flex items-start gap-12">
-    <div
-      class="frame-border w-max relative px-4 text-xl bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
-      02
-    </div>
+    <!-- <div class="flex items-start gap-12">
+      <div
+        class="frame-border w-max relative px-4 text-xl bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
+        02
+      </div>
 
-    <div class="flex flex-col justify-between gap-16 lg:flex-row">
-      <img class="sm:hidden" src="{{ url_for('static',filename='img/about-us/about-us-mobile-2.png') }}"
-        alt="About us" />
-      <img class="hidden sm:block" src="{{ url_for('static',filename='img/about-us/about-us-2.png') }}"
-        alt="About us" />
+      <div class="flex flex-col justify-between gap-16 lg:flex-row">
+        <img class="sm:hidden" src="{{ url_for('static',filename='img/about-us/about-us-mobile-2.png') }}"
+          alt="About us" />
+        <img class="hidden sm:block" src="{{ url_for('static',filename='img/about-us/about-us-2.png') }}"
+          alt="About us" />
 
-      <div class="flex flex-col justify-between gap-6">
-        <h2 class="text-4xl leading-[54px]">
-          {{_("WHAT WE DO?")}}
-        </h2>
+        <div class="flex flex-col justify-between gap-6">
+          <h2 class="text-4xl leading-[54px]">
+            {{_("WHAT WE DO?")}}
+          </h2>
 
-        <p class="leading-5">
-          {{_("During the one-week training, you will feel your weaknesses and strengths, you will understand how you
-          can most effectively show yourself in the Armed Forces, and you will get During the one-week training, you
-          will feel your weaknesses and strengths, you will understand how you can most effectively show yourself in the
-          Armed Forces, and you will get During the one-week training, you will feel your weaknesses and strengths, you
-          will understand what you can do most effectively in the Armed Forces and you will get")}}
-        </p>
+          <p class="leading-5">
+            {{_("During the one-week training, you will feel your weaknesses and strengths, you will understand how you
+            can most effectively show yourself in the Armed Forces, and you will get During the one-week training, you
+            will feel your weaknesses and strengths, you will understand how you can most effectively show yourself in the
+            Armed Forces, and you will get During the one-week training, you will feel your weaknesses and strengths, you
+            will understand what you can do most effectively in the Armed Forces and you will get")}}
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  {% include 'separator.html' %}
+    {% include 'separator.html' %}
 
-  <div class="flex items-start gap-12">
-    <div
-      class="frame-border w-max relative px-4 text-xl bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
-      03
-    </div>
+    <div class="flex items-start gap-12">
+      <div
+        class="frame-border w-max relative px-4 text-xl bg-transparent text-[--main-yellow] uppercase border-none cursor-pointer">
+        03
+      </div>
 
-    <div class="flex flex-col justify-between gap-16 lg:flex-row">
-      <img class="sm:hidden" src="{{ url_for('static',filename='img/about-us/about-us-mobile-3.png') }}"
-        alt="About us" />
-      <img class="hidden sm:block" src="{{ url_for('static',filename='img/about-us/about-us-3.png') }}"
-        alt="About us" />
+      <div class="flex flex-col justify-between gap-16 lg:flex-row">
+        <img class="sm:hidden" src="{{ url_for('static',filename='img/about-us/about-us-mobile-3.png') }}"
+          alt="About us" />
+        <img class="hidden sm:block" src="{{ url_for('static',filename='img/about-us/about-us-3.png') }}"
+          alt="About us" />
 
-      <div class="flex flex-col justify-between gap-6">
-        <h2 class="text-4xl leading-[54px]">
-          {{_("OUR MISSION")}}
-        </h2>
+        <div class="flex flex-col justify-between gap-6">
+          <h2 class="text-4xl leading-[54px]">
+            {{_("OUR MISSION")}}
+          </h2>
 
-        <p class="leading-leading-5">
-          {{_("During the one-week training, you will feel your weaknesses and strengths, you will understand how you
-          can most effectively show yourself in the Armed Forces, and you will get During the one-week training, you
-          will feel your weaknesses and strengths, you will understand how you can most effectively show yourself in the
-          Armed Forces, and you will get During the one-week training, you will feel your weaknesses and strengths, you
-          will understand what you can do most effectively in the Armed Forces and you will get")}}
-        </p>
+          <p class="leading-leading-5">
+            {{_("During the one-week training, you will feel your weaknesses and strengths, you will understand how you
+            can most effectively show yourself in the Armed Forces, and you will get During the one-week training, you
+            will feel your weaknesses and strengths, you will understand how you can most effectively show yourself in the
+            Armed Forces, and you will get During the one-week training, you will feel your weaknesses and strengths, you
+            will understand what you can do most effectively in the Armed Forces and you will get")}}
+          </p>
 
-        <ul class="leading-5 flex flex-col gap-5">
-          <li class="flex gap-3">
-            <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
-            <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
-          </li>
-          <li class="flex gap-3">
-            <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
-            <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
-          </li>
-          <li class="flex gap-3">
-            <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
-            <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
-          </li>
-          <li class="flex gap-3">
-            <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
-            <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
-          </li>
-        </ul>
+          <ul class="leading-5 flex flex-col gap-5">
+            <li class="flex gap-3">
+              <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
+              <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
+            </li>
+            <li class="flex gap-3">
+              <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
+              <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
+            </li>
+            <li class="flex gap-3">
+              <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
+              <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
+            </li>
+            <li class="flex gap-3">
+              <img src="{{ url_for('static',filename='img/carbon_drone.svg') }}" alt="Dron icon" />
+              <span>{{_("During the one-week training, you will feel your weaknesses")}}</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  {% include 'separator.html' %} -->
+    {% include 'separator.html' %} -->
+  </div>
 </div>

@@ -17,6 +17,9 @@ export default {
         desktop: '1440px',
         'mobile-range': { min: '320px', max: '1439px' },
       },
+      fontFamily: {
+        ethnocentric: ['Ethnocentric Regular', 'sans-serif'],
+      }
     },
   },
   plugins: [flowbite, tailwindcssIntersect],

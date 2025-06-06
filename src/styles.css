@@ -7,7 +7,7 @@
   --main-yellow-hover: rgba(255, 200, 35, 0.8);
   --main-black: #000000;
   color: white;
-  font-family: 'Ruberoid Regular', sans-serif;
+  font-family: 'UAFSans Regular', sans-serif;
 }
 
 h1,
@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Ruberoid Bold', sans-serif;
+  font-family: 'UAFSans Bold', sans-serif;
 }
 
 .text-danger {
@@ -39,11 +39,6 @@ h6 {
   background-color: transparent;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-
-a:hover {
-  color: var(--main-yellow);
-  text-decoration: underline;
 }
 
 .frame-border::before,
