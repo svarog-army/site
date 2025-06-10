@@ -1,21 +1,32 @@
-<div class="flex flex-col justify-center bg-gray-800 h-screen w-full bg-cover bg-right sm:bg-center bg-no-repeat bg-[url('../../static/img/hero-bg-mobile.png')] sm:bg-[url('../../static/img/hero-bg.png')]">
-  <div class="container lg:mx-auto px-5 lg:px-16">
-    <div class="max-w-[796px]">
-      <h1 class="text-white uppercase font-extrabold text-5xl lg:text-8xl lg:leading-[108px] mb-8">
-        {{_("JOIN OUR FIRE")}}
-      </h1>
+<div
+  class="flex flex-col justify-center bg-black h-screen w-full bg-cover bg-right sm:bg-center">
+  <div class="container mx-auto lg:mx-auto px-5 lg:px-16">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-start">
+      <div class="flex h-[180px] md:h-[400px] col-span-1 order-1">
+        <img
+          class="h-full object-cover mx-auto"
+          src="{{ url_for('static',filename='img/svarog-logo.svg') }}"
+          alt="Svarog logo" />
+      </div>
+      <div
+        class="flex flex-col items-center md:items-start mb-10 order-2 col-span-1 xl:col-span-2">
+        <h1
+          class="text-[--main-grey] text-center md:text-start uppercase font-bold text-2xl lg:text-4xl lg:leading-[40px]">
+          {{_("424 OB BPC")}}
+        </h1>
+        <span
+          class="text-[--main-grey] mb-5 mx-auto md:mx-0 uppercase font-extrabold text-5xl lg:text-[48px] xl:text-[96px] font-ethnocentric">
+          {{_("SVAROG")}}
+        </span>
+        <p
+          class="leading-5 lg:text-xl text-center md:text-start text-[--main-grey] mb-10 px-5 md:px-0">
+          <!-- prettier-ignore -->
+          {{_('Every day, we improve ourselves in order to successfully complete our tasks and save the lives of our brothers.
+          No matter where, no matter with whom!')}}
+        </p>
 
-      <p class="leading-5 lg:text-xl text-white mb-10">
-        <!-- prettier-ignore -->
-        {{_('Join 424-th sbUS "SVAROG" and burn all the enemies of Ukraine with your rage!')}}
-      </p>
-
-      <div class="flex flex-col gap-4 sm:flex-row">
         {% include 'button.html' %}
-
-        <a href="#vacancy-gallery" class="frame-border relative py-3 px-5 bg-transparent text-[--main-yellow] uppercase text-xl border-none cursor-pointer">
-          {{_("VIEW VACANCIES")}}
-        </a>
       </div>
     </div>
   </div>

@@ -17,7 +17,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 3. Run
 
 ```bash
-docker compose up d db
+docker compose up -d db
 ```
 
 to create an docker container

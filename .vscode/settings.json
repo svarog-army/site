@@ -24,7 +24,7 @@
     "pydantic",
     "pyproject",
     "pytest",
-    "Ruberoid",
+    "UAFSans",
     "signalbot",
     "sqlalchemy",
     "svarog",

@@ -1,22 +1,46 @@
 <div class="flex justify-center">
-  <div class="container absolute flex justify-between items-center w-full px-5 lg:px-16 mt-12 text-black">
-    <!-- Hide for now -->
-    <div class="cursor-pointer invisible">
-      <img src="{{url_for('static',filename='img/burger-menu.svg')}}" class="h-8 mr-3" alt="Navigation menu" />
+  <div class="container absolute flex justify-between items-center w-full px-5 lg:px-16 mt-5 md:mt-12  text-black">
+    <div class="flex items-start h-[24px]"> 
+      <img class="h-full object-cover"
+        src="{{ url_for('static',filename='img/svarog-logo.svg') }}"
+        alt="Svarog logo" />
+      <span class="text-xl font-bold ml-2 text-[--main-grey]">
+        424
+      </span>
+      <span class="text-xl font-bold ml-2 text-[--main-grey] hidden sm:inline uppercase">
+        Svarog
+      </span>
     </div>
 
-    <form class="flex gap-8" action="{{url_for('main.change_locale')}}" method="post">
-      {{ form.hidden_tag() }}
-      <div class="hidden sm:block">
-        <label for="local_select" class="sr-only">Language select</label>
-        <select id="local_select" name="locale" onchange="this.form.submit()"
-          class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-none appearance-none focus:outline-none focus:ring-0 peer cursor-pointer">
-          <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="uk" {% if g.lang_code=='uk' %}
-            selected {% endif %}>УКР</option>
-          <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="en" {% if g.lang_code=='en' %}
-            selected {% endif %}>EN</option>
-        </select>
+    <div class="flex items-center gap-4 h-[24px]"> 
+      <div class="flex gap-3">
+        <a href="https://www.instagram.com/svarog.usf/" target="_blank" class="my-auto">
+          <img src="{{ url_for('static',filename='img/instagram.svg') }}" width="24" height="24" alt="Instagram" class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]"/>
+        </a>
+
+        <a href="https://www.youtube.com/@424SVAROG" target="_blank" class="my-auto">
+          <img src="{{ url_for('static',filename='img/youtube.svg') }}" width="24" height="24" alt="Facebook" class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]"/>
+        </a>
+
+        <a href="https://t.me/svarog_usf" target="_blank" class="my-auto">
+          <img src="{{ url_for('static',filename='img/telegram.svg') }}" width="24" height="24" alt="Telegram" class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]"/>
+        </a>
+
       </div>
-    </form>
+      <form class="flex gap-8" action="{{url_for('main.change_locale')}}" method="post">
+        {{ form.hidden_tag() }}
+        <div>
+          <label for="local_select" class="sr-only">Language select</label>
+          <select id="local_select" name="locale" onchange="this.form.submit()"
+            class="block py-2.5 px-0 w-full text-sm text-[--main-grey] bg-transparent border-none appearance-none focus:outline-none focus:ring-0 peer cursor-pointer">
+            <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="uk" {% if g.lang_code=='uk' %}
+              selected {% endif %}>УКР</option>
+            <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="en" {% if g.lang_code=='en' %}
+              selected {% endif %}>EN</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    
   </div>
 </div>
