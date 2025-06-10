@@ -1917,17 +1917,16 @@ input:checked + .toggle-bg {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.bg-\[\#93C40A\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 196 10 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#C2C2C22E\] {
-  background-color: #C2C2C22E;
-}
-
 .bg-\[--main-black\] {
   background-color: var(--main-black);
+}
+
+.bg-\[--main-green\] {
+  background-color: var(--main-green);
+}
+
+.bg-\[--main-grey-opacity\] {
+  background-color: var(--main-grey-opacity);
 }
 
 .bg-\[--main-grey\] {
@@ -2562,6 +2561,7 @@ input:checked + .toggle-bg {
 
 :root {
   --main-grey: #c2c2c2;
+  --main-grey-opacity: #C2C2C22E;
   --main-grey-hover: rgba(194, 194, 194, 0);
   --main-green: #93C40A;
   --main-black: #000000;
@@ -3004,9 +3004,9 @@ select:-webkit-autofill:active {
   background-color: var(--main-grey);
 }
 
-.group:hover .group-hover\:text-\[\#090C10\] {
+.group:hover .group-hover\:text-black {
   --tw-text-opacity: 1;
-  color: rgb(9 12 16 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-gray-900 {
@@ -3587,10 +3587,6 @@ select:-webkit-autofill:active {
 @media (min-width: 1440px) {
   .desktop\:justify-start {
     justify-content: flex-start;
-  }
-
-  .desktop\:text-left {
-    text-align: left;
   }
 }
 

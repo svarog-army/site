@@ -4,6 +4,7 @@
 
 :root {
   --main-grey: #c2c2c2;
+  --main-grey-opacity: #C2C2C22E;
   --main-grey-hover: rgba(194, 194, 194, 0);
   --main-green: #93C40A;
   --main-black: #000000;
