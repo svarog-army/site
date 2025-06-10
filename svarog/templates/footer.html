@@ -1,9 +1,9 @@
-<div class="container mx-auto px-5 lg:px-10 xl:px-16">
+<div class="container mx-auto px-0 md:px-5 lg:px-10 xl:px-16">
  <div class="flex flex-col md:flex-row justify-center bg-black w-full">
-    <div class="w-[320px] md:w-[100%]">
-      <div class="mb-[60px] md:h-[80px] flex flex-col md:flex-row md:justify-between">
+    <div class="w-[100%]">
+      <div class="mb-[30px] md:h-[80px] flex flex-col md:flex-row md:justify-between">
         <div class="flex flex-col md:flex-row md:me-auto">
-          <img class="h-full object-cover mx-auto" src="{{ url_for('static',filename='img/svarog-logo.svg') }}"
+          <img class="h-full max-w-[320px] object-cover mx-auto" src="{{ url_for('static',filename='img/svarog-logo.svg') }}"
               alt="Svarog logo" />
           <div class="flex flex-col">
             <h1
@@ -16,8 +16,18 @@
             </span>
           </div>
         </div>
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row justify-between mx-auto md:mx-0 w-[320px] md:w-auto">
           <div class="flex gap-3">
+
+          <a href="https://t.me/svarog_usf" target="_blank" class="my-auto">
+            <img
+              src="{{ url_for('static',filename='img/telegram.svg') }}"
+              width="24"
+              height="24"
+              alt="Telegram"
+              class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]" />
+          </a>
+
           <a
             href="https://www.instagram.com/svarog.usf/"
             target="_blank"
@@ -31,23 +41,14 @@
           </a>
 
           <a
-            href="https://www.youtube.com/@424SVAROG"
+            href="https://www.facebook.com/svarog.usf"
             target="_blank"
             class="my-auto">
             <img
-              src="{{ url_for('static',filename='img/youtube.svg') }}"
+              src="{{ url_for('static',filename='img/facebook.svg') }}"
               width="24"
               height="24"
               alt="Facebook"
-              class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]" />
-          </a>
-
-          <a href="https://t.me/svarog_usf" target="_blank" class="my-auto">
-            <img
-              src="{{ url_for('static',filename='img/telegram.svg') }}"
-              width="24"
-              height="24"
-              alt="Telegram"
               class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]" />
           </a>
           </div>
@@ -66,6 +67,9 @@
           </form>
         </div>
       </div>
+      <div class="mb-[30px] md:text-end pe-7">
+        <pre class="text-slate-700">{{config.VERSION}}</pre>
+      </div>
     </div>
-  </div>
+ </div>
 </div>
