@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-09 11:35+0000\n"
+"POT-Creation-Date: 2025-06-10 09:05+0000\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -27,63 +27,20 @@ msgstr "Так"
 msgid "No"
 msgstr "Ні"
 
-#: svarog/templates/about-us.html:16
-msgid "ABOUT US"
-msgstr "ПРО НАС"
+#: svarog/templates/about-us.html:6
+msgid "TEAM IS OUR STRENGTH"
+msgstr "КОМАНДА - НАША СИЛА"
 
-#: svarog/templates/about-us.html:22
+#: svarog/templates/about-us.html:10
 msgid ""
-"We are the blacksmiths of the future in the newly formed Svarog battalion"
-" of Unmanned Systems Forces. Our fire is the source of strength and "
-"innovation that drives us forward. As a Phoenix, we are constantly "
-"reborn: from a civilian to a warrior, from a novice to a master of "
-"unmanned systems. In the flame of challenges, we are hardened, become "
-"stronger and ready to defend our common future. Drones, technology and an"
-" invincible spirit are our weapons. We are a team united by a single "
-"goal. Our path leads to victory through skill, cooperation, and an "
-"unquenchable fire in our hearts."
+"We are a young unit within the Unmanned Systems Force. Experienced\n"
+"        commanders and motivated recruits work together here. We are a "
+"community\n"
+"        built on trust, support, and teamwork."
 msgstr ""
-"Ми — ковалі майбутнього в новоствореному батальйоні Сил Безпілотних "
-"Систем «Сварог». Наш вогонь — це джерело сили й інновацій, що рухає нас "
-"вперед. Як Фенікс, ми постійно перероджуємось: з цивільного — у воїна, з "
-"новачка — у майстра безпілотних систем. У полум'ї викликів ми гартуємось,"
-" стаємо сильнішими й готовими захищати наше спільне майбутнє. Дрони, "
-"технології й непереможний дух — це наша зброя. Ми — команда, що об'єднана"
-" єдиною метою. Наш шлях веде до перемоги через майстерність, співпрацю та"
-" незламний вогонь у наших серцях."
-
-#: svarog/templates/about-us.html:46
-msgid "WHAT WE DO?"
-msgstr "ЩО МИ РОБИМО?"
-
-#: svarog/templates/about-us.html:50 svarog/templates/about-us.html:80
-msgid ""
-"During the one-week training, you will feel your weaknesses and "
-"strengths, you will understand how you\n"
-"          can most effectively show yourself in the Armed Forces, and you"
-" will get During the one-week training, you\n"
-"          will feel your weaknesses and strengths, you will understand "
-"how you can most effectively show yourself in the\n"
-"          Armed Forces, and you will get During the one-week training, "
-"you will feel your weaknesses and strengths, you\n"
-"          will understand what you can do most effectively in the Armed "
-"Forces and you will get"
-msgstr ""
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш"
-
-#: svarog/templates/about-us.html:76
-msgid "OUR MISSION"
-msgstr "НАША МІСІЯ"
-
-#: svarog/templates/about-us.html:90 svarog/templates/about-us.html:94
-#: svarog/templates/about-us.html:98 svarog/templates/about-us.html:102
-msgid "During the one-week training, you will feel your weaknesses"
-msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
+"Ми молодий підрозділ в складі Сил безпілотних систем. Тут разом працюють "
+"досвідчені командири та вмотивовані новобранці. Ми спільнота заснована на"
+" довірі, підтримці та командній роботі."
 
 #: svarog/templates/application_modal.html:130
 msgid "Save new application"
@@ -104,9 +61,57 @@ msgstr "SVAROG | 424 окремий батальйон безпілотних с
 msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
-#: svarog/templates/button.html:4
+#: svarog/templates/button.html:10 svarog/templates/button.html:26
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
+
+#: svarog/templates/choose-weapon.html:4
+msgid "Choose your weapon"
+msgstr "Обирай свою зброю"
+
+#: svarog/templates/choose-weapon.html:19
+msgid "FPV"
+msgstr "FPV"
+
+#: svarog/templates/choose-weapon.html:22
+#: svarog/templates/choose-weapon.html:49
+#: svarog/templates/choose-weapon.html:76
+#: svarog/templates/choose-weapon.html:103
+msgid ""
+"During the week-long training, you will discover your strengths\n"
+"          and weaknesses, understand how you can best prove yourself in "
+"the\n"
+"          Armed Forces of Ukraine, and receive During the week-long "
+"training,\n"
+"          you will discover your strengths and weaknesses, understand how"
+" you\n"
+"          can most effectively prove yourself in the Armed Forces of "
+"Ukraine,\n"
+"          and you will receive During the week-long training, you will "
+"discover\n"
+"          your strengths and weaknesses, understand how you can most "
+"effectively\n"
+"          prove yourself in the Armed Forces of Ukraine, and you will\n"
+"          receive."
+msgstr ""
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
+"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+
+#: svarog/templates/choose-weapon.html:46
+msgid "Aerial reconnaissance"
+msgstr "АЕРОРОЗВІДКА"
+
+#: svarog/templates/choose-weapon.html:73
+msgid "HEAVY BOMBERS"
+msgstr "ВАЖКІ БОМБЕРИ"
+
+#: svarog/templates/choose-weapon.html:100
+msgid "IMPACT WING"
+msgstr "УДАРНЕ КРИЛО"
 
 #: svarog/templates/cookie_policy.html:6
 msgid "Cookie Policy for 424bat.army website"
@@ -260,111 +265,26 @@ msgstr "ЗАБОРОНИТИ ВСЕ"
 msgid "ACCEPT ALL COOKIES"
 msgstr "ДОЗВОЛИТИ ВСЕ"
 
-#: svarog/templates/footer.html:5
-msgid "424th SEPARATE UNMANNED SYSTEMS FORCES BATTALION"
-msgstr "424 ОКРЕМИЙ БАТАЛЬЙОН СИЛ БЕЗПІЛОТНИХ СИСТЕМ"
+#: svarog/templates/footer.html:11
+msgid "424th Battalion of USF"
+msgstr "424 батальйон СБС"
 
-#: svarog/templates/footer.html:27
-msgid "Main"
-msgstr "Головна"
+#: svarog/templates/footer.html:15 svarog/templates/hero.html:20
+msgid "SVAROG"
+msgstr "SVAROG"
 
-#: svarog/templates/footer.html:28
-msgid "Cookie policy"
-msgstr "Cookie policy"
+#: svarog/templates/hero.html:16
+msgid "424 OB BPC"
+msgstr "424 ОБ БПС"
 
-#: svarog/templates/footer.html:29
-msgid "Privacy policy"
-msgstr "Політика конфіденційності"
-
-#: svarog/templates/footer.html:30
-msgid "Developed by Simple2B ©"
-msgstr "Розроблено Simple2B ©"
-
-#: svarog/templates/hero.html:5
-msgid "JOIN OUR FIRE"
-msgstr "ДОЛУЧАЙСЯ ДО НАШОГО ВОГНЮ"
-
-#: svarog/templates/hero.html:10
+#: svarog/templates/hero.html:25
 msgid ""
-"Join 424-th sbUS \"SVAROG\" and burn all the enemies of Ukraine with your"
-" rage!"
+"Every day, we improve ourselves in order to successfully complete our "
+"tasks and save the lives of our brothers.\n"
+"          No matter where, no matter with whom!"
 msgstr ""
-"Приєднуйся до 424 обБпС \"SVAROG\" та запечи своєю люттю всіх ворогів "
-"України!"
-
-#: svarog/templates/hero.html:17
-msgid "VIEW VACANCIES"
-msgstr "ПЕРЕГЛЯНУТИ ВАКАНСІЇ"
-
-#: svarog/templates/our-values.html:3
-msgid "OUR VALUES"
-msgstr "НАШІ ЦІННОСТІ"
-
-#: svarog/templates/our-values.html:11
-msgid "SPIRIT"
-msgstr "ДУХ"
-
-#: svarog/templates/our-values.html:15
-msgid ""
-"The fire in our hearts helps us overcome any challenges. Even in the "
-"toughest conditions, we remain steadfast, with unwavering determination, "
-"willpower, and fighting spirit"
-msgstr ""
-"Вогонь в наших серцях допомагає долати будь-які труднощі. Навіть в "
-"найважчих умовах ми зберігаємо рішучість, силу волі та бойовий дух"
-
-#: svarog/templates/our-values.html:25
-msgid "COMMUNITY"
-msgstr "СПІЛЬНОТА"
-
-#: svarog/templates/our-values.html:29
-msgid ""
-"We build our team not just on skills, but on mutual trust and respect. "
-"It's not about where, but with whom! People are our greatest asset, and a"
-" shared goal makes us stronger"
-msgstr ""
-"Ми будуємо команду не лише на основі навичок, а й на взаємній довірі та "
-"повазі. Адже не важливо де, важливо з ким! Люди наша головна цінність, а "
-"спільна мета робить нас сильнішими"
-
-#: svarog/templates/our-values.html:38
-msgid "PREPARATION"
-msgstr "ПІДГОТОВКА"
-
-#: svarog/templates/our-values.html:43
-msgid ""
-"Thorough preparation ensures our success. We provide the highest level of"
-" training so that every fighter is ready for challenges and can act "
-"confidently in any situation"
-msgstr ""
-"Ретельна підготовка гарантує наш успіх. Ми забезпечуємо найвищий рівень "
-"тренувань, щоб кожен боєць був готовий до викликів та діяв впевнено в "
-"будь-якій ситуації"
-
-#: svarog/templates/our-values.html:51
-msgid "INNOVATION"
-msgstr "ІННОВАЦІЇ"
-
-#: svarog/templates/our-values.html:55
-msgid ""
-"We embrace cutting-edge technologies and the latest solutions. Innovation"
-" allows us to stay one step ahead of the enemy and continuously improve"
-msgstr ""
-"Ми використовуємо передові технології та новітні рішення. Інновації "
-"дозволяють нам бути на крок попереду ворога і постійно вдосконалюватися"
-
-#: svarog/templates/our-values.html:63
-msgid "DIGNITY"
-msgstr "ГІДНІСТЬ"
-
-#: svarog/templates/our-values.html:67
-msgid ""
-"We hold human dignity in the highest regard and act with honor. Care, "
-"respect for our comrades, and mutual support form the foundation of our "
-"battalion"
-msgstr ""
-"Ми поважаємо людську гідність і діємо з честю. Турбота, повага до "
-"побратимів і взаємопідтримка є основою нашого батальйону"
+"Щоденно ми вдосконалюємось задля успішного виконання завдань і збереження"
+" життя побратимів"
 
 #: svarog/templates/privacy_policy.html:4
 msgid "Privacy Policy"
@@ -806,8 +726,22 @@ msgstr ""
 msgid "Sign Out"
 msgstr "Вийти"
 
+#: svarog/templates/technologies.html:8
+msgid "SPIRIT OF TECHNOLOGY"
+msgstr "ДУХ ТЕХНОЛОГІЙ"
+
+#: svarog/templates/technologies.html:11
+msgid ""
+"Our battalion specializes in airborne operations. We have a full\n"
+"      arsenal of UAVs: FPV, multi-rotors, heavy bombers, reconnaissance "
+"and\n"
+"      strike wings."
+msgstr ""
+"Наш батальйон спеціалізується на роботі в повітрі. В наявності повний "
+"арсенал БпАК: FPV, мультиротори, важкі бомбери, розвідувальні та ударні "
+"крила.  "
+
 #: svarog/templates/under_construction.html:66
-#, fuzzy
 msgid "424th separate battalion of unmanned systems"
 msgstr "424 окремий батальйон безпілотних систем"
 
@@ -815,153 +749,105 @@ msgstr "424 окремий батальйон безпілотних систе�
 msgid "site is under construction"
 msgstr "сайт знаходиться в стані розробки"
 
-#: svarog/templates/vacancy-gallery.html:3
+#: svarog/templates/vacancies.html:5
 msgid "VACANCIES"
 msgstr "ВАКАНСІЇ"
 
-#: svarog/templates/vacancy-gallery.html:7
-msgid "Scroll"
-msgstr "Прокрутіть"
+#: svarog/templates/vacancies.html:10
+msgid "Management"
+msgstr "Управління"
 
-#: svarog/templates/vacancy-gallery.html:22
-msgid "UAV pilot"
-msgstr "Пілот БпЛА"
+#: svarog/templates/vacancies.html:14
+msgid "Chief of Staff"
+msgstr "Начальник штабу"
 
-#: svarog/templates/vacancy-gallery.html:25
-msgid ""
-"You will carry out reconnaissance or combat missions, directly guiding "
-"the “bird” and witnessing enemy strikes firsthand. You’ll be responsible "
-"for launching, flight control, and data collection from the UAV. If "
-"you’re passionate about drones, aviation, or simulators, this is your "
-"chance to take your skills to the next level!"
-msgstr ""
-"Ти будеш виконувати розвідувальні або бойові завдання безпосередньо "
-"керуючи \"пташкою\" і спостерігаючи ураження ворога від першої особи. Ти "
-"відповідатимеш за запуск, контроль польотів і збір даних з БпЛА. Якщо ти "
-"любиш дрони, авіацію або симулятори, це твоя можливість вивести свої "
-"навички на новий рівень!"
+#: svarog/templates/vacancies.html:15
+msgid "Unit commander"
+msgstr "Командир підрозділу"
 
-#: svarog/templates/vacancy-gallery.html:34
-msgid "Driver-Electrician"
+#: svarog/templates/vacancies.html:17
+msgid "Operational Planning Officer"
+msgstr "Офіцер з оперативного планування"
+
+#: svarog/templates/vacancies.html:19
+msgid "Liaison officer"
+msgstr "Офіцер зв’язку"
+
+#: svarog/templates/vacancies.html:21
+msgid "Officer for moral and psychological support"
+msgstr "Офіцер з морально-психологічного забезпечення"
+
+#: svarog/templates/vacancies.html:24
+msgid "Head of Logistics Department"
+msgstr "Начальник відділу логістики"
+
+#: svarog/templates/vacancies.html:26
+msgid "Personnel Officer"
+msgstr "Офіцер з персоналу"
+
+#: svarog/templates/vacancies.html:32
+msgid "Combat"
+msgstr "Бойові"
+
+#: svarog/templates/vacancies.html:36
+msgid "UAV operator"
+msgstr "Оператор БПЛА"
+
+#: svarog/templates/vacancies.html:37
+msgid "UAV crew commander"
+msgstr "Командир екіпажу БПЛА"
+
+#: svarog/templates/vacancies.html:39
+msgid "Instructor in tactical use of drones"
+msgstr "Інструктор з тактичного застосування дронів"
+
+#: svarog/templates/vacancies.html:42
+msgid "UAV maintenance technician"
+msgstr "Технік обслуговування БПЛА"
+
+#: svarog/templates/vacancies.html:45
+msgid "UAV video surveillance analyst"
+msgstr "Аналітик відеоспостереження БПЛА"
+
+#: svarog/templates/vacancies.html:48
+msgid "Electronic warfare specialist(EW)"
+msgstr "Спеціаліст з електронно"
+
+#: svarog/templates/vacancies.html:50
+msgid "Strike drone operator"
+msgstr "Навідник-оператор ударного дрону"
+
+#: svarog/templates/vacancies.html:56
+msgid "Support"
+msgstr "Підтримка"
+
+#: svarog/templates/vacancies.html:60
+msgid "Driver-electrician"
 msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancy-gallery.html:38
-msgid ""
-"Your main task is to operate vehicles for transporting personnel, "
-"equipment, and UAVs. You'll be responsible for smooth logistics and "
-"ensuring the vehicle’s technical reliability. If you have a category B, "
-"C, or D driver's license, this job is for you!"
-msgstr ""
-"Твоя основна задача — керувати транспортом для перевезення особового "
-"складу, обладнання та БпЛА. Ти відповідатимеш за безперебійну логістику "
-"та технічну справність автомобіля. Якщо у тебе є права категорії B, C або"
-" D, ця робота для тебе!"
+#: svarog/templates/vacancies.html:61
+msgid "Medic"
+msgstr "Медик-санітар"
 
-#: svarog/templates/vacancy-gallery.html:46
-msgid "Master"
-msgstr "Майстер"
+#: svarog/templates/vacancies.html:62
+msgid "Radio operator"
+msgstr "Радіотелефоніст"
 
-#: svarog/templates/vacancy-gallery.html:49
-msgid ""
-"Proper preparation of munitions for UAVs is a key task for the success of"
-" operations. The Master is responsible for loading explosives and "
-"ensuring their safe use. If you have technical training or experience in "
-"pyrotechnics, this role offers the opportunity to work with cutting-edge "
-"technologies for victory!"
-msgstr ""
-"Правильна підготовка боєприпасів для БпЛА — одна з ключових задач для "
-"успіху операцій. Майстер відповідає за спорядження вибухових речовин і "
-"забезпечення їх безпечного використання. Якщо ти маєш технічну підготовку"
-" або досвід у піротехніці, ця робота дасть змогу працювати з передовими "
-"технологіями для перемоги!"
+#: svarog/templates/vacancies.html:63
+msgid "Field kitchen cook"
+msgstr "Кухар польової кухні"
 
-#: svarog/templates/vacancy-gallery.html:57
-msgid "Technician"
-msgstr "Технік"
+#: svarog/templates/vacancies.html:64
+msgid "Weapons technician"
+msgstr "Технік зі зброї"
 
-#: svarog/templates/vacancy-gallery.html:60
-msgid ""
-"Key responsibilities include preparing UAV for flights, performing "
-"maintenance and repairs, monitoring the operation of drones during "
-"missions, and troubleshooting issues. Collaborates with operators to "
-"optimize mission execution. Technical training and attention to detail "
-"are required"
-msgstr ""
-"Основні обов'язки: підготовка БпЛА до польотів, виконання технічного "
-"обслуговування та ремонту, моніторинг роботи апаратів під час місій і "
-"оперативне усунення неполадок. Співпраця з операторами для оптимізації "
-"виконання завдань. Вимагається технічна підготовка та уважність до "
-"деталей"
+#: svarog/templates/vacancies.html:65
+msgid "Engineer-sapper"
+msgstr "Інженер-сапер"
 
-#: svarog/templates/vacancy-gallery.html:68
-msgid "Decryptor"
-msgstr "Дешифрувальник"
-
-#: svarog/templates/vacancy-gallery.html:71
-msgid ""
-"You will work with video footage captured by reconnaissance UAVs, "
-"analyzing it to identify enemy equipment and priority targets. If you "
-"have a keen eye for detail, enjoy working with visual information, and "
-"want to influence combat decisions, this job is for you!"
-msgstr ""
-"Ти будеш працювати з відеоматеріалами, знятими розвідувальними БпЛА, "
-"аналізуючи їх для виявлення ворожої техніки та пріоритетних цілей. Якщо "
-"ти уважний до деталей, любиш працювати з візуальною інформацією і хочеш "
-"впливати на бойові рішення, ця робота для тебе!"
-
-#: svarog/templates/vacancy-gallery.html:79
-msgid "Airman"
-msgstr "Авіаційний Механік"
-
-#: svarog/templates/vacancy-gallery.html:82
-msgid ""
-"This position offers the opportunity to work with advanced unmanned "
-"aerial vehicles, responsible for their repair and maintenance—from "
-"individual components to complex systems. If you have experience in "
-"technical repairs and are ready for new challenges, this job will place "
-"you at the forefront of modern aviation!"
-msgstr ""
-"Ця посада відкриває можливість працювати з передовими безпілотниками, "
-"відповідаючи за їх ремонт і обслуговування — від окремих компонентів до "
-"складних систем. Якщо ти маєш досвід ремонту техніки та готовий до нових "
-"технічних викликів, ця робота дозволить тобі бути на передовій сучасної "
-"авіації!"
-
-#: svarog/templates/vacancy-gallery.html:90
-msgid "Sapper"
-msgstr "Сапер"
-
-#: svarog/templates/vacancy-gallery.html:93
-msgid ""
-"You will detect and neutralize explosive devices, ensuring the safety of "
-"your unit and UAV operations. This is not only a critical role on the "
-"battlefield but also a guarantee of safety for civilians in the future. "
-"This profession will remain vital, helping to mitigate threats even after"
-" the war. If you are brave and attentive, this career will allow you to "
-"make a positive impact on the world!"
-msgstr ""
-"Ти виявлятимеш і знешкоджуватимеш вибухові пристрої, забезпечуючи безпеку"
-" підрозділу та операцій БпЛА. Це не лише критична робота на полі бою, але"
-" й гарантія безпеки цивільних у майбутньому. Ця професія залишатиметься "
-"актуальною, допомагаючи знешкоджувати загрози і після війни. Якщо ти "
-"сміливий і уважний, ця професія дасть тобі змогу змінювати світ на краще!"
-
-#: svarog/templates/vacancy-gallery.html:102
-msgid "Radio electronic combat operator"
-msgstr "Оператор РЕБ"
-
-#: svarog/templates/vacancy-gallery.html:106
-msgid ""
-"Your mission is to disrupt the enemy’s plans by blocking their "
-"communications and navigation while protecting our units from hostile "
-"UAVs. If you’re interested in radio technology and want to counter modern"
-" threats, this position will make you a key element in safeguarding our "
-"operations!"
-msgstr ""
-"Твоя місія — зірвати плани ворога, блокуючи його комунікації, навігацію "
-"та захищаючи наші підрозділи від ворожих БпЛА. Якщо тебе цікавить "
-"радіотехніка і ти хочеш протидіяти сучасним загрозам, на цій посаді ти "
-"станеш ключовим елементом захисту наших операцій!"
+#: svarog/templates/vacancies.html:67
+msgid "Technical repair technician"
+msgstr "Майстер з ремонту техніки"
 
 #: svarog/templates/admin/add_modal.html:67
 msgid "Confirm Password"
@@ -1134,33 +1020,27 @@ msgid "Is there an MOS"
 msgstr "Чи є В/С"
 
 #: svarog/templates/specialty/add_modal.html:45
-#, fuzzy
 msgid "Save new specialty"
 msgstr "Оберіть спеціальність"
 
 #: svarog/templates/specialty/edit_modal.html:8
-#, fuzzy
 msgid "Specialty"
 msgstr "Оберіть спеціальність"
 
 #: svarog/templates/specialty/edit_modal.html:16
-#, fuzzy
 msgid "Name (en)"
 msgstr "Ім'я"
 
 #: svarog/templates/specialty/edit_modal.html:21
-#, fuzzy
 msgid "Name (uk)"
 msgstr "Ім'я"
 
 #: svarog/templates/specialty/edit_modal.html:27
 #: svarog/templates/specialty/specialties.html:35
-#, fuzzy
 msgid "Active"
 msgstr "Дії"
 
 #: svarog/templates/specialty/specialties.html:26
-#, fuzzy
 msgid "Add specialty"
 msgstr "Оберіть спеціальність"
 
@@ -1193,12 +1073,10 @@ msgid "Recruit status updated!"
 msgstr "Статус рекрута оновлений!"
 
 #: svarog/views/specialty.py:73
-#, fuzzy
 msgid "Cannot save specialty data"
 msgstr "Неможливо зберегти дані користувача"
 
 #: svarog/views/specialty.py:79
-#, fuzzy
 msgid "Specialty data updated!"
 msgstr "Інформація про рекрута оновлена!"
 
@@ -1512,4 +1390,371 @@ msgstr ""
 
 #~ msgid "CONTACT CENTER"
 #~ msgstr "КОНТАКТ ЦЕНТР"
+
+#~ msgid "ABOUT US"
+#~ msgstr "ПРО НАС"
+
+#~ msgid ""
+#~ "We are the blacksmiths of the "
+#~ "future in the newly formed Svarog "
+#~ "battalion of Unmanned Systems Forces. "
+#~ "Our fire is the source of strength"
+#~ " and innovation that drives us "
+#~ "forward. As a Phoenix, we are "
+#~ "constantly reborn: from a civilian to"
+#~ " a warrior, from a novice to a"
+#~ " master of unmanned systems. In the"
+#~ " flame of challenges, we are "
+#~ "hardened, become stronger and ready to"
+#~ " defend our common future. Drones, "
+#~ "technology and an invincible spirit are"
+#~ " our weapons. We are a team "
+#~ "united by a single goal. Our path"
+#~ " leads to victory through skill, "
+#~ "cooperation, and an unquenchable fire in"
+#~ " our hearts."
+#~ msgstr ""
+#~ "Ми — ковалі майбутнього в новоствореному"
+#~ " батальйоні Сил Безпілотних Систем "
+#~ "«Сварог». Наш вогонь — це джерело "
+#~ "сили й інновацій, що рухає нас "
+#~ "вперед. Як Фенікс, ми постійно "
+#~ "перероджуємось: з цивільного — у воїна,"
+#~ " з новачка — у майстра безпілотних"
+#~ " систем. У полум'ї викликів ми "
+#~ "гартуємось, стаємо сильнішими й готовими "
+#~ "захищати наше спільне майбутнє. Дрони, "
+#~ "технології й непереможний дух — це "
+#~ "наша зброя. Ми — команда, що "
+#~ "об'єднана єдиною метою. Наш шлях веде"
+#~ " до перемоги через майстерність, співпрацю"
+#~ " та незламний вогонь у наших серцях."
+
+#~ msgid "WHAT WE DO?"
+#~ msgstr "ЩО МИ РОБИМО?"
+
+#~ msgid ""
+#~ "During the one-week training, you "
+#~ "will feel your weaknesses and strengths,"
+#~ " you will understand how you\n"
+#~ "          can most effectively show "
+#~ "yourself in the Armed Forces, and "
+#~ "you will get During the one-week"
+#~ " training, you\n"
+#~ "          will feel your weaknesses and"
+#~ " strengths, you will understand how "
+#~ "you can most effectively show yourself"
+#~ " in the\n"
+#~ "          Armed Forces, and you will "
+#~ "get During the one-week training, "
+#~ "you will feel your weaknesses and "
+#~ "strengths, you\n"
+#~ "          will understand what you can"
+#~ " do most effectively in the Armed "
+#~ "Forces and you will get"
+#~ msgstr ""
+#~ "Протягом тижневого вишколу відчуєш свої "
+#~ "слабкі та сильні сторони, зрозумієш, в"
+#~ " чому найефективніше зможеш проявити себе"
+#~ " в ЗСУ та отримаєш Протягом тижневого"
+#~ " вишколу відчуєш свої слабкі та "
+#~ "сильні сторони, зрозумієш, в чому "
+#~ "найефективніше зможеш проявити себе в "
+#~ "ЗСУ та отримаєш Протягом тижневого "
+#~ "вишколу відчуєш свої слабкі та сильні"
+#~ " сторони, зрозумієш, в чому найефективніше"
+#~ " зможеш проявити себе в ЗСУ та "
+#~ "отримаєш"
+
+#~ msgid "OUR MISSION"
+#~ msgstr "НАША МІСІЯ"
+
+#~ msgid "During the one-week training, you will feel your weaknesses"
+#~ msgstr "Протягом тижневого вишколу відчуєш свої слабкі"
+
+#~ msgid "424th SEPARATE UNMANNED SYSTEMS FORCES BATTALION"
+#~ msgstr "424 ОКРЕМИЙ БАТАЛЬЙОН СИЛ БЕЗПІЛОТНИХ СИСТЕМ"
+
+#~ msgid "Main"
+#~ msgstr "Головна"
+
+#~ msgid "Cookie policy"
+#~ msgstr "Cookie policy"
+
+#~ msgid "Privacy policy"
+#~ msgstr "Політика конфіденційності"
+
+#~ msgid "Developed by Simple2B ©"
+#~ msgstr "Розроблено Simple2B ©"
+
+#~ msgid "JOIN OUR FIRE"
+#~ msgstr "ДОЛУЧАЙСЯ ДО НАШОГО ВОГНЮ"
+
+#~ msgid ""
+#~ "Join 424-th sbUS \"SVAROG\" and burn "
+#~ "all the enemies of Ukraine with "
+#~ "your rage!"
+#~ msgstr ""
+#~ "Приєднуйся до 424 обБпС \"SVAROG\" та"
+#~ " запечи своєю люттю всіх ворогів "
+#~ "України!"
+
+#~ msgid "VIEW VACANCIES"
+#~ msgstr "ПЕРЕГЛЯНУТИ ВАКАНСІЇ"
+
+#~ msgid "OUR VALUES"
+#~ msgstr "НАШІ ЦІННОСТІ"
+
+#~ msgid ""
+#~ "The fire in our hearts helps us"
+#~ " overcome any challenges. Even in the"
+#~ " toughest conditions, we remain steadfast,"
+#~ " with unwavering determination, willpower, "
+#~ "and fighting spirit"
+#~ msgstr ""
+#~ "Вогонь в наших серцях допомагає долати"
+#~ " будь-які труднощі. Навіть в найважчих "
+#~ "умовах ми зберігаємо рішучість, силу "
+#~ "волі та бойовий дух"
+
+#~ msgid "COMMUNITY"
+#~ msgstr "СПІЛЬНОТА"
+
+#~ msgid ""
+#~ "We build our team not just on "
+#~ "skills, but on mutual trust and "
+#~ "respect. It's not about where, but "
+#~ "with whom! People are our greatest "
+#~ "asset, and a shared goal makes us"
+#~ " stronger"
+#~ msgstr ""
+#~ "Ми будуємо команду не лише на "
+#~ "основі навичок, а й на взаємній "
+#~ "довірі та повазі. Адже не важливо "
+#~ "де, важливо з ким! Люди наша "
+#~ "головна цінність, а спільна мета робить"
+#~ " нас сильнішими"
+
+#~ msgid "PREPARATION"
+#~ msgstr "ПІДГОТОВКА"
+
+#~ msgid ""
+#~ "Thorough preparation ensures our success. "
+#~ "We provide the highest level of "
+#~ "training so that every fighter is "
+#~ "ready for challenges and can act "
+#~ "confidently in any situation"
+#~ msgstr ""
+#~ "Ретельна підготовка гарантує наш успіх. "
+#~ "Ми забезпечуємо найвищий рівень тренувань, "
+#~ "щоб кожен боєць був готовий до "
+#~ "викликів та діяв впевнено в будь-якій"
+#~ " ситуації"
+
+#~ msgid "INNOVATION"
+#~ msgstr "ІННОВАЦІЇ"
+
+#~ msgid ""
+#~ "We embrace cutting-edge technologies and"
+#~ " the latest solutions. Innovation allows"
+#~ " us to stay one step ahead of"
+#~ " the enemy and continuously improve"
+#~ msgstr ""
+#~ "Ми використовуємо передові технології та "
+#~ "новітні рішення. Інновації дозволяють нам "
+#~ "бути на крок попереду ворога і "
+#~ "постійно вдосконалюватися"
+
+#~ msgid "DIGNITY"
+#~ msgstr "ГІДНІСТЬ"
+
+#~ msgid ""
+#~ "We hold human dignity in the "
+#~ "highest regard and act with honor. "
+#~ "Care, respect for our comrades, and "
+#~ "mutual support form the foundation of"
+#~ " our battalion"
+#~ msgstr ""
+#~ "Ми поважаємо людську гідність і діємо"
+#~ " з честю. Турбота, повага до "
+#~ "побратимів і взаємопідтримка є основою "
+#~ "нашого батальйону"
+
+#~ msgid "Scroll"
+#~ msgstr "Прокрутіть"
+
+#~ msgid "UAV pilot"
+#~ msgstr "Пілот БпЛА"
+
+#~ msgid ""
+#~ "You will carry out reconnaissance or "
+#~ "combat missions, directly guiding the "
+#~ "“bird” and witnessing enemy strikes "
+#~ "firsthand. You’ll be responsible for "
+#~ "launching, flight control, and data "
+#~ "collection from the UAV. If you’re "
+#~ "passionate about drones, aviation, or "
+#~ "simulators, this is your chance to "
+#~ "take your skills to the next "
+#~ "level!"
+#~ msgstr ""
+#~ "Ти будеш виконувати розвідувальні або "
+#~ "бойові завдання безпосередньо керуючи "
+#~ "\"пташкою\" і спостерігаючи ураження ворога"
+#~ " від першої особи. Ти відповідатимеш "
+#~ "за запуск, контроль польотів і збір "
+#~ "даних з БпЛА. Якщо ти любиш дрони,"
+#~ " авіацію або симулятори, це твоя "
+#~ "можливість вивести свої навички на новий"
+#~ " рівень!"
+
+#~ msgid ""
+#~ "Your main task is to operate "
+#~ "vehicles for transporting personnel, "
+#~ "equipment, and UAVs. You'll be "
+#~ "responsible for smooth logistics and "
+#~ "ensuring the vehicle’s technical reliability."
+#~ " If you have a category B, C,"
+#~ " or D driver's license, this job "
+#~ "is for you!"
+#~ msgstr ""
+#~ "Твоя основна задача — керувати "
+#~ "транспортом для перевезення особового складу,"
+#~ " обладнання та БпЛА. Ти відповідатимеш "
+#~ "за безперебійну логістику та технічну "
+#~ "справність автомобіля. Якщо у тебе є "
+#~ "права категорії B, C або D, ця "
+#~ "робота для тебе!"
+
+#~ msgid "Master"
+#~ msgstr "Майстер"
+
+#~ msgid ""
+#~ "Proper preparation of munitions for UAVs"
+#~ " is a key task for the success"
+#~ " of operations. The Master is "
+#~ "responsible for loading explosives and "
+#~ "ensuring their safe use. If you "
+#~ "have technical training or experience in"
+#~ " pyrotechnics, this role offers the "
+#~ "opportunity to work with cutting-edge"
+#~ " technologies for victory!"
+#~ msgstr ""
+#~ "Правильна підготовка боєприпасів для БпЛА "
+#~ "— одна з ключових задач для успіху"
+#~ " операцій. Майстер відповідає за "
+#~ "спорядження вибухових речовин і забезпечення"
+#~ " їх безпечного використання. Якщо ти "
+#~ "маєш технічну підготовку або досвід у"
+#~ " піротехніці, ця робота дасть змогу "
+#~ "працювати з передовими технологіями для "
+#~ "перемоги!"
+
+#~ msgid ""
+#~ "Key responsibilities include preparing UAV "
+#~ "for flights, performing maintenance and "
+#~ "repairs, monitoring the operation of "
+#~ "drones during missions, and troubleshooting"
+#~ " issues. Collaborates with operators to "
+#~ "optimize mission execution. Technical training"
+#~ " and attention to detail are required"
+#~ msgstr ""
+#~ "Основні обов'язки: підготовка БпЛА до "
+#~ "польотів, виконання технічного обслуговування "
+#~ "та ремонту, моніторинг роботи апаратів "
+#~ "під час місій і оперативне усунення "
+#~ "неполадок. Співпраця з операторами для "
+#~ "оптимізації виконання завдань. Вимагається "
+#~ "технічна підготовка та уважність до "
+#~ "деталей"
+
+#~ msgid "Decryptor"
+#~ msgstr "Дешифрувальник"
+
+#~ msgid ""
+#~ "You will work with video footage "
+#~ "captured by reconnaissance UAVs, analyzing "
+#~ "it to identify enemy equipment and "
+#~ "priority targets. If you have a "
+#~ "keen eye for detail, enjoy working "
+#~ "with visual information, and want to "
+#~ "influence combat decisions, this job is"
+#~ " for you!"
+#~ msgstr ""
+#~ "Ти будеш працювати з відеоматеріалами, "
+#~ "знятими розвідувальними БпЛА, аналізуючи їх"
+#~ " для виявлення ворожої техніки та "
+#~ "пріоритетних цілей. Якщо ти уважний до"
+#~ " деталей, любиш працювати з візуальною "
+#~ "інформацією і хочеш впливати на бойові"
+#~ " рішення, ця робота для тебе!"
+
+#~ msgid "Airman"
+#~ msgstr "Авіаційний Механік"
+
+#~ msgid ""
+#~ "This position offers the opportunity to"
+#~ " work with advanced unmanned aerial "
+#~ "vehicles, responsible for their repair "
+#~ "and maintenance—from individual components to"
+#~ " complex systems. If you have "
+#~ "experience in technical repairs and are"
+#~ " ready for new challenges, this job"
+#~ " will place you at the forefront "
+#~ "of modern aviation!"
+#~ msgstr ""
+#~ "Ця посада відкриває можливість працювати "
+#~ "з передовими безпілотниками, відповідаючи за"
+#~ " їх ремонт і обслуговування — від "
+#~ "окремих компонентів до складних систем. "
+#~ "Якщо ти маєш досвід ремонту техніки "
+#~ "та готовий до нових технічних викликів,"
+#~ " ця робота дозволить тобі бути на "
+#~ "передовій сучасної авіації!"
+
+#~ msgid "Sapper"
+#~ msgstr "Сапер"
+
+#~ msgid ""
+#~ "You will detect and neutralize explosive"
+#~ " devices, ensuring the safety of your"
+#~ " unit and UAV operations. This is "
+#~ "not only a critical role on the"
+#~ " battlefield but also a guarantee of"
+#~ " safety for civilians in the future."
+#~ " This profession will remain vital, "
+#~ "helping to mitigate threats even after"
+#~ " the war. If you are brave and"
+#~ " attentive, this career will allow "
+#~ "you to make a positive impact on"
+#~ " the world!"
+#~ msgstr ""
+#~ "Ти виявлятимеш і знешкоджуватимеш вибухові "
+#~ "пристрої, забезпечуючи безпеку підрозділу та"
+#~ " операцій БпЛА. Це не лише критична"
+#~ " робота на полі бою, але й "
+#~ "гарантія безпеки цивільних у майбутньому. "
+#~ "Ця професія залишатиметься актуальною, "
+#~ "допомагаючи знешкоджувати загрози і після "
+#~ "війни. Якщо ти сміливий і уважний, "
+#~ "ця професія дасть тобі змогу змінювати"
+#~ " світ на краще!"
+
+#~ msgid ""
+#~ "Your mission is to disrupt the "
+#~ "enemy’s plans by blocking their "
+#~ "communications and navigation while protecting"
+#~ " our units from hostile UAVs. If "
+#~ "you’re interested in radio technology "
+#~ "and want to counter modern threats, "
+#~ "this position will make you a key"
+#~ " element in safeguarding our operations!"
+#~ msgstr ""
+#~ "Твоя місія — зірвати плани ворога, "
+#~ "блокуючи його комунікації, навігацію та "
+#~ "захищаючи наші підрозділи від ворожих "
+#~ "БпЛА. Якщо тебе цікавить радіотехніка і"
+#~ " ти хочеш протидіяти сучасним загрозам, "
+#~ "на цій посаді ти станеш ключовим "
+#~ "елементом захисту наших операцій!"
 

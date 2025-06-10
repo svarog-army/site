@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --main-yellow: #ffc823;
-  --main-yellow-hover: rgba(255, 200, 35, 0.8);
+  --main-grey: #c2c2c2;
+  --main-grey-hover: rgba(194, 194, 194, 0);
+  --main-green: #93C40A;
   --main-black: #000000;
   color: white;
   font-family: 'UAFSans Regular', sans-serif;
@@ -202,7 +203,7 @@ form label:hover {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--main-yellow);
+  background: var(--main-green);
 }
 
 .selected-items p {
