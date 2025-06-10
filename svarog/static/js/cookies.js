@@ -5870,24 +5870,6 @@ var checkConsentModeExists = function () {
         return true;
     }
 };
-// Accept all cookies button flow
-var acceptAllCookiesButton = document.querySelector('#acceptAllCookiesButton');
-acceptAllCookiesButton.addEventListener('click', function () {
-    localStorage.setItem('consentMode', 'all');
-    modal.hide();
-});
-// Decline cookies button flow
-var declineCookiesButton = document.querySelector('#declineCookiesButton');
-declineCookiesButton.addEventListener('click', function () {
-    localStorage.setItem('consentMode', 'decline');
-    modal.hide();
-});
-// Close cookies modal button flow
-var closeCookiesModalButton = document.querySelector('#closeCookiesModalButton');
-closeCookiesModalButton.addEventListener('click', function () {
-    localStorage.setItem('consentMode', 'decline');
-    modal.hide();
-});
 
 })();
 
