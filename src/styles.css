@@ -4,10 +4,12 @@
 
 :root {
   --main-grey: #c2c2c2;
+  --main-grey-87: #C2C2C2DE;
   --main-grey-opacity: #C2C2C22E;
   --main-grey-hover: rgba(194, 194, 194, 0);
   --main-green: #93C40A;
   --main-black: #000000;
+  --main-white-87: #FFFFFFDE;
   color: white;
   font-family: 'UAFSans Regular', sans-serif;
 }
@@ -17,7 +19,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.font_uaf_bold {
   font-family: 'UAFSans Bold', sans-serif;
 }
 
