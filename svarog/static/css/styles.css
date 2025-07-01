@@ -1231,6 +1231,10 @@ input:checked + .toggle-bg {
   margin-bottom: 2.5rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1495,6 +1499,10 @@ input:checked + .toggle-bg {
 
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[220px\] {
+  width: 220px;
 }
 
 .w-\[320px\] {
@@ -1967,10 +1975,6 @@ input:checked + .toggle-bg {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black\/50 {
-  background-color: rgb(0 0 0 / 0.5);
-}
-
 .bg-blue-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(235 245 255 / var(--tw-bg-opacity));
@@ -2063,6 +2067,10 @@ input:checked + .toggle-bg {
 
 .bg-yellow-200\/25 {
   background-color: rgb(252 233 106 / 0.25);
+}
+
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
 }
 
 .bg-opacity-40 {
@@ -2297,6 +2305,10 @@ input:checked + .toggle-bg {
   padding-top: 90px;
 }
 
+.pt-\[70px\] {
+  padding-top: 70px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2320,11 +2332,6 @@ input:checked + .toggle-bg {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -2362,9 +2369,9 @@ input:checked + .toggle-bg {
   line-height: 1rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -2612,7 +2619,7 @@ input:checked + .toggle-bg {
   --main-grey-opacity: #C2C2C22E;
   --main-grey-hover: rgba(194, 194, 194, 0);
   --main-green: #93C40A;
-  --main-black: #000000;
+  --main-black: #090C10;
   --main-white-87: #FFFFFFDE;
   color: white;
   font-family: 'UAFSans Regular', sans-serif;
@@ -3365,6 +3372,10 @@ select:-webkit-autofill:active {
     margin-right: 0px;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:me-auto {
     margin-inline-end: auto;
   }
@@ -3415,12 +3426,20 @@ select:-webkit-autofill:active {
     width: max-content;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
   }
 
   .md\:flex-wrap {
@@ -3479,6 +3498,11 @@ select:-webkit-autofill:active {
 
   .md\:text-end {
     text-align: end;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 
