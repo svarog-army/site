@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-24 10:01+0000\n"
+"POT-Creation-Date: 2025-07-01 08:47+0000\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -62,6 +62,7 @@ msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
 #: svarog/templates/button.html:10 svarog/templates/button.html:25
+#: svarog/templates/vacancies.html:105
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
@@ -265,17 +266,22 @@ msgstr "ЗАБОРОНИТИ ВСЕ"
 msgid "ACCEPT ALL COOKIES"
 msgstr "ДОЗВОЛИТИ ВСЕ"
 
-#: svarog/templates/footer.html:13
-msgid "424th Battalion of USF"
-msgstr "424 батальйон СБС"
-
-#: svarog/templates/footer.html:17 svarog/templates/hero.html:20
-msgid "SVAROG"
-msgstr "SVAROG"
+#: svarog/templates/footer.html:14
+msgid ""
+"424th Separate Battalion of Unmanned Systems Svarog Unmanned Systems "
+"Forces"
+msgstr ""
+"424-й окремий батальйон\n"
+"                   безпілотних систем Svarog\n"
+"                   Сил безпілотних систем"
 
 #: svarog/templates/hero.html:16
 msgid "424 OB BPC"
 msgstr "424 ОБ БПС"
+
+#: svarog/templates/hero.html:20
+msgid "SVAROG"
+msgstr "SVAROG"
 
 #: svarog/templates/hero.html:25
 msgid ""
@@ -754,99 +760,99 @@ msgstr "сайт знаходиться в стані розробки"
 msgid "VACANCIES"
 msgstr "ВАКАНСІЇ"
 
-#: svarog/templates/vacancies.html:10
+#: svarog/templates/vacancies.html:12
 msgid "Management"
 msgstr "Управління"
 
-#: svarog/templates/vacancies.html:14
+#: svarog/templates/vacancies.html:17
 msgid "Chief of Staff"
 msgstr "Начальник штабу"
 
-#: svarog/templates/vacancies.html:15
+#: svarog/templates/vacancies.html:18
 msgid "Unit commander"
 msgstr "Командир підрозділу"
 
-#: svarog/templates/vacancies.html:17
+#: svarog/templates/vacancies.html:20
 msgid "Operational Planning Officer"
 msgstr "Офіцер з оперативного планування"
 
-#: svarog/templates/vacancies.html:19
+#: svarog/templates/vacancies.html:23
 msgid "Liaison officer"
 msgstr "Офіцер зв’язку"
 
-#: svarog/templates/vacancies.html:21
+#: svarog/templates/vacancies.html:26
 msgid "Officer for moral and psychological support"
 msgstr "Офіцер з морально-психологічного забезпечення"
 
-#: svarog/templates/vacancies.html:24
+#: svarog/templates/vacancies.html:29
 msgid "Head of Logistics Department"
 msgstr "Начальник відділу логістики"
 
-#: svarog/templates/vacancies.html:26
+#: svarog/templates/vacancies.html:32
 msgid "Personnel Officer"
 msgstr "Офіцер з персоналу"
 
-#: svarog/templates/vacancies.html:32
+#: svarog/templates/vacancies.html:40
 msgid "Combat"
 msgstr "Бойові"
 
-#: svarog/templates/vacancies.html:36
+#: svarog/templates/vacancies.html:45
 msgid "UAV operator"
 msgstr "Оператор БПЛА"
 
-#: svarog/templates/vacancies.html:37
+#: svarog/templates/vacancies.html:47
 msgid "UAV crew commander"
 msgstr "Командир екіпажу БПЛА"
 
-#: svarog/templates/vacancies.html:39
+#: svarog/templates/vacancies.html:50
 msgid "Instructor in tactical use of drones"
 msgstr "Інструктор з тактичного застосування дронів"
 
-#: svarog/templates/vacancies.html:42
+#: svarog/templates/vacancies.html:53
 msgid "UAV maintenance technician"
 msgstr "Технік обслуговування БПЛА"
 
-#: svarog/templates/vacancies.html:45
+#: svarog/templates/vacancies.html:56
 msgid "UAV video surveillance analyst"
 msgstr "Аналітик відеоспостереження БПЛА"
 
-#: svarog/templates/vacancies.html:48
+#: svarog/templates/vacancies.html:59
 msgid "Electronic warfare specialist(EW)"
 msgstr "Спеціаліст з електронно"
 
-#: svarog/templates/vacancies.html:50
+#: svarog/templates/vacancies.html:62
 msgid "Strike drone operator"
 msgstr "Навідник-оператор ударного дрону"
 
-#: svarog/templates/vacancies.html:56
+#: svarog/templates/vacancies.html:70
 msgid "Support"
 msgstr "Підтримка"
 
-#: svarog/templates/vacancies.html:60
+#: svarog/templates/vacancies.html:76
 msgid "Driver-electrician"
 msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancies.html:61
+#: svarog/templates/vacancies.html:78
 msgid "Medic"
 msgstr "Медик-санітар"
 
-#: svarog/templates/vacancies.html:62
+#: svarog/templates/vacancies.html:79
 msgid "Radio operator"
 msgstr "Радіотелефоніст"
 
-#: svarog/templates/vacancies.html:63
+#: svarog/templates/vacancies.html:81
 msgid "Field kitchen cook"
 msgstr "Кухар польової кухні"
 
-#: svarog/templates/vacancies.html:64
+#: svarog/templates/vacancies.html:84
 msgid "Weapons technician"
 msgstr "Технік зі зброї"
 
-#: svarog/templates/vacancies.html:65
+#: svarog/templates/vacancies.html:86
 msgid "Engineer-sapper"
 msgstr "Інженер-сапер"
 
-#: svarog/templates/vacancies.html:67
+#: svarog/templates/vacancies.html:88
 msgid "Technical repair technician"
 msgstr "Майстер з ремонту техніки"
 
@@ -1758,4 +1764,7 @@ msgstr ""
 #~ " ти хочеш протидіяти сучасним загрозам, "
 #~ "на цій посаді ти станеш ключовим "
 #~ "елементом захисту наших операцій!"
+
+#~ msgid "424th Battalion of USF"
+#~ msgstr "424 батальйон СБС"
 
