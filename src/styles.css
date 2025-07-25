@@ -24,6 +24,17 @@ h6,
   font-family: 'UAFSans Bold', sans-serif;
 }
 
+.stats_line::after {
+  content: "";
+    position: absolute;
+    top: 22.5%;
+    height: 55%;
+    width: 1px;
+    background-color: var(--main-grey-opacity);
+    right: 0;
+    transform: translate(50%);
+}
+
 .text-danger {
   color: red;
 }
@@ -226,11 +237,15 @@ form label:hover {
 }
 
 .scroll-top {
+  position: absolute;
+  bottom: -50px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
 .scroll-top.show {
+  position: fixed;
+  bottom: 2rem;
   opacity: 1;
 }
 

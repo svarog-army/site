@@ -48,6 +48,16 @@ def index():
 
     return render_template("index.html", form=FlaskForm(), application_form=form, specialties=specialties)
 
+@multilingual.route("/stats/")
+def stats():
+    if CFG.PARKING:
+        return render_template("under_construction.html", form=FlaskForm())
+
+    form = f.ApplicationForm()
+    specialties = db.session.scalars(sa.select(m.Specialty)).all()
+
+    return render_template("stats.html", form=FlaskForm(), application_form=form, specialties=specialties)
+
 
 @multilingual.route("/cookie_policy/", methods=["GET"])
 def cookie_policy():

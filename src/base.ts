@@ -101,12 +101,15 @@ function updateSelectedItems() {
 }
 
 const scrollTopButton = document.getElementById('scroll-top');
+const statsButton = document.getElementById('stats-button');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
     scrollTopButton?.classList.add('show');
+    statsButton?.classList.add('show');
   } else {
     scrollTopButton?.classList.remove('show');
+    statsButton?.classList.remove('show');
   }
 });
 

@@ -1,0 +1,130 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mx-auto stats mt-[75px]">
+  <div class="stats_head flex flex-row mb-5">
+    <div class="w-[85px] h-[85px]">
+      <img
+        class="h-full object-cover mx-auto"
+        src="{{ url_for('static',filename='img/svarog-logo.svg') }}"
+        alt="Svarog logo" />
+    </div>
+    <div class="flex flex-col justify-center ml-4">
+      <h1 class="text-2xl text-bold font-bold">Звіт SVAROG</h1>
+      <div>
+        <span class="text-2xl">424 ОБ БПС</span>
+        <span class="text-2xl">ЗСУ</span>
+      </div>
+    </div>
+  </div>
+  <div class="my-5">
+    <p
+      class="h-12 mb-2 p-1 text-md bg-[--main-grey-opacity] text-[--main-white-87] rounded-lg flex flex-row justify-between items-center">
+      В період з
+      <span class="ms-1 me-1 text-[--main-green]">24.07 (18:00)</span>
+      по
+      <span class="ms-1 text-[--main-green]">теперішній час</span>
+    </p>
+    <p
+      class="h-12 p-1 text-xl font-bold text-center bg-[--main-grey-opacity] text-[--main-white-87] rounded-lg flex flex-row justify-center items-center">
+      Донбас
+    </p>
+  </div>
+  <div class="stats_result">
+    <div class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
+      <div class="text-center relative stats_line">
+        <span class="text-2xl font-bold">240</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          УРАЖЕНО ЦІЛЕЙ
+        </p>
+      </div>
+      <div class="text-center">
+        <span class="text-2xl font-bold">89</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          В Т.Ч. ЗНИЩЕНО
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
+      <div class="text-center relative stats_line">
+        <span class="text-2xl font-bold">240</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          УРАЖЕНО ЦІЛЕЙ
+        </p>
+      </div>
+      <div class="text-center relative stats_line">
+        <span class="text-2xl font-bold">89</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          В Т.Ч. ЗНИЩЕНО
+        </p>
+      </div>
+      <div class="text-center">
+        <span class="text-2xl font-bold">89</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          В Т.Ч. ЗНИЩЕНО
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
+      <div class="text-center relative stats_line">
+        <span class="text-2xl font-bold">940</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          БОЙОВИХ ВИЛЬОТІВ
+        </p>
+        <div
+          class="h-[1px] w-[80%] mt-3 mx-auto bg-[--main-grey-opacity]"></div>
+      </div>
+      <div class="text-center">
+        <span class="text-2xl font-bold">476</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          ВИЯВЛЕНО ЦІЛЕЙ
+        </p>
+        <div
+          class="h-[1px] w-[80%] mt-3 mx-auto bg-[--main-grey-opacity]"></div>
+      </div>
+      <div class="text-center relative stats_line pt-3">
+        <span class="text-2xl font-bold">432</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          РОЗВІД. ВИЛЬОТІВ
+        </p>
+      </div>
+      <div class="text-center pt-3">
+        <span class="text-2xl font-bold">508</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          УДАРНИХ ВИЛЬОТІВ
+        </p>
+      </div>
+    </div>
+    <div class="bg-[--main-grey-opacity] rounded-lg my-2 py-2 text-center">
+      <span class="text-[0.65rem] font-bold">КУПОЛ ПОКРОВСЬК</span>
+      <div class="grid grid-cols-2">
+        <div class="text-center relative stats_line pt-3">
+          <span class="text-2xl font-bold">52</span>
+          <p class="text-[0.65rem] font-bold text-[--main-green]">
+            ВИЯВЛЕНО FPV ДРОНІВ
+          </p>
+        </div>
+        <div class="text-center pt-3">
+          <span class="text-2xl font-bold">44</span>
+          <p class="text-[0.65rem] font-bold text-[--main-green]">
+            ЗНИЩЕНО
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
+      <div class="text-center relative stats_line">
+        <span class="text-2xl font-bold">20</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          СЕСІЙ МІНУВАННЯ
+        </p>
+
+      </div>
+      <div class="text-center">
+        <span class="text-2xl font-bold">39</span>
+        <p class="text-[0.65rem] font-bold text-[--main-green]">
+          ВСТАНОВЛЕНО МІН
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block scripts %} {% endblock %}

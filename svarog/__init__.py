@@ -84,6 +84,12 @@ def create_app(environment="development"):
     @app.route("/join")
     def invite():
         return redirect("https://forms.gle/rnqPqKBaUQcXtJff8")
+    
+    @app.route("/stats")
+    def stats():
+        if not g.get("lang_code", None):
+            get_locale()
+        return redirect(url_for("multilingual.stats"), code=301)
 
     @app.route("/robots.txt")
     def robots():
