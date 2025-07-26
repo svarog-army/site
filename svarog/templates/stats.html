@@ -3,15 +3,15 @@
   <!-- Stats head -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="stats_head flex flex-row mb-5 md:mb-0">
-      <div class="w-[85px] h-[85px] my-auto">
+      <a href="/" class="w-[85px] h-[85px] my-auto">
         <img
           class="h-full object-cover mx-auto"
           src="{{ url_for('static',filename='img/svarog-logo.svg') }}"
           alt="Svarog logo" />
-      </div>
+      </a>
       <div class="flex flex-col justify-center ml-4">
         <h1 class="text-2xl text-bold font-bold">
-          {{_("Report")}} <span class="font-ethnocentric">{{_("SVAROG")}}</span>
+          {{_("Report")}} <a href="/" class="font-ethnocentric">{{_("SVAROG")}}</a>
         </h1>
         <div>
           <span class="text-2xl">{{_("424 OB BPC")}}</span>
@@ -21,17 +21,13 @@
     </div>
 
     <!-- Stats date and place -->
-    <div class="my-5 md:mb-0">
+    <div class="my-auto">
       <p
-        class="h-12 mb-2 p-1 text-[0.9rem] bg-[--main-grey-opacity] text-[--main-white-87] rounded-lg flex flex-row justify-between sm:justify-center items-center">
+        class="h-12 p-1 text-[0.9rem] bg-[--main-grey-opacity] text-[--main-white-87] rounded-lg flex flex-row justify-between sm:justify-center items-center">
         {{_("Period from")}}
         <span class="ms-1 me-1 text-[--main-green]">24.07 (18:00)</span>
         {{_("to")}}
         <span class="ms-1 text-[--main-green]">{{_("present time")}}</span>
-      </p>
-      <p
-        class="h-12 p-1 text-xl font-bold text-center bg-[--main-grey-opacity] text-[--main-white-87] rounded-lg flex flex-row justify-center items-center">
-        {{_("Donbas")}}
       </p>
     </div>
 
@@ -108,7 +104,6 @@
       </div>
 
       <div class="bg-[--main-grey-opacity] rounded-lg my-2 py-2 text-center">
-        <span class="text-[0.65rem] font-bold">{{_("OPERATION 'DOME POKROVSK'")}}</span>
         <div class="grid grid-cols-2">
           <div class="text-center relative stats_line pt-3">
             <span class="text-2xl font-bold">52</span>
@@ -467,4 +462,5 @@
     </div>
   </div>
 </div>
+{% include 'scroll_top.html' %}
 {% endblock %} {% block scripts %} {% endblock %}
