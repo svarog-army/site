@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-01 08:47+0000\n"
+"POT-Creation-Date: 2025-07-26 17:25+0000\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -275,11 +275,11 @@ msgstr ""
 "                   безпілотних систем Svarog\n"
 "                   Сил безпілотних систем"
 
-#: svarog/templates/hero.html:16
+#: svarog/templates/hero.html:16 svarog/templates/stats.html:17
 msgid "424 OB BPC"
 msgstr "424 ОБ БПС"
 
-#: svarog/templates/hero.html:20
+#: svarog/templates/hero.html:20 svarog/templates/stats.html:14
 msgid "SVAROG"
 msgstr "SVAROG"
 
@@ -732,6 +732,153 @@ msgstr ""
 #: svarog/templates/sidebar.html:43
 msgid "Sign Out"
 msgstr "Вийти"
+
+#: svarog/templates/stats-button.html:2 svarog/templates/stats-button.html:3
+#: svarog/templates/stats-button.html:7
+msgid "Statistics"
+msgstr "Статистика"
+
+#: svarog/templates/stats.html:14
+msgid "Report"
+msgstr "Звіт"
+
+#: svarog/templates/stats.html:18
+msgid "AFoU"
+msgstr "ЗСУ"
+
+#: svarog/templates/stats.html:27
+msgid "Period from"
+msgstr "В період з"
+
+#: svarog/templates/stats.html:29
+msgid "to"
+msgstr "по"
+
+#: svarog/templates/stats.html:30
+msgid "present time"
+msgstr "теперішній час"
+
+#: svarog/templates/stats.html:43
+msgid "DAMAGED TARGETS"
+msgstr "УРАЖЕНО ЦІЛЕЙ"
+
+#: svarog/templates/stats.html:49 svarog/templates/stats.html:116
+#: svarog/templates/stats.html:150
+msgid "INCL. DESTROYED"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats.html:58
+#, fuzzy
+msgid "ROF PERSONNEL"
+msgstr "Офіцер з персоналу"
+
+#: svarog/templates/stats.html:63
+msgid "INCL. KILLED"
+msgstr "В Т.Ч. ВБИТИХ"
+
+#: svarog/templates/stats.html:69
+msgid "INCL. WOUNDED"
+msgstr "В Т.Ч. ВБИТИХ"
+
+#: svarog/templates/stats.html:79
+msgid "COMBAT FLIGHTS"
+msgstr "БОЙОВИХ ВИЛЬОТІВ"
+
+#: svarog/templates/stats.html:87
+msgid "TARGETS DETECTED"
+msgstr "ВИЯВЛЕНО ЦІЛЕЙ"
+
+#: svarog/templates/stats.html:95
+msgid "RECON MISSIONS"
+msgstr "РОЗВІД. ВИЛЬОТІВ"
+
+#: svarog/templates/stats.html:101
+msgid "STRIKE MISSIONS"
+msgstr "ДАРНИХ ВИЛЬОТІВ\""
+
+#: svarog/templates/stats.html:111
+msgid "FPV DRONES DETECTED"
+msgstr "ВИЯВЛЕНО FPV ДРОНІВ"
+
+#: svarog/templates/stats.html:126
+msgid "REMOTE MINE-LAYING SESSIONS"
+msgstr "СЕСІЙ МІНУВАННЯ"
+
+#: svarog/templates/stats.html:132
+msgid "AT MINES LAYED"
+msgstr "ВСТАНОВЛЕНО МІН"
+
+#: svarog/templates/stats.html:144
+msgid "DAMAGED"
+msgstr "УРАЖЕНО"
+
+#: svarog/templates/stats.html:162
+msgid "Tanks"
+msgstr "Танки"
+
+#: svarog/templates/stats.html:177 svarog/templates/stats.html:180
+msgid "MLRS + SAM"
+msgstr "РСЗВ + ЗРК"
+
+#: svarog/templates/stats.html:195 svarog/templates/stats.html:198
+msgid "Self-propelled artillery"
+msgstr "САУ"
+
+#: svarog/templates/stats.html:213 svarog/templates/stats.html:216
+msgid "AFV + APC"
+msgstr "ББМ + БМП + БТР"
+
+#: svarog/templates/stats.html:231 svarog/templates/stats.html:234
+msgid "Cars + trucks"
+msgstr "ЛАТ + ВАТ"
+
+#: svarog/templates/stats.html:249 svarog/templates/stats.html:252
+msgid "Motorcycles"
+msgstr "Мотоцикли"
+
+#: svarog/templates/stats.html:267 svarog/templates/stats.html:270
+msgid "Buggies"
+msgstr "Баггі військові"
+
+#: svarog/templates/stats.html:285 svarog/templates/stats.html:288
+msgid "ROF personnel"
+msgstr "ОС РОВ"
+
+#: svarog/templates/stats.html:303 svarog/templates/stats.html:306
+msgid "Guns + howitzers"
+msgstr "Гармати + гаубиці"
+
+#: svarog/templates/stats.html:321 svarog/templates/stats.html:324
+msgid "Mortars"
+msgstr "Міномети"
+
+#: svarog/templates/stats.html:339 svarog/templates/stats.html:342
+msgid "Air defence systems"
+msgstr "ЗУ"
+
+#: svarog/templates/stats.html:357 svarog/templates/stats.html:360
+msgid "EW + Radars"
+msgstr "РЕБ + РЛС техніка"
+
+#: svarog/templates/stats.html:375 svarog/templates/stats.html:378
+msgid "Ammunition caches + storage facilities"
+msgstr "Склади БК та майна"
+
+#: svarog/templates/stats.html:393 svarog/templates/stats.html:396
+msgid "Shelters + dugouts"
+msgstr "Укриття + бліндажі"
+
+#: svarog/templates/stats.html:411 svarog/templates/stats.html:414
+msgid "Fixed-wing UAV"
+msgstr "Ворожі крила"
+
+#: svarog/templates/stats.html:429 svarog/templates/stats.html:433
+msgid "Antennas, cameras, network equipment"
+msgstr "Антени, камери, мереж. обладнання"
+
+#: svarog/templates/stats.html:449 svarog/templates/stats.html:452
+msgid "Other"
+msgstr "Інше"
 
 #: svarog/templates/technologies.html:8
 msgid "SPIRIT OF TECHNOLOGY"
@@ -1767,4 +1914,118 @@ msgstr ""
 
 #~ msgid "424th Battalion of USF"
 #~ msgstr "424 батальйон СБС"
+
+#~ msgid "ZSU"
+#~ msgstr "ЗСУ"
+
+#~ msgid "Report"
+#~ msgstr "Звіт"
+
+#~ msgid "AFoU"
+#~ msgstr "ЗСУ"
+
+#~ msgid "Period from"
+#~ msgstr "В період з"
+
+#~ msgid "to"
+#~ msgstr "до"
+
+#~ msgid "present time"
+#~ msgstr "теперішній час"
+
+#~ msgid "Donbas"
+#~ msgstr "Донбас"
+
+#~ msgid "DAMAGED TARGETS"
+#~ msgstr "УРАЖЕНО ЦІЛЕЙ"
+
+#~ msgid "INCL. DESTROYED"
+#~ msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#~ msgid "ROF PERSONNEL"
+#~ msgstr "Офіцер з персоналу"
+
+#~ msgid "INCL. KILLED"
+#~ msgstr "В Т.Ч. ВБИТИХ"
+
+#~ msgid "INCL. WOUNDED"
+#~ msgstr "В Т.Ч. ПОРАНЕНИХ"
+
+#~ msgid "COMBAT FLIGHTS"
+#~ msgstr "БОЙОВИХ ВИЛЬОТІВ"
+
+#~ msgid "TARGETS DETECTED"
+#~ msgstr "ВИЯВЛЕНО ЦІЛЕЙ"
+
+#~ msgid "RECON MISSIONS"
+#~ msgstr "РОЗВІД. ВИЛЬОТІВ"
+
+#~ msgid "STRIKE MISSIONS"
+#~ msgstr "УДАРНИХ ВИЛЬОТІВ"
+
+#~ msgid "FPV DRONES DETECTED"
+#~ msgstr "ВИЯВЛЕНО FPV ДРОНІВ"
+
+#~ msgid "REMOTE MINE-LAYING SESSIONS"
+#~ msgstr "СЕСІЙ МІНУВАННЯ"
+
+#~ msgid "AT MINES LAYED"
+#~ msgstr "ВСТАНОВЛЕНО МІН"
+
+#~ msgid "DAMAGED"
+#~ msgstr "УРАЖЕНО"
+
+#~ msgid "Tanks"
+#~ msgstr "Танки"
+
+#~ msgid "MLRS + SAM"
+#~ msgstr "РСЗВ + ЗРК"
+
+#~ msgid "Self-propelled artillery"
+#~ msgstr "САУ"
+
+#~ msgid "AFV + APC"
+#~ msgstr "ББМ + БМП + БТР"
+
+#~ msgid "Cars + trucks"
+#~ msgstr "ЛАТ + ВАТ"
+
+#~ msgid "Motorcycles"
+#~ msgstr "Мотоцикли"
+
+#~ msgid "Buggies"
+#~ msgstr "Баггі військові"
+
+#~ msgid "ROF personnel"
+#~ msgstr "ОС РОВ"
+
+#~ msgid "Guns + howitzers"
+#~ msgstr "Гармати + гаубиці"
+
+#~ msgid "Mortars"
+#~ msgstr "Міномети"
+
+#~ msgid "Air defence systems"
+#~ msgstr "ЗУ"
+
+#~ msgid "EW + Radars"
+#~ msgstr "РЕБ + РЛС техніка"
+
+#~ msgid "Ammunition caches + storage facilities"
+#~ msgstr "Склади БК та майна"
+
+#~ msgid "Shelters + dugouts"
+#~ msgstr "Укриття + бліндажі"
+
+#~ msgid "Fixed-wing UAV"
+#~ msgstr "Ворожі крила"
+
+#~ msgid "Antennas, cameras, network equipment"
+#~ msgstr "Антени, камери, мереж. обладнання"
+
+#~ msgid "Other"
+#~ msgstr "Інше"
+
+#~ msgid "OPERATION 'DOME POKROVSK'"
+#~ msgstr "КУПОЛ ПОКРОВСЬК"
 
