@@ -1,23 +1,22 @@
-from typing import Self
 from datetime import datetime, date, timezone
 
-from flask_login import UserMixin, AnonymousUserMixin
 import sqlalchemy as sa
 from sqlalchemy import orm
-from werkzeug.security import generate_password_hash, check_password_hash
 
 from svarog.database import db
 from .utils import ModelMixin, gen_uuid
-from svarog.logger import log
-from svarog import schema as s
 
 
-def utcnow():
+def utcnow() -> datetime:
     return datetime.now(timezone.utc)
 
 
-class DayStats(db.Model, UserMixin, ModelMixin):
-    __tablename__ = "users"
+def current_date() -> date:
+    return utcnow().date()
+
+
+class DayStats(db.Model, ModelMixin):
+    __tablename__ = "day_stats"
 
     id: orm.Mapped[int] = orm.mapped_column(primary_key=True)
     uuid: orm.Mapped[str] = orm.mapped_column(sa.String(32), default=gen_uuid, index=True)
@@ -36,50 +35,27 @@ class DayStats(db.Model, UserMixin, ModelMixin):
         onupdate=utcnow,
     )
 
-
-
-    @property
-    def password(self):
-        return self.password_hash
-
-    @password.setter
-    def password(self, password):
-        self.password_hash = generate_password_hash(password)
-
-    @classmethod
-    def authenticate(
-        cls,
-        user_id,
-        password,
-        session: orm.Session | None = None,
-    ) -> Self | None:
-        if not session:
-            session = db.session
-        query = cls.select().where(
-            (sa.func.lower(cls.username) == sa.func.lower(user_id))
-            | (sa.func.lower(cls.email) == sa.func.lower(user_id))
-        )
-        assert session
-        user: Self | None = session.scalar(query)
-        if not user or user.is_deleted:
-            log(log.WARNING, "user:[%s] not found", user_id)
-        elif check_password_hash(user.password, password):
-            return user
-        return None
-
-    def reset_password(self):
-        self.password_hash = ""
-        self.reset_password_uid = gen_uuid()
-        self.save()
+    tanks: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Tanks
+    mlrss: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # MLRS + SAM
+    spas: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Self-propelled artillery
+    afvs: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # AFV + APC
+    cars: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Cars + trucks
+    motorcycles: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Motorcycles
+    buggies: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Buggies
+    rofs: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # ROF personnel
+    guns: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Guns + howitzers
+    mortars: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Mortars
+    adss: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Air defense systems
+    radars: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # EW + Radars
+    ammos: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Ammunition caches + storage facilities
+    shelters: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Shelters + dugouts
+    uavs: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Fixed-wing UAV
+    antennas: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Antennas, cameras, network equipment
+    other: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Other
 
     def __repr__(self):
-        return f"<{self.id}: {self.username},{self.email}>"
-
-    @property
-    def json(self):
-        u = s.User.model_validate(self)
-        return u.model_dump_json()
-
-
-class AnonymousUser(AnonymousUserMixin):
-    pass
+        return f"<{self.id}: {self.day},{self.email}>"
