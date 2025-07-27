@@ -30,6 +30,7 @@ def create_app(environment="development"):
         admin_blueprint,
         recruit_blueprint,
         specialty_blueprint,
+        stats_blueprint,
     )
     from svarog import models as m
 
@@ -66,6 +67,8 @@ def create_app(environment="development"):
     )
 
     # Register blueprints.
+    admin_blueprint.register_blueprint(stats_blueprint)
+
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
     app.register_blueprint(application_blueprint)
@@ -84,7 +87,7 @@ def create_app(environment="development"):
     @app.route("/join")
     def invite():
         return redirect("https://forms.gle/rnqPqKBaUQcXtJff8")
-    
+
     @app.route("/stats")
     def stats():
         if not g.get("lang_code", None):

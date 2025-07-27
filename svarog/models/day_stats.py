@@ -34,6 +34,7 @@ class DayStats(db.Model, ModelMixin):
         default=utcnow,
         onupdate=utcnow,
     )
+    is_deleted: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
 
     tanks: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Tanks
     mlrss: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # MLRS + SAM

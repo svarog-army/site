@@ -6,3 +6,4 @@ from .multilingual import multilingual
 from .admin import admin_blueprint
 from .recruit import recruit_blueprint
 from .specialty import specialty_blueprint
+from .stats import stats_blueprint

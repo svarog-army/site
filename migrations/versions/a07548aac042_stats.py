@@ -1,8 +1,8 @@
 """stats
 
-Revision ID: 5404998caeb0
+Revision ID: a07548aac042
 Revises: 89c3410b5d6d
-Create Date: 2025-07-27 13:17:26.514742
+Create Date: 2025-07-27 15:25:36.893919
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '5404998caeb0'
+revision = 'a07548aac042'
 down_revision = '89c3410b5d6d'
 branch_labels = None
 depends_on = None
@@ -24,6 +24,7 @@ def upgrade():
     sa.Column('day', sa.Date(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
+    sa.Column('is_deleted', sa.Boolean(), server_default=sa.text('false'), nullable=False),
     sa.Column('tanks', sa.Integer(), nullable=True),
     sa.Column('mlrss', sa.Integer(), nullable=True),
     sa.Column('spas', sa.Integer(), nullable=True),
