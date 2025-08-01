@@ -92,6 +92,7 @@ const configs = [
   cookieConfig,
   landingConfig,
   phoneFormattingConfig,
+  statsConfig,
 ].map(conf => merge(defaultConfig, conf));
 
 module.exports = configs;

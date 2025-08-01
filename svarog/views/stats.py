@@ -1,3 +1,5 @@
+from datetime import date
+
 import sqlalchemy as sa
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_required
@@ -5,10 +7,10 @@ from flask_login import login_required
 
 from svarog import db
 
-# from svarog import forms as f
+from svarog import forms as f
 from svarog import models as m
 
-# from svarog import schema as s
+from svarog import schema as s
 from svarog.controllers.pagination import create_pagination
 from svarog.logger import log
 
@@ -22,22 +24,17 @@ stats_blueprint = Blueprint(
 @stats_blueprint.route("/", methods=["GET"])
 @login_required
 def stats():
-    q = request.args.get("q", type=str, default=None)
-    period = request.args.get("period", type=str, default=None)
-    where = sa.and_(m.DayStats.is_deleted.is_(False))
+    period = s.Period(
+        start=request.args.get("start", type=str, default=s.date_year_ago().strftime("%Y-%m-%d")),
+        end=request.args.get("end", type=str, default=date.today().strftime("%Y-%m-%d")),
+    )
 
-    if q:
-        # where = sa.and_(where, m.Recruit.full_name.ilike(f"%{q}%") | m.Recruit.phone.ilike(f"%{q}%"))
-        # TODO: Implement search by day
-        pass
-    if period:
-        # TODO: Implement period filtering logic
-        # where = sa.and_(where, m.Recruit.status == status)
-        pass
-
+    where = sa.and_(m.DayStats.is_deleted.is_(False), m.DayStats.day >= period.start, m.DayStats.day <= period.end)
     query = sa.select(m.DayStats).where(where).order_by(m.DayStats.created_at.desc())
     count_query = sa.select(sa.func.count()).select_from(m.DayStats).where(where)
-    pagination = create_pagination(total=db.session.scalar(count_query))
+    total = db.session.scalar(count_query)
+    assert total is not None, "Total count should not be None"
+    pagination = create_pagination(total=total)
 
     log(log.INFO, "Returning stats: [%s]", db.session.scalar(count_query))
 
@@ -51,7 +48,17 @@ def stats():
         "stats/stats.html",
         stats=stats,
         page=pagination,
+        begin_stats_period=period.start,
+        end_stats_period=period.end,
     )
+
+
+@stats_blueprint.route("/get_add_form", methods=["GET"])
+@login_required
+def get_add_form():
+    """htmx request"""
+    form = f.NewStatsForm()
+    return render_template("stats/add_modal.html", form=form)
 
 
 # @stats_blueprint.route("/filter", methods=["POST"])
