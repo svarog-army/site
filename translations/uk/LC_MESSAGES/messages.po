@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-26 17:25+0000\n"
+"POT-Creation-Date: 2025-08-01 11:39+0000\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -768,9 +768,8 @@ msgid "INCL. DESTROYED"
 msgstr "В Т.Ч. ЗНИЩЕНО"
 
 #: svarog/templates/stats.html:58
-#, fuzzy
 msgid "ROF PERSONNEL"
-msgstr "Офіцер з персоналу"
+msgstr "ОС РОВ"
 
 #: svarog/templates/stats.html:63
 msgid "INCL. KILLED"
@@ -794,7 +793,7 @@ msgstr "РОЗВІД. ВИЛЬОТІВ"
 
 #: svarog/templates/stats.html:101
 msgid "STRIKE MISSIONS"
-msgstr "ДАРНИХ ВИЛЬОТІВ\""
+msgstr "УДАРНИХ ВИЛЬОТІВ"
 
 #: svarog/templates/stats.html:111
 msgid "FPV DRONES DETECTED"
@@ -816,9 +815,13 @@ msgstr "УРАЖЕНО"
 msgid "Tanks"
 msgstr "Танки"
 
-#: svarog/templates/stats.html:177 svarog/templates/stats.html:180
-msgid "MLRS + SAM"
-msgstr "РСЗВ + ЗРК"
+#: svarog/templates/stats.html:177
+msgid "MLRS + SAM CU"
+msgstr "РСЗВ + ЗРК + ЗУ"
+
+#: svarog/templates/stats.html:180
+msgid "MLRS + SAM + CU"
+msgstr "РСЗВ + ЗРК + ЗУ"
 
 #: svarog/templates/stats.html:195 svarog/templates/stats.html:198
 msgid "Self-propelled artillery"
@@ -852,31 +855,27 @@ msgstr "Гармати + гаубиці"
 msgid "Mortars"
 msgstr "Міномети"
 
-#: svarog/templates/stats.html:339 svarog/templates/stats.html:342
-msgid "Air defence systems"
-msgstr "ЗУ"
-
-#: svarog/templates/stats.html:357 svarog/templates/stats.html:360
+#: svarog/templates/stats.html:340 svarog/templates/stats.html:343
 msgid "EW + Radars"
 msgstr "РЕБ + РЛС техніка"
 
-#: svarog/templates/stats.html:375 svarog/templates/stats.html:378
+#: svarog/templates/stats.html:358 svarog/templates/stats.html:361
 msgid "Ammunition caches + storage facilities"
 msgstr "Склади БК та майна"
 
-#: svarog/templates/stats.html:393 svarog/templates/stats.html:396
+#: svarog/templates/stats.html:376 svarog/templates/stats.html:379
 msgid "Shelters + dugouts"
 msgstr "Укриття + бліндажі"
 
-#: svarog/templates/stats.html:411 svarog/templates/stats.html:414
+#: svarog/templates/stats.html:394 svarog/templates/stats.html:397
 msgid "Fixed-wing UAV"
 msgstr "Ворожі крила"
 
-#: svarog/templates/stats.html:429 svarog/templates/stats.html:433
+#: svarog/templates/stats.html:412 svarog/templates/stats.html:416
 msgid "Antennas, cameras, network equipment"
 msgstr "Антени, камери, мереж. обладнання"
 
-#: svarog/templates/stats.html:449 svarog/templates/stats.html:452
+#: svarog/templates/stats.html:432 svarog/templates/stats.html:435
 msgid "Other"
 msgstr "Інше"
 
@@ -1979,7 +1978,7 @@ msgstr ""
 #~ msgstr "Танки"
 
 #~ msgid "MLRS + SAM"
-#~ msgstr "РСЗВ + ЗРК"
+#~ msgstr "РСЗВ + ЗРК + ЗУ"
 
 #~ msgid "Self-propelled artillery"
 #~ msgstr "САУ"
