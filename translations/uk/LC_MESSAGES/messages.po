@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-01 08:47+0000\n"
+"POT-Creation-Date: 2025-08-06 14:41+0000\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: svarog/forms/application.py:28
 msgid "Yes"
@@ -62,7 +62,7 @@ msgid "The official website of the 424th separate battalion"
 msgstr "Офіційний веб-сайт 424-го окремого батальйону"
 
 #: svarog/templates/button.html:10 svarog/templates/button.html:25
-#: svarog/templates/vacancies.html:105
+#: svarog/templates/vacancies.html:127
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
 
@@ -75,44 +75,49 @@ msgid "FPV"
 msgstr "FPV"
 
 #: svarog/templates/choose-weapon.html:22
-#: svarog/templates/choose-weapon.html:49
-#: svarog/templates/choose-weapon.html:76
-#: svarog/templates/choose-weapon.html:103
 msgid ""
-"During the week-long training, you will discover your strengths\n"
-"          and weaknesses, understand how you can best prove yourself in "
-"the\n"
-"          Armed Forces of Ukraine, and receive During the week-long "
-"training,\n"
-"          you will discover your strengths and weaknesses, understand how"
-" you\n"
-"          can most effectively prove yourself in the Armed Forces of "
-"Ukraine,\n"
-"          and you will receive During the week-long training, you will "
-"discover\n"
-"          your strengths and weaknesses, understand how you can most "
-"effectively\n"
-"          prove yourself in the Armed Forces of Ukraine, and you will\n"
-"          receive."
+"Speed, accuracy, and determination. You will destroy enemy forces and "
+"equipment using various types of FPV drones."
 msgstr ""
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
-"Протягом тижневого вишколу відчуєш свої слабкі та сильні сторони, "
-"зрозумієш, в чому найефективніше зможеш проявити себе в ЗСУ та отримаєш "
+"Швидкість, точність і рішучість. Будеш знищувати живу силу та техніку "
+"ворога за допомогою FPV-дронів різного типу."
 
-#: svarog/templates/choose-weapon.html:46
-msgid "Aerial reconnaissance"
+#: svarog/templates/choose-weapon.html:38
+msgid "AERIAL RECONNAISSANCE"
 msgstr "АЕРОРОЗВІДКА"
 
-#: svarog/templates/choose-weapon.html:73
+#: svarog/templates/choose-weapon.html:41
+msgid ""
+"Eyes above the battlefield. You will detect enemy positions, correct "
+"artillery fire, collect and analyze intelligence data."
+msgstr ""
+"Очі над полем бою. Виявлятимеш позиції ворога, коригуватимеш артилерію, "
+"збиратимеш і аналізуватимеш розвіддані."
+
+#: svarog/templates/choose-weapon.html:57
 msgid "HEAVY BOMBERS"
 msgstr "ВАЖКІ БОМБЕРИ"
 
-#: svarog/templates/choose-weapon.html:100
+#: svarog/templates/choose-weapon.html:60
+msgid ""
+"Damage, mining, and logistics. You will control large drones to deliver "
+"pleasant packages to your allies and explosively unpleasant ones to your "
+"enemies."
+msgstr ""
+"Ураження, мінування та логістика. Керуватимеш великими дронами для "
+"доставки приємних пакунків для своїх та вибухово неприємних для ворога."
+
+#: svarog/templates/choose-weapon.html:76
 msgid "IMPACT WING"
 msgstr "УДАРНЕ КРИЛО"
+
+#: svarog/templates/choose-weapon.html:79
+msgid ""
+"Goals that seemed unattainable. You will deliver precision strikes on "
+"warehouses, equipment, and command posts behind enemy lines."
+msgstr ""
+"Цілі, що здавались недосяжними. Завдаватимеш точкових ударів по складах, "
+"техніці та командних пунктах у тилу ворога."
 
 #: svarog/templates/cookie_policy.html:6
 msgid "Cookie Policy for 424bat.army website"
@@ -796,65 +801,89 @@ msgstr "Офіцер з персоналу"
 msgid "Combat"
 msgstr "Бойові"
 
-#: svarog/templates/vacancies.html:45
-msgid "UAV operator"
-msgstr "Оператор БПЛА"
+#: svarog/templates/vacancies.html:46
+msgid "Electrician driver"
+msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancies.html:47
-msgid "UAV crew commander"
-msgstr "Командир екіпажу БПЛА"
+#: svarog/templates/vacancies.html:49
+msgid "Accountant 1st category"
+msgstr "Бухгалтер 1 категорії"
 
-#: svarog/templates/vacancies.html:50
-msgid "Instructor in tactical use of drones"
-msgstr "Інструктор з тактичного застосування дронів"
+#: svarog/templates/vacancies.html:52
+msgid "Photogrammetry operator"
+msgstr "Оператор фотограметрист"
 
-#: svarog/templates/vacancies.html:53
-msgid "UAV maintenance technician"
-msgstr "Технік обслуговування БПЛА"
+#: svarog/templates/vacancies.html:55
+msgid "FPV mechanic at RUBpAK"
+msgstr "Механік FPV в РУБпАК"
 
-#: svarog/templates/vacancies.html:56
-msgid "UAV video surveillance analyst"
-msgstr "Аналітик відеоспостереження БПЛА"
+#: svarog/templates/vacancies.html:58
+msgid "FPV mechanic in the workshop"
+msgstr "Механік FPV в майстерню"
 
-#: svarog/templates/vacancies.html:59
-msgid "Electronic warfare specialist(EW)"
-msgstr "Спеціаліст з електронно"
+#: svarog/templates/vacancies.html:61
+msgid "Sanitary Instructor"
+msgstr "Санітарний Інструктор"
 
-#: svarog/templates/vacancies.html:62
-msgid "Strike drone operator"
-msgstr "Навідник-оператор ударного дрону"
+#: svarog/templates/vacancies.html:64
+msgid "Medical assistant"
+msgstr "Фельдшер"
 
-#: svarog/templates/vacancies.html:70
+#: svarog/templates/vacancies.html:67
+msgid "Master of Engineering Munitions"
+msgstr "Майстер інженерних боєприпасів"
+
+#: svarog/templates/vacancies.html:69
+msgid "Decryptor"
+msgstr "Дешифрувальник"
+
+#: svarog/templates/vacancies.html:71
+msgid "Control operator"
+msgstr "Оператор управління"
+
+#: svarog/templates/vacancies.html:74
+msgid "Combat medic"
+msgstr "Бойовий медик"
+
+#: svarog/templates/vacancies.html:77
+msgid "UAV aircraft mechanic"
+msgstr "Авіамеханік БпАК"
+
+#: svarog/templates/vacancies.html:80
+msgid "Anti-aircraft gunner"
+msgstr "Стрілець зенітник"
+
+#: svarog/templates/vacancies.html:83
+msgid "Explosives technician"
+msgstr "Вибухотехнік"
+
+#: svarog/templates/vacancies.html:86
+msgid "Electronic Warfare/ELINT operator"
+msgstr "Оператор РЕБ/РЕР"
+
+#: svarog/templates/vacancies.html:94
 msgid "Support"
 msgstr "Підтримка"
 
-#: svarog/templates/vacancies.html:76
-msgid "Driver-electrician"
-msgstr "Водій-Електрик"
+#: svarog/templates/vacancies.html:100
+msgid "Driver-electrician of the communications platoon"
+msgstr "Водій-електрик взводу зв'язку"
 
-#: svarog/templates/vacancies.html:78
-msgid "Medic"
-msgstr "Медик-санітар"
+#: svarog/templates/vacancies.html:102
+msgid "Driver for a logistics rota"
+msgstr "Водій роти логістки"
 
-#: svarog/templates/vacancies.html:79
-msgid "Radio operator"
-msgstr "Радіотелефоніст"
+#: svarog/templates/vacancies.html:104
+msgid "Cook"
+msgstr "Кухар"
 
-#: svarog/templates/vacancies.html:81
-msgid "Field kitchen cook"
-msgstr "Кухар польової кухні"
+#: svarog/templates/vacancies.html:107
+msgid "Clerk"
+msgstr "Діловод"
 
-#: svarog/templates/vacancies.html:84
-msgid "Weapons technician"
-msgstr "Технік зі зброї"
-
-#: svarog/templates/vacancies.html:86
-msgid "Engineer-sapper"
-msgstr "Інженер-сапер"
-
-#: svarog/templates/vacancies.html:88
-msgid "Technical repair technician"
-msgstr "Майстер з ремонту техніки"
+#: svarog/templates/vacancies.html:110
+msgid "Electrician"
+msgstr "Електрик"
 
 #: svarog/templates/admin/add_modal.html:67
 msgid "Confirm Password"
@@ -1767,4 +1796,76 @@ msgstr ""
 
 #~ msgid "424th Battalion of USF"
 #~ msgstr "424 батальйон СБС"
+
+#~ msgid "UAV operator"
+#~ msgstr "Оператор БПЛА"
+
+#~ msgid "UAV crew commander"
+#~ msgstr "Командир екіпажу БПЛА"
+
+#~ msgid "Instructor in tactical use of drones"
+#~ msgstr "Інструктор з тактичного застосування дронів"
+
+#~ msgid "UAV maintenance technician"
+#~ msgstr "Технік обслуговування БПЛА"
+
+#~ msgid "UAV video surveillance analyst"
+#~ msgstr "Аналітик відеоспостереження БПЛА"
+
+#~ msgid "Strike drone operator"
+#~ msgstr "Навідник-оператор ударного дрону"
+
+#~ msgid "Medic"
+#~ msgstr "Медик-санітар"
+
+#~ msgid "Radio operator"
+#~ msgstr "Радіотелефоніст"
+
+#~ msgid "Field kitchen cook"
+#~ msgstr "Кухар польової кухні"
+
+#~ msgid "Weapons technician"
+#~ msgstr "Технік зі зброї"
+
+#~ msgid "Engineer-sapper"
+#~ msgstr "Інженер-сапер"
+
+#~ msgid "Technical repair technician"
+#~ msgstr "Майстер з ремонту техніки"
+
+#~ msgid ""
+#~ "During the week-long training, you will discover your strengths\n"
+#~ "          and weaknesses, understand how "
+#~ "you can best prove yourself in the"
+#~ "\n"
+#~ "          Armed Forces of Ukraine, and"
+#~ " receive During the week-long "
+#~ "training,\n"
+#~ "          you will discover your "
+#~ "strengths and weaknesses, understand how "
+#~ "you\n"
+#~ "          can most effectively prove "
+#~ "yourself in the Armed Forces of "
+#~ "Ukraine,\n"
+#~ "          and you will receive During"
+#~ " the week-long training, you will "
+#~ "discover\n"
+#~ "          your strengths and weaknesses, "
+#~ "understand how you can most effectively"
+#~ "\n"
+#~ "          prove yourself in the Armed Forces of Ukraine, and you will\n"
+#~ "          receive."
+#~ msgstr ""
+#~ "Протягом тижневого вишколу відчуєш свої "
+#~ "слабкі та сильні сторони, зрозумієш, в"
+#~ " чому найефективніше зможеш проявити себе"
+#~ " в ЗСУ та отримаєш Протягом тижневого"
+#~ " вишколу відчуєш свої слабкі та "
+#~ "сильні сторони, зрозумієш, в чому "
+#~ "найефективніше зможеш проявити себе в "
+#~ "ЗСУ та отримаєш Протягом тижневого "
+#~ "вишколу відчуєш свої слабкі та сильні"
+#~ " сторони, зрозумієш, в чому найефективніше"
+#~ " зможеш проявити себе в ЗСУ та "
+#~ "отримаєш "
 
