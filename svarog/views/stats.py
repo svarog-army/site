@@ -229,8 +229,8 @@ def delete(stats_uuid: str):
     stats.is_deleted = True
     db.session.commit()  # type: ignore
     log(log.INFO, "Day Statistics deleted: [%s]", stats_uuid)
-    # return render_template("toast.html", category="success", message="Recruit deleted!"), 202
-    return redirect(url_for("admin.stats.stats"))
+    return render_template("toast.html", category="success", message=_("Day Statistic deleted!")), 202
+    # return redirect(url_for("admin.stats.stats"))
 
 
 @stats_blueprint.route("/create", methods=["POST"])

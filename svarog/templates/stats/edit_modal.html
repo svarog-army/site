@@ -24,9 +24,10 @@
         </button>
         <button
           type="button"
+          id="close-modal"
           hx-confirm="{{_('Are you sure you wish to delete all statistic for this day?')}}"
           hx-indicator="#htmx-spinner"
-          hx-target="{{ url_for('admin.stats.stats') }}"
+          hx-target="#close-modal"
           hx-target-404="#not-found"
           hx-trigger="click"
           hx-swap="outerHTML"
