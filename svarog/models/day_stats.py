@@ -91,7 +91,6 @@ class DayStats(db.Model, ModelMixin):
     mining_flights: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Mining Flights
     setup_mines: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Setup mines
 
-
     def __repr__(self):
         return f"<{self.id}: {self.day}>"
 
@@ -119,21 +118,45 @@ class DayStats(db.Model, ModelMixin):
         stats = s.Stats(period=period)
         for stat in stats_list:
             stats.tanks += stat.tanks or 0
+            stats.tanks_destroyed += stat.tanks_destroyed or 0
             stats.mlrss += stat.mlrss or 0
+            stats.mlrss_destroyed += stat.mlrss_destroyed or 0
             stats.spas += stat.spas or 0
+            stats.spas_destroyed += stat.spas_destroyed or 0
             stats.afvs += stat.afvs or 0
+            stats.afvs_destroyed += stat.afvs_destroyed or 0
             stats.cars += stat.cars or 0
+            stats.cars_destroyed += stat.cars_destroyed or 0
             stats.motorcycles += stat.motorcycles or 0
+            stats.motorcycles_destroyed += stat.motorcycles_destroyed or 0
             stats.buggies += stat.buggies or 0
+            stats.buggies_destroyed += stat.buggies_destroyed or 0
             stats.rofs += stat.rofs or 0
+            stats.rofs_destroyed += stat.rofs_destroyed or 0
             stats.guns += stat.guns or 0
+            stats.guns_destroyed += stat.guns_destroyed or 0
             stats.mortars += stat.mortars or 0
+            stats.mortars_destroyed += stat.mortars_destroyed or 0
             stats.adss += stat.adss or 0
+            stats.adss_destroyed += stat.adss_destroyed or 0
             stats.radars += stat.radars or 0
+            stats.radars_destroyed += stat.radars_destroyed or 0
             stats.ammos += stat.ammos or 0
+            stats.ammos_destroyed += stat.ammos_destroyed or 0
             stats.shelters += stat.shelters or 0
+            stats.shelters_destroyed += stat.shelters_destroyed or 0
             stats.uavs += stat.uavs or 0
+            stats.uavs_destroyed += stat.uavs_destroyed or 0
             stats.antennas += stat.antennas or 0
+            stats.antennas_destroyed += stat.antennas_destroyed or 0
             stats.other += stat.other or 0
+            stats.other_destroyed += stat.other_destroyed or 0
+            stats.impact_flights += stat.impact_flights or 0
+            stats.scouting_flights += stat.scouting_flights or 0
+            stats.found_targets += stat.found_targets or 0
+            stats.found_fpv_drones += stat.found_fpv_drones or 0
+            stats.destroyed_fpv_drones += stat.destroyed_fpv_drones or 0
+            stats.mining_flights += stat.mining_flights or 0
+            stats.setup_mines += stat.setup_mines or 0
 
         return stats
