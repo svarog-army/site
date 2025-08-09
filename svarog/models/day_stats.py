@@ -160,3 +160,34 @@ class DayStats(db.Model, ModelMixin):
             stats.setup_mines += stat.setup_mines or 0
 
         return stats
+
+    def set_value_by_name(self, stat_name: str, count: int, destroyed_count: int | None = None):
+        """Set value by stat name."""
+        # Check impossible names and raise an error
+        if stat_name in ["id", "uuid", "created_at", "updated_at", "is_deleted"]:
+            raise ValueError(f"Cannot set value for reserved stat name: {stat_name}")
+        if not hasattr(self, stat_name):
+            raise ValueError(f"Stat {stat_name} does not exist in DayStats model")
+        setattr(self, stat_name, count)
+        # If a destroyed stat exists, set it as well
+        if destroyed_count is not None and stat_name not in [
+            "impact_flights",
+            "scouting_flights",
+            "found_targets",
+            "found_fpv_drones",
+            "destroyed_fpv_drones",
+            "mining_flights",
+            "setup_mines",
+        ]:
+            # If a destroyed stat exists, set it as well
+            destroyed_stat_name = f"{stat_name}_destroyed"
+            if hasattr(self, destroyed_stat_name):
+                setattr(self, destroyed_stat_name, destroyed_count)
+
+    def get_value_by_name(self, stat_name: str) -> int | None:
+        """Get value by stat name."""
+        if not hasattr(self, stat_name):
+            raise ValueError(f"Stat {stat_name} does not exist in DayStats model")
+        if stat_name in ["id", "uuid", "created_at", "updated_at", "is_deleted"]:
+            raise ValueError(f"Cannot get value for reserved name: {stat_name}")
+        return getattr(self, stat_name)

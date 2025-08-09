@@ -24,7 +24,6 @@
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
-        <th scope="col" class="px-6 py-3">#</th>
         <th scope="col" class="px-6 py-3">{{_("Date")}}</th>
         <th scope="col" class="px-6 py-3">{{_("Tanks")}}</th>
         <th scope="col" class="px-6 py-3">{{_("MLRS + SAM")}}</th>
@@ -47,65 +46,62 @@
     </thead>
     <tbody>
       {% for stat in stats %}
-      <tr id="stat-{{ stat.uuid }}" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-        <td class="w-4 p-4">
-          <div class="flex items-center">
-            {{ loop.index + page.skip }}
-          </div>
-        </td>
+      <tr id="stat-{{ stat.uuid }}" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+        hx-indicator="#htmx-spinner" hx-target="body" hx-swap="beforeend" hx-target-404="#not-found" hx-trigger="click"
+        hx-get="{{ url_for('admin.stats.get_edit_form', stat_uuid=stat.uuid) }}">
         <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
           {{ stat.day.strftime('%Y-%m-%d') }}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.tanks }}
+          {{ stat.tanks or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.mlrss }}
+          {{ stat.mlrss or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.spas }}
+          {{ stat.spas or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.afvs }}
+          {{ stat.afvs or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.cars }}
+          {{ stat.cars or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.motorcycles }}
+          {{ stat.motorcycles or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.buggies }}
+          {{ stat.buggies or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.rofs }}
+          {{ stat.rofs or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.guns }}
+          {{ stat.guns or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.mortars }}
+          {{ stat.mortars or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.adss }}
+          {{ stat.adss or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace nowrap dark:text-white">
-          {{ stat.radars }}
+          {{ stat.radars or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.ammos }}
+          {{ stat.ammos or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.shelters }}
+          {{ stat.shelters or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.uavs }}
+          {{ stat.uavs or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.antennas }}
+          {{ stat.antennas or ""}}
         </td>
         <td class="p-4 text-center text-base font-normal text-gray-900 whitespace-nowrap dark:text-white">
-          {{ stat.other }}
+          {{ stat.other or ""}}
         </td>
 
 
