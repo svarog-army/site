@@ -2533,10 +2533,6 @@ input:checked + .toggle-bg {
   line-height: 1.25;
 }
 
-.leading-\[1\] {
-  line-height: 1;
-}
-
 .text-\[--main-black\] {
   color: var(--main-black);
 }
@@ -3489,11 +3485,6 @@ select:-webkit-autofill:active {
     padding-right: 2.5rem;
   }
 
-  .sm\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3502,10 +3493,6 @@ select:-webkit-autofill:active {
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .sm\:text-\[1\.25rem\] {
-    font-size: 1.25rem;
   }
 
   .sm\:text-sm {
@@ -3521,27 +3508,6 @@ select:-webkit-autofill:active {
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .sm\:leading-\[3\.3\] {
-    line-height: 3.3;
-  }
-
-  .sm\:leading-\[1\.25\] {
-    line-height: 1.25;
-  }
-
-  .sm\:leading-\[1\] {
-    line-height: 1;
-  }
-
-  .sm\:leading-\[1\/1\] {
-    line-height: 1/1;
   }
 
   .sm\:leading-\[1\.1\] {
@@ -3721,14 +3687,6 @@ select:-webkit-autofill:active {
   .md\:leading-\[1\.25\] {
     line-height: 1.25;
   }
-
-  .md\:leading-\[3\.3\] {
-    line-height: 3.3;
-  }
-
-  .md\:leading-\[\] {
-    line-height: ;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -3774,6 +3732,11 @@ select:-webkit-autofill:active {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .lg\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -3789,17 +3752,17 @@ select:-webkit-autofill:active {
     padding-right: 1.25rem;
   }
 
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .lg\:pl-16 {
     padding-left: 4rem;
   }
 
   .lg\:pl-3 {
     padding-left: 0.75rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-3xl {
@@ -3810,6 +3773,11 @@ select:-webkit-autofill:active {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .lg\:text-\[48px\] {
@@ -3826,26 +3794,12 @@ select:-webkit-autofill:active {
     line-height: 1rem;
   }
 
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .lg\:leading-\[40px\] {
-    line-height: 40px;
-  }
-
   .lg\:leading-\[1\.1\] {
     line-height: 1.1;
   }
 
-  .lg\:text-\[\] {
-    color: ;
+  .lg\:leading-\[40px\] {
+    line-height: 40px;
   }
 
   .lg\:transition {
@@ -3890,11 +3844,6 @@ select:-webkit-autofill:active {
   .xl\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .xl\:text-\[96px\] {

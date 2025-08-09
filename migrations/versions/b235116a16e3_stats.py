@@ -1,8 +1,8 @@
 """stats
 
-Revision ID: a07548aac042
+Revision ID: b235116a16e3
 Revises: 89c3410b5d6d
-Create Date: 2025-07-27 15:25:36.893919
+Create Date: 2025-08-09 13:59:03.832509
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'a07548aac042'
+revision = 'b235116a16e3'
 down_revision = '89c3410b5d6d'
 branch_labels = None
 depends_on = None
@@ -26,22 +26,46 @@ def upgrade():
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.Column('is_deleted', sa.Boolean(), server_default=sa.text('false'), nullable=False),
     sa.Column('tanks', sa.Integer(), nullable=True),
+    sa.Column('tanks_destroyed', sa.Integer(), nullable=True),
     sa.Column('mlrss', sa.Integer(), nullable=True),
+    sa.Column('mlrss_destroyed', sa.Integer(), nullable=True),
     sa.Column('spas', sa.Integer(), nullable=True),
+    sa.Column('spas_destroyed', sa.Integer(), nullable=True),
     sa.Column('afvs', sa.Integer(), nullable=True),
+    sa.Column('afvs_destroyed', sa.Integer(), nullable=True),
     sa.Column('cars', sa.Integer(), nullable=True),
+    sa.Column('cars_destroyed', sa.Integer(), nullable=True),
     sa.Column('motorcycles', sa.Integer(), nullable=True),
+    sa.Column('motorcycles_destroyed', sa.Integer(), nullable=True),
     sa.Column('buggies', sa.Integer(), nullable=True),
+    sa.Column('buggies_destroyed', sa.Integer(), nullable=True),
     sa.Column('rofs', sa.Integer(), nullable=True),
+    sa.Column('rofs_destroyed', sa.Integer(), nullable=True),
     sa.Column('guns', sa.Integer(), nullable=True),
+    sa.Column('guns_destroyed', sa.Integer(), nullable=True),
     sa.Column('mortars', sa.Integer(), nullable=True),
+    sa.Column('mortars_destroyed', sa.Integer(), nullable=True),
     sa.Column('adss', sa.Integer(), nullable=True),
+    sa.Column('adss_destroyed', sa.Integer(), nullable=True),
     sa.Column('radars', sa.Integer(), nullable=True),
+    sa.Column('radars_destroyed', sa.Integer(), nullable=True),
     sa.Column('ammos', sa.Integer(), nullable=True),
+    sa.Column('ammos_destroyed', sa.Integer(), nullable=True),
     sa.Column('shelters', sa.Integer(), nullable=True),
+    sa.Column('shelters_destroyed', sa.Integer(), nullable=True),
     sa.Column('uavs', sa.Integer(), nullable=True),
+    sa.Column('uavs_destroyed', sa.Integer(), nullable=True),
     sa.Column('antennas', sa.Integer(), nullable=True),
+    sa.Column('antennas_destroyed', sa.Integer(), nullable=True),
     sa.Column('other', sa.Integer(), nullable=True),
+    sa.Column('other_destroyed', sa.Integer(), nullable=True),
+    sa.Column('impact_flights', sa.Integer(), nullable=True),
+    sa.Column('scouting_flights', sa.Integer(), nullable=True),
+    sa.Column('found_targets', sa.Integer(), nullable=True),
+    sa.Column('found_fpv_drones', sa.Integer(), nullable=True),
+    sa.Column('destroyed_fpv_drones', sa.Integer(), nullable=True),
+    sa.Column('mining_flights', sa.Integer(), nullable=True),
+    sa.Column('setup_mines', sa.Integer(), nullable=True),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_day_stats')),
     sa.UniqueConstraint('day', name=op.f('uq_day_stats_day'))
     )

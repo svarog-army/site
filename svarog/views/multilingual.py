@@ -1,4 +1,6 @@
+from datetime import date, timedelta
 import sqlalchemy as sa
+from sqlalchemy.sql import func
 from flask import Blueprint, abort, current_app, g, redirect, render_template, request, url_for
 from flask_wtf import FlaskForm
 
@@ -6,6 +8,7 @@ from config import CFG
 from svarog import db
 from svarog import forms as f
 from svarog import models as m
+from svarog import schema as s
 
 multilingual = Blueprint("multilingual", __name__, template_folder="templates", url_prefix="/<lang_code>")
 
@@ -48,15 +51,22 @@ def index():
 
     return render_template("index.html", form=FlaskForm(), application_form=form, specialties=specialties)
 
+
 @multilingual.route("/stats/")
 def stats():
-    if CFG.PARKING:
-        return render_template("under_construction.html", form=FlaskForm())
+    period = request.args.get("period", type=str, default="day")
+    start_day = date.today() - timedelta(days=1)
+    if period == "week":
+        start_day = date.today() - timedelta(days=7)
+    elif period == "month":
+        start_day = date.today() - timedelta(days=31)
 
-    form = f.ApplicationForm()
-    specialties = db.session.scalars(sa.select(m.Specialty)).all()
+    if period == "day":
+        stats = m.DayStats.last_day()
+    else:
+        stats = m.DayStats.get_stats_for_period(s.Period(start=start_day, end=date.today()))
 
-    return render_template("stats.html", form=FlaskForm(), application_form=form, specialties=specialties)
+    return render_template("stats.html", form=FlaskForm(), stats=stats, period=period, start_day=start_day)
 
 
 @multilingual.route("/cookie_policy/", methods=["GET"])

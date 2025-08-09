@@ -11,7 +11,8 @@
       </a>
       <div class="flex flex-col justify-center ml-4">
         <h1 class="text-2xl text-bold font-bold">
-          {{_("Report")}} <a href="/" class="font-ethnocentric">{{_("SVAROG")}}</a>
+          {{_("Report")}}
+          <a href="/" class="font-ethnocentric">{{_("SVAROG")}}</a>
         </h1>
         <div>
           <span class="text-2xl">{{_("424 OB BPC")}}</span>
@@ -25,7 +26,7 @@
       <p
         class="h-12 p-1 text-[0.9rem] sm:text-2xl md:text-[0.9rem] lg:text-2xl bg-[--main-grey-opacity] text-[--main-white-87] rounded-lg flex flex-row justify-between sm:justify-center items-center">
         {{_("Period from")}}
-        <span class="ms-1 me-1 text-[--main-green]">24.07 (18:00)</span>
+        <span class="ms-1 me-1 text-[--main-green]">{{start_day.strftime("%d.%m")}} (18:00)</span>
         {{_("to")}}
         <span class="ms-1 text-[--main-green]">{{_("present time")}}</span>
       </p>
@@ -35,102 +36,82 @@
 
     <!-- Stats full result -->
     <div class="stats_result">
-      <div
-        class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 md:mt-0 py-2">
+      <div class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 md:mt-0 py-2">
         <div class="text-center relative stats_line">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">240</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-             {{_("DAMAGED TARGETS")}}
-          </p>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.total_impacted}}</span>
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("DAMAGED TARGETS")}}</p>
         </div>
         <div class="text-center">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">89</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("INCL. DESTROYED")}}
-          </p>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.total_destroyed}}</span>
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("INCL. DESTROYED")}}</p>
         </div>
       </div>
 
-      <div
-        class="grid grid-cols-3 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
+      <div class="grid grid-cols-3 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
         <div class="text-center relative stats_line">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">240</span>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.rofs}}</span>
           <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("ROF PERSONNEL")}}</p>
         </div>
         <div class="text-center relative stats_line">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">89</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("INCL. KILLED")}}
-          </p>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.rofs_destroyed}}</span>
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("INCL. KILLED")}}</p>
         </div>
         <div class="text-center">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">89</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("INCL. WOUNDED")}}
-          </p>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold"
+            >{{stats.rofs - stats.rofs_destroyed}}</span
+          >
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("INCL. WOUNDED")}}</p>
         </div>
       </div>
 
-      <div
-        class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
+      <div class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
         <div class="text-center relative stats_line">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">940</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("COMBAT FLIGHTS")}}
-          </p>
-          <div
-            class="h-[1px] w-[80%] mt-3 mx-auto bg-[--main-grey-opacity]"></div>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold"
+            >{{stats.impact_flights + stats.scouting_flights}}</span
+          >
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("COMBAT FLIGHTS")}}</p>
+          <div class="h-[1px] w-[80%] mt-3 mx-auto bg-[--main-grey-opacity]"></div>
         </div>
         <div class="text-center">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">476</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("TARGETS DETECTED")}}
-          </p>
-          <div
-            class="h-[1px] w-[80%] mt-3 mx-auto bg-[--main-grey-opacity]"></div>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.found_targets}}</span>
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("TARGETS DETECTED")}}</p>
+          <div class="h-[1px] w-[80%] mt-3 mx-auto bg-[--main-grey-opacity]"></div>
         </div>
         <div class="text-center relative stats_line pt-3">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">432</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("RECON MISSIONS")}}
-          </p>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.scouting_flights}}</span>
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("RECON MISSIONS")}}</p>
         </div>
         <div class="text-center pt-3">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">508</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("STRIKE MISSIONS")}}
-          </p>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.impact_flights}}</span>
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("STRIKE MISSIONS")}}</p>
         </div>
       </div>
 
       <div class="bg-[--main-grey-opacity] rounded-lg my-2 py-2 text-center">
         <div class="grid grid-cols-2">
           <div class="text-center relative stats_line pt-3">
-            <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">52</span>
+            <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.found_fpv_drones}}</span>
             <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
               {{_("FPV DRONES DETECTED")}}
             </p>
           </div>
           <div class="text-center pt-3">
-            <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">44</span>
+            <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.destroyed_fpv_drones}}</span>
             <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("INCL. DESTROYED")}}</p>
           </div>
         </div>
       </div>
 
-      <div
-        class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
+      <div class="grid grid-cols-2 bg-[--main-grey-opacity] rounded-lg my-2 py-2">
         <div class="text-center relative stats_line">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">20</span>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.mining_flights}}</span>
           <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
             {{_("REMOTE MINE-LAYING SESSIONS")}}
           </p>
         </div>
         <div class="text-center">
-          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">39</span>
-          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">
-            {{_("AT MINES LAYED")}}
-          </p>
+          <span class="text-2xl sm:text-5xl md:text-3xl lg:text-5xl font-bold">{{stats.setup_mines}}</span>
+          <p class="text-[0.65rem] sm:text-xl md:text-sm font-bold text-[--main-green]">{{_("AT MINES LAYED")}}</p>
         </div>
       </div>
     </div>
@@ -153,19 +134,16 @@
         </div>
         <div class="flex flex-row py-3">
           <div class="text-center w-[20%] px-1 h-[32px]">
-            <img
-              class="h-full object-fill mx-auto"
-              src="/static/img/stats-icons/tank.svg"
-              alt="Танки" />
+            <img class="h-full object-fill mx-auto" src="/static/img/stats-icons/tank.svg" alt="{{_('Tanks')}}" />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Tanks")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">1</span>
+            <span class="text-xl font-bold">{{stats.tanks}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.tanks_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -180,10 +158,10 @@
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("MLRS + SAM + CU")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.mlrss}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.mlrss_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -195,31 +173,30 @@
               alt='{{_("Self-propelled artillery")}}' />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
-            <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Self-propelled artillery")}}</span>
+            <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl"
+              >{{_("Self-propelled artillery")}}</span
+            >
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.spas}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.spas_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
         <div class="flex flex-row py-3">
           <div class="text-center w-[20%] px-1 h-[32px]">
-            <img
-              class="h-full object-fill mx-auto"
-              src="/static/img/stats-icons/bmp.svg"
-              alt='{{_("AFV + APC")}}' />
+            <img class="h-full object-fill mx-auto" src="/static/img/stats-icons/bmp.svg" alt='{{_("AFV + APC")}}' />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("AFV + APC")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.afvs}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.afvs_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -234,10 +211,10 @@
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Cars + trucks")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.cars}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.cars_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -252,28 +229,25 @@
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Motorcycles")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.motorcycles}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.motorcycles_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
         <div class="flex flex-row py-3">
           <div class="text-center w-[20%] px-1 h-[32px]">
-            <img
-              class="h-full object-fill mx-auto"
-              src="/static/img/stats-icons/buggy.svg"
-              alt='{{_("Buggies")}}' />
+            <img class="h-full object-fill mx-auto" src="/static/img/stats-icons/buggy.svg" alt='{{_("Buggies")}}' />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Buggies")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.buggies}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.buggies_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -288,10 +262,10 @@
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("ROF personnel")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.rofs}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.rofs_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -306,47 +280,41 @@
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Guns + howitzers")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.guns}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.guns_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
         <div class="flex flex-row py-3">
           <div class="text-center w-[20%] px-1 h-[32px]">
-            <img
-              class="h-full object-fill mx-auto"
-              src="/static/img/stats-icons/minomet.svg"
-              alt='{{_("Mortars")}}' />
+            <img class="h-full object-fill mx-auto" src="/static/img/stats-icons/minomet.svg" alt='{{_("Mortars")}}' />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Mortars")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.mortars}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.mortars_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
         <div class="flex flex-row py-3">
           <div class="text-center w-[20%] px-1 h-[32px]">
-            <img
-              class="h-full object-fill mx-auto"
-              src="/static/img/stats-icons/rls.svg"
-              alt='{{_("EW + Radars")}}' />
+            <img class="h-full object-fill mx-auto" src="/static/img/stats-icons/rls.svg" alt='{{_("EW + Radars")}}' />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("EW + Radars")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.radars}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.radars_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -358,13 +326,15 @@
               alt='{{_("Ammunition caches + storage facilities")}}' />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
-            <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Ammunition caches + storage facilities")}}</span>
+            <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl"
+              >{{_("Ammunition caches + storage facilities")}}</span
+            >
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.ammos}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.ammos_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -379,10 +349,10 @@
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Shelters + dugouts")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.shelters}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.shelters_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -397,10 +367,10 @@
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Fixed-wing UAV")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.uavs}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.uavs_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
@@ -417,33 +387,29 @@
             >
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.antennas}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.antennas_destroyed}}</span>
           </div>
         </div>
         <div class="h-[1px] w-[95%] mx-auto bg-[--main-grey-opacity]"></div>
         <div class="flex flex-row py-3">
           <div class="text-center w-[20%] px-1 py-auto h-[32px]">
-            <img
-              class="h-full object-fill mx-auto"
-              src="/static/img/stats-icons/explosion.svg"
-              alt='{{_("Other")}}' />
+            <img class="h-full object-fill mx-auto" src="/static/img/stats-icons/explosion.svg" alt='{{_("Other")}}' />
           </div>
           <div class="text-start w-[46%] px-1 flex flex-col justify-center">
             <span class="text-[0.90rem] sm:text-xl md:text-[0.90rem] lg:text-xl">{{_("Other")}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.other}}</span>
           </div>
           <div class="text-center w-[17%] px-1 flex items-center justify-center">
-            <span class="text-xl font-bold">0</span>
+            <span class="text-xl font-bold">{{stats.other_destroyed}}</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-{% include 'scroll_top.html' %}
-{% endblock %} {% block scripts %} {% endblock %}
+{% include 'scroll_top.html' %} {% endblock %} {% block scripts %} {% endblock %}
