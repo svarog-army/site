@@ -1,8 +1,8 @@
 """stats
 
-Revision ID: b235116a16e3
+Revision ID: 69587990eb60
 Revises: 89c3410b5d6d
-Create Date: 2025-08-09 13:59:03.832509
+Create Date: 2025-08-09 23:09:33.652041
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'b235116a16e3'
+revision = '69587990eb60'
 down_revision = '89c3410b5d6d'
 branch_labels = None
 depends_on = None
@@ -66,8 +66,7 @@ def upgrade():
     sa.Column('destroyed_fpv_drones', sa.Integer(), nullable=True),
     sa.Column('mining_flights', sa.Integer(), nullable=True),
     sa.Column('setup_mines', sa.Integer(), nullable=True),
-    sa.PrimaryKeyConstraint('id', name=op.f('pk_day_stats')),
-    sa.UniqueConstraint('day', name=op.f('uq_day_stats_day'))
+    sa.PrimaryKeyConstraint('id', name=op.f('pk_day_stats'))
     )
     with op.batch_alter_table('day_stats', schema=None) as batch_op:
         batch_op.create_index(batch_op.f('ix_day_stats_uuid'), ['uuid'], unique=False)

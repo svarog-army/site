@@ -26,7 +26,7 @@
           type="button"
           hx-confirm="{{_('Are you sure you wish to delete all statistic for this day?')}}"
           hx-indicator="#htmx-spinner"
-          hx-target="#stat-{{ form.stats_uuid.data }}"
+          hx-target="{{ url_for('admin.stats.stats') }}"
           hx-target-404="#not-found"
           hx-trigger="click"
           hx-swap="outerHTML"

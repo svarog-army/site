@@ -24,7 +24,6 @@ class DayStats(db.Model, ModelMixin):
     day: orm.Mapped[date] = orm.mapped_column(
         sa.Date,
         default=current_date,
-        unique=True,
     )
     created_at: orm.Mapped[datetime] = orm.mapped_column(
         sa.DateTime,
