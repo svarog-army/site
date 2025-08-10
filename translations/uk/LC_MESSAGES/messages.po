@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-10 10:21+0300\n"
+"POT-Creation-Date: 2025-08-10 12:32+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -913,7 +913,7 @@ msgstr "В Т.Ч. ВБИТИХ"
 
 #: svarog/templates/stats.html:63
 msgid "INCL. WOUNDED"
-msgstr "В Т.Ч. ВБИТИХ"
+msgstr "В Т.Ч. ПОРАНЕНИХ"
 
 #: svarog/templates/stats.html:72
 msgid "COMBAT FLIGHTS"
@@ -1390,15 +1390,15 @@ msgstr "Статистика"
 msgid "Date"
 msgstr "Дата"
 
-#: svarog/views/admin.py:87 svarog/views/recruit.py:144
+#: svarog/views/admin.py:90 svarog/views/recruit.py:144
 msgid "Cannot save user data"
 msgstr "Неможливо зберегти дані користувача"
 
-#: svarog/views/admin.py:96
+#: svarog/views/admin.py:99
 msgid "User updated!"
 msgstr "Користувача оновлено!"
 
-#: svarog/views/admin.py:130
+#: svarog/views/admin.py:133
 msgid "User added!"
 msgstr "Додано користувача!"
 
