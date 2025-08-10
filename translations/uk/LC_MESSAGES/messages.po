@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-01 11:39+0000\n"
+"POT-Creation-Date: 2025-08-10 10:21+0300\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -26,6 +26,146 @@ msgstr "Так"
 #: svarog/forms/application.py:29
 msgid "No"
 msgstr "Ні"
+
+#: svarog/forms/stats.py:74 svarog/templates/stats.html:137
+#: svarog/templates/stats.html:140 svarog/templates/stats/edit_modal.html:48
+#: svarog/templates/stats/stats.html:28
+msgid "Tanks"
+msgstr "Танки"
+
+#: svarog/forms/stats.py:75 svarog/templates/stats/edit_modal.html:66
+#: svarog/templates/stats/stats.html:29
+msgid "MLRS + SAM"
+msgstr "РСЗВ"
+
+#: svarog/forms/stats.py:76 svarog/templates/stats.html:173
+#: svarog/templates/stats.html:177 svarog/templates/stats/edit_modal.html:84
+#: svarog/templates/stats/stats.html:30
+msgid "Self-propelled artillery"
+msgstr "САУ"
+
+#: svarog/forms/stats.py:77 svarog/templates/stats.html:190
+#: svarog/templates/stats.html:193 svarog/templates/stats/edit_modal.html:102
+#: svarog/templates/stats/stats.html:31
+msgid "AFV + APC"
+msgstr "ББМ + БМП + БТР"
+
+#: svarog/forms/stats.py:78 svarog/templates/stats.html:208
+#: svarog/templates/stats.html:211 svarog/templates/stats/edit_modal.html:120
+#: svarog/templates/stats/stats.html:32
+msgid "Cars + trucks"
+msgstr "ЛАТ + ВАТ"
+
+#: svarog/forms/stats.py:79 svarog/templates/stats.html:226
+#: svarog/templates/stats.html:229 svarog/templates/stats/edit_modal.html:138
+#: svarog/templates/stats/stats.html:33
+msgid "Motorcycles"
+msgstr "Мотоцикли"
+
+#: svarog/forms/stats.py:80 svarog/templates/stats.html:241
+#: svarog/templates/stats.html:244 svarog/templates/stats/edit_modal.html:157
+#: svarog/templates/stats/stats.html:34
+msgid "Buggies"
+msgstr "Баггі військові"
+
+#: svarog/forms/stats.py:81 svarog/templates/stats.html:259
+#: svarog/templates/stats.html:262 svarog/templates/stats/edit_modal.html:176
+#: svarog/templates/stats/stats.html:35
+msgid "ROF personnel"
+msgstr "ОС РОВ"
+
+#: svarog/forms/stats.py:82 svarog/templates/stats.html:277
+#: svarog/templates/stats.html:280 svarog/templates/stats/edit_modal.html:194
+#: svarog/templates/stats/stats.html:36
+msgid "Guns + howitzers"
+msgstr "Гармати + гаубиці"
+
+#: svarog/forms/stats.py:83 svarog/templates/stats.html:292
+#: svarog/templates/stats.html:295 svarog/templates/stats/edit_modal.html:212
+#: svarog/templates/stats/stats.html:37
+msgid "Mortars"
+msgstr "Міномети"
+
+#: svarog/forms/stats.py:84 svarog/templates/stats/edit_modal.html:231
+#: svarog/templates/stats/stats.html:38
+msgid "Air defense systems"
+msgstr "ЗУ"
+
+#: svarog/forms/stats.py:85 svarog/templates/stats.html:308
+#: svarog/templates/stats.html:311 svarog/templates/stats/edit_modal.html:249
+#: svarog/templates/stats/stats.html:39
+msgid "EW + Radars"
+msgstr "РЕБ + РЛС техніка"
+
+#: svarog/forms/stats.py:86 svarog/templates/stats.html:326
+#: svarog/templates/stats.html:330 svarog/templates/stats/edit_modal.html:268
+#: svarog/templates/stats/stats.html:40
+msgid "Ammunition caches + storage facilities"
+msgstr "Склади БК та майна"
+
+#: svarog/forms/stats.py:87 svarog/templates/stats.html:346
+#: svarog/templates/stats.html:349 svarog/templates/stats/edit_modal.html:286
+#: svarog/templates/stats/stats.html:41
+msgid "Shelters + dugouts"
+msgstr "Укриття + бліндажі"
+
+#: svarog/forms/stats.py:88 svarog/templates/stats.html:364
+#: svarog/templates/stats.html:367 svarog/templates/stats/edit_modal.html:305
+#: svarog/templates/stats/stats.html:42
+msgid "Fixed-wing UAV"
+msgstr "Ворожі крила"
+
+#: svarog/forms/stats.py:89 svarog/templates/stats.html:382
+#: svarog/templates/stats.html:386 svarog/templates/stats/edit_modal.html:323
+#: svarog/templates/stats/stats.html:43
+msgid "Antennas, cameras, network equipment"
+msgstr "Антени, камери, мереж. обладнання"
+
+#: svarog/forms/stats.py:90 svarog/templates/stats.html:399
+#: svarog/templates/stats.html:402 svarog/templates/stats/edit_modal.html:342
+#: svarog/templates/stats/stats.html:44
+msgid "Other"
+msgstr "Інше"
+
+#: svarog/forms/stats.py:91 svarog/templates/stats/edit_modal.html:360
+msgid "Impact Flights"
+msgstr "УДАРНЕ КРИЛО"
+
+#: svarog/forms/stats.py:92 svarog/templates/stats/edit_modal.html:369
+msgid "Scouting Flights"
+msgstr "РОЗВІДКОВІ ВИЛЬОТИ"
+
+#: svarog/forms/stats.py:93 svarog/templates/stats/edit_modal.html:379
+msgid "Found Targets"
+msgstr "ЗНАЙДЕНО ЦІЛЕЙ"
+
+#: svarog/forms/stats.py:94 svarog/templates/stats/edit_modal.html:388
+msgid "Found FPV Drones"
+msgstr "ЗНАЙДЕНО FPV"
+
+#: svarog/forms/stats.py:95 svarog/templates/stats/edit_modal.html:398
+msgid "Destroyed FPV Drones"
+msgstr "ЗНИЩЕНО FPV"
+
+#: svarog/forms/stats.py:96 svarog/templates/stats/edit_modal.html:408
+msgid "Mining Flights"
+msgstr "МІСІЙ З МІНУВАННЯ"
+
+#: svarog/forms/stats.py:97 svarog/templates/stats/edit_modal.html:417
+msgid "Setup Mines"
+msgstr "ВСТАНОВЛЕНО МІН"
+
+#: svarog/forms/stats.py:101
+msgid "Count"
+msgstr "Чисельність"
+
+#: svarog/forms/stats.py:102
+msgid "Count Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/forms/stats.py:103 svarog/templates/stats/add_modal.html:69
+msgid "Save"
+msgstr "Зберегти все"
 
 #: svarog/templates/about-us.html:6
 msgid "TEAM IS OUR STRENGTH"
@@ -275,11 +415,11 @@ msgstr ""
 "                   безпілотних систем Svarog\n"
 "                   Сил безпілотних систем"
 
-#: svarog/templates/hero.html:16 svarog/templates/stats.html:17
+#: svarog/templates/hero.html:16 svarog/templates/stats.html:18
 msgid "424 OB BPC"
 msgstr "424 ОБ БПС"
 
-#: svarog/templates/hero.html:20 svarog/templates/stats.html:14
+#: svarog/templates/hero.html:20 svarog/templates/stats.html:15
 msgid "SVAROG"
 msgstr "SVAROG"
 
@@ -717,19 +857,15 @@ msgstr "вул. Енергетиків 12"
 msgid "Interview by appointment"
 msgstr "Співбесіда по домовленості"
 
-#: svarog/templates/sidebar.html:10
+#: svarog/templates/sidebar.html:23
 msgid "Users"
 msgstr "Користувачі"
 
-#: svarog/templates/sidebar.html:23
-msgid "Recruits"
-msgstr "Новобранці"
+#: svarog/templates/sidebar.html:62
+msgid "Statistic"
+msgstr "Статистика"
 
-#: svarog/templates/sidebar.html:33
-msgid "Specialties"
-msgstr ""
-
-#: svarog/templates/sidebar.html:43
+#: svarog/templates/sidebar.html:72
 msgid "Sign Out"
 msgstr "Вийти"
 
@@ -742,142 +878,82 @@ msgstr "Статистика"
 msgid "Report"
 msgstr "Звіт"
 
-#: svarog/templates/stats.html:18
+#: svarog/templates/stats.html:19
 msgid "AFoU"
 msgstr "ЗСУ"
 
-#: svarog/templates/stats.html:27
+#: svarog/templates/stats.html:28
 msgid "Period from"
 msgstr "В період з"
 
-#: svarog/templates/stats.html:29
+#: svarog/templates/stats.html:30
 msgid "to"
 msgstr "по"
 
-#: svarog/templates/stats.html:30
+#: svarog/templates/stats.html:31
 msgid "present time"
 msgstr "теперішній час"
 
-#: svarog/templates/stats.html:43
+#: svarog/templates/stats.html:42
 msgid "DAMAGED TARGETS"
 msgstr "УРАЖЕНО ЦІЛЕЙ"
 
-#: svarog/templates/stats.html:49 svarog/templates/stats.html:116
-#: svarog/templates/stats.html:150
+#: svarog/templates/stats.html:46 svarog/templates/stats.html:100
+#: svarog/templates/stats.html:131
 msgid "INCL. DESTROYED"
 msgstr "В Т.Ч. ЗНИЩЕНО"
 
-#: svarog/templates/stats.html:58
+#: svarog/templates/stats.html:53
 msgid "ROF PERSONNEL"
 msgstr "ОС РОВ"
 
-#: svarog/templates/stats.html:63
+#: svarog/templates/stats.html:57
 msgid "INCL. KILLED"
 msgstr "В Т.Ч. ВБИТИХ"
 
-#: svarog/templates/stats.html:69
+#: svarog/templates/stats.html:63
 msgid "INCL. WOUNDED"
 msgstr "В Т.Ч. ВБИТИХ"
 
-#: svarog/templates/stats.html:79
+#: svarog/templates/stats.html:72
 msgid "COMBAT FLIGHTS"
 msgstr "БОЙОВИХ ВИЛЬОТІВ"
 
-#: svarog/templates/stats.html:87
+#: svarog/templates/stats.html:77
 msgid "TARGETS DETECTED"
 msgstr "ВИЯВЛЕНО ЦІЛЕЙ"
 
-#: svarog/templates/stats.html:95
+#: svarog/templates/stats.html:82
 msgid "RECON MISSIONS"
 msgstr "РОЗВІД. ВИЛЬОТІВ"
 
-#: svarog/templates/stats.html:101
+#: svarog/templates/stats.html:86
 msgid "STRIKE MISSIONS"
 msgstr "УДАРНИХ ВИЛЬОТІВ"
 
-#: svarog/templates/stats.html:111
+#: svarog/templates/stats.html:95
 msgid "FPV DRONES DETECTED"
 msgstr "ВИЯВЛЕНО FPV ДРОНІВ"
 
-#: svarog/templates/stats.html:126
+#: svarog/templates/stats.html:109
 msgid "REMOTE MINE-LAYING SESSIONS"
 msgstr "СЕСІЙ МІНУВАННЯ"
 
-#: svarog/templates/stats.html:132
+#: svarog/templates/stats.html:114
 msgid "AT MINES LAYED"
 msgstr "ВСТАНОВЛЕНО МІН"
 
-#: svarog/templates/stats.html:144
+#: svarog/templates/stats.html:125
 msgid "DAMAGED"
 msgstr "УРАЖЕНО"
 
-#: svarog/templates/stats.html:162
-msgid "Tanks"
-msgstr "Танки"
-
-#: svarog/templates/stats.html:177
+#: svarog/templates/stats.html:155
 msgid "MLRS + SAM CU"
-msgstr "РСЗВ + ЗРК + ЗУ"
+msgstr "РСЗВ"
 
-#: svarog/templates/stats.html:180
+#: svarog/templates/stats.html:158
 msgid "MLRS + SAM + CU"
-msgstr "РСЗВ + ЗРК + ЗУ"
-
-#: svarog/templates/stats.html:195 svarog/templates/stats.html:198
-msgid "Self-propelled artillery"
-msgstr "САУ"
-
-#: svarog/templates/stats.html:213 svarog/templates/stats.html:216
-msgid "AFV + APC"
-msgstr "ББМ + БМП + БТР"
-
-#: svarog/templates/stats.html:231 svarog/templates/stats.html:234
-msgid "Cars + trucks"
-msgstr "ЛАТ + ВАТ"
-
-#: svarog/templates/stats.html:249 svarog/templates/stats.html:252
-msgid "Motorcycles"
-msgstr "Мотоцикли"
-
-#: svarog/templates/stats.html:267 svarog/templates/stats.html:270
-msgid "Buggies"
-msgstr "Баггі військові"
-
-#: svarog/templates/stats.html:285 svarog/templates/stats.html:288
-msgid "ROF personnel"
-msgstr "ОС РОВ"
-
-#: svarog/templates/stats.html:303 svarog/templates/stats.html:306
-msgid "Guns + howitzers"
-msgstr "Гармати + гаубиці"
-
-#: svarog/templates/stats.html:321 svarog/templates/stats.html:324
-msgid "Mortars"
-msgstr "Міномети"
-
-#: svarog/templates/stats.html:340 svarog/templates/stats.html:343
-msgid "EW + Radars"
-msgstr "РЕБ + РЛС техніка"
-
-#: svarog/templates/stats.html:358 svarog/templates/stats.html:361
-msgid "Ammunition caches + storage facilities"
-msgstr "Склади БК та майна"
-
-#: svarog/templates/stats.html:376 svarog/templates/stats.html:379
-msgid "Shelters + dugouts"
-msgstr "Укриття + бліндажі"
-
-#: svarog/templates/stats.html:394 svarog/templates/stats.html:397
-msgid "Fixed-wing UAV"
-msgstr "Ворожі крила"
-
-#: svarog/templates/stats.html:412 svarog/templates/stats.html:416
-msgid "Antennas, cameras, network equipment"
-msgstr "Антени, камери, мереж. обладнання"
-
-#: svarog/templates/stats.html:432 svarog/templates/stats.html:435
-msgid "Other"
-msgstr "Інше"
+msgstr "РСЗВ"
 
 #: svarog/templates/technologies.html:8
 msgid "SPIRIT OF TECHNOLOGY"
@@ -892,7 +968,7 @@ msgid ""
 msgstr ""
 "Наш батальйон спеціалізується на роботі в повітрі. В наявності повний "
 "арсенал БпАК: FPV, мультиротори, важкі бомбери, розвідувальні та ударні "
-"крила.  "
+"крила. "
 
 #: svarog/templates/under_construction.html:66
 msgid "424th separate battalion of unmanned systems"
@@ -1051,30 +1127,36 @@ msgstr "Редагувати"
 
 #: svarog/templates/admin/admins.html:75
 #: svarog/templates/specialty/specialties.html:73
+#: svarog/templates/stats/edit_modal.html:39
+#: svarog/templates/stats/edit_modal.html:446
 msgid "Delete"
 msgstr "Видалити"
 
 #: svarog/templates/admin/admins.html:92
 #: svarog/templates/recruit/recruits.html:173
 #: svarog/templates/specialty/specialties.html:88
+#: svarog/templates/stats/stats.html:134
 msgid "First"
 msgstr "Перший"
 
 #: svarog/templates/admin/admins.html:101
 #: svarog/templates/recruit/recruits.html:190
 #: svarog/templates/specialty/specialties.html:96
+#: svarog/templates/stats/stats.html:143
 msgid "Previous"
 msgstr "Попередній"
 
 #: svarog/templates/admin/admins.html:126
 #: svarog/templates/recruit/recruits.html:225
 #: svarog/templates/specialty/specialties.html:121
+#: svarog/templates/stats/stats.html:168
 msgid "Next"
 msgstr "Наступний"
 
 #: svarog/templates/admin/admins.html:136
 #: svarog/templates/recruit/recruits.html:242
 #: svarog/templates/specialty/specialties.html:131
+#: svarog/templates/stats/stats.html:178
 msgid "Last"
 msgstr "Останній"
 
@@ -1096,6 +1178,8 @@ msgid "Confirmation Password"
 msgstr "Підтвердити пароль"
 
 #: svarog/templates/admin/edit_modal.html:94
+#: svarog/templates/stats/edit_modal.html:23
+#: svarog/templates/stats/edit_modal.html:431
 msgid "Save all"
 msgstr "Зберегти все"
 
@@ -1117,7 +1201,7 @@ msgstr "Звідки"
 
 #: svarog/templates/recruit/edit_modal.html:65
 msgid "Education"
-msgstr "НАЦІЯ"
+msgstr "ОСВІТА"
 
 #: svarog/templates/recruit/edit_modal.html:73
 msgid "Skills"
@@ -1197,6 +1281,115 @@ msgstr "Дії"
 msgid "Add specialty"
 msgstr "Оберіть спеціальність"
 
+#: svarog/templates/stats/add_modal.html:26
+msgid "When was it?"
+msgstr "Коли це було?"
+
+#: svarog/templates/stats/add_modal.html:36
+msgid "What was affected"
+msgstr "Що було уражено"
+
+#: svarog/templates/stats/add_modal.html:46
+msgid "How many defected?"
+msgstr "Скільки уражено?"
+
+#: svarog/templates/stats/add_modal.html:56
+msgid "How many destroyed?"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:15
+msgid "Edit day statistic"
+msgstr "Редагувати Статистику дня"
+
+#: svarog/templates/stats/edit_modal.html:28
+#: svarog/templates/stats/edit_modal.html:435
+msgid "Are you sure you wish to delete all statistic for this day?"
+msgstr "Ти впевнений, що хочеш видалити всю статистику за цей день?"
+
+#: svarog/templates/stats/edit_modal.html:57
+msgid "Tanks Destroyed"
+msgstr "ЗНИЩЕНО ТАНКІВ"
+
+#: svarog/templates/stats/edit_modal.html:75
+msgid "MLRS + SAM Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:93
+msgid "Self-propelled artillery Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:111
+msgid "AFV + APC Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:129
+msgid "Cars + trucks Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:147
+msgid "Motorcycles Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:166
+msgid "Buggies Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:185
+msgid "ROF personnel Destroyed"
+msgstr "ЗНИЩЕНО ОС РОВ"
+
+#: svarog/templates/stats/edit_modal.html:203
+msgid "Guns + howitzers Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:221
+msgid "Mortars Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:240
+msgid "Air defense systems Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:258
+msgid "EW + Radars Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:277
+msgid "Ammunition caches and etc. Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:295
+msgid "Shelters + dugouts Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:314
+msgid "Fixed-wing UAV Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:332
+msgid "Antennas, network equipment Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/edit_modal.html:351
+msgid "Other Destroyed"
+msgstr "В Т.Ч. ЗНИЩЕНО"
+
+#: svarog/templates/stats/stats.html:7
+msgid "Begin period"
+msgstr "Початок"
+
+#: svarog/templates/stats/stats.html:12
+msgid "End period"
+msgstr "Кінець"
+
+#: svarog/templates/stats/stats.html:20
+msgid "Add statistic"
+msgstr "Статистика"
+
+#: svarog/templates/stats/stats.html:27
+msgid "Date"
+msgstr "Дата"
+
 #: svarog/views/admin.py:87 svarog/views/recruit.py:144
 msgid "Cannot save user data"
 msgstr "Неможливо зберегти дані користувача"
@@ -1235,7 +1428,31 @@ msgstr "Інформація про рекрута оновлена!"
 
 #: svarog/views/specialty.py:110
 msgid "Specialty created!"
-msgstr ""
+msgstr "Фах створено!"
+
+#: svarog/views/stats.py:162
+msgid "Cannot update day statistics data"
+msgstr "Неможливо оновити дані статистики"
+
+#: svarog/views/stats.py:208
+msgid "Day Statistics data updated!"
+msgstr "Статистика дня оновлена!"
+
+#: svarog/views/stats.py:227
+msgid "Day Statistic not found"
+msgstr "Статистика дня не знайдена"
+
+#: svarog/views/stats.py:232
+msgid "Day Statistic deleted!"
+msgstr "Статистика дня видалена!"
+
+#: svarog/views/stats.py:258
+msgid "Stats for this day already exists! Please edit or delete it"
+msgstr "Статистика за цей день вже існує! Будь ласка, відредагуйте або видаліть її"
+
+#: svarog/views/stats.py:267
+msgid "Day statistic added!"
+msgstr "Статистика дня додана!"
 
 #~ msgid "CHOOSE YOUR WAY WITH USF"
 #~ msgstr "ОБЕРИ СВІЙ ШЛЯХ З ОББпС"
@@ -1453,13 +1670,7 @@ msgstr ""
 #~ "ефективного виконання бойових завдань"
 
 #~ msgid "Simple2B"
-#~ msgstr ""
-
-#~ msgid "KYIV"
-#~ msgstr "КИЇВ"
-
-#~ msgid "ave. Peremohy, 83/2"
-#~ msgstr "просп. Перемоги, 83/2"
+#~ msgstr "Simple2"
 
 #~ msgid "Daily from 09:00 to 18:00"
 #~ msgstr "Щодня з 09:00 до 18:00"
@@ -2027,4 +2238,10 @@ msgstr ""
 
 #~ msgid "OPERATION 'DOME POKROVSK'"
 #~ msgstr "КУПОЛ ПОКРОВСЬК"
+
+#~ msgid "Recruits"
+#~ msgstr "Новобранці"
+
+#~ msgid "Specialties"
+#~ msgstr "Фахи"
 
