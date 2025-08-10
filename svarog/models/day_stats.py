@@ -101,9 +101,52 @@ class DayStats(db.Model, ModelMixin):
         )
         if not last_day_stats:
             return s.Stats(period=s.Period(start=date.today(), end=date.today()))
-        stats = s.Stats.model_validate(last_day_stats)
+        stats = s.Stats()
         stats.period.start = last_day_stats.day
         stats.period.end = last_day_stats.day
+        # stats = s.Stats.model_validate(last_day_stats)
+        stats.tanks = last_day_stats.tanks or 0
+        stats.tanks_destroyed = last_day_stats.tanks_destroyed or 0
+        stats.mlrss = last_day_stats.mlrss or 0
+        stats.mlrss_destroyed = last_day_stats.mlrss_destroyed or 0
+        stats.spas = last_day_stats.spas or 0
+        stats.spas_destroyed = last_day_stats.spas_destroyed or 0
+        stats.afvs = last_day_stats.afvs or 0
+        stats.afvs_destroyed = last_day_stats.afvs_destroyed or 0
+        stats.cars = last_day_stats.cars or 0
+        stats.cars_destroyed = last_day_stats.cars_destroyed or 0
+        stats.motorcycles = last_day_stats.motorcycles or 0
+        stats.motorcycles_destroyed = last_day_stats.motorcycles_destroyed or 0
+        stats.buggies = last_day_stats.buggies or 0
+        stats.buggies_destroyed = last_day_stats.buggies_destroyed or 0
+        stats.rofs = last_day_stats.rofs or 0
+        stats.rofs_destroyed = last_day_stats.rofs_destroyed or 0
+        stats.guns = last_day_stats.guns or 0
+        stats.guns_destroyed = last_day_stats.guns_destroyed or 0
+        stats.mortars = last_day_stats.mortars or 0
+        stats.mortars_destroyed = last_day_stats.mortars_destroyed or 0
+        stats.adss = last_day_stats.adss or 0
+        stats.adss_destroyed = last_day_stats.adss_destroyed or 0
+        stats.radars = last_day_stats.radars or 0
+        stats.radars_destroyed = last_day_stats.radars_destroyed or 0
+        stats.ammos = last_day_stats.ammos or 0
+        stats.ammos_destroyed = last_day_stats.ammos_destroyed or 0
+        stats.shelters = last_day_stats.shelters or 0
+        stats.shelters_destroyed = last_day_stats.shelters_destroyed or 0
+        stats.uavs = last_day_stats.uavs or 0
+        stats.uavs_destroyed = last_day_stats.uavs_destroyed or 0
+        stats.antennas = last_day_stats.antennas or 0
+        stats.antennas_destroyed = last_day_stats.antennas_destroyed or 0
+        stats.other = last_day_stats.other or 0
+        stats.other_destroyed = last_day_stats.other_destroyed or 0
+        stats.impact_flights = last_day_stats.impact_flights or 0
+        stats.scouting_flights = last_day_stats.scouting_flights or 0
+        stats.found_targets = last_day_stats.found_targets or 0
+        stats.found_fpv_drones = last_day_stats.found_fpv_drones or 0
+        stats.destroyed_fpv_drones = last_day_stats.destroyed_fpv_drones or 0
+        stats.mining_flights = last_day_stats.mining_flights or 0
+        stats.setup_mines = last_day_stats.setup_mines or 0
+
         return stats
 
     @classmethod

@@ -28,7 +28,7 @@ BLANK_PASSWORD = "********"
 def index():
     if current_user.is_admin:
         return redirect(url_for("admin.admins"))
-    return redirect(url_for("recruit.recruits"))
+    return redirect(url_for("admin.stats.stats"))
 
 
 @admin_blueprint.route("/admins", methods=["GET"])
