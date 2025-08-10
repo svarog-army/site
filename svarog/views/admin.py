@@ -10,12 +10,15 @@ from svarog import forms as f
 from svarog import models as m
 from svarog.controllers.pagination import create_pagination
 from svarog.logger import log
+from .stats import stats_blueprint
 
 admin_blueprint = Blueprint(
     "admin",
     __name__,
     url_prefix="/admin",
 )
+# Register the stats blueprint to the admin blueprint
+admin_blueprint.register_blueprint(stats_blueprint)
 
 BLANK_PASSWORD = "********"
 

@@ -1,6 +1,5 @@
 from datetime import date, timedelta
 import sqlalchemy as sa
-from sqlalchemy.sql import func
 from flask import Blueprint, abort, current_app, g, redirect, render_template, request, url_for
 from flask_wtf import FlaskForm
 

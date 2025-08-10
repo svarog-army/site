@@ -67,22 +67,46 @@ class Stats(BaseModel):
     def total_impacted(self) -> int:
         """Calculate the total number of impacted items."""
         return (
-            self.tanks + self.mlrss + self.spas + self.afvs + self.cars +
-            self.motorcycles + self.buggies + self.rofs + self.guns +
-            self.mortars + self.adss + self.radars + self.ammos +
-            self.shelters + self.uavs + self.antennas + self.other
+            self.tanks
+            + self.mlrss
+            + self.spas
+            + self.afvs
+            + self.cars
+            + self.motorcycles
+            + self.buggies
+            + self.rofs
+            + self.guns
+            + self.mortars
+            + self.adss
+            + self.radars
+            + self.ammos
+            + self.shelters
+            + self.uavs
+            + self.antennas
+            + self.other
         )
 
     @property
     def total_destroyed(self) -> int:
         """Calculate the total number of destroyed items."""
         return (
-            self.tanks_destroyed + self.mlrss_destroyed + self.spas_destroyed +
-            self.afvs_destroyed + self.cars_destroyed + self.motorcycles_destroyed +
-            self.buggies_destroyed + self.rofs_destroyed + self.guns_destroyed +
-            self.mortars_destroyed + self.adss_destroyed + self.radars_destroyed +
-            self.ammos_destroyed + self.shelters_destroyed + self.uavs_destroyed +
-            self.antennas_destroyed + self.other_destroyed
+            self.tanks_destroyed
+            + self.mlrss_destroyed
+            + self.spas_destroyed
+            + self.afvs_destroyed
+            + self.cars_destroyed
+            + self.motorcycles_destroyed
+            + self.buggies_destroyed
+            + self.rofs_destroyed
+            + self.guns_destroyed
+            + self.mortars_destroyed
+            + self.adss_destroyed
+            + self.radars_destroyed
+            + self.ammos_destroyed
+            + self.shelters_destroyed
+            + self.uavs_destroyed
+            + self.antennas_destroyed
+            + self.other_destroyed
         )
 
     model_config = ConfigDict(
