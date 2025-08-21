@@ -76,3 +76,12 @@ def init(app: Flask):
 
         fill_test_recruits(count)
         print(f"DB populated by {count} recruits")
+
+    @app.cli.command("fill-stats")
+    @click.option("--count", default=100, type=int)
+    def fill_stats(count: int):
+        """Fill day_stats table with dummy data."""
+        from svarog.controllers.stats import fill_test_stats
+
+        fill_test_stats(count)
+        print(f"DB populated by {count} day_stats records")

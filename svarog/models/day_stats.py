@@ -1,0 +1,235 @@
+from datetime import datetime, date, timezone
+
+import sqlalchemy as sa
+from sqlalchemy import orm
+
+from svarog.database import db
+from svarog import schema as s
+from .utils import ModelMixin, gen_uuid
+
+
+def utcnow() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def current_date() -> date:
+    return utcnow().date()
+
+
+class DayStats(db.Model, ModelMixin):
+    __tablename__ = "day_stats"
+
+    id: orm.Mapped[int] = orm.mapped_column(primary_key=True)
+    uuid: orm.Mapped[str] = orm.mapped_column(sa.String(32), default=gen_uuid, index=True)
+    day: orm.Mapped[date] = orm.mapped_column(
+        sa.Date,
+        default=current_date,
+    )
+    created_at: orm.Mapped[datetime] = orm.mapped_column(
+        sa.DateTime,
+        default=utcnow,
+    )
+    updated_at: orm.Mapped[datetime] = orm.mapped_column(
+        sa.DateTime,
+        default=utcnow,
+        onupdate=utcnow,
+    )
+    is_deleted: orm.Mapped[bool] = orm.mapped_column(sa.Boolean, server_default=sa.false())
+
+    tanks: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Tanks
+    tanks_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Tanks destroyed
+    mlrss: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # MLRS + SAM
+    mlrss_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # MLRS + SAM destroyed
+    spas: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Self-propelled artillery
+    spas_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # SPA destroyed
+    afvs: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # AFV + APC
+    afvs_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # AFV + APC destroyed
+    cars: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Cars + trucks
+    cars_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Cars + trucks destroyed
+    motorcycles: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Motorcycles
+    motorcycles_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Motorcycles destroyed
+    buggies: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Buggies
+    buggies_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Buggies destroyed
+    rofs: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # ROF personnel
+    rofs_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # ROF personnel destroyed
+    guns: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Guns + howitzers
+    guns_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Guns + howitzers destroyed
+    mortars: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Mortars
+    mortars_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Mortars destroyed
+    adss: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Air defense systems
+    adss_destroyed: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Air defense systems destroyed
+    radars: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # EW + Radars
+    radars_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # EW + Radars destroyed
+    ammos: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Ammunition caches + storage facilities
+    ammos_destroyed: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Ammunition caches + storage facilities destroyed
+    shelters: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Shelters + dugouts
+    shelters_destroyed: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Shelters + dugouts destroyed
+    uavs: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Fixed-wing UAV
+    uavs_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Fixed-wing UAV destroyed
+    antennas: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Antennas, cameras, network equipment
+    antennas_destroyed: orm.Mapped[int | None] = orm.mapped_column(
+        sa.Integer, default=None
+    )  # Antennas, cameras, network equipment destroyed
+    other: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Other
+    other_destroyed: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Other destroyed
+    impact_flights: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Impact Flights
+    scouting_flights: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Scouting Flights
+    found_targets: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Found targets
+    found_fpv_drones: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Found FPV drones
+    destroyed_fpv_drones: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Destroyed FPV drones
+    mining_flights: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Mining Flights
+    setup_mines: orm.Mapped[int | None] = orm.mapped_column(sa.Integer, default=None)  # Setup mines
+
+    def __repr__(self):
+        return f"<{self.id}: {self.day}>"
+
+    @classmethod
+    def last_day(cls) -> s.Stats:
+        """Returns the last day stats."""
+        last_day_stats = db.session.scalar(
+            sa.select(cls).where(cls.is_deleted.is_(False)).order_by(cls.day.desc()).limit(1)
+        )
+        if not last_day_stats:
+            return s.Stats(period=s.Period(start=date.today(), end=date.today()))
+        stats = s.Stats()
+        stats.period.start = last_day_stats.day
+        stats.period.end = last_day_stats.day
+        # stats = s.Stats.model_validate(last_day_stats)
+        stats.tanks = last_day_stats.tanks or 0
+        stats.tanks_destroyed = last_day_stats.tanks_destroyed or 0
+        stats.mlrss = last_day_stats.mlrss or 0
+        stats.mlrss_destroyed = last_day_stats.mlrss_destroyed or 0
+        stats.spas = last_day_stats.spas or 0
+        stats.spas_destroyed = last_day_stats.spas_destroyed or 0
+        stats.afvs = last_day_stats.afvs or 0
+        stats.afvs_destroyed = last_day_stats.afvs_destroyed or 0
+        stats.cars = last_day_stats.cars or 0
+        stats.cars_destroyed = last_day_stats.cars_destroyed or 0
+        stats.motorcycles = last_day_stats.motorcycles or 0
+        stats.motorcycles_destroyed = last_day_stats.motorcycles_destroyed or 0
+        stats.buggies = last_day_stats.buggies or 0
+        stats.buggies_destroyed = last_day_stats.buggies_destroyed or 0
+        stats.rofs = last_day_stats.rofs or 0
+        stats.rofs_destroyed = last_day_stats.rofs_destroyed or 0
+        stats.guns = last_day_stats.guns or 0
+        stats.guns_destroyed = last_day_stats.guns_destroyed or 0
+        stats.mortars = last_day_stats.mortars or 0
+        stats.mortars_destroyed = last_day_stats.mortars_destroyed or 0
+        stats.adss = last_day_stats.adss or 0
+        stats.adss_destroyed = last_day_stats.adss_destroyed or 0
+        stats.radars = last_day_stats.radars or 0
+        stats.radars_destroyed = last_day_stats.radars_destroyed or 0
+        stats.ammos = last_day_stats.ammos or 0
+        stats.ammos_destroyed = last_day_stats.ammos_destroyed or 0
+        stats.shelters = last_day_stats.shelters or 0
+        stats.shelters_destroyed = last_day_stats.shelters_destroyed or 0
+        stats.uavs = last_day_stats.uavs or 0
+        stats.uavs_destroyed = last_day_stats.uavs_destroyed or 0
+        stats.antennas = last_day_stats.antennas or 0
+        stats.antennas_destroyed = last_day_stats.antennas_destroyed or 0
+        stats.other = last_day_stats.other or 0
+        stats.other_destroyed = last_day_stats.other_destroyed or 0
+        stats.impact_flights = last_day_stats.impact_flights or 0
+        stats.scouting_flights = last_day_stats.scouting_flights or 0
+        stats.found_targets = last_day_stats.found_targets or 0
+        stats.found_fpv_drones = last_day_stats.found_fpv_drones or 0
+        stats.destroyed_fpv_drones = last_day_stats.destroyed_fpv_drones or 0
+        stats.mining_flights = last_day_stats.mining_flights or 0
+        stats.setup_mines = last_day_stats.setup_mines or 0
+
+        return stats
+
+    @classmethod
+    def get_stats_for_period(cls, period: s.Period) -> s.Stats:
+        """Returns stats for the given period."""
+        where = sa.and_(cls.is_deleted.is_(False), cls.day >= period.start, cls.day <= period.end)
+        query = sa.select(cls).where(where).order_by(cls.day.desc())
+        stats_list = db.session.scalars(query).all()
+        assert stats_list, "No stats found for the specified period"
+
+        stats = s.Stats(period=period)
+        for stat in stats_list:
+            stats.tanks += stat.tanks or 0
+            stats.tanks_destroyed += stat.tanks_destroyed or 0
+            stats.mlrss += stat.mlrss or 0
+            stats.mlrss_destroyed += stat.mlrss_destroyed or 0
+            stats.spas += stat.spas or 0
+            stats.spas_destroyed += stat.spas_destroyed or 0
+            stats.afvs += stat.afvs or 0
+            stats.afvs_destroyed += stat.afvs_destroyed or 0
+            stats.cars += stat.cars or 0
+            stats.cars_destroyed += stat.cars_destroyed or 0
+            stats.motorcycles += stat.motorcycles or 0
+            stats.motorcycles_destroyed += stat.motorcycles_destroyed or 0
+            stats.buggies += stat.buggies or 0
+            stats.buggies_destroyed += stat.buggies_destroyed or 0
+            stats.rofs += stat.rofs or 0
+            stats.rofs_destroyed += stat.rofs_destroyed or 0
+            stats.guns += stat.guns or 0
+            stats.guns_destroyed += stat.guns_destroyed or 0
+            stats.mortars += stat.mortars or 0
+            stats.mortars_destroyed += stat.mortars_destroyed or 0
+            stats.adss += stat.adss or 0
+            stats.adss_destroyed += stat.adss_destroyed or 0
+            stats.radars += stat.radars or 0
+            stats.radars_destroyed += stat.radars_destroyed or 0
+            stats.ammos += stat.ammos or 0
+            stats.ammos_destroyed += stat.ammos_destroyed or 0
+            stats.shelters += stat.shelters or 0
+            stats.shelters_destroyed += stat.shelters_destroyed or 0
+            stats.uavs += stat.uavs or 0
+            stats.uavs_destroyed += stat.uavs_destroyed or 0
+            stats.antennas += stat.antennas or 0
+            stats.antennas_destroyed += stat.antennas_destroyed or 0
+            stats.other += stat.other or 0
+            stats.other_destroyed += stat.other_destroyed or 0
+            stats.impact_flights += stat.impact_flights or 0
+            stats.scouting_flights += stat.scouting_flights or 0
+            stats.found_targets += stat.found_targets or 0
+            stats.found_fpv_drones += stat.found_fpv_drones or 0
+            stats.destroyed_fpv_drones += stat.destroyed_fpv_drones or 0
+            stats.mining_flights += stat.mining_flights or 0
+            stats.setup_mines += stat.setup_mines or 0
+
+        return stats
+
+    def set_value_by_name(self, stat_name: str, count: int, destroyed_count: int | None = None):
+        """Set value by stat name."""
+        # Check impossible names and raise an error
+        if stat_name in ["id", "uuid", "created_at", "updated_at", "is_deleted"]:
+            raise ValueError(f"Cannot set value for reserved stat name: {stat_name}")
+        if not hasattr(self, stat_name):
+            raise ValueError(f"Stat {stat_name} does not exist in DayStats model")
+        setattr(self, stat_name, count)
+        # If a destroyed stat exists, set it as well
+        if destroyed_count is not None and stat_name not in [
+            "impact_flights",
+            "scouting_flights",
+            "found_targets",
+            "found_fpv_drones",
+            "destroyed_fpv_drones",
+            "mining_flights",
+            "setup_mines",
+        ]:
+            # If a destroyed stat exists, set it as well
+            destroyed_stat_name = f"{stat_name}_destroyed"
+            if hasattr(self, destroyed_stat_name):
+                setattr(self, destroyed_stat_name, destroyed_count)
+
+    def get_value_by_name(self, stat_name: str) -> int | None:
+        """Get value by stat name."""
+        if not hasattr(self, stat_name):
+            raise ValueError(f"Stat {stat_name} does not exist in DayStats model")
+        if stat_name in ["id", "uuid", "created_at", "updated_at", "is_deleted"]:
+            raise ValueError(f"Cannot get value for reserved name: {stat_name}")
+        return getattr(self, stat_name)

@@ -5,3 +5,4 @@ from .recruit import Recruit
 from .specialty import Specialty
 from .utils import count, all, first, paginate, gen_uuid
 from .recruiter_status_change_event import RecruitStatusChangeEvent
+from .day_stats import DayStats

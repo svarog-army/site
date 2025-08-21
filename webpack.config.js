@@ -55,6 +55,16 @@ const adminConfig = {
   },
 };
 
+const statsConfig = {
+  entry: {
+    main: './src/stats.ts',
+  },
+  output: {
+    path: path.resolve(__dirname, './svarog/static'),
+    filename: 'js/stats.js', // <--- Will be compiled to this single file
+  },
+};
+
 const landingConfig = {
   entry: {
     main: './src/landing.ts',
@@ -82,6 +92,7 @@ const configs = [
   cookieConfig,
   landingConfig,
   phoneFormattingConfig,
+  statsConfig,
 ].map(conf => merge(defaultConfig, conf));
 
 module.exports = configs;

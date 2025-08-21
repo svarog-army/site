@@ -1,0 +1,451 @@
+<div
+  tabindex="-1"
+  hx-trigger="click"
+  hx-swap="delete"
+  hx-get="{{url_for('main.no_content')}}"
+  class="fixed bg-opacity-80 bg-gray-600 top-0 left-0 right-0 z-50 items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full flex">
+  <div class="rounded-lg relative w-full max-w-2xl max-h-full bg-white" onclick="event.stopPropagation();">
+    <form
+      action="{{url_for('admin.stats.save')}}"
+      method="post"
+      class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      {{ form.hidden_tag() }}
+      <!-- Modal header -->
+      <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{{_("Edit day statistic")}}</h3>
+      </div>
+      <!-- Top panel -->
+      <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button
+          name="submit"
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          {{_("Save all")}}
+        </button>
+        <button
+          type="button"
+          id="close-modal"
+          hx-confirm="{{_('Are you sure you wish to delete all statistic for this day?')}}"
+          hx-indicator="#htmx-spinner"
+          hx-target="#close-modal"
+          hx-target-404="#not-found"
+          hx-trigger="click"
+          hx-swap="outerHTML"
+          hx-delete="{{ url_for('admin.stats.delete', stats_uuid=form.stats_uuid.data) }}"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900"
+          hx-headers='{"X-CSRFToken": "{{ csrf_token() }}"}'>
+          <!-- prettier-ignore -->
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path> </svg>
+          {{_("Delete")}}
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="p-6 space-y-6">
+        <div class="grid grid-cols-6 gap-6">
+          <!-- Tanks -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="tanks" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Tanks")}}
+            </label>
+            {{ form.tanks(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Tanks Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="tanks_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Tanks Destroyed")}}
+            </label>
+            {{ form.tanks_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- MLRS -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="mlrs" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("MLRS + SAM")}}
+            </label>
+            {{ form.mlrss(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- MLRS Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="mlrs_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("MLRS + SAM Destroyed")}}
+            </label>
+            {{ form.mlrss_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Self-propelled artillery -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="spas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Self-propelled artillery")}}
+            </label>
+            {{ form.spas(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Self-propelled artillery Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="spas_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Self-propelled artillery Destroyed")}}
+            </label>
+            {{ form.spas_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- AFV + APC -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="afvs" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("AFV + APC")}}
+            </label>
+            {{ form.afvs(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- AFV + APC Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="afvs_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("AFV + APC Destroyed")}}
+            </label>
+            {{ form.afvs_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Cars + trucks -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="cars" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Cars + trucks")}}
+            </label>
+            {{ form.cars(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Cars + trucks Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="cars_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Cars + trucks Destroyed")}}
+            </label>
+            {{ form.cars_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Motorcycles -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="motorcycles" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Motorcycles")}}
+            </label>
+            {{ form.motorcycles(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Motorcycles Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="motorcycles_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Motorcycles Destroyed")}}
+            </label>
+            {{ form.motorcycles_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Buggies -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="buggies" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Buggies")}}
+            </label>
+            {{ form.buggies(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Buggies Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="buggies_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Buggies Destroyed")}}
+            </label>
+            {{ form.buggies_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- ROF personnel -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="rofs" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("ROF personnel")}}
+            </label>
+            {{ form.rofs(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- ROF personnel Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="rofs_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("ROF personnel Destroyed")}}
+            </label>
+            {{ form.rofs_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Guns + howitzers -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="guns" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Guns + howitzers")}}
+            </label>
+            {{ form.guns(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Guns + howitzers Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="guns_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Guns + howitzers Destroyed")}}
+            </label>
+            {{ form.guns_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Mortars -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="mortars" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Mortars")}}
+            </label>
+            {{ form.mortars(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Mortars Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="mortars_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Mortars Destroyed")}}
+            </label>
+            {{ form.mortars_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Air defense systems -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="adss" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Air defense systems")}}
+            </label>
+            {{ form.adss(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Air defense systems Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="adss_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Air defense systems Destroyed")}}
+            </label>
+            {{ form.adss_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- EW + Radars -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="radars" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("EW + Radars")}}
+            </label>
+            {{ form.radars(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- EW + Radars Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="radars_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("EW + Radars Destroyed")}}
+            </label>
+            {{ form.radars_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Ammunition caches + storage facilities -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="ammos" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Ammunition caches + storage facilities")}}
+            </label>
+            {{ form.ammos(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Ammunition caches + storage facilities Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="ammos_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Ammunition caches and etc. Destroyed")}}
+            </label>
+            {{ form.ammos_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Shelters + dugouts -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="shelters" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Shelters + dugouts")}}
+            </label>
+            {{ form.shelters(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Shelters + dugouts Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="shelters_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Shelters + dugouts Destroyed")}}
+            </label>
+            {{ form.shelters_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Fixed-wing UAV -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="uavs" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Fixed-wing UAV")}}
+            </label>
+            {{ form.uavs(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Fixed-wing UAV Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="uavs_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Fixed-wing UAV Destroyed")}}
+            </label>
+            {{ form.uavs_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Antennas, cameras, network equipment -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="antennas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Antennas, cameras, network equipment")}}
+            </label>
+            {{ form.antennas(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Antennas, cameras, network equipment Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="antennas_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Antennas, network equipment Destroyed")}}
+            </label>
+            {{ form.antennas_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Other -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="other" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Other")}}
+            </label>
+            {{ form.other(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Other Destroyed -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="other_destroyed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Other Destroyed")}}
+            </label>
+            {{ form.other_destroyed(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Impact Flights -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="impact_flights" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Impact Flights")}}
+            </label>
+            {{ form.impact_flights(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Scouting Flights -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="scouting_flights" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Scouting Flights")}}
+            </label>
+            {{ form.scouting_flights(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Found Targets -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="found_targets" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Found Targets")}}
+            </label>
+            {{ form.found_targets(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Found FPV Drones -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="found_fpv_drones" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Found FPV Drones")}}
+            </label>
+            {{ form.found_fpv_drones(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Destroyed FPV Drones -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="destroyed_fpv_drones" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Destroyed FPV Drones")}}
+            </label>
+            {{ form.destroyed_fpv_drones(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm
+            rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+            dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+            dark:focus:border-blue-500") }}
+          </div>
+          <!-- Mining Flights -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="mining_flights" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Mining Flights")}}
+            </label>
+            {{ form.mining_flights(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+          <!-- Setup Mines -->
+          <div class="col-span-6 sm:col-span-3">
+            <label for="setup_mines" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              {{_("Setup Mines")}}
+            </label>
+            {{ form.setup_mines(class_="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+          </div>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button
+          name="submit"
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          {{_("Save all")}}
+        </button>
+        <button
+          type="button"
+          hx-confirm="{{_('Are you sure you wish to delete all statistic for this day?')}}"
+          hx-indicator="#htmx-spinner"
+          hx-target="#stat-{{ form.stats_uuid.data }}"
+          hx-target-404="#not-found"
+          hx-trigger="click"
+          hx-swap="outerHTML"
+          hx-delete="{{ url_for('admin.stats.delete', stats_uuid=form.stats_uuid.data) }}"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900"
+          hx-headers='{"X-CSRFToken": "{{ csrf_token() }}"}'>
+          <!-- prettier-ignore -->
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path> </svg>
+          {{_("Delete")}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

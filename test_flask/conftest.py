@@ -5,6 +5,7 @@ from flask.testing import FlaskClient
 
 from svarog import create_app, db
 from svarog import models as m
+from svarog.controllers.stats import fill_test_stats
 from test_flask.utils import register
 
 
@@ -50,10 +51,13 @@ def runner(app, client):
 @pytest.fixture
 def populate(client: FlaskClient):
     NUM_TEST_USERS = 100
+    NUM_TEST_STAT_DAYS = 100
     for i in range(NUM_TEST_USERS):
         m.User(
-            username=f"user{i+1}",
-            email=f"user{i+1}@mail.com",
+            username=f"user{i + 1}",
+            email=f"user{i + 1}@mail.com",
         ).save(False)
     db.session.commit()
+    fill_test_stats(NUM_TEST_STAT_DAYS)
+
     yield client
