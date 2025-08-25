@@ -1,13 +1,9 @@
-# Ukrainian translations for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-23 10:10+0000\n"
+"POT-Creation-Date: 2025-08-25 11:27+0000\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -413,7 +409,7 @@ msgstr "ДОЗВОЛИТИ ВСЕ"
 
 #: svarog/templates/footer.html:14
 msgid ""
-"424th Separate Battalion of Unmanned Systems Svarog Unmanned Systems "
+"424th Separate Unmanned Systems Battalion “SVAROG” of Unmanned Systems "
 "Forces"
 msgstr ""
 "424-й окремий батальйон\n"
@@ -421,7 +417,7 @@ msgstr ""
 "                   Сил безпілотних систем"
 
 #: svarog/templates/hero.html:16 svarog/templates/stats.html:18
-msgid "424 OB BPC"
+msgid "424th SUSB"
 msgstr "424 ОБ БПС"
 
 #: svarog/templates/hero.html:20 svarog/templates/stats.html:15
@@ -430,13 +426,11 @@ msgstr "SVAROG"
 
 #: svarog/templates/hero.html:25
 msgid ""
-"Every day, we improve ourselves in order to successfully complete our "
-"tasks and save the lives of our brothers. \n"
-"          No matter where, no matter with whom!"
+"Every day we improve ourselves to ensure mission success and safeguard "
+"our brothers-in-arms. Doesn’t matter where, but with whom!"
 msgstr ""
 "Щоденно ми вдосконалюємось задля успішного виконання завдань і збереження"
-" життя побратимів. \n"
-"          Байдуже де, не байдуже з ким!"
+" життя побратимів. Байдуже де, не байдуже з ким!"
 
 #: svarog/templates/privacy_policy.html:4
 msgid "Privacy Policy"
@@ -991,7 +985,7 @@ msgstr "ВАКАНСІЇ"
 msgid "Electrician driver"
 msgstr "Водій-Електрик"
 
-#: svarog/templates/vacancies.html:15
+#: svarog/templates/vacancies.html:15 svarog/templates/vacancies.html:91
 msgid "Accountant 1st category"
 msgstr "Бухгалтер 1 категорії"
 
@@ -1062,10 +1056,6 @@ msgstr "Діловод"
 #: svarog/templates/vacancies.html:83 svarog/templates/vacancies.html:108
 msgid "Electrician"
 msgstr "Електрик"
-
-#: svarog/templates/vacancies.html:91
-msgid "  "
-msgstr ""
 
 #: svarog/templates/admin/add_modal.html:67
 msgid "Confirm Password"
@@ -2338,4 +2328,10 @@ msgstr "Статистика дня додана!"
 
 #~ msgid "Driver-electrician of the communications platoon"
 #~ msgstr "Водій-електрик взводу зв'язку"
+
+#~ msgid "  "
+#~ msgstr ""
+
+#~ msgid "424 OB BPC"
+#~ msgstr ""
 
