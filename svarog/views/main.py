@@ -1,6 +1,7 @@
 from flask import Blueprint, request, redirect, g, current_app, url_for, abort
 from config import CFG
 from svarog.logger import log
+from svarog.controllers import get_custom_links
 
 
 main_blueprint = Blueprint("main", __name__)
@@ -36,4 +37,14 @@ def change_locale():
         return redirect(url_for(endpoint, **args), code=301)
     except Exception as e:
         log(log.ERROR, "Failed to change locale: %s", e)
+        abort(404)
+
+
+@main_blueprint.route("/test-drive/", methods=["GET"])
+def test_drive():
+    links = get_custom_links()
+    # Redirect to the test drive link if set
+    if links.test_drive:
+        return redirect(links.test_drive)
+    else:
         abort(404)

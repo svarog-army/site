@@ -40,7 +40,6 @@ def before_request():
         if dfl["lang_code"] != request.full_path.split("/")[1]:
             abort(404)
     g.custom_links = get_custom_links()
-    pass
 
 
 @multilingual.route("/")
@@ -81,3 +80,5 @@ def cookie_policy():
 def privacy_policy():
     form = f.ApplicationForm()
     return render_template("privacy_policy.html", form=form)
+
+
