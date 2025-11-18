@@ -64,6 +64,14 @@ class BaseConfig(BaseSettings):
     SIGNAL_TO: str
     ROBOTS_DISALLOW: str = ""
 
+    # Custom links
+    LINK_INSTAGRAM: str
+    LINK_FACEBOOK: str
+    LINK_TELEGRAM: str
+    LINK_YOUTUBE: str
+    LINK_DONATE: str
+    LINK_TEST_DRIVE: str
+
     @staticmethod
     def configure(app):
         # Implement this method to do further configuration on your app.
@@ -101,7 +109,7 @@ def config(name: str = APP_ENV) -> DevelopmentConfig | TestingConfig | Productio
         testing=TestingConfig,
         production=ProductionConfig,
     )
-    configuration = CONF_MAP[name]()
+    configuration = CONF_MAP[name]()  # type: ignore
     configuration.ENV = name
     return configuration
 

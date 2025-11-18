@@ -18,7 +18,7 @@
           <div class="flex flex-row justify-between mx-auto md:mx-0 w-[320px] md:w-auto">
             <div class="flex gap-3">
 
-            <a href="https://t.me/svarog_usf" target="_blank" class="my-auto">
+            <a href={{g.custom_links.telegram}} target="_blank" class="my-auto">
               <img
                 src="{{ url_for('static',filename='img/telegram.svg') }}"
                 width="24"
@@ -28,7 +28,7 @@
             </a>
 
             <a
-              href="https://www.instagram.com/424_svarog/"
+              href={{g.custom_links.instagram}}
               target="_blank"
               class="my-auto">
               <img
@@ -40,7 +40,7 @@
             </a>
 
             <a
-              href="https://www.facebook.com/svarog.usf"
+              href={{g.custom_links.facebook}}
               target="_blank"
               class="my-auto">
               <img

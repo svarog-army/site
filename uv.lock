@@ -970,7 +970,7 @@ wheels = [
 
 [[package]]
 name = "svarog"
-version = "2.1.0"
+version = "2.1.10"
 source = { virtual = "." }
 dependencies = [
     { name = "alchemical" },

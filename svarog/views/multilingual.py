@@ -8,6 +8,7 @@ from svarog import db
 from svarog import forms as f
 from svarog import models as m
 from svarog import schema as s
+from svarog.controllers import get_custom_links
 
 multilingual = Blueprint("multilingual", __name__, template_folder="templates", url_prefix="/<lang_code>")
 
@@ -38,6 +39,8 @@ def before_request():
     if dfl and "lang_code" in dfl:
         if dfl["lang_code"] != request.full_path.split("/")[1]:
             abort(404)
+    g.custom_links = get_custom_links()
+    pass
 
 
 @multilingual.route("/")

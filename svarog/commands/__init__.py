@@ -30,7 +30,7 @@ def init(app: Flask):
     def create_admin():
         """Create super admin account"""
         query = m.User.select().where(m.User.email == app.config["ADMIN_EMAIL"])
-        if db.session.execute(query).first():
+        if db.session.execute(query).first():  # pyright: ignore[reportAttributeAccessIssue]
             print(f"User with e-mail: [{app.config['ADMIN_EMAIL']}] already exists")
             return
         m.User(
@@ -58,7 +58,7 @@ def init(app: Flask):
         ]
         counter = 0
         for en, uk in specialties:
-            existing = db.session.scalar(
+            existing = db.session.scalar(  # pyright: ignore[reportAttributeAccessIssue]
                 m.Specialty.select().where(m.Specialty.name_en == en, m.Specialty.is_deleted.is_(False))
             )
             if existing:
@@ -85,3 +85,24 @@ def init(app: Flask):
 
         fill_test_stats(count)
         print(f"DB populated by {count} day_stats records")
+
+    @app.cli.command("fill-custom-links")
+    def fill_custom_links():
+        """Fill custom_links table with data from config."""
+        links = {
+            s.LinkType.INSTAGRAM: app.config["LINK_INSTAGRAM"],
+            s.LinkType.FACEBOOK: app.config["LINK_FACEBOOK"],
+            s.LinkType.TELEGRAM: app.config["LINK_TELEGRAM"],
+            s.LinkType.YOUTUBE: app.config["LINK_YOUTUBE"],
+            s.LinkType.DONATE: app.config["LINK_DONATE"],
+            s.LinkType.TEST_DRIVE: app.config["LINK_TEST_DRIVE"],
+        }
+        counter = 0
+        for link_type, link_url in links.items():
+            existing = db.session.scalar(m.CustomLink.select().where(m.CustomLink.link_type == link_type))  # pyright: ignore[reportAttributeAccessIssue]
+            if existing:
+                print(f"Custom link [{link_type}] already exists")
+                continue
+            m.CustomLink(link_type=link_type, link_url=link_url).save()
+            counter += 1
+        print(f"{counter} custom links created")

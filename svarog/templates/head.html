@@ -15,15 +15,15 @@
     <div class="flex items-center gap-4 h-[24px]">
       <div class="flex gap-3">
 
-        <a href="https://t.me/svarog_usf" target="_blank" class="my-auto">
+        <a href={{g.custom_links.telegram}} target="_blank" class="my-auto">
           <img src="{{ url_for('static',filename='img/telegram.svg') }}" width="24" height="24" alt="Telegram" class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]"/>
         </a>
 
-        <a href="https://www.instagram.com/424_svarog/" target="_blank" class="my-auto">
+        <a href={{g.custom_links.instagram}} target="_blank" class="my-auto">
           <img src="{{ url_for('static',filename='img/instagram.svg') }}" width="24" height="24" alt="Instagram" class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]"/>
         </a>
 
-        <a href="https://www.facebook.com/svarog.usf" target="_blank" class="my-auto">
+        <a href={{g.custom_links.facebook}} target="_blank" class="my-auto">
             <img src="{{ url_for('static',filename='img/facebook.svg') }}" width="24" height="24" alt="Facebook" class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]" />
         </a>
 
@@ -34,6 +34,7 @@
           <label for="local_select" class="sr-only">Language select</label>
           <select id="local_select" name="locale" onchange="this.form.submit()"
             class="block py-2.5 px-0 w-full text-sm text-[--main-grey] bg-transparent border-none appearance-none focus:outline-none focus:ring-0 peer cursor-pointer">
+            <!-- prettier-ignore -->
             <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="uk" {% if g.lang_code=='uk' %}
               selected {% endif %}>УКР</option>
             <option class="dark:bg-gray-700 text-black dark:text-white text-center" value="en" {% if g.lang_code=='en' %}
