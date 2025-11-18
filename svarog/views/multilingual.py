@@ -80,5 +80,3 @@ def cookie_policy():
 def privacy_policy():
     form = f.ApplicationForm()
     return render_template("privacy_policy.html", form=form)
-
-
