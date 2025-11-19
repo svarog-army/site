@@ -1,2 +1,2 @@
-yarn js;
-yarn css;
+npm run js;
+npm run css;

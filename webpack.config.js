@@ -85,6 +85,16 @@ const phoneFormattingConfig = {
   },
 };
 
+const redirectConfig = {
+  entry: {
+    main: './src/redirect.ts',
+  },
+  output: {
+    path: path.resolve(__dirname, './svarog/static'),
+    filename: 'js/redirect.js',
+  },
+};
+
 const configs = [
   baseConfig,
   recruitConfig,
@@ -93,6 +103,7 @@ const configs = [
   landingConfig,
   phoneFormattingConfig,
   statsConfig,
+  redirectConfig,
 ].map(conf => merge(defaultConfig, conf));
 
 module.exports = configs;

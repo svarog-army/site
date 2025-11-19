@@ -45,7 +45,7 @@ flask db upgrade
 6. In main folder need install node_modules to work with tailwind, run
 
 ```bash
-yarn
+npm install
 ```
 
 7. Unpack signal bot config.
@@ -67,11 +67,11 @@ yarn
    docker compose up bot
    ```
 
-2. Get captcha code. To get the token, go to https://signalcaptchas.org/registration/generate.html
+2. Get captcha code. To get the token, go to <https://signalcaptchas.org/registration/generate.html>
 
    You need to open the page on the same device that runs the signal-cli register command (or at least a device that has the same external IP address).
 
-   (If the token from that page doesn't work, you can try https://signalcaptchas.org/challenge/generate.html)
+   (If the token from that page doesn't work, you can try <https://signalcaptchas.org/challenge/generate.html>)
 
    After filling the captcha, the site doesn't immediately show the token but tries to redirect to a signalcaptcha:// url that contains the token.
 
@@ -98,6 +98,7 @@ yarn
    ```bash
    signal-cli --config /home/.local/share/signal-cli -a  < phone_number_here > verify < verification_code >
    ```
+
 5. Leave the container
 
    ```bash
@@ -111,13 +112,14 @@ Now the bot is ready to use. To send a sample message do:
      -d '{"message": "Test via Signal API!", "number": "+4412345", "recipients": [ "+44987654" ]}'
    ```
 
-### Update Signal bot setup at stage/production environment (Optional):
+### Update Signal bot setup at stage/production environment (Optional)
 
 1. Create a new archive with the updated signal bot config:
 
    ```bash
    tar --exclude '*.db' -czvf  signal-cli-config.tar.gz signal-cli-config
    ```
+
 2. Convert the archive to base64:
 
    ```bash
@@ -126,30 +128,38 @@ Now the bot is ready to use. To send a sample message do:
 
 3. Set the SIGNAL_BOT_CONFIG_BASE64 secret at repo settings in Github to the content of the signal-cli-config.tar.gz.base64 file.
 
-
 ## How to work with translations (i18n)
+
 1. In HTML you need to write text in special brackets
 (the text language must be the default language for your project):
+
 ```bash
 <h1>{{_("Your text")}}</h1>
 ```
+
 2. Run scripts in this order:
+
 ```bash
 ./translate-compile.sh
 ```
+
 ```bash
 ./translate-update.sh
 ```
+
 3. Go to the `messages.po` file and check the text, it should be:
+
 ```bash
 #: svarog/templates/your-template.html:10 <--- your file path and text line
 #, fuzzy <--- this means that you need to check whether the text was compiled correctly
 msgid "Your text"
 msgstr "" <--- here you need to insert your text in another language
 ```
+
 **It is important to remove `#, fuzzy`, otherwise the translation won't be applied.**
 
 How it should look after the changes:
+
 ```bash
 #: svarog/templates/your-template.html:10
 msgid "Your text"

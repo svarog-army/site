@@ -1,0 +1,1 @@
+(()=>{var r=document.querySelector("#redirect-url");if(r){var e=r.dataset.url;e&&(window.location.href=e)}})();

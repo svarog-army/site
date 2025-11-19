@@ -1,4 +1,5 @@
-from flask import Blueprint, request, redirect, g, current_app, url_for, abort
+from flask import Blueprint, request, redirect, g, current_app, url_for, abort, render_template
+from flask_wtf import FlaskForm
 from config import CFG
 from svarog.logger import log
 from svarog.controllers import get_custom_links
@@ -11,6 +12,11 @@ main_blueprint = Blueprint("main", __name__)
 def no_content():
     """HTMX request"""
     return "", 200
+
+
+@main_blueprint.before_request
+def before_request():
+    g.custom_links = get_custom_links()
 
 
 @main_blueprint.route("/change-locale", methods=["POST"])
@@ -43,8 +49,10 @@ def change_locale():
 @main_blueprint.route("/test-drive/", methods=["GET"])
 def test_drive():
     links = get_custom_links()
+    form = FlaskForm()
     # Redirect to the test drive link if set
     if links.test_drive:
-        return redirect(links.test_drive)
+        # return redirect(links.test_drive)
+        return render_template("redirect.html", redirect_url=links.test_drive, form=form)
     else:
         abort(404)
