@@ -54,7 +54,7 @@ services:
       - db
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.svarog.rule=Host(`svarog.army`) || Host(`www.svarog.army`) || Host(`www.424bat.army`) || Host(`424bat.army`)'
+      - 'traefik.http.routers.svarog.rule=Host(`svarog.army`) || Host(`www.svarog.army`)
       - 'traefik.http.routers.svarog.tls=true'
       - 'traefik.http.routers.svarog.tls.certresolver=myresolver'
 

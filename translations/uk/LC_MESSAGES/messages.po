@@ -256,8 +256,8 @@ msgstr ""
 "техніці та командних пунктах у тилу ворога."
 
 #: svarog/templates/cookie_policy.html:6
-msgid "Cookie Policy for 424bat.army website"
-msgstr "Політика використання файлів cookie для веб-сайту 424bat.army"
+msgid "Cookie Policy for svarog.army website"
+msgstr "Політика використання файлів cookie для веб-сайту svarog.army"
 
 #: svarog/templates/cookie_policy.html:9
 msgid "Introduction"
@@ -265,14 +265,14 @@ msgstr "Вступ"
 
 #: svarog/templates/cookie_policy.html:12
 msgid ""
-"This Cookie Policy explains how the 424bat.army website (the “Site”)\n"
+"This Cookie Policy explains how the svarog.army website (the “Site”)\n"
 "    uses cookies and similar technologies to collect and process "
 "information\n"
 "    about you. We use cookies to ensure the Site works properly and "
 "provide a\n"
 "    better user experience."
 msgstr ""
-"Ця Політика використання файлів cookie пояснює, як веб-сайт 424bat.army "
+"Ця Політика використання файлів cookie пояснює, як веб-сайт svarog.army "
 "(далі – “Сайт”) використовує файли cookie та подібні технології для збору"
 " та обробки інформації про вас. Ми використовуємо файли cookie для "
 "забезпечення належної роботи Сайту та надання кращого користувацького "
@@ -376,8 +376,8 @@ msgstr ""
 "переглядайте цей документ, щоб бути в курсі будь-яких змін."
 
 #: svarog/templates/cookie_policy.html:55
-msgid "Thank you for using the 424bat.army Site!"
-msgstr "Дякуємо за використання Сайту 424bat.army!"
+msgid "Thank you for using the svarog.army Site!"
+msgstr "Дякуємо за використання Сайту svarog.army!"
 
 #: svarog/templates/cookies.html:18
 msgid ""
@@ -445,11 +445,11 @@ msgid ""
 "Privacy policy – rules governing the collection, processing, use and\n"
 "    protection of personal data that may be requested/received when using"
 " the\n"
-"    424bat.army web portal (hereinafter referred to as the Portal)."
+"    svarog.army web portal (hereinafter referred to as the Portal)."
 msgstr ""
 "Політика конфіденційності – правила, якими регламентується збір, обробка,"
 " використання і захист персональних даних, що можуть бути "
-"запитані/отримані при використанні вебпорталу 424bat.army (далі –  "
+"запитані/отримані при використанні вебпорталу svarog.army (далі –  "
 "Портал)."
 
 #: svarog/templates/privacy_policy.html:15
