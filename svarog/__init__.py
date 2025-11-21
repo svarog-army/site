@@ -113,6 +113,9 @@ def create_app(environment="development"):
     @app.errorhandler(HTTPException)
     def handle_http_error(exc):
         from flask_wtf import FlaskForm
+        from svarog.controllers import get_custom_links
+
+        g.custom_links = get_custom_links()
 
         return render_template("error.html", error=exc, form=FlaskForm()), exc.code
 

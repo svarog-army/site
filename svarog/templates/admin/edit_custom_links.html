@@ -1,0 +1,97 @@
+<!-- prettier-ignore -->
+{% extends 'admin/base_admin.html' %}
+{% block content %}
+<div class="pt-8 relative overflow-x-auto shadow-md sm:rounded-lg">
+  <!-- form for edit custom URLs -->
+    <form
+        action="{{ url_for('admin.edit_custom_links') }}"
+        method="post"
+        class="p-4">
+        {{ form.hidden_tag() }}
+        <div class="grid grid-cols-6 gap-6">
+            <div class="col-span-6 sm:col-span-3">
+                <label
+                for="instagram_url"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Instagram
+                </label>
+                {{ form.instagram_url(class_="shadow-sm bg-gray-50 border border-gray-300
+                text-gray-900 text-sm rounded-lg focus:ring-blue-600
+                focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+                dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+                dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+                <label
+                for="facebook_url"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Facebook
+                </label>
+                {{ form.facebook_url(class_="shadow-sm bg-gray-50 border border-gray-300
+                text-gray-900 text-sm rounded-lg focus:ring-blue-600
+                focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+                dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+                dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+                <label
+                for="telegram_url"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Telegram
+                </label>
+                {{ form.telegram_url(class_="shadow-sm bg-gray-50 border border-gray-300
+                text-gray-900 text-sm rounded-lg focus:ring-blue-600
+                focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+                dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+                dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+                <label
+                for="youtube_url"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    YouTube
+                </label>
+                {{ form.youtube_url(class_="shadow-sm bg-gray-50 border border-gray-300
+                text-gray-900 text-sm rounded-lg focus:ring-blue-600
+                focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+                dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+                dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+                <label
+                for="donate_url"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Donate
+                </label>
+                {{ form.donate_url(class_="shadow-sm bg-gray-50 border border-gray-300
+                text-gray-900 text-sm rounded-lg focus:ring-blue-600
+                focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+                dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+                dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+                <label
+                for="test_drive_url"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Test Drive
+                </label>
+                {{ form.test_drive_url(class_="shadow-sm bg-gray-50 border border-gray-300
+                text-gray-900 text-sm rounded-lg focus:ring-blue-600
+                focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600
+                dark:border-gray-500 dark:placeholder-gray-400 dark:text-white
+                dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+            </div>
+        </div>
+        <div class="mt-4">
+
+        {{ form.submit(class_="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4
+            focus:outline-none focus:ring-blue-300 font-medium rounded-lg
+            text-sm w-full sm:w-auto px-5 py-2.5 text-center
+            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800") }}
+        </div>
+</div>
+<!-- prettier-ignore -->
+{% endblock %}
+<!-- prettier-ignore -->
+{% block scripts %}
+{% endblock %}

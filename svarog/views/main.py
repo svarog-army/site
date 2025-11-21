@@ -51,8 +51,8 @@ def test_drive():
     links = get_custom_links()
     form = FlaskForm()
     # Redirect to the test drive link if set
-    if links.test_drive:
+    if links.test_drive_url:
         # return redirect(links.test_drive)
-        return render_template("redirect.html", redirect_url=links.test_drive, form=form)
+        return render_template("redirect.html", redirect_url=links.test_drive_url, form=form)
     else:
         abort(404)

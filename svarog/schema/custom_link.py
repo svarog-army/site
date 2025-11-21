@@ -15,9 +15,9 @@ class LinkType(StrEnum):
 class CustomLink(BaseModel):
     """Custom links"""
 
-    instagram: str = ""
-    facebook: str = ""
-    telegram: str = ""
-    youtube: str = ""
-    donate: str = ""
-    test_drive: str = ""
+    instagram_url: str = ""
+    facebook_url: str = ""
+    telegram_url: str = ""
+    youtube_url: str = ""
+    donate_url: str = ""
+    test_drive_url: str = ""

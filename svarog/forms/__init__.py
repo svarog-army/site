@@ -5,3 +5,4 @@ from .application import ApplicationForm
 from .specialty import SpecialtyForm, NewSpecialtyForm
 from .recruit import RecruitForm, StatusForm, FilterForm
 from .stats import NewStatsForm, EditStatsForm
+from .custom_links import CustomLinksForm

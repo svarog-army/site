@@ -25,15 +25,15 @@ def test_get_custom_links(runner: FlaskCliRunner, client: FlaskClient):
     from svarog.controllers import get_custom_links
 
     links = get_custom_links()
-    assert links.instagram, "Instagram link must be set"
-    assert links.instagram == app.config["LINK_INSTAGRAM"]
-    assert links.facebook, "Facebook link must be set"
-    assert links.facebook == app.config["LINK_FACEBOOK"]
-    assert links.telegram, "Telegram link must be set"
-    assert links.telegram == app.config["LINK_TELEGRAM"]
-    assert links.youtube, "YouTube link must be set"
-    assert links.youtube == app.config["LINK_YOUTUBE"]
-    assert links.donate, "Donate link must be set"
-    assert links.donate == app.config["LINK_DONATE"]
-    assert links.test_drive, "Test Drive link must be set"
-    assert links.test_drive == app.config["LINK_TEST_DRIVE"]
+    assert links.instagram_url, "Instagram link must be set"
+    assert links.instagram_url == app.config["LINK_INSTAGRAM"]
+    assert links.facebook_url, "Facebook link must be set"
+    assert links.facebook_url == app.config["LINK_FACEBOOK"]
+    assert links.telegram_url, "Telegram link must be set"
+    assert links.telegram_url == app.config["LINK_TELEGRAM"]
+    assert links.youtube_url, "YouTube link must be set"
+    assert links.youtube_url == app.config["LINK_YOUTUBE"]
+    assert links.donate_url, "Donate link must be set"
+    assert links.donate_url == app.config["LINK_DONATE"]
+    assert links.test_drive_url, "Test Drive link must be set"
+    assert links.test_drive_url == app.config["LINK_TEST_DRIVE"]

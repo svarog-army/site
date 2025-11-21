@@ -1,13 +1,14 @@
 from datetime import datetime
 
 import sqlalchemy as sa
-from flask import Blueprint, flash, redirect, render_template, request, url_for
+from flask import Blueprint, flash, redirect, render_template, request, url_for, g
 from flask_login import login_required, current_user
 from flask_babel import _
 
 from svarog import db
 from svarog import forms as f
 from svarog import models as m
+from svarog.controllers import get_custom_links, update_custom_links
 from svarog.controllers.pagination import create_pagination
 from svarog.logger import log
 from .stats import stats_blueprint
@@ -21,6 +22,12 @@ admin_blueprint = Blueprint(
 admin_blueprint.register_blueprint(stats_blueprint)
 
 BLANK_PASSWORD = "********"
+
+
+@admin_blueprint.before_request
+def before_request():
+    g.custom_links = get_custom_links()
+    pass
 
 
 @admin_blueprint.route("/", methods=["GET"])
@@ -156,3 +163,37 @@ def delete(admin_uuid: str):
     db.session.commit()
     log(log.INFO, "User deleted. User: [%s]", admin)
     return render_template("toast.html", category="success", message="User deleted!"), 202
+
+
+@admin_blueprint.route("/custom-links", methods=["GET", "POST"])
+@login_required
+def edit_custom_links():
+    form = f.CustomLinksForm()
+    links = get_custom_links()
+
+    if form.is_submitted():
+        if form.validate_on_submit():
+            links.instagram_url = form.instagram_url.data or ""
+            links.facebook_url = form.facebook_url.data or ""
+            links.telegram_url = form.telegram_url.data or ""
+            links.youtube_url = form.youtube_url.data or ""
+            links.donate_url = form.donate_url.data or ""
+            links.test_drive_url = form.test_drive_url.data or ""
+            update_custom_links(links)
+            flash(_("Custom links updated!"), "success")
+            return redirect(url_for("admin.edit_custom_links"))
+        else:
+            log(log.ERROR, "Custom links form errors: [%s]", form.errors)
+            for key, value in form.errors.items():
+                for error in value:
+                    flash(f"{error}", "danger")
+            return redirect(url_for("admin.edit_custom_links"))
+    else:
+        # Pre-fill form with existing links
+        form.instagram_url.data = links.instagram_url
+        form.facebook_url.data = links.facebook_url
+        form.telegram_url.data = links.telegram_url
+        form.youtube_url.data = links.youtube_url
+        form.donate_url.data = links.donate_url
+        form.test_drive_url.data = links.test_drive_url
+    return render_template("admin/edit_custom_links.html", form=form)
