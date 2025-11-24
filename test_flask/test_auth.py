@@ -1,4 +1,5 @@
 from test_flask.utils import register, login, logout
+from flask_babel import _
 from flask import url_for
 
 from svarog import schema as s
@@ -56,7 +57,7 @@ def test_edit_custom_links(client):
     ).model_dump()
 
     response = client.post(URL, data=data, follow_redirects=True)
-    assert "Custom links updated!" in response.text
+    assert _("Custom links updated!") in response.text
     assert response.status_code == 200
     # Check data in database
     response = client.get(URL)
