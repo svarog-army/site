@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-25 11:27+0000\n"
+"POT-Creation-Date: 2025-11-24 14:00+0200\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -856,15 +856,27 @@ msgstr "вул. Енергетиків 12"
 msgid "Interview by appointment"
 msgstr "Співбесіда по домовленості"
 
+#: svarog/templates/redirect.html:13
+msgid "Please wait..."
+msgstr ""
+
+#: svarog/templates/redirect.html:14
+msgid "You are being redirected to outside page."
+msgstr ""
+
 #: svarog/templates/sidebar.html:23
 msgid "Users"
 msgstr "Користувачі"
 
-#: svarog/templates/sidebar.html:62
+#: svarog/templates/sidebar.html:60
 msgid "Statistic"
 msgstr "Статистика"
 
-#: svarog/templates/sidebar.html:72
+#: svarog/templates/sidebar.html:70
+msgid "Custom Links"
+msgstr ""
+
+#: svarog/templates/sidebar.html:80
 msgid "Sign Out"
 msgstr "Вийти"
 
@@ -1369,17 +1381,21 @@ msgstr "Статистика"
 msgid "Date"
 msgstr "Дата"
 
-#: svarog/views/admin.py:90 svarog/views/recruit.py:144
+#: svarog/views/admin.py:97 svarog/views/recruit.py:144
 msgid "Cannot save user data"
 msgstr "Неможливо зберегти дані користувача"
 
-#: svarog/views/admin.py:99
+#: svarog/views/admin.py:106
 msgid "User updated!"
 msgstr "Користувача оновлено!"
 
-#: svarog/views/admin.py:133
+#: svarog/views/admin.py:140
 msgid "User added!"
 msgstr "Додано користувача!"
+
+#: svarog/views/admin.py:183
+msgid "Custom links updated!"
+msgstr "Посилання оновлено!"
 
 #: svarog/views/application.py:77
 msgid "Application applied successfully"
