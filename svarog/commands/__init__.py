@@ -96,6 +96,7 @@ def init(app: Flask):
             s.LinkType.YOUTUBE: app.config["LINK_YOUTUBE"],
             s.LinkType.DONATE: app.config["LINK_DONATE"],
             s.LinkType.TEST_DRIVE: app.config["LINK_TEST_DRIVE"],
+            s.LinkType.COFFEE_BOX: app.config["LINK_COFFEE_BOX"],
         }
         counter = 0
         for link_type, link_url in links.items():

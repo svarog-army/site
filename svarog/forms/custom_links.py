@@ -9,4 +9,5 @@ class CustomLinksForm(FlaskForm):
     youtube_url = StringField("YouTube", render_kw={"placeholder": "YouTube URL"})
     donate_url = StringField("Donate", render_kw={"placeholder": "Donate URL"})
     test_drive_url = StringField("Test Drive", render_kw={"placeholder": "Test Drive URL"})
+    coffee_box_url = StringField("Coffee Box", render_kw={"placeholder": "Coffee Box URL"})
     submit = SubmitField("Save")

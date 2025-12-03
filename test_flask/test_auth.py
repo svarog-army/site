@@ -46,6 +46,7 @@ def test_edit_custom_links(client):
     TEST_YOUTUBE_LINK = "https://youtube.com/testprofile"
     TEST_DONATE_LINK = "https://donate.com/testprofile"
     TEST_TEST_DRIVE_LINK = "https://testdrive.com/testprofile"
+    TEST_COFFEE_BOX_LINK = "https://ko-fi.com/testprofile"
 
     data = s.CustomLink(
         instagram_url=TEST_INSTA_LINK,
@@ -54,6 +55,7 @@ def test_edit_custom_links(client):
         youtube_url=TEST_YOUTUBE_LINK,
         donate_url=TEST_DONATE_LINK,
         test_drive_url=TEST_TEST_DRIVE_LINK,
+        coffee_box_url=TEST_COFFEE_BOX_LINK,
     ).model_dump()
 
     response = client.post(URL, data=data, follow_redirects=True)
@@ -67,3 +69,4 @@ def test_edit_custom_links(client):
     assert TEST_YOUTUBE_LINK in response.text
     assert TEST_DONATE_LINK in response.text
     assert TEST_TEST_DRIVE_LINK in response.text
+    assert TEST_COFFEE_BOX_LINK in response.text

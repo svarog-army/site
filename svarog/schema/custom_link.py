@@ -10,6 +10,7 @@ class LinkType(StrEnum):
     YOUTUBE = "youtube"
     DONATE = "donate"
     TEST_DRIVE = "test_drive"
+    COFFEE_BOX = "coffee_box"
 
 
 class CustomLink(BaseModel):
@@ -21,3 +22,4 @@ class CustomLink(BaseModel):
     youtube_url: str = ""
     donate_url: str = ""
     test_drive_url: str = ""
+    coffee_box_url: str = ""

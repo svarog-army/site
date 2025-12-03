@@ -179,6 +179,7 @@ def edit_custom_links():
             links.youtube_url = form.youtube_url.data or ""
             links.donate_url = form.donate_url.data or ""
             links.test_drive_url = form.test_drive_url.data or ""
+            links.coffee_box_url = form.coffee_box_url.data or ""
             update_custom_links(links)
             flash(_("Custom links updated!"), "success")
             return redirect(url_for("admin.edit_custom_links"))
@@ -196,4 +197,5 @@ def edit_custom_links():
         form.youtube_url.data = links.youtube_url
         form.donate_url.data = links.donate_url
         form.test_drive_url.data = links.test_drive_url
+        form.coffee_box_url.data = links.coffee_box_url
     return render_template("admin/edit_custom_links.html", form=form)

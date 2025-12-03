@@ -71,6 +71,7 @@ class BaseConfig(BaseSettings):
     LINK_YOUTUBE: str
     LINK_DONATE: str
     LINK_TEST_DRIVE: str
+    LINK_COFFEE_BOX: str
 
     @staticmethod
     def configure(app):
