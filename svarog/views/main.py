@@ -67,6 +67,7 @@ def donate():
     else:
         abort(404)
 
+
 @main_blueprint.route("/svarog-coffee-box/", methods=["GET"])
 def coffee_box():
     links = get_custom_links()
