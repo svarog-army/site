@@ -12,6 +12,21 @@
       </span>
     </a>
 
+    <div class="hidden lg:inline-flex">
+      <a href="/" class="text-[--main-white-87] text-base px-[10px] py-3 hover:bg-[--main-grey-opacity]">
+        {{_("Main")}}
+      </a>
+      <a href="{{g.custom_links.test_drive_url}}" target="_blank" class="text-[--main-white-87] text-base px-[10px] py-3 hover:bg-[--main-grey-opacity]">
+        {{_("Test course")}}
+      </a>
+      <a href="{{g.custom_links.donate_url}}" class="text-[--main-white-87] text-base px-[10px] py-3 hover:bg-[--main-grey-opacity]">
+        {{_("To support")}}
+      </a>
+      <a href="/#vacancies" class="text-[--main-white-87] text-base px-[10px] py-3 hover:bg-[--main-grey-opacity]">
+        {{_("Vacancies")}}
+      </a>
+    </div>
+
     <div class="flex items-center gap-4 h-[24px]">
       <div class="flex gap-3">
 
@@ -28,7 +43,50 @@
         </a>
 
       </div>
-      <form class="flex gap-8" action="{{url_for('main.change_locale')}}" method="post">
+
+      <button id="open-sidebar-menu" class="py-1">
+        <img src="{{ url_for('static',filename='img/burger.svg') }}" width="26" height="26" alt='{{_("Open menu")}}' class="hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey] lg:hidden"/>
+      </button>
+      <div id="sidebar-menu" class="fixed z-50 inset-y-0 right-0 w-full bg-[--main-grey] transform translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="close-sidebar-menu" class="absolute top-8 right-8 py-1 text-[--main-black]">
+          <img src="{{ url_for('static',filename='img/cross.svg') }}" width="32" height="32" alt='{{_("Close menu")}}' class=" hover:scale-110 active:opacity-50 active:scale-100 transition text-[--main-grey]"/>
+        </button>
+        
+        <div class="flex flex-col mt-40 space-y-4 text-end pe-8">
+          <a href="/" class="text-[--menu-black] text-3xl font-semibold hover:underline active:no-underline">
+            {{_("Main")}}
+          </a>
+          <a href="{{g.custom_links.test_drive_url}}" target="_blank" class="text-[--menu-black] text-3xl font-semibold hover:underline active:no-underline">
+            {{_("Test course")}}
+          </a>
+          <a href="{{g.custom_links.donate_url}}" class="text-[--menu-black] text-3xl font-semibold hover:underline active:no-underline">
+            {{_("To support")}}
+          </a>
+          <a href="/#vacancies" class="text-[--menu-black] text-3xl font-semibold hover:underline active:no-underline">
+            {{_("Vacancies")}}
+          </a>
+        </div>
+
+        <div class="flex flex-col mt-20 space-y-4 text-end pe-8">
+          <span class="text-2xl">{{_("Change language:")}}</span>
+          <form class="gap-8" action="{{url_for('main.change_locale')}}" method="post">
+            {{ form.hidden_tag() }}
+            <div>
+              <label for="local_select_mobile" class="sr-only">Language select</label>
+              <select id="local_select_mobile" name="locale" onchange="this.form.submit()"
+                class="local_select_mobile block ms-auto py-2.5 px-0 pe-0 text-3xl text-[--menu-black] bg-transparent border-none appearance-none focus:outline-none focus:ring-0 peer cursor-pointer">
+                <!-- prettier-ignore -->
+                <option class="text-[--menu-black] text-3xl font-semibold hover:underline active:no-underline" value="uk" {% if g.lang_code=='uk' %}
+                  selected {% endif %}>Українська</option>
+                <option class="text-[--menu-black] text-3xl font-semibold hover:underline active:no-underline" value="en" {% if g.lang_code=='en' %}
+                  selected {% endif %}>English</option>
+              </select>
+            </div>
+      </form>
+        </div>
+      </div>
+
+      <form class="hidden lg:flex gap-8" action="{{url_for('main.change_locale')}}" method="post">
         {{ form.hidden_tag() }}
         <div>
           <label for="local_select" class="sr-only">Language select</label>

@@ -103,7 +103,7 @@ function updateSelectedItems() {
 const scrollTopButton = document.getElementById('scroll-top');
 const statsButton = document.getElementById('stats-button');
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {``
   if (window.scrollY > 100) {
     scrollTopButton?.classList.add('show');
     statsButton?.classList.add('show');
@@ -116,4 +116,22 @@ window.addEventListener('scroll', () => {
 scrollTopButton?.addEventListener('click', () => {
   scrollTopButton.classList.remove('show');
   window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+const openSidebarButton = document.getElementById('open-sidebar-menu');
+const closeSidebarButton = document.getElementById('close-sidebar-menu');
+const sidebar = document.getElementById('sidebar-menu');
+const body = document.body;
+
+openSidebarButton.addEventListener('click', function () {
+  sidebar.classList.add('translate-x-0');
+  sidebar.classList.remove('translate-x-full');
+  body.classList.add("overflow-hidden");
+});
+
+closeSidebarButton.addEventListener('click', function () {
+  sidebar.classList.remove('translate-x-0');
+  sidebar.classList.add('translate-x-full');
+      body.classList.remove("overflow-hidden");
+
 });

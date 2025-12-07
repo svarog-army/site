@@ -69,6 +69,13 @@ def stats():
 
     return render_template("stats.html", form=FlaskForm(), stats=stats, period=period, start_day=start_day)
 
+@multilingual.route("/to_support/")
+def to_support():
+    if CFG.PARKING:
+        return render_template("under_construction.html", form=FlaskForm())
+
+    return render_template("to_support.html", form=FlaskForm())
+
 
 @multilingual.route("/cookie_policy/", methods=["GET"])
 def cookie_policy():

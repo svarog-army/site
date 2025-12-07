@@ -10,6 +10,7 @@
   --main-green: #93C40A;
   --main-black: #090C10;
   --main-white-87: #FFFFFFDE;
+  --menu-black: #090C10C7;
   color: white;
   font-family: 'UAFSans Regular', sans-serif;
 }
@@ -265,4 +266,9 @@ select:-webkit-autofill:active {
   -webkit-text-fill-color: #fff;
   box-shadow: 0 0 0px 1000px #000 inset;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+select.local_select_mobile {
+  padding-right: 0;
+  background: transparent;
 }

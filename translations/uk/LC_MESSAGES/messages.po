@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-24 14:00+0200\n"
+"POT-Creation-Date: 2025-12-07 20:15+0200\n"
 "PO-Revision-Date: 2024-09-28 16:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: svarog/forms/application.py:28
 msgid "Yes"
@@ -201,6 +201,12 @@ msgstr "Офіційний веб-сайт 424-го окремого батал�
 #: svarog/templates/vacancies.html:124
 msgid "SUBMIT APPLICATION"
 msgstr "ПОДАТИ ЗАЯВКУ"
+
+#: svarog/templates/button_support.html:10
+#: svarog/templates/button_support.html:26 svarog/templates/head.html:23
+#: svarog/templates/head.html:63
+msgid "To support"
+msgstr "Підтримати"
 
 #: svarog/templates/choose-weapon.html:4
 msgid "Choose your weapon"
@@ -416,21 +422,49 @@ msgstr ""
 "                   безпілотних систем Svarog\n"
 "                   Сил безпілотних систем"
 
-#: svarog/templates/hero.html:16 svarog/templates/stats.html:18
+#: svarog/templates/head.html:17 svarog/templates/head.html:57
+msgid "Main"
+msgstr "Головна"
+
+#: svarog/templates/head.html:20 svarog/templates/head.html:60
+msgid "Test course"
+msgstr "Тестовий курс"
+
+#: svarog/templates/head.html:26 svarog/templates/head.html:66
+msgid "Vacancies"
+msgstr "Вакансії"
+
+#: svarog/templates/head.html:48
+msgid "Open menu"
+msgstr "Відкрити меню"
+
+#: svarog/templates/head.html:52
+msgid "Close menu"
+msgstr "Закрити меню"
+
+#: svarog/templates/head.html:71
+msgid "Change language:"
+msgstr "Змінити мову:"
+
+#: svarog/templates/hero.html:13 svarog/templates/stats.html:18
 msgid "424th SUSB"
 msgstr "424 ОБ БПС"
 
-#: svarog/templates/hero.html:20 svarog/templates/stats.html:15
+#: svarog/templates/hero.html:17 svarog/templates/stats.html:15
 msgid "SVAROG"
 msgstr "SVAROG"
 
-#: svarog/templates/hero.html:25
+#: svarog/templates/hero.html:21 svarog/templates/support-content.html:21
 msgid ""
 "Every day we improve ourselves to ensure mission success and safeguard "
 "our brothers-in-arms. Doesn’t matter where, but with whom!"
 msgstr ""
 "Щоденно ми вдосконалюємось задля успішного виконання завдань і збереження"
 " життя побратимів. Байдуже де, не байдуже з ким!"
+
+#: svarog/templates/hero.html:30
+msgid "Sign up for a test drive"
+msgstr "Записатися на тест-драйв"
 
 #: svarog/templates/privacy_policy.html:4
 msgid "Privacy Policy"
@@ -966,6 +1000,14 @@ msgstr "РСЗВ"
 msgid "MLRS + SAM + CU"
 msgstr "РСЗВ"
 
+#: svarog/templates/support-content.html:13
+msgid "Support"
+msgstr "Підтримати"
+
+#: svarog/templates/support-content.html:17
+msgid "424 SVAROG"
+msgstr "424 SVAROG"
+
 #: svarog/templates/technologies.html:8
 msgid "SPIRIT OF TECHNOLOGY"
 msgstr "ДУХ ТЕХНОЛОГІЙ"
@@ -1393,7 +1435,7 @@ msgstr "Користувача оновлено!"
 msgid "User added!"
 msgstr "Додано користувача!"
 
-#: svarog/views/admin.py:183
+#: svarog/views/admin.py:184
 msgid "Custom links updated!"
 msgstr "Посилання оновлено!"
 
