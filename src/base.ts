@@ -9,18 +9,13 @@ export interface HTMXEventDetail {
 
 updateSelectedItems();
 
-const themeToggleDarkIcons = document.querySelectorAll(
-  '#theme-toggle-dark-icon',
-);
-const themeToggleLightIcons = document.querySelectorAll(
-  '#theme-toggle-light-icon',
-);
+const themeToggleDarkIcons = document.querySelectorAll('#theme-toggle-dark-icon');
+const themeToggleLightIcons = document.querySelectorAll('#theme-toggle-light-icon');
 
 // Change the icons inside the button based on previous settings
 if (
   localStorage.getItem('color-theme') === 'dark' ||
-  (!('color-theme' in localStorage) &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches)
+  (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 ) {
   themeToggleLightIcons.forEach(function (el) {
     el.classList.remove('hidden');
@@ -73,11 +68,7 @@ const detailsElement = document.getElementById('specialties-details');
 const selectedItemsContainer = document.getElementById('selected-items');
 
 document.addEventListener('click', (event: MouseEvent) => {
-  if (
-    detailsElement &&
-    event.target instanceof Node &&
-    !detailsElement.contains(event.target)
-  ) {
+  if (detailsElement && event.target instanceof Node && !detailsElement.contains(event.target)) {
     detailsElement.removeAttribute('open');
   }
 });
@@ -87,23 +78,17 @@ detailsElement?.addEventListener('change', updateSelectedItems);
 function updateSelectedItems() {
   if (!detailsElement || !selectedItemsContainer) return;
 
-  const checkedInputs = detailsElement.querySelectorAll<HTMLInputElement>(
-    'input[type="checkbox"]:checked',
-  );
-  const selectedItems = Array.from(checkedInputs).map(
-    input => input.nextElementSibling?.textContent || '',
-  );
+  const checkedInputs = detailsElement.querySelectorAll<HTMLInputElement>('input[type="checkbox"]:checked');
+  const selectedItems = Array.from(checkedInputs).map(input => input.nextElementSibling?.textContent || '');
 
   selectedItemsContainer.innerHTML =
-    selectedItems.length > 0
-      ? selectedItems.map(item => `<p>${item}</p>`).join('')
-      : '';
+    selectedItems.length > 0 ? selectedItems.map(item => `<p>${item}</p>`).join('') : '';
 }
 
 const scrollTopButton = document.getElementById('scroll-top');
 const statsButton = document.getElementById('stats-button');
 
-window.addEventListener('scroll', () => {``
+window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
     scrollTopButton?.classList.add('show');
     statsButton?.classList.add('show');
@@ -126,12 +111,11 @@ const body = document.body;
 openSidebarButton.addEventListener('click', function () {
   sidebar.classList.add('translate-x-0');
   sidebar.classList.remove('translate-x-full');
-  body.classList.add("overflow-hidden");
+  body.classList.add('overflow-hidden');
 });
 
 closeSidebarButton.addEventListener('click', function () {
   sidebar.classList.remove('translate-x-0');
   sidebar.classList.add('translate-x-full');
-      body.classList.remove("overflow-hidden");
-
+  body.classList.remove('overflow-hidden');
 });
