@@ -4,12 +4,13 @@
 
 :root {
   --main-grey: #c2c2c2;
-  --main-grey-87: #C2C2C2DE;
-  --main-grey-opacity: #C2C2C22E;
+  --main-grey-87: #c2c2c2de;
+  --main-grey-opacity: #c2c2c22e;
   --main-grey-hover: rgba(194, 194, 194, 0);
-  --main-green: #93C40A;
-  --main-black: #090C10;
-  --main-white-87: #FFFFFFDE;
+  --main-green: #93c40a;
+  --main-black: #090c10;
+  --main-white-87: #ffffffde;
+  --menu-black: #090c10c7;
   color: white;
   font-family: 'UAFSans Regular', sans-serif;
 }
@@ -25,14 +26,14 @@ h6,
 }
 
 .stats_line::after {
-  content: "";
-    position: absolute;
-    top: 22.5%;
-    height: 55%;
-    width: 1px;
-    background-color: var(--main-grey-opacity);
-    right: 0;
-    transform: translate(50%);
+  content: '';
+  position: absolute;
+  top: 22.5%;
+  height: 55%;
+  width: 1px;
+  background-color: var(--main-grey-opacity);
+  right: 0;
+  transform: translate(50%);
 }
 
 .text-danger {
@@ -265,4 +266,9 @@ select:-webkit-autofill:active {
   -webkit-text-fill-color: #fff;
   box-shadow: 0 0 0px 1000px #000 inset;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+select.local_select_mobile {
+  padding-right: 0;
+  background: transparent;
 }

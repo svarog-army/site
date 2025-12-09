@@ -91,6 +91,12 @@ def create_app(environment="development"):
             get_locale()
         return redirect(url_for("multilingual.stats"), code=301)
 
+    @app.route("/to_support")
+    def to_support():
+        if not g.get("lang_code", None):
+            get_locale()
+        return redirect(url_for("multilingual.to_support"), code=301)
+
     @app.route("/robots.txt")
     def robots():
         template = render_template("robots.txt", disallow=CFG.ROBOTS_DISALLOW)
