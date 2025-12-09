@@ -69,6 +69,7 @@ def stats():
 
     return render_template("stats.html", form=FlaskForm(), stats=stats, period=period, start_day=start_day)
 
+
 @multilingual.route("/to_support/")
 def to_support():
     if CFG.PARKING:

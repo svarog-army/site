@@ -90,7 +90,7 @@ def create_app(environment="development"):
         if not g.get("lang_code", None):
             get_locale()
         return redirect(url_for("multilingual.stats"), code=301)
-    
+
     @app.route("/to_support")
     def to_support():
         if not g.get("lang_code", None):
