@@ -1380,12 +1380,28 @@ input:checked + .toggle-bg {
   margin-top: 24rem;
 }
 
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
 .mt-\[75px\] {
   margin-top: 75px;
 }
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mt-\[144px\] {
+  margin-top: 144px;
 }
 
 .block {
@@ -3684,6 +3700,10 @@ select.local_select_mobile {
     margin-top: 3rem;
   }
 
+  .md\:mt-\[288px\] {
+    margin-top: 288px;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -3845,6 +3865,10 @@ select.local_select_mobile {
 
   .lg\:mb-20 {
     margin-bottom: 5rem;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:mt-20 {
