@@ -91,11 +91,11 @@ def create_app(environment="development"):
             get_locale()
         return redirect(url_for("multilingual.stats"), code=301)
 
-    @app.route("/to_support")
-    def to_support():
+    @app.route("/donate")
+    def donate():
         if not g.get("lang_code", None):
             get_locale()
-        return redirect(url_for("multilingual.to_support"), code=301)
+        return redirect(url_for("multilingual.donate"), code=301)
 
     @app.route("/robots.txt")
     def robots():
