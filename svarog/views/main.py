@@ -66,14 +66,3 @@ def donate():
         return render_template("redirect.html", redirect_url=links.donate_url, form=form)
     else:
         abort(404)
-
-
-@main_blueprint.route("/svarog-coffee-box/", methods=["GET"])
-def coffee_box():
-    links = get_custom_links()
-    form = FlaskForm()
-    # Redirect to the coffee box link if set
-    if links.coffee_box_url:
-        return render_template("redirect.html", redirect_url=links.coffee_box_url, form=form)
-    else:
-        abort(404)
