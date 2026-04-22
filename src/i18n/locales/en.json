@@ -1,0 +1,187 @@
+{
+  "site": {
+    "title": "SVAROG | 424th Separate Unmanned Systems Battalion of the Unmanned Systems Forces",
+    "description": "The official website of the 424th separate battalion"
+  },
+  "nav": {
+    "main": "Main",
+    "testCourse": "Test course",
+    "toSupport": "To support",
+    "vacancies": "Vacancies",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "changeLanguage": "Change language:"
+  },
+  "footer": {
+    "unitName": "424th Separate Unmanned Systems Battalion “SVAROG” of Unmanned Systems Forces"
+  },
+  "hero": {
+    "susb": "424th SUSB",
+    "svarog": "SVAROG",
+    "description": "Every day we improve ourselves to ensure mission success and safeguard our brothers-in-arms. Doesn’t matter where, but with whom!",
+    "submitApplication": "SUBMIT APPLICATION",
+    "signUpTestDrive": "Sign up for a test drive"
+  },
+  "technologies": {
+    "title": "SPIRIT OF TECHNOLOGY",
+    "description": "Our battalion specializes in airborne operations. We have a full arsenal of UAVs: FPV, multi-rotors, heavy bombers, reconnaissance and strike wings."
+  },
+  "chooseWeapon": {
+    "title": "Choose your weapon",
+    "fpv": {
+      "name": "FPV",
+      "description": "Speed, accuracy, and determination. You will destroy enemy forces and equipment using various types of FPV drones."
+    },
+    "aerialRecon": {
+      "name": "AERIAL RECONNAISSANCE",
+      "description": "Eyes above the battlefield. You will detect enemy positions, correct artillery fire, collect and analyze intelligence data."
+    },
+    "heavyBombers": {
+      "name": "HEAVY BOMBERS",
+      "description": "Damage, mining, and logistics. You will control large drones to deliver pleasant packages to your allies and explosively unpleasant ones to your enemies."
+    },
+    "impactWing": {
+      "name": "IMPACT WING",
+      "description": "Goals that seemed unattainable. You will deliver precision strikes on warehouses, equipment, and command posts behind enemy lines."
+    }
+  },
+  "aboutUs": {
+    "title": "TEAM IS OUR STRENGTH",
+    "description": "We are a young unit within the Unmanned Systems Force. Experienced commanders and motivated recruits work together here. We are a community built on trust, support, and teamwork."
+  },
+  "vacancies": {
+    "title": "VACANCIES",
+    "submitApplication": "SUBMIT APPLICATION",
+    "list": [
+      "Electrician driver",
+      "Accountant 1st category",
+      "Photogrammetry operator",
+      "FPV technician at RUBpAK",
+      "FPV technician in the workshop",
+      "UAV aircraft mechanic",
+      "Sanitary Instructor",
+      "Medical assistant",
+      "Combat medic",
+      "Explosives technician",
+      "Master of Engineering Munitions",
+      "Control operator",
+      "Decryptor",
+      "Electronic Warfare/ELINT operator",
+      "Anti-aircraft gunner",
+      "Driver for a logistics",
+      "Cook",
+      "Clerk",
+      "Electrician"
+    ]
+  },
+  "donate": {
+    "title": "Support",
+    "subtitle": "424 SVAROG",
+    "description": "Every day we improve ourselves to ensure mission success and safeguard our brothers-in-arms. Doesn’t matter where, but with whom!",
+    "toSupport": "To support"
+  },
+  "cookiePolicy": {
+    "title": "Cookie policy",
+    "intro": "Cookie Policy for svarog.army website",
+    "section1Title": "1. Introduction",
+    "section1": "This Cookie Policy explains how the svarog.army website (the “Site”) uses cookies and similar technologies to collect and process information about you. We use cookies to ensure the Site works properly and provide a better user experience.",
+    "section2Title": "2. What Are Cookies",
+    "section2": "Cookies are small text files that are stored on your device when you visit the website. They are used for collection information about your choices and settings, and to collect data for analysis and improvement of the functioning of the Site.",
+    "section3Title": "3. Types of cookies we use",
+    "section3aLabel": "The files are necessary for work",
+    "section3aText": "These files help ensure the correct operation of the Site and access to basic functions.",
+    "section3bLabel": "Analytics files",
+    "section3bText": "We use cookies to collect anonymous data about the use of the Site in order to understand how users interact with the content and improve its quality.",
+    "section4Title": "4. Management of cookies",
+    "section4": "You have the option to manage the use of cookies through the settings your web browser. You can choose to block all cookies or get a warning before saving them. Note that disabling cookies may limit access to some of the Site’s functions.",
+    "section5Title": "5. Disclaimer",
+    "section5": "We are not responsible for cookies and third-party technologies, which can be used on the Site. We recommend that you review the policy privacy and use of cookies by these third parties.",
+    "section6Title": "6. Changes to the Cookies Policy",
+    "section6": "We may update this Policy from time to time. Please periodically review this document to be aware of any changes.",
+    "thank": "Thank you for using the svarog.army Site!"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "sections": [
+      {
+        "heading": "1. General provisions",
+        "paragraphs": [
+          "Privacy policy – rules governing the collection, processing, use and protection of personal data that may be requested/received when using the svarog.army web portal (hereinafter referred to as the Portal).",
+          "Personal data – information or a set of information about a natural or legal person who is identified or can be specifically identified.",
+          "The Portal administrator treats with great respect the confidential (personal) information of any persons who use the information posted on the Portal, as well as the subjects of the Portal – users registered on the Portal, authorized persons of providers, teachers (trainers), therefore we strive to protect confidentiality personal data, thereby creating and providing the most comfortable conditions for using the Portal.",
+          "By filling out the data in the registration form and marking the fact that you have read this Privacy Policy (hereinafter – the Policy), you give your consent to the processing of your personal data for the purpose of providing role access, preparing statistical, administrative and other information on professional training.",
+          "Before using the Portal, carefully familiarize yourself with your rights and obligations regarding the processing of personal data, which are specified in article 8 of the Law of Ukraine “On the Protection of Personal Data”, this Policy, and also express your full agreement with its terms."
+        ]
+      },
+      {
+        "heading": "2. Collection and use of personal data",
+        "paragraphs": [
+          "The collection of personal data is carried out solely according to your conscious and voluntary decision as the subject of personal data to use the Portal’s functionality and in accordance with the purpose of personal data processing formulated in this Policy.",
+          "The scope and type of collection and use of your personal data varies depending on the role in which you plan to use the functionality of the Portal.",
+          "Depending on the role you have chosen, by registering on the Portal and filling in your personal account data, you provide the following data:",
+          "Full name, date of birth, gender, or other identification data, phone number and e-mail;",
+          "Information related to your professional activity: place of work, position, position category, specialty, qualification, scientific degree, academic title, etc.;",
+          "With further use of the Portal, information about what is contained in requests for feedback forms / electronic messages is automatically collected."
+        ]
+      },
+      {
+        "heading": "3. Purpose of collection, processing and use of personal data",
+        "paragraphs": [
+          "The collection, processing and use of personal data is carried out for the purpose of provision of role access, in particular: registration of Portal entities; organization of electronic interaction of Portal subjects through personal accounts; generalization and systematization of registers and structured data, in particular: formation of the list; monitoring, summarization and analysis of statistical data generated by the subjects of the Portal as a result of its use.",
+          "Personal data are stored for no longer than is necessary for the purpose of their collection, processing and use or until you stop using the Portal by deleting your account on the Portal."
+        ]
+      },
+      {
+        "heading": "4. Access to personal data",
+        "paragraphs": [
+          "Full access to personal data of registered Portal subjects is granted to an authorized person of the Portal administrator."
+        ]
+      },
+      {
+        "heading": "5. Transfer of personal data to third parties",
+        "paragraphs": [
+          "The Portal Administrator (424 Battalion of Unmanned Systems) does not transfer or disclose personal data received from registered Portal subjects to third parties.",
+          "The disclosure of personal data is possible in cases determined by the current legislation of Ukraine, as well as in the case of the involvement of third parties that provide technical support and/or services for the improvement of the Portal under the terms of the contract and on the condition that personal data is not disclosed.",
+          "The portal may contain hyperlinks to third-party websites and other resources on the Internet of third parties. Third-party resources may be governed by their own terms of use and privacy. Third-party resources and their content are not checked by us for compliance with requirements (authenticity, completeness, legality, etc.). 424 Battalion of Unmanned Systems is not responsible for any information, materials posted on the resources of third parties."
+        ]
+      },
+      {
+        "heading": "6. Protection of personal data",
+        "paragraphs": [
+          "The Portal administrator takes the necessary procedural and technical measures to protect your personal data from their loss, unauthorized access to them or their distribution on the Portal."
+        ]
+      },
+      {
+        "heading": "7. Changes to the terms of the Policy",
+        "paragraphs": [
+          "The Portal Administrator may change this Policy to accurately reflect the methods of collection, processing, use, access and protection of personal data.",
+          "Accordingly, you should review this Policy periodically. When the Portal administrator changes this Policy, he will update the “last modified” date at the top of this Policy. Changes to this Policy are effective when posted."
+        ]
+      },
+      {
+        "heading": "8. Your rights",
+        "paragraphs": [
+          "By registering on the Portal, you have the right to receive information about the sources of collection and the place of storage of your personal data, its purpose."
+        ]
+      }
+    ],
+    "sectionsUkOnly": [
+      {
+        "paragraphs": [
+          "receive information about the conditions for providing access to personal data, in particular information about third parties to whom your personal data is transferred;",
+          "receive information about the processing and use of your personal data later than thirty calendar days from the date of receipt of the request (except for visits provided for by the Law of Ukraine “On the Protection of Personal Data”);",
+          "submit a reasoned claim to the owner of personal data with an objection to the processing of your personal data;",
+          "file complaints about the processing of your personal data by the owner or administrator of personal data to the Human Rights Commissioner of the Verkhovna Rada of Ukraine or to the court;",
+          "save legal remedies in case of violation of the legislation on the protection of personal data;",
+          "withdraw consent to the processing of your personal data."
+        ]
+      },
+      {
+        "heading": "9. Location of personal data",
+        "paragraphs": [
+          "The owner and administrator of personal data is 424 Battalion of Unmanned Systems."
+        ]
+      }
+    ]
+  }
+}

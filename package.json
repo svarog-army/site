@@ -1,35 +1,29 @@
 {
-  "name": "static",
+  "name": "svarog-site",
+  "private": true,
   "version": "2.2.7",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "js-watch": "webpack --config webpack.dev.js --watch",
-    "js": "webpack --config webpack.prod.js",
-    "css": "tailwindcss -i ./src/styles.css -o ./svarog/static/css/styles.css --minify",
-    "css-watch": "tailwindcss -i ./src/styles.css -o ./svarog/static/css/styles.css --watch",
-    "build": "npm run css && npm run js"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "flowbite": "^1.6.4",
-    "tailwindcss": "^3.4.13"
+    "i18next": "^23.15.1",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.0.1",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^5.0.0",
-    "mini-css-extract-plugin": "^2.7.5",
-    "postcss": "^8.4.21",
-    "postcss-loader": "^7.2.4",
-    "postcss-preset-env": "^8.3.1",
-    "style-loader": "^3.3.2",
-    "tailwindcss-intersect": "^2.0.1",
-    "ts-loader": "^9.4.2",
-    "typescript": "^5.0.4",
-    "webpack": "^5.79.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.13.2"
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8"
   }
 }
