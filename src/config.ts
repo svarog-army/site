@@ -5,4 +5,5 @@ export const LINKS = {
   youtube: 'https://www.youtube.com/@424SVAROG',
   donate: 'https://send.monobank.ua/jar/3LiMyQb9G2',
   testDrive: 'https://docs.google.com/forms/d/1GzpWBUZbNhZffrV65M3xP05LMXJUTp_AepSTK8i7wlw',
+  joinForm: 'https://docs.google.com/forms/d/e/1FAIpQLSece3WSW7RhYscBL8dpv3hfRkxUt1S1IsTjs1J0uVZjklYfkQ/viewform',
 }

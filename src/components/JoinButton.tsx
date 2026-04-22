@@ -10,7 +10,7 @@ export default function JoinButton({ className = '' }: Props) {
   return (
     <>
       <a
-        href={LINKS.testDrive}
+        href={LINKS.joinForm}
         target="_blank"
         rel="noreferrer"
         className={`relative inline-flex md:hidden items-center justify-start py-3 px-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out bg-[--main-grey-opacity] group ${className}`}
@@ -22,7 +22,7 @@ export default function JoinButton({ className = '' }: Props) {
         </span>
       </a>
       <a
-        href={LINKS.testDrive}
+        href={LINKS.joinForm}
         target="_blank"
         rel="noreferrer"
         className={`relative hidden md:inline-flex items-center justify-start py-3 px-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out bg-[--main-grey-opacity] group ${className}`}

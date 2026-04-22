@@ -37,7 +37,7 @@ export default function Vacancies() {
 
         <div className="flex justify-center pt-[90px] pb-[120px]">
           <a
-            href={LINKS.testDrive}
+            href={LINKS.joinForm}
             target="_blank"
             rel="noreferrer"
             className="relative inline-flex items-center justify-start py-3 px-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out bg-[--main-grey-opacity] group"
