@@ -3,7 +3,7 @@ name = "svarog"
 version = "2.2.7"
 description = ""
 authors = [{ name = "kostia", email = "saintkos117@gmail.com" }]
-requires-python = "~=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "flask>=2.2.3,<3",
     "flask-migrate>=4.0.4,<5",
@@ -12,13 +12,14 @@ dependencies = [
     "flask-login>=0.6.2,<0.7",
     "python-dotenv>=1.0.0,<2",
     "click>=8.1.3,<9",
-    "psycopg2-binary>=2.9.10,<3",
-    "pydantic>=2.4.2,<3",
+    "psycopg[binary]>=3.2,<4",
+    "pydantic>=2.11,<3",
     "alchemical>=0.7.1,<0.8",
-    "fastapi>=0.103.1,<0.104",
-    "uvicorn>=0.23.2,<0.24",
+    "sqlalchemy>=2.0.40",
+    "fastapi>=0.115.0,<1",
+    "uvicorn>=0.29.0,<1",
     "python-jose>=3.3.0,<4",
-    "python-multipart>=0.0.6,<0.0.7",
+    "python-multipart>=0.0.12,<1",
     "pydantic-settings>=2.0.3,<3",
     "email-validator>=2.2.0,<3",
     "wtforms-sqlalchemy>=0.4.1,<0.5",
@@ -30,7 +31,7 @@ dependencies = [
 dev = [
     "pytest>=7.1.1,<8",
     "faker>=18.3.1,<19",
-    "httpx>=0.25.0,<0.26",
+    "httpx>=0.27.0,<1",
     "mypy>=1.5.1,<2",
     "types-flask-migrate>=4.0.0.6,<5",
     "types-python-jose>=3.3.4.8,<4",
