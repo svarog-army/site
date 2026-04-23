@@ -1,1 +1,0 @@
-(()=>{var e=document.querySelector("#table-search-admins");document.querySelector("#table-search-admin-button"),searchInputButton&&e&&searchInputButton.addEventListener("click",(function(){var t=new URL(window.location.href);t.searchParams.set("q",e.value),window.location.href="".concat(t.href)}))})();

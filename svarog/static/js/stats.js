@@ -1,1 +1,0 @@
-(()=>{var e=document.querySelector("#begin-stats-period"),a=document.querySelector("#end-stats-period");if(e&&a){var t=function(){var t=new URL(window.location.href);t.searchParams.set("start",e.value),t.searchParams.set("end",a.value),window.location.href="".concat(t.href)};e.addEventListener("change",t),a.addEventListener("change",t)}})();
