@@ -5,7 +5,10 @@ export default function AboutUs() {
   return (
     <div
       className="w-full h-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/img/about-us/about-us.jpg')" }}
+      style={{
+        backgroundImage:
+          "image-set(url('/img/about-us/about-us.webp') type('image/webp'), url('/img/about-us/about-us.jpg') type('image/jpeg'))",
+      }}
     >
       <div className="container mx-auto pt-[500px] pb-[100px] px-2 lg:px-10 xl:px-16 bg-no-repeat">
         <div className="flex flex-col justify-between gap-6 max-w-[900px]">
