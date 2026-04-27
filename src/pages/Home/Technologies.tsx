@@ -5,7 +5,10 @@ export default function Technologies() {
   return (
     <div
       className="w-full h-full bg-cover bg-right sm:bg-center bg-no-repeat relative"
-      style={{ backgroundImage: "url('/img/technologies.png')" }}
+      style={{
+        backgroundImage:
+          "image-set(url('/img/technologies.webp') type('image/webp'), url('/img/technologies.png') type('image/png'))",
+      }}
     >
       <div className="absolute inset-0 bg-black/50 z-0" />
       <div className="flex flex-col justify-center gap-5 items-center py-[233px] mx-auto">
